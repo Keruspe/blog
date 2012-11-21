@@ -71,3 +71,8 @@ img {
 #copyright {
     padding-top: 5px;
 }
+
+#disqus_thread {
+    padding-top: 20px;
+    border-top: 1px solid black;
+}
