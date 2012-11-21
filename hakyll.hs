@@ -98,9 +98,9 @@ makeTagList tag posts =
 
 feedConfiguration :: FeedConfiguration
 feedConfiguration = FeedConfiguration
-    { feedTitle       = "Clément Delafargue - RSS feed"
-    , feedDescription = "Musings about FP and CS"
-    , feedAuthorName  = "Clément Delafargue"
-    , feedAuthorEmail = "clement+blog@delafargue.name"
-    , feedRoot        = "http://clementd.cleverapps.io"
+    { feedTitle       = "Marc-Antoine Perennou - RSS feed"
+    , feedDescription = "Various free software hacking stuff"
+    , feedAuthorName  = "Marc-Anroine Perennou"
+    , feedAuthorEmail = "Marc-Antoine@Perennou.com"
+    , feedRoot        = "http://keruspe.org"
     }
