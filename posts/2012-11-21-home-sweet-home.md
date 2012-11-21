@@ -17,7 +17,7 @@ Just to be clear, what I mean by sysadmin is not
 
     sudo apt-get install kde
 
-I'm a source-based distrubutions enthusiast and prefer tutorials and tips
+I'm a source-based distributions enthusiast and prefer tutorials and tips
 about raw software over distro-specific ones.
 
 ## Special thanks
