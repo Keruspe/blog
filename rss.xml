@@ -161,7 +161,7 @@
 <p>On a UNIX-like system, everything is a file. A folder is just a specific kind of file, which can contain some other files. Each piece of harware stuff is seen as a file. You write and read this file to interact with the real hardware. All of these files are stored in a tree respecting the <a href="http://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard">Filesystem Hierarchy Standard</a>.</p>
 <ul>
 <li>/ is the parent folder of everything, we call it “slash”.</li>
-<li>/boot is the folder where everything needed by the bootloader (The menu where you select which OS to start).</li>
+<li>/boot is the folder where everything needed by the bootloader (The menu where you select which OS to start) is stored.</li>
 <li>/dev contains all the files corresponding to hardware devices or core functionnalities.</li>
 <li>/etc contains all the system-wide configuration files.</li>
 <li>/home contains the personnal directories of the users.</li>
@@ -181,7 +181,7 @@
 </ul>
 <p>There is now a standard filesystem hierarchy for data stored in each user home directory, guided by freedesktop: <a href="http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html">The XDG base directory specification</a>.</p>
 <h2 id="the-gnulinux-boot-process">The GNU/Linux boot process</h2>
-<p>When you start your computer, you (usually) gets to a bootloader. This bootloader asks you to select which system you want to start. What you actually do when you select an entry is to select a couple of informations:</p>
+<p>When you start your computer, you (usually) get to a bootloader. This bootloader asks you to select which system you want to start. What you actually do when you select an entry is to select a couple of informations:</p>
 <ul>
 <li>A kernel (you can have several ones installed at the same time, but you only boot using one of them).</li>
 <li>The part of your hard drive where your system lays.</li>
