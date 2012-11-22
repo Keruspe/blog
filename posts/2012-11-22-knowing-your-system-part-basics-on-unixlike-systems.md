@@ -68,7 +68,7 @@ All of these files are stored in a tree respecting the [Filesystem Hierarchy Sta
 * /media used to be the place where external storage devices used to be automounted (the place where we accessed their files).
 * /mnt is the place where we explicitely mount external (or internal) storage devices.
 * /opt is the place where we place software we install system-wide using automatic installers
-* /proc contains data specific to currently running proceses
+* /proc contains data specific to currently running processes
 * /root is the home directory of "root" (administrator)
 * /tmp is the place where are stored temporary data
 * /var is the place where will be stored variable content such as logs and databases content
