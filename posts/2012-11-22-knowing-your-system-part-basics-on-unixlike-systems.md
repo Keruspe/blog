@@ -61,7 +61,7 @@ interact with the real hardware.
 All of these files are stored in a tree respecting the [Filesystem Hierarchy Standard](http://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard).
 
 * / is the parent folder of everything, we call it "slash".
-* /boot is the folder where everything needed by the bootloader (The menu where you select which OS to start).
+* /boot is the folder where everything needed by the bootloader (The menu where you select which OS to start) is stored.
 * /dev contains all the files corresponding to hardware devices or core functionnalities.
 * /etc contains all the system-wide configuration files.
 * /home contains the personnal directories of the users.
@@ -86,7 +86,7 @@ There is now a standard filesystem hierarchy for data stored in each user home d
 
 ## The GNU/Linux boot process
 
-When you start your computer, you (usually) gets to a bootloader. This bootloader asks you to select which
+When you start your computer, you (usually) get to a bootloader. This bootloader asks you to select which
 system you want to start. What you actually do when you select an entry is to select a couple of informations:
 
 * A kernel (you can have several ones installed at the same time, but you only boot using one of them).
