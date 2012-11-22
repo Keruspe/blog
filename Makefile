@@ -12,15 +12,10 @@ new:
 publish: build
 	git stash save
 	git checkout publish
-	mkdir _source
-	find . -maxdepth 1 ! -name _source ! -name . ! -name .git -exec mv '{}' _source/ \;
-	cp -r _source/_site/* ./
-	rm -fr _source
-	git add . &&  git commit -m "Publish" || true
-	rm -fr ./*
+	cp -r _site/* ./
+	git add . &&  git co "Publish" || true
 	git push clever publish:master
 	git checkout master
-	git checkout -- .
 	git stash pop || true
 
 preview: hakyll
