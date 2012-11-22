@@ -93,7 +93,7 @@ system you want to start. What you actually do when you select an entry is to se
 * The part of your hard drive where your system lays.
 * Extra configuration for your kernel.
 
-When your kernel has successfully initialized everything, it the gives the power to a root process, comonly
+When your kernel has successfully initialized everything, it then gives the power to a root process, comonly
 called "init", which goal is to track all the other processes that you and your system will run.
 The init process will then reach a few breakpoints (which can be called runlevels, or targets). To each of these
 breakpoints correspond a list of process that must be started. This is how all the root components of your system are
