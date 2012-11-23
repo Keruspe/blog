@@ -13,15 +13,23 @@ a {
 
 body>header hgroup {
     font-family: 'Kite One', Helvetica, sans-serif;
+    padding: 1em;
 }
 
 body>header h1 {
     font-size: 2.2em;
+    display: inline;
 }
 
 body>header h2 {
-    font-size: 1.1em;
+    font-size: 1.6em;
     font-weight: normal;
+    display: inline;
+}
+
+body>header span {
+    font-size: 1.6em;
+    padding: 1em;
 }
 
 body>header a, body>header a:hover {
@@ -39,7 +47,6 @@ nav {
 }
 
 menu {
-    text-align: center;
     padding: 0;
 }
 
