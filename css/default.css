@@ -16,7 +16,7 @@ img {
 }
 
 body>header hgroup {
-    font-family: 'Kite One', Helvetica, sans-serif;
+    font-family: 'Arvo', serif;
     padding: 1em;
 }
 
@@ -62,7 +62,7 @@ body>nav menu a:hover {
 }
 
 article h1 {
-    font-family: 'Kite One', Helvetica, sans-serif;
+    font-family: 'Arvo', serif;
     font-size: 2em;
     text-decoration: underline;
     margin-bottom: 0p
