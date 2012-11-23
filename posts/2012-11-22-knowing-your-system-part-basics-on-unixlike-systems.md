@@ -78,7 +78,7 @@ All of these files are stored in a tree respecting the [Filesystem Hierarchy Sta
 * /bin is the place where the executables are stored
 * /sbin is the place where administrative executables are stored
 * /usr (unix shared resources) is a legacy directory where we used to put all the binaries, libraries and data which
-were not necessary to boot the system, when the main hard drive was too little to store everything. It's now becoming
+were not necessary to boot the system, when the main hard drive was too small to store everything. It's now becoming
 the standard place in which are moved /bin, /sbin and /lib.
 
 There is now a standard filesystem hierarchy for data stored in each user home directory, guided by freedesktop:
@@ -93,7 +93,7 @@ system you want to start. What you actually do when you select an entry is to se
 * The part of your hard drive where your system lays.
 * Extra configuration for your kernel.
 
-When your kernel has successfully initialized everything, it then gives the power to a root process, comonly
+When your kernel has successfully initialized everything, it then gives the power to a root process, commonly
 called "init", which goal is to track all the other processes that you and your system will run.
 The init process will then reach a few breakpoints (which can be called runlevels, or targets). To each of these
 breakpoints correspond a list of process that must be started. This is how all the root components of your system are
