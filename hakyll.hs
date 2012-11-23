@@ -99,7 +99,7 @@ makeTagList tag posts =
 
 feedConfiguration :: FeedConfiguration
 feedConfiguration = FeedConfiguration
-    { feedTitle       = "Marc-Antoine Perennou - RSS feed"
+    { feedTitle       = "Keruspe's blag - RSS feed"
     , feedDescription = "Various free software hacking stuff"
     , feedAuthorName  = "Marc-Anroine Perennou"
     , feedAuthorEmail = "Marc-Antoine@Perennou.com"
