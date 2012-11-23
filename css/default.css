@@ -1,9 +1,14 @@
 body {
     min-width: 20em;
-    max-width: 80em;
+    max-width: 60em;
     margin: auto;
+    padding: 1em;
     background-color: #DEDEDE;
     font-family: ABeeZee, Helvetica, sans-serif;
+}
+
+a {
+    color: #4444EE;
 }
 
 body>header hgroup {
