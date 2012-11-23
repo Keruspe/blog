@@ -1,18 +1,19 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-      <title>Various free software hacking stuff - Knowing your system - Part 1 - Basis on UNIX-like systems</title>
+      <title>Keruspe's blag - Knowing your system - Part 1 - Basis on UNIX-like systems</title>
       <meta charset="utf-8">
       <link href="http://fonts.googleapis.com/css?family=Kite+One" rel="stylesheet" type="text/css">
       <link href="http://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type="text/css">
       <link rel="stylesheet" type="text/css" href="../css/default.css">
-      <link rel="alternate" type="application/rss+xml" title="Various free software hacking stuff" href="../rss.xml">
+      <link rel="alternate" type="application/rss+xml" title="Keruspe's blag" href="../rss.xml">
     </head>
     <body>
         <header>
             <hgroup>
-                <h1><a href="../">Various free software hacking stuff</a></h1>
-                <!-- <h2>A log of my journey through FP and CS</h2> -->
+                <h1><a href="../">Keruspe's blag</a></h1>
+                <span>-</span>
+                <h2>Various free software hacking stuff</h2>
             </hgroup>
         </header>
         <nav>
@@ -22,6 +23,7 @@
                 <!-- <a href="http://marc-antoine.perennou.com">About me</a> -->
                 <a href="../rss.xml">RSS feed</a>
                 <a href="http://github.com/Keruspe">My work</a>
+                <a href="http://www.clever-cloud.com">My company</a>
             </menu>
         </nav>
         <section>
@@ -78,7 +80,7 @@
 <li>/lib is the place where are stored libraries (there also can be /lib32 and/or /lib64)</li>
 <li>/bin is the place where the executables are stored</li>
 <li>/sbin is the place where administrative executables are stored</li>
-<li>/usr (unix shared resources) is a legacy directory where we used to put all the binaries, libraries and data which were not necessary to boot the system, when the main hard drive was too little to store everything. It’s now becoming the standard place in which are moved /bin, /sbin and /lib.</li>
+<li>/usr (unix shared resources) is a legacy directory where we used to put all the binaries, libraries and data which were not necessary to boot the system, when the main hard drive was too small to store everything. It’s now becoming the standard place in which are moved /bin, /sbin and /lib.</li>
 </ul>
 <p>There is now a standard filesystem hierarchy for data stored in each user home directory, guided by freedesktop: <a href="http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html">The XDG base directory specification</a>.</p>
 <h2 id="the-gnulinux-boot-process">The GNU/Linux boot process</h2>
@@ -88,7 +90,7 @@
 <li>The part of your hard drive where your system lays.</li>
 <li>Extra configuration for your kernel.</li>
 </ul>
-<p>When your kernel has successfully initialized everything, it then gives the power to a root process, comonly called “init”, which goal is to track all the other processes that you and your system will run. The init process will then reach a few breakpoints (which can be called runlevels, or targets). To each of these breakpoints correspond a list of process that must be started. This is how all the root components of your system are started in the right order. One of the last things to start is the graphical interface.</p>
+<p>When your kernel has successfully initialized everything, it then gives the power to a root process, commonly called “init”, which goal is to track all the other processes that you and your system will run. The init process will then reach a few breakpoints (which can be called runlevels, or targets). To each of these breakpoints correspond a list of process that must be started. This is how all the root components of your system are started in the right order. One of the last things to start is the graphical interface.</p>
     </section>
 </article>
 
@@ -110,13 +112,6 @@
 </section>
 
         </section>
-        <!--
-        <nav>
-            <a href="http://marc-antoine.perennou.com">Marc-Antoine Perennou</a>
-            <a href="http://jaspervdj.be/hakyll/index.html">Generated with Hakyll</a>
-            <a href="http://github.com/Keruspe/blog">Source code</a>
-        </nav>
-        -->
         <footer>
             <p>
                 <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
