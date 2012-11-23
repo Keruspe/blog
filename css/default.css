@@ -11,6 +11,10 @@ a {
     color: #4444EE;
 }
 
+img {
+    border-width: 0;
+}
+
 body>header hgroup {
     font-family: 'Kite One', Helvetica, sans-serif;
     padding: 1em;
@@ -41,18 +45,18 @@ article>header {
     margin-bottom: 3em;
 }
 
-nav, body>footer {
+body>nav, body>footer {
     background-color: #BBBBBB;
     padding: 0.5em 0;
 }
 
-menu a {
+body>nav menu a {
     color: black;
     text-decoration: none;
-    padding: 0 2em;
+    padding: 0 1.5em;
 }
 
-menu a:hover {
+body>nav menu a:hover {
     color: #555555;
     text-decoration: none;
 }
@@ -69,25 +73,19 @@ article h2 {
     font-size: 1.5em;
 }
 
-body>footer {
-    text-align: right;
-}
-
-img {
-    border-width: 0;
-}
-
-#cc-icon {
-    float: right;
-    margin-left: 2em;
-}
-
-#copyright {
-    text-align: center;
-    padding-top: 0.2em;
-}
-
 #disqus_thread {
     padding-top: 2em;
     border-top: 1px solid black;
+}
+
+body>footer {
+    text-align: center;
+    vertical-align: center;
+    padding: 0.2em;
+}
+
+#cc-icon {
+    margin-top: -0.3em;
+    margin-right: 1em;
+    float: right;
 }
