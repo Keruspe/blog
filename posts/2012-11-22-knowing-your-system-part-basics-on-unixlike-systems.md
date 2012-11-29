@@ -38,7 +38,7 @@ graphical environment (aka desktop/window manager). The most common desktop mana
 * [KDE](http://www.kde.org/)
 * [XFCE](http://xfce.org/)
 
-But there are also another kind of desktop managers which become more and more popular, like:
+But there is also another kind of desktop managers which become more and more popular, like:
 
 * [xmonad](http://xmonad.org/)
 * [i3](http://i3wm.org/)
@@ -62,11 +62,11 @@ All of these files are stored in a tree respecting the [Filesystem Hierarchy Sta
 
 * / is the parent folder of everything, we call it "slash".
 * /boot is the folder where everything needed by the bootloader (The menu where you select which OS to start) is stored.
-* /dev contains all the files corresponding to hardware devices or core functionnalities.
+* /dev contains all the files corresponding to hardware devices or core functionalities.
 * /etc contains all the system-wide configuration files.
-* /home contains the personnal directories of the users.
+* /home contains the personal directories of the users.
 * /media used to be the place where external storage devices used to be automounted (the place where we accessed their files).
-* /mnt is the place where we explicitely mount external (or internal) storage devices.
+* /mnt is the place where we explicitly mount external (or internal) storage devices.
 * /opt is the place where we place software we install system-wide using automatic installers
 * /proc contains data specific to currently running processes
 * /root is the home directory of "root" (administrator)
