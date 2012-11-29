@@ -10,20 +10,20 @@ works.
 
 ## The goal of the init process
 
-The init process is the more important software running on your system. Its goal is to start everything up in order
+The init process is the most important software running on your system. Its goal is to start everything up in the right order
 for your system to work properly. It will manage everything, report errors (and maybe act regarding them) and
-supervise everything. When a process will get orphaned (because its father process, the one which started it, exits or
+supervise everything. When a process gets orphaned (because its father process, the one which started it, exits or
 dies), init will automatically become its father process.
 
-The init process allows you to get a trace of what your processes and doing, where they do come from, and whether they're
-in a decent or a zombie state.
+The init process allows you to get a trace of what your processes are doing, where they come from, and whether they're
+in a decent or zombie state.
 
 ## The legacy System V init
 
 UNIX System V is probably the most known UNIX system. It was one of the most used operating systems in the 80s-90s for
 servers. Its init system is the base of most of our actual systems' ones.
 
-[SysVInit](http://savannah.nongnu.org/projects/sysvinit) design split the boot process into several step (usually 6
+[SysVInit](http://savannah.nongnu.org/projects/sysvinit) design splits the boot process into several steps (usually 6
 or 7 for recent versions) called "runlevels":
 
 * the runlevel 0 corresponds to the system shutdown
@@ -68,7 +68,7 @@ the legacy ones, though. Runit splits the init process into three runlevels name
 * the stage 3 corresponds to shutdown tasks.
 
 Runit can read and handle SysVInit runlevels through an external compatibility layer called runsvdir but this is not how
-it is intended to be ran.
+it is intended to be run.
 
 Runit's goal is to be as small and light as possible, it does exactly what you ask it to, and nothing more. You end up
 with a system as small as possible, but you do not have to forget anything since it won't automatically do it for you.
@@ -94,11 +94,11 @@ called a "unit". A unit can either be a "target" (runlevel equivalent) or a "ser
 a "mount" operation, an "automount" operation or even a "timer" (cron-like) which will run your service in a regular
 fashion.
 
-Some targets are provided by default by you can create your owns as you wish, with the names you want. You can
+Some targets are provided by default but you can create your owns as you wish, with the names you want. You can
 specify which target has to be reached by default at system startup. In each unit, you can specify before or after which
 unit it should be started, whether it requires or is required by other units, if it conflicts with other units, and to
 which target it belongs. This allows systemd to know which targets and services it should start before starting the
-default target specified. To eash target corresponds a target.wants directory, where the unit which should be started
+specified default target. To each target corresponds a target.wants directory, where the unit which should be started
 with this target are symbolic-linked. The sockets and mount operations are kinda more specific. Mount and automount
 operations are auto-generated from /etc/fstab (auto-mounting means that the filesystem appears to be mounted, but it
 really is mounted only once it has been accessed, which leads to a consequent gain of time). If a socket unit
@@ -106,8 +106,8 @@ corresponds to a service one, systemd supports the socket activation of this ser
 really be started only when another service starts to communicate with it.
 
 systemd is a real source of conflict between people against it and people in favor of it. The main argument of people
-which are against it is that is does too many things, it's too complex and ships too many functionalities. I think this
-is a fake problem, since most of the functionalities are optional (and thus can be disabled), and everything is split
+which are against it is that it does too many things, it's too complex and ships too many functionalities. I think this
+is a fake problem, since most of the functionalities are optional (and thus can be disabled), and everything is splited
 into several binaries (systemd doesn't do all this stuff itself but calls tools that it ships to do so). It is fully
 modular, and not modular like its "opponents".
 
@@ -116,5 +116,5 @@ integrated in the init process (well, it actually only communicates with it, it'
 to get rid of an external logging utility such as syslog-ng or rsyslog. You can browse all the logs with the
 "journalctl" command which allows you to apply a lot of filters on them.
 
-A really interesting serie of blog post by Lennart Poettering (systemd's lead developer) is available
+A really interesting serie of blog posts by Lennart Poettering (systemd's lead developer) is available
 [here](http://www.freedesktop.org/wiki/Software/systemd).
