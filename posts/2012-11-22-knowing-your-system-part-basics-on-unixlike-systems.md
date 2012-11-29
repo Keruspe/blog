@@ -4,7 +4,7 @@ author: Marc-Antoine Perennou
 tags: gnu, unix, linux, sysadmin, knowingyoursystem
 ---
 
-Before starting to blog about more technical stuff, I'd like to remember a few basis
+Before starting to blog about more technical stuff, I'd like to recall a few basis
 about UNIX-like systems.
 
 I use a GNU/Linux based distribution most of the time, so I'll speak about this kind of system,
@@ -31,7 +31,7 @@ them: the GNU/Linux distributions. The most common desktop distributions are:
 
 ## It's better with colors
 
-These distribution provide the GNU/Linux set packaged with a bunch of other software, like a
+These distributions provide the GNU/Linux set packaged with a bunch of other software, like a
 graphical environment (aka desktop/window manager). The most common desktop managers are:
 
 * [GNOME](http://www.gnome.org/)

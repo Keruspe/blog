@@ -10,8 +10,8 @@ works.
 
 ## The goal of the init process
 
-The init process is the more inportant software running on your system. It's goal is to start everything up as it has to
-be for your system to work properly. It will manage everything, report errors (and maybe act regarding them) and
+The init process is the more inportant software running on your system. Its goal is to start everything up in order
+for your system to work properly. It will manage everything, report errors (and maybe act regarding them) and
 supervise everything. When a process will get orphaned (because its father process, the one which started it, exits or
 dies), init will automatically become its father process.
 
@@ -25,13 +25,14 @@ servers. Its init system is the base of most of our actual systems' ones.
 
 [SysVInit](http://savannah.nongnu.org/projects/sysvinit) design splitted the boot process into several step (usually 6
 or 7 for recent versions) called "runlevels":
-- the runlevel 0 corresponds to the system shutdown
-- the runlevel 1 corresponds to the "single user" mode, it's the step when the system's basic components are started
-- the runlevel 2 corresponds to the "multi user" mode, all things that do not require networking are started there
-- the runlevel 3 corresponds to the "multi user with network" mode, all things requiring networking are started there
-- the runlevel 4 is usually unused, you can use it for specific custom purpose
-- the runlevel 5 usually starts the graphical user interface, but a lot of distributions already does it in runlevel 3
-- the runlevel 6 is used to reboot the system
+
+* the runlevel 0 corresponds to the system shutdown
+* the runlevel 1 corresponds to the "single user" mode, it's the step when the system's basic components are started
+* the runlevel 2 corresponds to the "multi user" mode, all things that do not require networking are started there
+* the runlevel 3 corresponds to the "multi user with network" mode, all things requiring networking are started there
+* the runlevel 4 is usually unused, you can use it for specific custom purpose
+* the runlevel 5 usually starts the graphical user interface, but a lot of distributions already does it in runlevel 3
+* the runlevel 6 is used to reboot the system
 
 Services that need to be started when you start the system must provide what is called an "init script" which will
 tell SysVInit how to start the said service. This is usually a bash script which takes as argument either start, stop or
@@ -52,7 +53,7 @@ Here are four examples of alternatives to SysVInit. There are other but these ar
 ### OpenRC
 
 [OpenRC](http://www.gentoo.org/proj/en/base/openrc/) is [Gentoo](http://www.gentoo.org/)'s init process. It is not a
-standalone one as it relies on SysVInit, it's only there to add handy features and preformance to SysVInit.
+standalone one as it relies on SysVInit, it's only there to add handy features and performance to SysVInit.
 
 OpenRC allows you to explicitely specify dependencies between services, which makes the task a lot easier than having to
 prepend numbers to services names. It also adds the ability to get configuration files separated from init scripts.
@@ -61,9 +62,10 @@ prepend numbers to services names. It also adds the ability to get configuration
 
 [Runit](http://smarden.org/runit/) is a replacement to SysVInit that also handles runlevels. It is not compatible with
 the legacy ones, though. Runit splits the init process into three runlevels named "stages":
-- the stage 1 corresponds to the system initialization. If anything goes wrong here, runit drops you to a rescue shell.
-- the stage 2 corresponds to everything that needs to be started (like SysVInit's runlevel 5)
-- the stage 3 corresponds to shutdown tasks.
+
+* the stage 1 corresponds to the system initialization. If anything goes wrong here, runit drops you to a rescue shell.
+* the stage 2 corresponds to everything that needs to be started (like SysVInit's runlevel 5)
+* the stage 3 corresponds to shutdown tasks.
 
 Runit can read and handle SysVInit runlevels through an external compatibility layer called runsvdir but this is not how
 it is intended to be ran.
@@ -92,7 +94,7 @@ called a "unit". A unit can either be a "target" (runlevel equivalent) or a "ser
 a "mount" operation, an "automount" operation or even a "timer" (cron-like) which will run your service in a regular
 fashion.
 
-Some targets are provided by default by you can create your own ones as you wish, with the names you want. You can
+Some targets are provided by default by you can create your owns as you wish, with the names you want. You can
 specify which target has to be reached by default at system startup. In each unit, you can specify before or after which
 unit it should be started, whether it requires or is required by other units, if it conflicts with other units, and to
 which target it belongs. This allows systemd to know which targets and services it should start before starting the
