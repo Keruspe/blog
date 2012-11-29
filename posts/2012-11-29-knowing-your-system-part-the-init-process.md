@@ -86,7 +86,7 @@ specific init scripts though, especially to take advantage of upstart features.
 ### systemd
 
 [systemd](http://www.freedesktop.org/wiki/Software/systemd) (yes, no caps here) is [Red Hat](http://www.redhat.com/)'s
-attempt to make the boot faster, especially for its desktop distribution: [Fedora](http://fedoraproject.org/).
+attempt to make the boot smarter (and thus faster), especially for its desktop distribution: [Fedora](http://fedoraproject.org/).
 systemd is widely inspired from Upstart, the Upstart's TODO list, and from Apple's Mac OS X init system: launchd.
 
 systemd is as lazy as possible. It does not handle "runlevels" but rather "targets". Everything handled by systemd is
