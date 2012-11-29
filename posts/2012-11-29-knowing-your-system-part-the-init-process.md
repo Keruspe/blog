@@ -10,12 +10,12 @@ works.
 
 ## The goal of the init process
 
-The init process is the most important software running on your system. Its goal is to start everything up in the right order
+The init process is the most important software running on your system. Its goal is to start everything up in order
 for your system to work properly. It will manage everything, report errors (and maybe act regarding them) and
 supervise everything. When a process gets orphaned (because its father process, the one which started it, exits or
 dies), init will automatically become its father process.
 
-The init process allows you to get a trace of what your processes are doing, where they come from, and whether they're
+The init process allows you to get a trace of what your processes are doing, where they do come from, and whether they're
 in a decent or zombie state.
 
 ## The legacy System V init
@@ -107,7 +107,7 @@ really be started only when another service starts to communicate with it.
 
 systemd is a real source of conflict between people against it and people in favor of it. The main argument of people
 which are against it is that it does too many things, it's too complex and ships too many functionalities. I think this
-is a fake problem, since most of the functionalities are optional (and thus can be disabled), and everything is splited
+is a fake problem, since most of the functionalities are optional (and thus can be disabled), and everything is split
 into several binaries (systemd doesn't do all this stuff itself but calls tools that it ships to do so). It is fully
 modular, and not modular like its "opponents".
 
