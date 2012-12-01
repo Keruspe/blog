@@ -47,7 +47,7 @@ GPaste structure is really modular. It's split in a few libraries:
 
 * libgpaste-setting to handle user settings using [dconf](https://live.gnome.org/dconf)
 * libgpaste-keybinder to handle keybindings leading to actions in the daemon
-* libgoaste-core is the place where the history and the items composing it are managed
+* libgpaste-core is the place where the history and the items composing it are managed
 * libgpaste-daemon is a set of functions to create your own GPaste daemon
 * libgpaste-client is a set of function to easily create your own client application
 
