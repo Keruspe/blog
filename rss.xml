@@ -166,6 +166,58 @@
     <pubDate>Thu, 29 Nov 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-11-29-knowing-your-system-part-the-init-process.html</guid>
 </item>
+<item>
+    <title>GPaste 2.9.1 released</title>
+    <link>http://www.imagination-land.org/posts/2012-12-01-gpaste-released.html</link>
+    <description><![CDATA[<article>
+    <header>
+        <h1>GPaste 2.9.1 released</h1>
+        <p>by <em>Marc-Antoine Perennou</em> on <strong>December  1, 2012</strong></p>
+        <p>Tagged as: <a href="/tags/GPaste.html">GPaste</a>, <a href="/tags/release.html">release</a>, <a href="/tags/clipboard.html">clipboard</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/gnome.html">gnome</a>.</p>
+    </header>
+
+    <section>
+        <p>It’s available <a href="https://github.com/Keruspe/GPaste/downloads">there</a>, get it while it’s hot!</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>Fix memory leak when handling images</li>
+<li>Fix duplicated images in history</li>
+<li>Fix “changed” signal in GPasteSettings</li>
+</ul>
+<h2 id="introduction-to-clipboard-managers">Introduction to clipboard managers</h2>
+<p>I started to use some clipboards manager a few years ago. If you’re a developer and you don’t use one yet, I highly recommend you to do so!</p>
+<h3 id="what-is-a-clipboard-manager">What is a clipboard manager?</h3>
+<p>A clipboard manager is a tool which allows you to keep a trace of what you’re copying and pasting. Is is really useful when you go through tons of documentation and you want to keep around a bunch of functions you might want to use, for example. The clipboard manager will store an history of everything you do, so that you can get back to older copies you now want to paste.</p>
+<p>If you never tried using one, download and install one and give it a try for a few days. Chances are high that you’ll immediately get addicted.</p>
+<h3 id="which-one-should-i-use">Which one should I use?</h3>
+<p>Well, it depends on your operating system. If you’re on a non UNIX-like one, I won’t be of great help to find yours. If you’re running Mac OS X, a lot of friends of mine use <a href="http://jumpcut.sourceforge.net/">JumpCut</a> and are really happy with it.</p>
+<p>If you’re running a GNU/Linux system like me, here is my experience:</p>
+<p>I tried around ten different clipboards manager. I used <a href="http://parcellite.sourceforge.net/">parcellite</a> for a couple of years, it was kinda great and lightweight. But then it got unmaintained and used some deprecated stuff. I then forked it and made <a href="https://github.com/Keruspe/parcellite3">parcellite3</a> which was parcellite ported to gtk+-3 and with many bugs fixed. But then I was not happy at all with the way it worked internally. At this time, I was student at university and wanted to learn <a href="https://live.gnome.org/Vala/">vala</a> (which is a great language by the way) and decided to write my own clipboard manager: <a href="https://github.com/Keruspe/GPaste/">GPaste</a>. GPaste aims to be a new generation parcellite. For some reasons, I since rewrote a large part of it in C, but that will be another story in another post.</p>
+<p>GPaste structure is really modular. It’s split in a few libraries:</p>
+<ul>
+<li>libgpaste-setting to handle user settings using <a href="https://live.gnome.org/dconf">dconf</a></li>
+<li>libgpaste-keybinder to handle keybindings leading to actions in the daemon</li>
+<li>libgoaste-core is the place where the history and the items composing it are managed</li>
+<li>libgpaste-daemon is a set of functions to create your own GPaste daemon</li>
+<li>libgpaste-client is a set of function to easily create your own client application</li>
+</ul>
+<p>All these libraries are written with a full <a href="https://live.gnome.org/GObjectIntrospection">gobject-introspection</a> compatibility, so you can use them from any compatible language (python, javascript, perl…). Vala bindings are also shipped.</p>
+<p>On top of these libraries, the components of the GPaste stack are:</p>
+<ul>
+<li>gpasted, the daemon which is available over <a href="http://www.freedesktop.org/wiki/Software/dbus">dbus</a></li>
+<li>gpaste, a command line tool to manage gpasted</li>
+<li>gpaste-settings, a graphical interface to manager GPaste settings</li>
+<li>gpaste-applet, the legacy applet which shows you the list of the history managed by GPaste</li>
+<li>gnome-shell-extensions-gpaste, a <a href="https://live.gnome.org/GnomeShell">gnome-shell</a> extension similar to gpaste-applet</li>
+</ul>
+<p>All development takes place on <a href="https://github.com/">github</a>, so feel free to contribute and to test it!</p>
+<p>GPaste is packaged by myself for the <a href="http://exherbo.org/">exherbo</a> GNU/Linux distribution and by other people for ubuntu, fedora, debian, archlinux and frugalware, at least.</p>
+    </section>
+</article>
+]]></description>
+    <pubDate>Sat, 01 Dec 2012 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2012-12-01-gpaste-released.html</guid>
+</item>
 
     </channel> 
 </rss>

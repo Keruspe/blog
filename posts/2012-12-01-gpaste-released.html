@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+      <title>Keruspe's blag - GPaste 2.9.1 released</title>
+      <meta charset="utf-8">
+      <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+      <link href="http://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="alternate" type="application/rss+xml" title="Keruspe's blag" href="../rss.xml">
+    </head>
+    <body>
+        <header>
+            <hgroup>
+                <h1><a href="../">Keruspe's blag</a></h1>
+                <span>-</span>
+                <h2>Various free software hacking stuff</h2>
+            </hgroup>
+        </header>
+        <nav>
+            <menu>
+                <a href="../">Home</a>
+                <a href="../posts.html">All posts</a>
+                <!-- <a href="http://marc-antoine.perennou.com">About me</a> -->
+                <a href="../rss.xml">RSS feed</a>
+                <a href="http://github.com/Keruspe">My work</a>
+                <a href="http://www.clever-cloud.com">My company</a>
+            </menu>
+        </nav>
+        <section>
+            <article>
+    <header>
+        <h1>GPaste 2.9.1 released</h1>
+        <p>by <em>Marc-Antoine Perennou</em> on <strong>December  1, 2012</strong></p>
+        <p>Tagged as: <a href="../tags/GPaste.html">GPaste</a>, <a href="../tags/release.html">release</a>, <a href="../tags/clipboard.html">clipboard</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/gnome.html">gnome</a>.</p>
+    </header>
+
+    <section>
+        <p>It’s available <a href="https://github.com/Keruspe/GPaste/downloads">there</a>, get it while it’s hot!</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>Fix memory leak when handling images</li>
+<li>Fix duplicated images in history</li>
+<li>Fix “changed” signal in GPasteSettings</li>
+</ul>
+<h2 id="introduction-to-clipboard-managers">Introduction to clipboard managers</h2>
+<p>I started to use some clipboards manager a few years ago. If you’re a developer and you don’t use one yet, I highly recommend you to do so!</p>
+<h3 id="what-is-a-clipboard-manager">What is a clipboard manager?</h3>
+<p>A clipboard manager is a tool which allows you to keep a trace of what you’re copying and pasting. Is is really useful when you go through tons of documentation and you want to keep around a bunch of functions you might want to use, for example. The clipboard manager will store an history of everything you do, so that you can get back to older copies you now want to paste.</p>
+<p>If you never tried using one, download and install one and give it a try for a few days. Chances are high that you’ll immediately get addicted.</p>
+<h3 id="which-one-should-i-use">Which one should I use?</h3>
+<p>Well, it depends on your operating system. If you’re on a non UNIX-like one, I won’t be of great help to find yours. If you’re running Mac OS X, a lot of friends of mine use <a href="http://jumpcut.sourceforge.net/">JumpCut</a> and are really happy with it.</p>
+<p>If you’re running a GNU/Linux system like me, here is my experience:</p>
+<p>I tried around ten different clipboards manager. I used <a href="http://parcellite.sourceforge.net/">parcellite</a> for a couple of years, it was kinda great and lightweight. But then it got unmaintained and used some deprecated stuff. I then forked it and made <a href="https://github.com/Keruspe/parcellite3">parcellite3</a> which was parcellite ported to gtk+-3 and with many bugs fixed. But then I was not happy at all with the way it worked internally. At this time, I was student at university and wanted to learn <a href="https://live.gnome.org/Vala/">vala</a> (which is a great language by the way) and decided to write my own clipboard manager: <a href="https://github.com/Keruspe/GPaste/">GPaste</a>. GPaste aims to be a new generation parcellite. For some reasons, I since rewrote a large part of it in C, but that will be another story in another post.</p>
+<p>GPaste structure is really modular. It’s split in a few libraries:</p>
+<ul>
+<li>libgpaste-setting to handle user settings using <a href="https://live.gnome.org/dconf">dconf</a></li>
+<li>libgpaste-keybinder to handle keybindings leading to actions in the daemon</li>
+<li>libgoaste-core is the place where the history and the items composing it are managed</li>
+<li>libgpaste-daemon is a set of functions to create your own GPaste daemon</li>
+<li>libgpaste-client is a set of function to easily create your own client application</li>
+</ul>
+<p>All these libraries are written with a full <a href="https://live.gnome.org/GObjectIntrospection">gobject-introspection</a> compatibility, so you can use them from any compatible language (python, javascript, perl…). Vala bindings are also shipped.</p>
+<p>On top of these libraries, the components of the GPaste stack are:</p>
+<ul>
+<li>gpasted, the daemon which is available over <a href="http://www.freedesktop.org/wiki/Software/dbus">dbus</a></li>
+<li>gpaste, a command line tool to manage gpasted</li>
+<li>gpaste-settings, a graphical interface to manager GPaste settings</li>
+<li>gpaste-applet, the legacy applet which shows you the list of the history managed by GPaste</li>
+<li>gnome-shell-extensions-gpaste, a <a href="https://live.gnome.org/GnomeShell">gnome-shell</a> extension similar to gpaste-applet</li>
+</ul>
+<p>All development takes place on <a href="https://github.com/">github</a>, so feel free to contribute and to test it!</p>
+<p>GPaste is packaged by myself for the <a href="http://exherbo.org/">exherbo</a> GNU/Linux distribution and by other people for ubuntu, fedora, debian, archlinux and frugalware, at least.</p>
+    </section>
+</article>
+
+<section>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'keruspe';
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+        </section>
+        <footer>
+            <p>
+                This  work is licensed under a
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                    Creative Commons Attribution-ShareAlike 3.0 Unported License
+                    <img id="cc-icon" alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png">
+                </a>.
+            </p>
+        </footer>
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-36525806-1']);
+          _gaq.push(['_setDomainName', 'imagination-land.org']);
+          _gaq.push(['_setAllowLinker', true]);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+    </body>
+</html>
