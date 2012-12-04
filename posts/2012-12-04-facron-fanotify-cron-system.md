@@ -62,3 +62,7 @@ Two more special tokens will appear: "$@" which will contain the dirname of the 
 basename.
 
 A systemd service file and a release tarball will be provided soon.
+
+You can reload the configuration at any time by sending a SIGUSR1 to facron:
+
+    kill -USR1 $(pidof facron)
