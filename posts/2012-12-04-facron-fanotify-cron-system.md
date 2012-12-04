@@ -1,7 +1,7 @@
 ---
 title: Facron - fanotify cron system
 author: Marc-Antoine Perennou
-tags: facron, fanotify, cron
+tags: facron, fanotify, cron, sysadmin
 ---
 
 ## The filesystem cron principle
