@@ -4,6 +4,8 @@ author: Marc-Antoine Perennou
 tags: facron, fanotify, cron, sysadmin
 ---
 
+It's available on github: [https://github.com/Keruspe/facron](https://github.com/Keruspe/facron)
+
 ## The filesystem cron principle
 
 At [Clever Cloud](http://www.clever-cloud.com), we often have to manage stuff based on filesystem events. In order to
