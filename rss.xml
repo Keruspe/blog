@@ -229,7 +229,8 @@
     </header>
 
     <section>
-        <h2 id="the-filesystem-cron-principle">The filesystem cron principle</h2>
+        <p>It’s available on github: <a href="https://github.com/Keruspe/facron">https://github.com/Keruspe/facron</a></p>
+<h2 id="the-filesystem-cron-principle">The filesystem cron principle</h2>
 <p>At <a href="http://www.clever-cloud.com">Clever Cloud</a>, we often have to manage stuff based on filesystem events. In order to react dynamically, we will sometimes have to reload some specific configurations when the config file has changed, or we’ll want to wrap some files which just appeared to grab them in the global flow.</p>
 <p>Filesystem crons allow you to do this kind of things. What you have to do is specify the files you want to monitor with the events you want to react to and the action you want to proceed when those events occur.</p>
 <h2 id="incron">Incron</h2>
