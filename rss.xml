@@ -269,6 +269,54 @@
     <pubDate>Tue, 04 Dec 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html</guid>
 </item>
+<item>
+    <title>Facron 0.9 released</title>
+    <link>http://www.imagination-land.org/posts/2012-12-07-facron-released.html</link>
+    <description><![CDATA[<article>
+    <header>
+        <h1>Facron 0.9 released</h1>
+        <p>by <em>Marc-Antoine Perennou</em> on <strong>December  7, 2012</strong></p>
+        <p>Tagged as: <a href="/tags/facron.html">facron</a>, <a href="/tags/fanotify.html">fanotify</a>, <a href="/tags/cron.html">cron</a>, <a href="/tags/sysadmin.html">sysadmin</a>.</p>
+    </header>
+
+    <section>
+        <p>Usually, every Thursday I publish another post in <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">my “Knowing your system” saga</a>, but this week I was busy <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">working on facron</a>. I plan to publish the part three on next Monday, it will be about source-based GNU/Linux distributions.</p>
+<h2 id="whats-in-this-release">What’s in this release?</h2>
+<p>Since <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">last time I wrote about it</a>, a few things have changed: the code is more robust and much more cleaner, and several improvements have been made:</p>
+<ul>
+<li>You’re now able to pass arguments containing spaces if you surround them with quotes or double quotes in the configuration file.</li>
+<li>The fanotify flags handling have slightly changed with a new separator, the comma. If you specify “FAN_MODIFY|FAN_CLOSE_WRITE,FAN_OPEN” the event caught will be: either FAN_MODIFY AND FAN_CLOSE_WRITE, or FAN_OPEN.</li>
+<li>$@ is now the dirname of the file, <span class="math">$# the basename ($</span>$ is still the full path)</li>
+<li>A manual is now provided</li>
+<li>A systemd service is now provided (supporting the reload action to reload the configuration)</li>
+<li>You can now pass the “--background” argument to facron to launch it in background on non-systemd systems.</li>
+</ul>
+<h2 id="how-do-i-get-it">How do I get it?</h2>
+<p>The release tarball is available <a href="https://github.com/Keruspe/facron/downloads">there: https://github.com/Keruspe/facron/downloads</a>.</p>
+<p>You must have fanotify included in your kernel (most recent systems should have it by default).</p>
+<p>Here are the steps you need to run in order to get it up and running:</p>
+<pre><code>wget https://github.com/downloads/Keruspe/facron/facron-0.9.tar.xz
+tar xf facron-0.9.tar.xz
+cd facron-0.9
+./configure --sysconfdir=/etc --with-systemdsystemunitdir=/usr/lib/systemd/system
+make
+sudo make install</code></pre>
+<p>Then just create your configuration file <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">as I said in the previous post</a> or following the manual instructions (man facron).</p>
+<p>When everything is ready, you just have to run</p>
+<pre><code>sudo systemctl start facron.service</code></pre>
+<p>Or for non-systemd systems</p>
+<pre><code>sudo facron --background</code></pre>
+<p>If you edit the configuration file, you can reload it without restarting the daemon by running</p>
+<pre><code>sudo systemctl reload facron.service</code></pre>
+<p>Or for non-systemd systems</p>
+<pre><code>sudo kill -USR1 $(pidof facron)</code></pre>
+<p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute !</p>
+    </section>
+</article>
+]]></description>
+    <pubDate>Fri, 07 Dec 2012 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2012-12-07-facron-released.html</guid>
+</item>
 
     </channel> 
 </rss>

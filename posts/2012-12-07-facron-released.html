@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+      <title>Keruspe's blag - Facron 0.9 released</title>
+      <meta charset="utf-8">
+      <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+      <link href="http://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type="text/css">
+      <link rel="stylesheet" type="text/css" href="../css/default.css">
+      <link rel="alternate" type="application/rss+xml" title="Keruspe's blag" href="../rss.xml">
+    </head>
+    <body>
+        <header>
+            <hgroup>
+                <h1><a href="../">Keruspe's blag</a></h1>
+                <span>-</span>
+                <h2>Various free software hacking stuff</h2>
+            </hgroup>
+        </header>
+        <nav>
+            <menu>
+                <a href="../">Home</a>
+                <a href="../posts.html">All posts</a>
+                <!-- <a href="http://marc-antoine.perennou.com">About me</a> -->
+                <a href="../rss.xml">RSS feed</a>
+                <a href="http://github.com/Keruspe">My projects</a>
+                <a href="http://www.clever-cloud.com">My company</a>
+            </menu>
+        </nav>
+        <section>
+            <article>
+    <header>
+        <h1>Facron 0.9 released</h1>
+        <p>by <em>Marc-Antoine Perennou</em> on <strong>December  7, 2012</strong></p>
+        <p>Tagged as: <a href="../tags/facron.html">facron</a>, <a href="../tags/fanotify.html">fanotify</a>, <a href="../tags/cron.html">cron</a>, <a href="../tags/sysadmin.html">sysadmin</a>.</p>
+    </header>
+
+    <section>
+        <p>Usually, every Thursday I publish another post in <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">my “Knowing your system” saga</a>, but this week I was busy <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">working on facron</a>. I plan to publish the part three on next Monday, it will be about source-based GNU/Linux distributions.</p>
+<h2 id="whats-in-this-release">What’s in this release?</h2>
+<p>Since <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">last time I wrote about it</a>, a few things have changed: the code is more robust and much more cleaner, and several improvements have been made:</p>
+<ul>
+<li>You’re now able to pass arguments containing spaces if you surround them with quotes or double quotes in the configuration file.</li>
+<li>The fanotify flags handling have slightly changed with a new separator, the comma. If you specify “FAN_MODIFY|FAN_CLOSE_WRITE,FAN_OPEN” the event caught will be: either FAN_MODIFY AND FAN_CLOSE_WRITE, or FAN_OPEN.</li>
+<li>$@ is now the dirname of the file, <span class="math">$# the basename ($</span>$ is still the full path)</li>
+<li>A manual is now provided</li>
+<li>A systemd service is now provided (supporting the reload action to reload the configuration)</li>
+<li>You can now pass the “--background” argument to facron to launch it in background on non-systemd systems.</li>
+</ul>
+<h2 id="how-do-i-get-it">How do I get it?</h2>
+<p>The release tarball is available <a href="https://github.com/Keruspe/facron/downloads">there: https://github.com/Keruspe/facron/downloads</a>.</p>
+<p>You must have fanotify included in your kernel (most recent systems should have it by default).</p>
+<p>Here are the steps you need to run in order to get it up and running:</p>
+<pre><code>wget https://github.com/downloads/Keruspe/facron/facron-0.9.tar.xz
+tar xf facron-0.9.tar.xz
+cd facron-0.9
+./configure --sysconfdir=/etc --with-systemdsystemunitdir=/usr/lib/systemd/system
+make
+sudo make install</code></pre>
+<p>Then just create your configuration file <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">as I said in the previous post</a> or following the manual instructions (man facron).</p>
+<p>When everything is ready, you just have to run</p>
+<pre><code>sudo systemctl start facron.service</code></pre>
+<p>Or for non-systemd systems</p>
+<pre><code>sudo facron --background</code></pre>
+<p>If you edit the configuration file, you can reload it without restarting the daemon by running</p>
+<pre><code>sudo systemctl reload facron.service</code></pre>
+<p>Or for non-systemd systems</p>
+<pre><code>sudo kill -USR1 $(pidof facron)</code></pre>
+<p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute !</p>
+    </section>
+</article>
+
+<section>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'keruspe';
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+        </section>
+        <footer>
+            <p>
+                This  work is licensed under a
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                    Creative Commons Attribution-ShareAlike 3.0 Unported License
+                    <img id="cc-icon" alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png">
+                </a>.
+            </p>
+        </footer>
+        <script type="text/javascript">
+          var _gaq = _gaq || [];
+          _gaq.push(['_setAccount', 'UA-36525806-1']);
+          _gaq.push(['_setDomainName', 'imagination-land.org']);
+          _gaq.push(['_setAllowLinker', true]);
+          _gaq.push(['_trackPageview']);
+
+          (function() {
+            var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+            ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+          })();
+        </script>
+    </body>
+</html>
