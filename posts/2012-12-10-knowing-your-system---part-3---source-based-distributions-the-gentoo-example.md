@@ -47,7 +47,7 @@ course. I was quite happy with it for the first months, but as soon as I wanted 
 compiling my own kernel, or when I wanted to do really specific operations, I was immediately limited by the design of
 this distribution.
 
-I was a student at this time, and my class-mate [Kevin Decherf](http://blog.kdecherf.com/) told me he was using
+I was a student at this time, and my class-mate (and now colleague) [Kevin Decherf](http://blog.kdecherf.com/) told me he was using
 [Gentoo](http://www.gentoo.org/). on his server. I immediately asked him if he agreed to plan an Install Party the week just after that.
 During this session, I installed a minimal system, discovering the distribution. At the end of the day, it was barely booting to an xterm.
 
