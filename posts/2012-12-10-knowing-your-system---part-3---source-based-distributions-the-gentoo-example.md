@@ -53,9 +53,9 @@ During this session, I installed a minimal system, discovering the distribution.
 
 I wanted to really explore my distribution to understand exactly how everything works, so I started "playing" with it,
 modifying packages, checking how things reacted. I broke my system and reinstalled it 5 times in 3 weeks, playing harder
-and harder, until I knew how to make my system work again after a major wanted breakage.
+and harder, until I knew how to make my system work again after a wanted major breakage.
 
-Source-based distributions really are a must have, to really get how things work. It can take a few months to understand
+You really should try source-based distributions, to really get how things work. It can take a few months to understand
 them if you just play a little with them on an irregular basis, but it's really worth it. Gentoo was my choice since
 it's the most popular source-based distribution, and the only one I heard of at this time. It's quite good, but you'll
-see in my next post that I didn't really like it's default package manager, and I no longer use Gentoo.
+see in my next post that I didn't really like its default package manager, and I no longer use Gentoo.
