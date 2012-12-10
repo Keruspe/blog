@@ -48,8 +48,8 @@ compiling my own kernel, or when I wanted to do really specific operations, I wa
 this distribution.
 
 I was a student at this time, and my class-mate [Kevin Decherf](http://blog.kdecherf.com/) told me he was using
-[Gentoo](http://www.gentoo.org/). on his server. I immediately asked him he agreed to plan an Install Party the week just after that.
-During this session, I installed minimal system, discovering the distribution. At the end of the day, it was barely booting to an xterm.
+[Gentoo](http://www.gentoo.org/). on his server. I immediately asked him if he agreed to plan an Install Party the week just after that.
+During this session, I installed a minimal system, discovering the distribution. At the end of the day, it was barely booting to an xterm.
 
 I wanted to really explore my distribution to understand exactly how everything works, so I started "playing" with it,
 modifying packages, checking how things reacted. I broke my system and reinstalled it 5 times in 3 weeks, playing harder
