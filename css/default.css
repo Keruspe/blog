@@ -61,6 +61,10 @@ body>nav menu a:hover {
     text-decoration: none;
 }
 
+article {
+    text-align:justify;
+}
+
 article header h1 {
     font-family: 'Arvo', serif;
     font-size: 1.6em;
