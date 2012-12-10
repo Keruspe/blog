@@ -77,6 +77,11 @@ article h3 {
     font-size: 1.1em;
 }
 
+pre {
+    margin-left: 2em;
+    background-color: #D2D2D2;
+}
+
 #disqus_thread {
     padding-top: 2em;
     border-top: 1px solid black;
