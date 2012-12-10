@@ -32,12 +32,12 @@ hours on certain boxes.
 This can be seen as a PITA but this is the price of real liberty. With source-based distributions, you can choose which
 components of each software you want to build, and exactly which options you want. With binary distributions, if you're
 missing a feature, you'll have to do everything by yourself outside your package manager, and this will really be a PITA
-to maintain. With source-based distribution, it's way easier to contribute, as we'll saw in a later post of [this saga
+to maintain. With source-based distribution, it's way easier to contribute, as we'll see in a later post of [this saga
 of posts](http://www.imagination-land.org/tags/knowingyoursystem.html). The package does not contain all the binaries,
 it's just a text file you have to edit to add an option you're missing. Everything becomes easier to customize, you
 become the God of your system.
 
-You must also keep in mind that while you're compiling styuff, your system is still fully usable, so you can just do it
+You must also keep in mind that while you're compiling stuff, your system is still fully usable, so you can just do it
 in background.
 
 ## The Gentoo example: My beginning with source-based distributions
