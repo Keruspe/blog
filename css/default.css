@@ -62,7 +62,7 @@ body>nav menu a:hover {
 }
 
 article {
-    text-align:justify;
+    text-align: justify;
 }
 
 article header h1 {
@@ -82,7 +82,8 @@ article h3 {
 }
 
 pre {
-    margin-left: 2em;
+    padding: 1em 1em;
+    margin: 1em 2em;
     background-color: #D2D2D2;
 }
 
