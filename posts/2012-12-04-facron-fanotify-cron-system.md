@@ -35,36 +35,36 @@ hacks to do the job correctly. That's why I decided we needed our own solution.
 more reliable and have better performances than the now deprecated inotify one. I started to write it two days ago, it's
 at a stage where it's usable. It's not yet perfect and I want to improve it a little but you already can try it.
 
-The configuration file (/etc/facron.conf) looks like:
+The configuration file (`/etc/facron.conf`) looks like:
 
     /path/to/a/file FAN_MODIFY|FAN_EVENT_ON_CHILD /path/to/script fromFacron $$$$
 
 The first element is the file or directory to watch (of course multiple lines are supported), the second one corresponds
 to all fanotify events that you want to follow, and then your script or application (full path is recommended) + arguments.
-"$$$$" is a special token which will be replaced by the full path of the file which has emitted the event.
+`$$$$` is a special token which will be replaced by the full path of the file which has emitted the event.
 
 The available fanotify events are:
 
-* FAN_ACCESS
-* FAN_MODIFY
-* FAN_CLOSE_WRITE
-* FAN_CLOSE_NOWRITE
-* FAN_OPEN
-* FAN_Q_OVERFLOW
-* FAN_OPEN_PERM
-* FAN_ACCESS_PERM
-* FAN_ONDIR
-* FAN_EVENT_ON_CHILD
-* FAN_CLOSE
-* FAN_ALL_EVENTS
-* FAN_ALL_PERM_EVENTS
-* FAN_ALL_OUTGOING_EVENTS
+* `FAN_ACCESS`
+* `FAN_MODIFY`
+* `FAN_CLOSE_WRITE`
+* `FAN_CLOSE_NOWRITE`
+* `FAN_OPEN`
+* `FAN_Q_OVERFLOW`
+* `FAN_OPEN_PERM`
+* `FAN_ACCESS_PERM`
+* `FAN_ONDIR`
+* `FAN_EVENT_ON_CHILD`
+* `FAN_CLOSE`
+* `FAN_ALL_EVENTS`
+* `FAN_ALL_PERM_EVENTS`
+* `FAN_ALL_OUTGOING_EVENTS`
 
-Two more special tokens will appear: "$@" which will contain the dirname of the file, and "$#" which will contain its
+Two more special tokens will appear: `$@` which will contain the dirname of the file, and `$#` which will contain its
 basename.
 
 A systemd service file and a release tarball will be provided soon.
 
-You can reload the configuration at any time by sending a SIGUSR1 to facron:
+You can reload the configuration at any time by sending a `SIGUSR1` to facron:
 
     kill -USR1 $(pidof facron)

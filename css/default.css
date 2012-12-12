@@ -42,7 +42,8 @@ body>header a, body>header a:hover {
 }
 
 article>header {
-    margin-bottom: 3em;
+    margin-bottom: 1.5em;
+    border-bottom: 1px solid;
 }
 
 body>nav, body>footer {
@@ -81,9 +82,9 @@ article h3 {
     font-size: 1.1em;
 }
 
-pre {
-    padding: 1em 1em;
-    margin: 1em 2em;
+code {
+    display: inline-block;
+    padding: 0.5em;
     background-color: #D2D2D2;
 }
 

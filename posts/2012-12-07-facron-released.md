@@ -16,11 +16,11 @@ a few things have changed: the code is more robust and much more cleaner, and se
 * You're now able to pass arguments containing spaces if you surround them with quotes or double quotes in the configuration
 file.
 * The fanotify flags handling have slightly changed with a new separator, the comma. If you specify
-"FAN_MODIFY|FAN_CLOSE_WRITE,FAN_OPEN" the event caught will be: either FAN_MODIFY AND FAN_CLOSE_WRITE, or FAN_OPEN.
-* $@ is now the dirname of the file, $# the basename ($$$$ is still the full path)
+`FAN_MODIFY|FAN_CLOSE_WRITE,FAN_OPEN` the event caught will be: either `FAN_MODIFY` AND `FAN_CLOSE_WRITE`, or `FAN_OPEN`.
+* `$@` is now the dirname of the file, `$#` the basename (`$$$$` is still the full path)
 * A manual is now provided
 * A systemd service is now provided (supporting the reload action to reload the configuration)
-* You can now pass the "\-\-background" argument to facron to launch it in background on non-systemd systems.
+* You can now pass the `--background` argument to facron to launch it in background on non-systemd systems.
 
 ## How do I get it?
 

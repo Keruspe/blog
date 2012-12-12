@@ -60,26 +60,26 @@ Each piece of harware stuff is seen as a file. You write and read this file to
 interact with the real hardware.
 All of these files are stored in a tree respecting the [Filesystem Hierarchy Standard](http://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard).
 
-* / is the parent folder of everything, we call it "slash".
-* /boot is the folder where everything needed by the bootloader (The menu where you select which OS to start) is stored.
-* /dev contains all the files corresponding to hardware devices or core functionalities.
-* /etc contains all the system-wide configuration files.
-* /home contains the personal directories of the users.
-* /media used to be the place where external storage devices used to be automounted (the place where we accessed their files).
-* /mnt is the place where we explicitly mount external (or internal) storage devices.
-* /opt is the place where we put software we install system-wide using automatic installers
-* /proc contains data specific to currently running processes
-* /root is the home directory of "root" (administrator)
-* /tmp is the place where are stored temporary data
-* /var is the place where will be stored variable content such as logs and databases content
-* /run is the folder used by software to store runtime specific data
-* /run/media is the replacement to the deprecated /media
-* /lib is the place where are stored libraries (there also can be /lib32 and/or /lib64)
-* /bin is the place where the executables are stored
-* /sbin is the place where administrative executables are stored
-* /usr (unix shared resources) is a legacy directory where we used to put all the binaries, libraries and data which
+* `/` is the parent folder of everything, we call it "slash".
+* `/boot` is the folder where everything needed by the bootloader (The menu where you select which OS to start) is stored.
+* `/dev` contains all the files corresponding to hardware devices or core functionalities.
+* `/etc` contains all the system-wide configuration files.
+* `/home` contains the personal directories of the users.
+* `/media` used to be the place where external storage devices used to be automounted (the place where we accessed their files).
+* `/mnt` is the place where we explicitly mount external (or internal) storage devices.
+* `/opt` is the place where we put software we install system-wide using automatic installers
+* `/proc` contains data specific to currently running processes
+* `/root` is the home directory of "root" (administrator)
+* `/tmp` is the place where are stored temporary data
+* `/var` is the place where will be stored variable content such as logs and databases content
+* `/run` is the folder used by software to store runtime specific data
+* `/run/media` is the replacement to the deprecated `/media`
+* `/lib` is the place where are stored libraries (there also can be `/lib32` and/or `/lib64`)
+* `/bin` is the place where the executables are stored
+* `/sbin` is the place where administrative executables are stored
+* `/usr` (unix shared resources) is a legacy directory where we used to put all the binaries, libraries and data which
 were not necessary to boot the system, when the main hard drive was too small to store everything. It's now becoming
-the standard place in which are moved /bin, /sbin and /lib.
+the standard place in which are moved `/bin`, `/sbin` and `/lib`.
 
 There is now a standard filesystem hierarchy for data stored in each user home directory, guided by freedesktop:
 [The XDG base directory specification](http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html).
