@@ -73,24 +73,24 @@
 <h2 id="a-gnulinux-system-structure.">A GNU/Linux system structure.</h2>
 <p>On a UNIX-like system, everything is a file. A folder is just a specific kind of file, which can contain some other files. Each piece of harware stuff is seen as a file. You write and read this file to interact with the real hardware. All of these files are stored in a tree respecting the <a href="http://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard">Filesystem Hierarchy Standard</a>.</p>
 <ul>
-<li>/ is the parent folder of everything, we call it “slash”.</li>
-<li>/boot is the folder where everything needed by the bootloader (The menu where you select which OS to start) is stored.</li>
-<li>/dev contains all the files corresponding to hardware devices or core functionalities.</li>
-<li>/etc contains all the system-wide configuration files.</li>
-<li>/home contains the personal directories of the users.</li>
-<li>/media used to be the place where external storage devices used to be automounted (the place where we accessed their files).</li>
-<li>/mnt is the place where we explicitly mount external (or internal) storage devices.</li>
-<li>/opt is the place where we put software we install system-wide using automatic installers</li>
-<li>/proc contains data specific to currently running processes</li>
-<li>/root is the home directory of “root” (administrator)</li>
-<li>/tmp is the place where are stored temporary data</li>
-<li>/var is the place where will be stored variable content such as logs and databases content</li>
-<li>/run is the folder used by software to store runtime specific data</li>
-<li>/run/media is the replacement to the deprecated /media</li>
-<li>/lib is the place where are stored libraries (there also can be /lib32 and/or /lib64)</li>
-<li>/bin is the place where the executables are stored</li>
-<li>/sbin is the place where administrative executables are stored</li>
-<li>/usr (unix shared resources) is a legacy directory where we used to put all the binaries, libraries and data which were not necessary to boot the system, when the main hard drive was too small to store everything. It’s now becoming the standard place in which are moved /bin, /sbin and /lib.</li>
+<li><code>/</code> is the parent folder of everything, we call it “slash”.</li>
+<li><code>/boot</code> is the folder where everything needed by the bootloader (The menu where you select which OS to start) is stored.</li>
+<li><code>/dev</code> contains all the files corresponding to hardware devices or core functionalities.</li>
+<li><code>/etc</code> contains all the system-wide configuration files.</li>
+<li><code>/home</code> contains the personal directories of the users.</li>
+<li><code>/media</code> used to be the place where external storage devices used to be automounted (the place where we accessed their files).</li>
+<li><code>/mnt</code> is the place where we explicitly mount external (or internal) storage devices.</li>
+<li><code>/opt</code> is the place where we put software we install system-wide using automatic installers</li>
+<li><code>/proc</code> contains data specific to currently running processes</li>
+<li><code>/root</code> is the home directory of “root” (administrator)</li>
+<li><code>/tmp</code> is the place where are stored temporary data</li>
+<li><code>/var</code> is the place where will be stored variable content such as logs and databases content</li>
+<li><code>/run</code> is the folder used by software to store runtime specific data</li>
+<li><code>/run/media</code> is the replacement to the deprecated <code>/media</code></li>
+<li><code>/lib</code> is the place where are stored libraries (there also can be <code>/lib32</code> and/or <code>/lib64</code>)</li>
+<li><code>/bin</code> is the place where the executables are stored</li>
+<li><code>/sbin</code> is the place where administrative executables are stored</li>
+<li><code>/usr</code> (unix shared resources) is a legacy directory where we used to put all the binaries, libraries and data which were not necessary to boot the system, when the main hard drive was too small to store everything. It’s now becoming the standard place in which are moved <code>/bin</code>, <code>/sbin</code> and <code>/lib</code>.</li>
 </ul>
 <p>There is now a standard filesystem hierarchy for data stored in each user home directory, guided by freedesktop: <a href="http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html">The XDG base directory specification</a>.</p>
 <h2 id="the-gnulinux-boot-process">The GNU/Linux boot process</h2>
@@ -239,29 +239,29 @@
 <p>We experienced quite a few instabilities with incron which was not as reliable as we expected, ending up with ugly bash hacks to do the job correctly. That’s why I decided we needed our own solution.</p>
 <h2 id="facron">Facron</h2>
 <p><a href="https://github.com/Keruspe/facron">Facron</a> is my vision of the filesystem cron problematic. It is based on the “new” <a href="http://lwn.net/Articles/339253">fanotify</a> <a href="http://en.wikipedia.org/wiki/Application_binary_interface">ABI</a> which is more reliable and have better performances than the now deprecated inotify one. I started to write it two days ago, it’s at a stage where it’s usable. It’s not yet perfect and I want to improve it a little but you already can try it.</p>
-<p>The configuration file (/etc/facron.conf) looks like:</p>
+<p>The configuration file (<code>/etc/facron.conf</code>) looks like:</p>
 <pre><code>/path/to/a/file FAN_MODIFY|FAN_EVENT_ON_CHILD /path/to/script fromFacron $$</code></pre>
-<p>The first element is the file or directory to watch (of course multiple lines are supported), the second one corresponds to all fanotify events that you want to follow, and then your script or application (full path is recommended) + arguments. “$$” is a special token which will be replaced by the full path of the file which has emitted the event.</p>
+<p>The first element is the file or directory to watch (of course multiple lines are supported), the second one corresponds to all fanotify events that you want to follow, and then your script or application (full path is recommended) + arguments. <code>$$</code> is a special token which will be replaced by the full path of the file which has emitted the event.</p>
 <p>The available fanotify events are:</p>
 <ul>
-<li>FAN_ACCESS</li>
-<li>FAN_MODIFY</li>
-<li>FAN_CLOSE_WRITE</li>
-<li>FAN_CLOSE_NOWRITE</li>
-<li>FAN_OPEN</li>
-<li>FAN_Q_OVERFLOW</li>
-<li>FAN_OPEN_PERM</li>
-<li>FAN_ACCESS_PERM</li>
-<li>FAN_ONDIR</li>
-<li>FAN_EVENT_ON_CHILD</li>
-<li>FAN_CLOSE</li>
-<li>FAN_ALL_EVENTS</li>
-<li>FAN_ALL_PERM_EVENTS</li>
-<li>FAN_ALL_OUTGOING_EVENTS</li>
+<li><code>FAN_ACCESS</code></li>
+<li><code>FAN_MODIFY</code></li>
+<li><code>FAN_CLOSE_WRITE</code></li>
+<li><code>FAN_CLOSE_NOWRITE</code></li>
+<li><code>FAN_OPEN</code></li>
+<li><code>FAN_Q_OVERFLOW</code></li>
+<li><code>FAN_OPEN_PERM</code></li>
+<li><code>FAN_ACCESS_PERM</code></li>
+<li><code>FAN_ONDIR</code></li>
+<li><code>FAN_EVENT_ON_CHILD</code></li>
+<li><code>FAN_CLOSE</code></li>
+<li><code>FAN_ALL_EVENTS</code></li>
+<li><code>FAN_ALL_PERM_EVENTS</code></li>
+<li><code>FAN_ALL_OUTGOING_EVENTS</code></li>
 </ul>
-<p>Two more special tokens will appear: “<span class="math">$@&quot; which will contain the dirname of the file, and &quot;$</span>#” which will contain its basename.</p>
+<p>Two more special tokens will appear: <code>$@</code> which will contain the dirname of the file, and <code>$#</code> which will contain its basename.</p>
 <p>A systemd service file and a release tarball will be provided soon.</p>
-<p>You can reload the configuration at any time by sending a SIGUSR1 to facron:</p>
+<p>You can reload the configuration at any time by sending a <code>SIGUSR1</code> to facron:</p>
 <pre><code>kill -USR1 $(pidof facron)</code></pre>
     </section>
 </article>
@@ -285,11 +285,11 @@
 <p>Since <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">last time I wrote about it</a>, a few things have changed: the code is more robust and much more cleaner, and several improvements have been made:</p>
 <ul>
 <li>You’re now able to pass arguments containing spaces if you surround them with quotes or double quotes in the configuration file.</li>
-<li>The fanotify flags handling have slightly changed with a new separator, the comma. If you specify “FAN_MODIFY|FAN_CLOSE_WRITE,FAN_OPEN” the event caught will be: either FAN_MODIFY AND FAN_CLOSE_WRITE, or FAN_OPEN.</li>
-<li>$@ is now the dirname of the file, <span class="math">$# the basename ($</span>$ is still the full path)</li>
+<li>The fanotify flags handling have slightly changed with a new separator, the comma. If you specify <code>FAN_MODIFY|FAN_CLOSE_WRITE,FAN_OPEN</code> the event caught will be: either <code>FAN_MODIFY</code> AND <code>FAN_CLOSE_WRITE</code>, or <code>FAN_OPEN</code>.</li>
+<li><code>$@</code> is now the dirname of the file, <code>$#</code> the basename (<code>$$</code> is still the full path)</li>
 <li>A manual is now provided</li>
 <li>A systemd service is now provided (supporting the reload action to reload the configuration)</li>
-<li>You can now pass the “--background” argument to facron to launch it in background on non-systemd systems.</li>
+<li>You can now pass the <code>--background</code> argument to facron to launch it in background on non-systemd systems.</li>
 </ul>
 <h2 id="how-do-i-get-it">How do I get it?</h2>
 <p>The release tarball is available <a href="https://github.com/Keruspe/facron/downloads">there: https://github.com/Keruspe/facron/downloads</a>.</p>

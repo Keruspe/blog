@@ -45,29 +45,29 @@
 <p>We experienced quite a few instabilities with incron which was not as reliable as we expected, ending up with ugly bash hacks to do the job correctly. That’s why I decided we needed our own solution.</p>
 <h2 id="facron">Facron</h2>
 <p><a href="https://github.com/Keruspe/facron">Facron</a> is my vision of the filesystem cron problematic. It is based on the “new” <a href="http://lwn.net/Articles/339253">fanotify</a> <a href="http://en.wikipedia.org/wiki/Application_binary_interface">ABI</a> which is more reliable and have better performances than the now deprecated inotify one. I started to write it two days ago, it’s at a stage where it’s usable. It’s not yet perfect and I want to improve it a little but you already can try it.</p>
-<p>The configuration file (/etc/facron.conf) looks like:</p>
+<p>The configuration file (<code>/etc/facron.conf</code>) looks like:</p>
 <pre><code>/path/to/a/file FAN_MODIFY|FAN_EVENT_ON_CHILD /path/to/script fromFacron $$</code></pre>
-<p>The first element is the file or directory to watch (of course multiple lines are supported), the second one corresponds to all fanotify events that you want to follow, and then your script or application (full path is recommended) + arguments. “$$” is a special token which will be replaced by the full path of the file which has emitted the event.</p>
+<p>The first element is the file or directory to watch (of course multiple lines are supported), the second one corresponds to all fanotify events that you want to follow, and then your script or application (full path is recommended) + arguments. <code>$$</code> is a special token which will be replaced by the full path of the file which has emitted the event.</p>
 <p>The available fanotify events are:</p>
 <ul>
-<li>FAN_ACCESS</li>
-<li>FAN_MODIFY</li>
-<li>FAN_CLOSE_WRITE</li>
-<li>FAN_CLOSE_NOWRITE</li>
-<li>FAN_OPEN</li>
-<li>FAN_Q_OVERFLOW</li>
-<li>FAN_OPEN_PERM</li>
-<li>FAN_ACCESS_PERM</li>
-<li>FAN_ONDIR</li>
-<li>FAN_EVENT_ON_CHILD</li>
-<li>FAN_CLOSE</li>
-<li>FAN_ALL_EVENTS</li>
-<li>FAN_ALL_PERM_EVENTS</li>
-<li>FAN_ALL_OUTGOING_EVENTS</li>
+<li><code>FAN_ACCESS</code></li>
+<li><code>FAN_MODIFY</code></li>
+<li><code>FAN_CLOSE_WRITE</code></li>
+<li><code>FAN_CLOSE_NOWRITE</code></li>
+<li><code>FAN_OPEN</code></li>
+<li><code>FAN_Q_OVERFLOW</code></li>
+<li><code>FAN_OPEN_PERM</code></li>
+<li><code>FAN_ACCESS_PERM</code></li>
+<li><code>FAN_ONDIR</code></li>
+<li><code>FAN_EVENT_ON_CHILD</code></li>
+<li><code>FAN_CLOSE</code></li>
+<li><code>FAN_ALL_EVENTS</code></li>
+<li><code>FAN_ALL_PERM_EVENTS</code></li>
+<li><code>FAN_ALL_OUTGOING_EVENTS</code></li>
 </ul>
-<p>Two more special tokens will appear: “<span class="math">$@&quot; which will contain the dirname of the file, and &quot;$</span>#” which will contain its basename.</p>
+<p>Two more special tokens will appear: <code>$@</code> which will contain the dirname of the file, and <code>$#</code> which will contain its basename.</p>
 <p>A systemd service file and a release tarball will be provided soon.</p>
-<p>You can reload the configuration at any time by sending a SIGUSR1 to facron:</p>
+<p>You can reload the configuration at any time by sending a <code>SIGUSR1</code> to facron:</p>
 <pre><code>kill -USR1 $(pidof facron)</code></pre>
     </section>
 </article>

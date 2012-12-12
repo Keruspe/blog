@@ -40,11 +40,11 @@
 <p>Since <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">last time I wrote about it</a>, a few things have changed: the code is more robust and much more cleaner, and several improvements have been made:</p>
 <ul>
 <li>You’re now able to pass arguments containing spaces if you surround them with quotes or double quotes in the configuration file.</li>
-<li>The fanotify flags handling have slightly changed with a new separator, the comma. If you specify “FAN_MODIFY|FAN_CLOSE_WRITE,FAN_OPEN” the event caught will be: either FAN_MODIFY AND FAN_CLOSE_WRITE, or FAN_OPEN.</li>
-<li>$@ is now the dirname of the file, <span class="math">$# the basename ($</span>$ is still the full path)</li>
+<li>The fanotify flags handling have slightly changed with a new separator, the comma. If you specify <code>FAN_MODIFY|FAN_CLOSE_WRITE,FAN_OPEN</code> the event caught will be: either <code>FAN_MODIFY</code> AND <code>FAN_CLOSE_WRITE</code>, or <code>FAN_OPEN</code>.</li>
+<li><code>$@</code> is now the dirname of the file, <code>$#</code> the basename (<code>$$</code> is still the full path)</li>
 <li>A manual is now provided</li>
 <li>A systemd service is now provided (supporting the reload action to reload the configuration)</li>
-<li>You can now pass the “--background” argument to facron to launch it in background on non-systemd systems.</li>
+<li>You can now pass the <code>--background</code> argument to facron to launch it in background on non-systemd systems.</li>
 </ul>
 <h2 id="how-do-i-get-it">How do I get it?</h2>
 <p>The release tarball is available <a href="https://github.com/Keruspe/facron/downloads">there: https://github.com/Keruspe/facron/downloads</a>.</p>

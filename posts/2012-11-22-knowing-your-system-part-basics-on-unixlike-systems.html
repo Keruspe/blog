@@ -63,24 +63,24 @@
 <h2 id="a-gnulinux-system-structure.">A GNU/Linux system structure.</h2>
 <p>On a UNIX-like system, everything is a file. A folder is just a specific kind of file, which can contain some other files. Each piece of harware stuff is seen as a file. You write and read this file to interact with the real hardware. All of these files are stored in a tree respecting the <a href="http://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard">Filesystem Hierarchy Standard</a>.</p>
 <ul>
-<li>/ is the parent folder of everything, we call it “slash”.</li>
-<li>/boot is the folder where everything needed by the bootloader (The menu where you select which OS to start) is stored.</li>
-<li>/dev contains all the files corresponding to hardware devices or core functionalities.</li>
-<li>/etc contains all the system-wide configuration files.</li>
-<li>/home contains the personal directories of the users.</li>
-<li>/media used to be the place where external storage devices used to be automounted (the place where we accessed their files).</li>
-<li>/mnt is the place where we explicitly mount external (or internal) storage devices.</li>
-<li>/opt is the place where we put software we install system-wide using automatic installers</li>
-<li>/proc contains data specific to currently running processes</li>
-<li>/root is the home directory of “root” (administrator)</li>
-<li>/tmp is the place where are stored temporary data</li>
-<li>/var is the place where will be stored variable content such as logs and databases content</li>
-<li>/run is the folder used by software to store runtime specific data</li>
-<li>/run/media is the replacement to the deprecated /media</li>
-<li>/lib is the place where are stored libraries (there also can be /lib32 and/or /lib64)</li>
-<li>/bin is the place where the executables are stored</li>
-<li>/sbin is the place where administrative executables are stored</li>
-<li>/usr (unix shared resources) is a legacy directory where we used to put all the binaries, libraries and data which were not necessary to boot the system, when the main hard drive was too small to store everything. It’s now becoming the standard place in which are moved /bin, /sbin and /lib.</li>
+<li><code>/</code> is the parent folder of everything, we call it “slash”.</li>
+<li><code>/boot</code> is the folder where everything needed by the bootloader (The menu where you select which OS to start) is stored.</li>
+<li><code>/dev</code> contains all the files corresponding to hardware devices or core functionalities.</li>
+<li><code>/etc</code> contains all the system-wide configuration files.</li>
+<li><code>/home</code> contains the personal directories of the users.</li>
+<li><code>/media</code> used to be the place where external storage devices used to be automounted (the place where we accessed their files).</li>
+<li><code>/mnt</code> is the place where we explicitly mount external (or internal) storage devices.</li>
+<li><code>/opt</code> is the place where we put software we install system-wide using automatic installers</li>
+<li><code>/proc</code> contains data specific to currently running processes</li>
+<li><code>/root</code> is the home directory of “root” (administrator)</li>
+<li><code>/tmp</code> is the place where are stored temporary data</li>
+<li><code>/var</code> is the place where will be stored variable content such as logs and databases content</li>
+<li><code>/run</code> is the folder used by software to store runtime specific data</li>
+<li><code>/run/media</code> is the replacement to the deprecated <code>/media</code></li>
+<li><code>/lib</code> is the place where are stored libraries (there also can be <code>/lib32</code> and/or <code>/lib64</code>)</li>
+<li><code>/bin</code> is the place where the executables are stored</li>
+<li><code>/sbin</code> is the place where administrative executables are stored</li>
+<li><code>/usr</code> (unix shared resources) is a legacy directory where we used to put all the binaries, libraries and data which were not necessary to boot the system, when the main hard drive was too small to store everything. It’s now becoming the standard place in which are moved <code>/bin</code>, <code>/sbin</code> and <code>/lib</code>.</li>
 </ul>
 <p>There is now a standard filesystem hierarchy for data stored in each user home directory, guided by freedesktop: <a href="http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html">The XDG base directory specification</a>.</p>
 <h2 id="the-gnulinux-boot-process">The GNU/Linux boot process</h2>
