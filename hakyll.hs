@@ -20,6 +20,10 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
+    match "robots.txt" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     -- Render posts
     match "posts/*" $ do
         route   $ setExtension ".html"
