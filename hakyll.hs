@@ -20,6 +20,7 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
+    -- robots.txt
     match "robots.txt" $ do
         route   idRoute
         compile copyFileCompiler
@@ -37,39 +38,43 @@ main = hakyll $ do
             >>> relativizeUrlsCompiler
 
     -- Render posts list
-    match "posts.html" $ route idRoute
-    create "posts.html" $ constA mempty
-        >>> arr (setField "title" "All posts")
-        >>> requireAllA "posts/*" addPostList
-        >>> applyTemplateCompiler "templates/posts.html"
-        >>> applyTemplateCompiler "templates/default.html"
-        >>> relativizeUrlsCompiler
+    match "posts.html" $ do
+        route idRoute
+        create "posts.html" $ constA mempty
+            >>> arr (setField "title" "All posts")
+            >>> requireAllA "posts/*" addPostList
+            >>> applyTemplateCompiler "templates/posts.html"
+            >>> applyTemplateCompiler "templates/default.html"
+            >>> relativizeUrlsCompiler
 
     -- Index
-    match "index.html" $ route idRoute
-    create "index.html" $ constA mempty
-        >>> arr (setField "title" "Home")
-        >>> requireA "tags" (setFieldA "tagcloud" (renderTagCloud'))
-        >>> requireAllA "posts/*" (id *** arr (take 10 . reverse . chronological) >>> addPostList)
-        >>> applyTemplateCompiler "templates/index.html"
-        >>> applyTemplateCompiler "templates/default.html"
-        >>> relativizeUrlsCompiler
+    match "index.html" $ do
+        route idRoute
+        create "index.html" $ constA mempty
+            >>> arr (setField "title" "Home")
+            >>> requireA "tags" (setFieldA "tagcloud" (renderTagCloud'))
+            >>> requireAllA "posts/*" (id *** arr (take 10 . reverse . chronological) >>> addPostList)
+            >>> applyTemplateCompiler "templates/index.html"
+            >>> applyTemplateCompiler "templates/default.html"
+            >>> relativizeUrlsCompiler
 
     -- Tags
     create "tags" $
         requireAll "posts/*" (\_ ps -> readTags ps :: Tags String)
 
     -- Add a tag list compiler for every tag
-    match "tags/*" $ route $ setExtension ".html"
-    metaCompile $ require_ "tags"
-        >>> arr tagsMap
-        >>> arr (map (\(t, p) -> (tagIdentifier t, makeTagList t p)))
+    match "tags/*" $ do
+        route $ setExtension ".html"
+        metaCompile $ require_ "tags"
+            >>> arr tagsMap
+            >>> arr (map (\(t, p) -> (tagIdentifier t, makeTagList t p)))
 
     -- Render RSS feed
-    match "rss.xml" $ route idRoute
-    create "rss.xml" $
-        requireAll_ "posts/*"
-            >>> renderRss feedConfiguration
+    match "rss.xml" $ do
+        route idRoute
+        create "rss.xml" $
+            requireAll_ "posts/*"
+                >>> renderRss feedConfiguration
 
     -- Read templates
     match "templates/*" $ compile templateCompiler
