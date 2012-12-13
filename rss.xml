@@ -393,8 +393,8 @@ sudo make install</code></pre>
 <p>We’ll see some more advanced paludis features in a next post of <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">the knowing your system saga</a>.</p>
 <p>Last thing, The way I update my system is:</p>
 <pre><code>cave sync
-cave resolve world -c -km -Km</code></pre>
-<p>It sync repositories with upstream to get latest versions of the packages, and then resolve <code>world</code> which is the set containing all the packages you have installed, with a complete dependency tree, as deep as it can, with <code>-c</code> aka <code>--complete</code> and reinstalling all packages for which metadata have changed because of <code>-km -Km</code> aka <code>--keep if-same-metadata --keep-targets if-same-metadata</code>. I then re run this last command with <code>-x</code> aka <code>--execute</code> to apply the available updates.</p>
+cave resolve world -c -km -Km -Cs</code></pre>
+<p>It syncs repositories with upstream to get latest versions of the packages, and then resolve <code>world</code> which is the set containing all the packages you have installed, with a complete dependency tree, as deep as it can, with <code>-c</code> aka <code>--complete</code> and reinstalling all packages for which metadata have changed because of <code>-km -Km</code> aka <code>--keep if-same-metadata --keep-targets if-same-metadata</code>. If a failure occurs, it continues to build the rest while the dependencies still are satisfied thanks to <code>-Cs</code> aka <code>--continue-on-failure if-satisfied</code>. I then run this last command again with <code>-x</code> aka <code>--execute</code> to apply the available updates.</p>
     </section>
 </article>
 ]]></description>
