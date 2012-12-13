@@ -349,6 +349,58 @@ sudo make install</code></pre>
     <pubDate>Mon, 10 Dec 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html</guid>
 </item>
+<item>
+    <title>Knowing your system - Part 4 - Falling in love with paludis</title>
+    <link>http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html</link>
+    <description><![CDATA[<article>
+    <header>
+        <h1>Knowing your system - Part 4 - Falling in love with paludis</h1>
+        <p>by <em>Marc-Antoine Perennou</em> on <strong>December 13, 2012</strong></p>
+        <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/unix.html">unix</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="/tags/source-based.html">source-based</a>.</p>
+    </header>
+
+    <section>
+        <h2 id="installing-a-source-based-gnulinux-distribution">Installing a source-based GNU/Linux distribution</h2>
+<p><a href="http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html">As we last saw</a>, I’m really fond of source-based distributions. Beyond the administration and the management of an installed system, you also have to install it in the first place. Because of the fact that you have to compile absolutely everything in your system, it may be really scary to install one.</p>
+<p>I formerly told you to keep in mind that your system is fully usable whilst you’re upgrading it…</p>
+<p>When you install a source-based distribution, it’s not using a shiny interface and clicking repeatedly on the “next” button. You have to use a “bootstrap” system, which can be a livecd such as the awesome <a href="http://www.sysresccd.org/">sysrescuecd</a>, but you also can decide to first install a binary distribution like <a href="http://fedoraproject.org/">Fedora</a> or <a href="http://www.ubuntu.com/">Ubuntu</a> (you may probably already have one, so you obviously can use it).</p>
+<p>When you have booted your “bootstrap” system, there will be 3 steps:</p>
+<ul>
+<li>Mounting the target partition to anywhere in your filesystem, like <code>/mnt/newsystem</code></li>
+<li>Unpacking the base filesystem of your distribution into that folder (these are commonly called “stages tarballs”)</li>
+<li>Chrooting into this folder (you may have to mount several subsystems such as /dev beforehand, refer to the ditribution documentation)</li>
+</ul>
+<p>One you have chrooted, you will actually be (for the current shell) in your bare new system. However you can start to manage and install it from a shell within your “bootstrap” system that you can hopefully use to work during the installation. Note that you can also leave your computer do all the compilations during your idle time at night.</p>
+<p>Here are two install guides that I recommend you to follow:</p>
+<ul>
+<li><a href="http://www.gentoo.org/doc/en/handbook/handbook-x86.xml">Gentoo install guide</a></li>
+<li><a href="http://www.exherbo.org/docs/install-guide.html">Exherbo install guide</a></li>
+</ul>
+<h2 id="paludis-the-other-package-mangler">Paludis, the other package mangler</h2>
+<p>Now that you have all the minimal informations needed to understand what is a source-based GNU/Linux distribution and to understand how it works globally, We’ll give a closer look to the heart of the distribution: the package manager.</p>
+<p>On Gentoo, the official package manager is portage, with the <code>emerge</code> command line. I used it the first weeks I tried Gentoo, but when I really wanted to play with my system, it was too restrictive so I decided to switch. Moreover, portage is written in python (so are a lot of core components of gentoo), and when your python installation gets broken… Game over.</p>
+<p>When exploring the list of available packages, I found out <a href="http://paludis.exherbo.org/">paludis</a> and decided to give it a try. Thanks to <a href="http://git.exherbo.org/paludis/paludis-scripts.git/tree/portage2paludis.bash">a provided script</a>, I translated roughly my portage configuration to a paludis one (Paludis can use portage configuration but this is not recommended). It was not perfect, but was a good start. After cleaning and updating it a little by myself (<a href="http://paludis.exherbo.org/">the documentation and man pages are really exhaustive</a>), I could start using it. The man pages are also really complete.</p>
+<p>You can see my current configuration here: <a href="https://github.com/Keruspe/paludis-config">https://github.com/Keruspe/paludis-config</a>. A first configuration will be a lot lighter, this is a configuration that have evolved during 4 years, from Gentoo to Exherbo.</p>
+<p>Paludis command line <code>cave</code> is a modular tool which allow you to do a lot of things. Basically everything you would ever want to do, and some more.</p>
+<p>The main <code>cave</code> subcommands are:</p>
+<ul>
+<li><code>cave resolve</code> looks for the whole dependency tree of a package, in pretend mode by default, and you then can apply this resolution (to install stuff) by specifying the <code>-x</code> argument</li>
+<li><code>cave uninstall</code> is the pendent of <code>cave resolve</code> for uninstalling</li>
+<li><code>cave purge</code> looks for unused packages (as for all commands, pretending by default, and executiong with <code>-x</code>)</li>
+<li><code>cave fix-linkage</code> looks for broken binaries (because of libraries updates) and suggest you to rebuild them.</li>
+</ul>
+<p>A lot of other subcommands are available, and a lot of options for each of these. Amongst other things, cave allows you to stop the installation process at a certain phase, or resume at another. This allows you to abort at compile phase to apply custom patches, and them resume at compile phase to compile the package with your patches applied. It also support a hooks mechanism.</p>
+<p>We’ll see some more advanced paludis features in a next post of <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">the knowing your system saga</a>.</p>
+<p>Last thing, The way I update my system is:</p>
+<pre><code>cave sync
+cave resolve world -c -km -Km</code></pre>
+<p>It sync repositories with upstream to get lastest versions of the packages, and then resolve <code>world</code> which is the set containing all the packages you have installed, with a complete dependency tree, as deep as it can, with <code>-c</code> aka <code>--complete</code> and reinstalling all packages for which metadata have changed because of <code>-km -Km</code> aka <code>--keep if-same-metadata --keep-targets if-same-metadata</code>. I then re run this last command with <code>-x</code> aka <code>--execute</code> to apply the available updates.</p>
+    </section>
+</article>
+]]></description>
+    <pubDate>Thu, 13 Dec 2012 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html</guid>
+</item>
 
     </channel> 
 </rss>
