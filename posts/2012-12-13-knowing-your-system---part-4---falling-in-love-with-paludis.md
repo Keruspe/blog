@@ -76,10 +76,11 @@ We'll see some more advanced paludis features in a next post of [the knowing you
 Last thing, The way I update my system is:
 
     cave sync
-    cave resolve world -c -km -Km
+    cave resolve world -c -km -Km -Cs
 
-It sync repositories with upstream to get latest versions of the packages, and then resolve `world` which is the set
+It syncs repositories with upstream to get latest versions of the packages, and then resolve `world` which is the set
 containing all the packages you have installed, with a complete dependency tree, as deep as it can, with `-c` aka
 `--complete`  and reinstalling all packages for which metadata have changed because of `-km -Km` aka `--keep
-if-same-metadata --keep-targets if-same-metadata`. I then re run this last command with `-x` aka `--execute` to apply
-the available updates.
+if-same-metadata --keep-targets if-same-metadata`. If a failure occurs, it continues to build the rest while the
+dependencies still are satisfied thanks to `-Cs` aka `--continue-on-failure if-satisfied`. I then run this last
+command again with `-x` aka `--execute` to apply the available updates.
