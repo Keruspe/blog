@@ -56,7 +56,7 @@
 <ul>
 <li>Mounting the target partition to anywhere in your filesystem, like <code>/mnt/newsystem</code></li>
 <li>Unpacking the base filesystem of your distribution into that folder (these are commonly called “stages tarballs”)</li>
-<li>Chrooting into this folder (you may have to mount several subsystems such as /dev beforehand, refer to the ditribution documentation)</li>
+<li>Chrooting into this folder (you may have to mount several subsystems such as /dev beforehand, refer to the distribution documentation)</li>
 </ul>
 <p>One you have chrooted, you will actually be (for the current shell) in your bare new system. However you can start to manage and install it from a shell within your “bootstrap” system that you can hopefully use to work during the installation. Note that you can also leave your computer do all the compilations during your idle time at night.</p>
 <p>Here are two install guides that I recommend you to follow:</p>
@@ -74,7 +74,7 @@
 <ul>
 <li><code>cave resolve</code> looks for the whole dependency tree of a package, in pretend mode by default, and you then can apply this resolution (to install stuff) by specifying the <code>-x</code> argument</li>
 <li><code>cave uninstall</code> is the pendent of <code>cave resolve</code> for uninstalling</li>
-<li><code>cave purge</code> looks for unused packages (as for all commands, pretending by default, and executiong with <code>-x</code>)</li>
+<li><code>cave purge</code> looks for unused packages (as for all commands, pretending by default, and execution with <code>-x</code>)</li>
 <li><code>cave fix-linkage</code> looks for broken binaries (because of libraries updates) and suggest you to rebuild them.</li>
 </ul>
 <p>A lot of other subcommands are available, and a lot of options for each of these. Amongst other things, cave allows you to stop the installation process at a certain phase, or resume at another. This allows you to abort at compile phase to apply custom patches, and them resume at compile phase to compile the package with your patches applied. It also support a hooks mechanism.</p>
@@ -82,7 +82,7 @@
 <p>Last thing, The way I update my system is:</p>
 <pre><code>cave sync
 cave resolve world -c -km -Km</code></pre>
-<p>It sync repositories with upstream to get lastest versions of the packages, and then resolve <code>world</code> which is the set containing all the packages you have installed, with a complete dependency tree, as deep as it can, with <code>-c</code> aka <code>--complete</code> and reinstalling all packages for which metadata have changed because of <code>-km -Km</code> aka <code>--keep if-same-metadata --keep-targets if-same-metadata</code>. I then re run this last command with <code>-x</code> aka <code>--execute</code> to apply the available updates.</p>
+<p>It sync repositories with upstream to get latest versions of the packages, and then resolve <code>world</code> which is the set containing all the packages you have installed, with a complete dependency tree, as deep as it can, with <code>-c</code> aka <code>--complete</code> and reinstalling all packages for which metadata have changed because of <code>-km -Km</code> aka <code>--keep if-same-metadata --keep-targets if-same-metadata</code>. I then re run this last command with <code>-x</code> aka <code>--execute</code> to apply the available updates.</p>
     </section>
 </article>
 
