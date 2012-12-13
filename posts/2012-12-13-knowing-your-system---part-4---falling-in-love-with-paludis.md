@@ -22,7 +22,7 @@ When you have booted your "bootstrap" system, there will be 3 steps:
 
 * Mounting the target partition to anywhere in your filesystem, like `/mnt/newsystem`
 * Unpacking the base filesystem of your distribution into that folder (these are commonly called "stages tarballs")
-* Chrooting into this folder (you may have to mount several subsystems such as /dev beforehand, refer to the ditribution
+* Chrooting into this folder (you may have to mount several subsystems such as /dev beforehand, refer to the distribution
   documentation)
 
 One you have chrooted, you will actually be (for the current shell) in your bare new system. However you can start to
@@ -63,7 +63,7 @@ The main `cave` subcommands are:
 * `cave resolve` looks for the whole dependency tree of a package, in pretend mode by default, and you then can apply
   this resolution (to install stuff) by specifying the `-x` argument
 * `cave uninstall` is the pendent of `cave resolve` for uninstalling
-* `cave purge` looks for unused packages (as for all commands, pretending by default, and executiong with `-x`)
+* `cave purge` looks for unused packages (as for all commands, pretending by default, and execution with `-x`)
 * `cave fix-linkage` looks for broken binaries (because of libraries updates) and suggest you to rebuild them.
 
 A lot of other subcommands are available, and a lot of options for each of these. Amongst other things, cave allows you
@@ -78,7 +78,7 @@ Last thing, The way I update my system is:
     cave sync
     cave resolve world -c -km -Km
 
-It sync repositories with upstream to get lastest versions of the packages, and then resolve `world` which is the set
+It sync repositories with upstream to get latest versions of the packages, and then resolve `world` which is the set
 containing all the packages you have installed, with a complete dependency tree, as deep as it can, with `-c` aka
 `--complete`  and reinstalling all packages for which metadata have changed because of `-km -Km` aka `--keep
 if-same-metadata --keep-targets if-same-metadata`. I then re run this last command with `-x` aka `--execute` to apply
