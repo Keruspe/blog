@@ -48,7 +48,7 @@ When exploring the list of available packages, I found out [paludis](http://palu
 a try. Thanks to [a provided script](http://git.exherbo.org/paludis/paludis-scripts.git/tree/portage2paludis.bash), I
 translated roughly my portage configuration to a paludis one (Paludis can use portage configuration but this is not
 recommended). It was not perfect, but was a good start. After cleaning and updating it a little by myself ([the
-documentation and man pages are really exhaustive](http://paludis.exherbo.org/)), I could start using it. The man pages
+documentation is really exhaustive](http://paludis.exherbo.org/)), I could start using it. The man pages
 are also really complete.
 
 You can see my current configuration here: [https://github.com/Keruspe/paludis-config](https://github.com/Keruspe/paludis-config).
