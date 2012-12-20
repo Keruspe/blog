@@ -19,7 +19,7 @@ The virtual machines would have the same problem, and for much longer, since you
 machine than in an hypervisor, so compilations last longer.
 
 This is why we decided to manage everything using binary packages. Wait… What? Binary packages in a source-based
-distribution?
+distribution? How?!
 
 ## The search is over: paludis' pbins
 
