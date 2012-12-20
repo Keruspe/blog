@@ -44,7 +44,7 @@
     <header>
         <h1>Knowing your system - Part 4 - Falling in love with paludis</h1>
         <p>by <em>Marc-Antoine Perennou</em> on <strong>December 13, 2012</strong></p>
-        <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/source-based.html">source-based</a>.</p>
+        <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/source-based.html">source-based</a>, <a href="../tags/paludis.html">paludis</a>.</p>
     </header>
 
     <section>
@@ -67,7 +67,7 @@
 <h2 id="paludis-the-other-package-mangler">Paludis, the other package mangler</h2>
 <p>Now that you have all the minimal informations needed to understand what is a source-based GNU/Linux distribution and to understand how it works globally, We’ll give a closer look to the heart of the distribution: the package manager.</p>
 <p>On Gentoo, the official package manager is portage, with the <code>emerge</code> command line. I used it the first weeks I tried Gentoo, but when I really wanted to play with my system, it was too restrictive so I decided to switch. Moreover, portage is written in python (so are a lot of core components of gentoo), and when your python installation gets broken… Game over.</p>
-<p>When exploring the list of available packages, I found out <a href="http://paludis.exherbo.org/">paludis</a> and decided to give it a try. Thanks to <a href="http://git.exherbo.org/paludis/paludis-scripts.git/tree/portage2paludis.bash">a provided script</a>, I translated roughly my portage configuration to a paludis one (Paludis can use portage configuration but this is not recommended). It was not perfect, but was a good start. After cleaning and updating it a little by myself (<a href="http://paludis.exherbo.org/">the documentation and man pages are really exhaustive</a>), I could start using it. The man pages are also really complete.</p>
+<p>When exploring the list of available packages, I found out <a href="http://paludis.exherbo.org/">paludis</a> and decided to give it a try. Thanks to <a href="http://git.exherbo.org/paludis/paludis-scripts.git/tree/portage2paludis.bash">a provided script</a>, I translated roughly my portage configuration to a paludis one (Paludis can use portage configuration but this is not recommended). It was not perfect, but was a good start. After cleaning and updating it a little by myself (<a href="http://paludis.exherbo.org/">the documentation is really exhaustive</a>), I could start using it. The man pages are also really complete.</p>
 <p>You can see my current configuration here: <a href="https://github.com/Keruspe/paludis-config">https://github.com/Keruspe/paludis-config</a>. A first configuration will be a lot lighter, this is a configuration that have evolved during 4 years, from Gentoo to Exherbo.</p>
 <p>Paludis command line <code>cave</code> is a modular tool which allow you to do a lot of things. Basically everything you would ever want to do, and some more.</p>
 <p>The main <code>cave</code> subcommands are:</p>

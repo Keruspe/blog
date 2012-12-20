@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Keruspe's blag - Knowing your system - Part 5 - Source-based distributions: the binary way</title>
+        <meta charset="utf-8">
+        <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="../css/default.css">
+        <link rel="alternate" type="application/rss+xml" title="Keruspe's blag" href="../rss.xml">
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-36525806-1']);
+            _gaq.push(['_setDomainName', 'imagination-land.org']);
+            _gaq.push(['_setAllowLinker', true]);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+            })();
+        </script>
+    </head>
+    <body>
+        <header>
+            <hgroup>
+                <h1><a href="../">Keruspe's blag</a></h1>
+                <span>-</span>
+                <h2>Various free software hacking stuff</h2>
+            </hgroup>
+        </header>
+        <nav>
+            <menu>
+                <a href="../">Home</a>
+                <a href="../posts.html">All posts</a>
+                <!-- <a href="http://marc-antoine.perennou.com">About me</a> -->
+                <a href="../rss.xml">RSS feed</a>
+                <a href="http://github.com/Keruspe">My projects</a>
+                <a href="http://www.clever-cloud.com">My company</a>
+            </menu>
+        </nav>
+        <section>
+            <article>
+    <header>
+        <h1>Knowing your system - Part 5 - Source-based distributions: the binary way</h1>
+        <p>by <em>Marc-Antoine Perennou</em> on <strong>December 20, 2012</strong></p>
+        <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/source-based.html">source-based</a>, <a href="../tags/paludis.html">paludis</a>.</p>
+    </header>
+
+    <section>
+        <p><a href="http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html">We last saw</a> the <a href="http://paludis.exherbo.org/">paludis</a> tool. Now, we’ll take a look at how we can handle a source-based distribution using paludis for large pools of servers.</p>
+<h2 id="source-based-distributions-for-huge-server-pools">Source-based distributions for huge server pools</h2>
+<p>At <a href="http://www.clever-cloud.com/">Clever Cloud</a>, we decided to use a source-based GNU/Linux distribution called <a href="http://www.exherbo.org/">exherbo</a>, which I’ll blog about next week, because of its strictness and flexibility. Since we have to manage hundreds of servers and virtual machines, it would have been a big overload in energy consumption and in time invested if we managed it the “conventional” way. Indeed, compiling everything on the hypervisors could cause instabilities because of the CPUs being monopolised by the compilation process, leaving no power to virtual machines. The virtual machines would have the same problem, and for much longer, since you do not have the same power in a virtual machine than in an hypervisor, so compilations last longer.</p>
+<p>This is why we decided to manage everything using binary packages. Wait… What? Binary packages in a source-based distribution?</p>
+<h2 id="the-search-is-over-paludis-pbins">The search is over: paludis’ pbins</h2>
+<h3 id="setup">Setup</h3>
+<p>Paludis comes with a very nice feature: <a href="http://paludis.exherbo.org/overview/pbins.html">pbins</a>.</p>
+<p>The concept is simple:</p>
+<ul>
+<li>You create an empty repository, anywhere in your filesystem, containing an empty <code>packages</code> directory, a <code>profiles</code> directory containing a file named <code>repo_name</code> which contents is your binary repository name, like <code>mybinaries</code>.</li>
+<li>In your repository, create a <code>metadata</code> containing a <code>layout.conf</code> file, with <code>masters = arbor</code> in it.</li>
+<li>On your compilation node, create a configuration file for you binary repository</li>
+<li>On the other nodes, create a configuration file for it too. It’s the same, without the lines starting with <code>binary_</code> and modifying the <code>sync</code> line</li>
+</ul>
+<p>A sample configuration file:</p>
+<pre><code>format = e
+location = /var/db/paludis/repositories/mybinaries
+sync = file:///var/db/paludis/repositories/mybinaries
+importance = 100
+binary_destination = true
+binary_distdir = /var/cache/paludis/distfiles
+binary_keywords_filter = amd64 ~amd64
+binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
+<p><code>location</code> is the place where you put your empty repository.</p>
+<p><code>sync</code> is the same that <code>location</code> on the compilation node, and may refer to a git repository where you’ll publish your binary repository on the other nodes.</p>
+<p><code>binary_distdir</code> is the directory where binary tarballs will be placed. I recommend you to make it point to the same place as where paludis downloads its distfiles, since it will be easier to maintain in further use. That’s why I left the default value here.</p>
+<p><code>binary_prefix</code> is the URL where the generated tarballs will be available for the other nodes. Ensure that the /var/cache/paludis/distfiles directory is available via http at this URL.</p>
+<h3 id="usage">Usage</h3>
+<p>You’re now fully ready! All you have to do is create the binary packages on your compilation node, push the updated repository to your git server, sync it on the other boxes and you will be able to install your freshly made binary packages without having to compile them on all of your machines.</p>
+<p>It’s pretty simple to make binary packages, all you have to do is first to generate the binaries for everything you have installed:</p>
+<pre><code>cave resolve -xc world --make binaries --make-dependencies all</code></pre>
+<p>It will automatically generate packages and put tarballs in your distfiles directory. If you run this after updating your compilation box, it will only generate new binary packages for those that have changed.</p>
+<p>Last thing you might want to know: to create a binary package for a package you do not have installed yet, just run</p>
+<pre><code>cave resolve -x --make binaries --make-dependencies all &lt;insert a package name here&gt;</code></pre>
+<p>It will create packages for all the dependencies, installing it afterwards, and finish by making the package for the software you asked.</p>
+<p>Don’t forget to push all changes on your git server!</p>
+    </section>
+</article>
+
+<section>
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'keruspe';
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = 'http://' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+</section>
+
+        </section>
+        <footer>
+            <p>
+                This  work is licensed under a
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                    Creative Commons Attribution-ShareAlike 3.0 Unported License
+                    <img id="cc-icon" alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png">
+                </a>.
+            </p>
+        </footer>
+    </body>
+</html>
