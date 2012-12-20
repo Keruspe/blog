@@ -51,7 +51,7 @@
         <p><a href="http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html">We last saw</a> the <a href="http://paludis.exherbo.org/">paludis</a> tool. Now, we’ll take a look at how we can handle a source-based distribution using paludis for large pools of servers.</p>
 <h2 id="source-based-distributions-for-huge-server-pools">Source-based distributions for huge server pools</h2>
 <p>At <a href="http://www.clever-cloud.com/">Clever Cloud</a>, we decided to use a source-based GNU/Linux distribution called <a href="http://www.exherbo.org/">exherbo</a>, which I’ll blog about next week, because of its strictness and flexibility. Since we have to manage hundreds of servers and virtual machines, it would have been a big overload in energy consumption and in time invested if we managed it the “conventional” way. Indeed, compiling everything on the hypervisors could cause instabilities because of the CPUs being monopolised by the compilation process, leaving no power to virtual machines. The virtual machines would have the same problem, and for much longer, since you do not have the same power in a virtual machine than in an hypervisor, so compilations last longer.</p>
-<p>This is why we decided to manage everything using binary packages. Wait… What? Binary packages in a source-based distribution?</p>
+<p>This is why we decided to manage everything using binary packages. Wait… What? Binary packages in a source-based distribution? How?!</p>
 <h2 id="the-search-is-over-paludis-pbins">The search is over: paludis’ pbins</h2>
 <h3 id="setup">Setup</h3>
 <p>Paludis comes with a very nice feature: <a href="http://paludis.exherbo.org/overview/pbins.html">pbins</a>.</p>
