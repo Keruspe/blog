@@ -114,7 +114,7 @@
     <header>
         <h1>Knowing your system - Part 2 - The init process</h1>
         <p>by <em>Marc-Antoine Perennou</em> on <strong>November 29, 2012</strong></p>
-        <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/unix.html">unix</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/knowingyoursystem.html">knowingyoursystem</a>.</p>
+        <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/unix.html">unix</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="/tags/systemd.html">systemd</a>.</p>
     </header>
 
     <section>
@@ -487,6 +487,37 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 ]]></description>
     <pubDate>Thu, 27 Dec 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-12-27-knowing-your-system---part-6---source-based-distributions-discovering-exherbo.html</guid>
+</item>
+<item>
+    <title>Systemd as a session manager</title>
+    <link>http://www.imagination-land.org/posts/2013-01-01-systemd-as-a-session-manager.html</link>
+    <description><![CDATA[<article>
+    <header>
+        <h1>Systemd as a session manager</h1>
+        <p>by <em>Marc-Antoine Perennou</em> on <strong>January  1, 2013</strong></p>
+        <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/systemd.html">systemd</a>, <a href="/tags/gnome.html">gnome</a>.</p>
+    </header>
+
+    <section>
+        <p>As we are supposed to take good resolutions for 2013, mine has been to switch from <code>gnome-session</code> to <a href="http://www.freedesktop.org/wiki/Software/systemd">systemd</a> for managing my user session. Here is how I replaced gnome-session with systemd.</p>
+<h2 id="how-did-it-come-to-my-mind">How did it come to my mind?</h2>
+<p>Since its beginning, systemd has been created for both system and session management. The default is obviously the system manager, aka <code>systemd --system</code>, but what less people know is that you also can run <code>systemd --user</code>.</p>
+<p>Since I’ve been using systemd as my init system for a while and have been quite happy with it, I often thought of trying a migration for my session. Recently, I started playing with my mails, first with <a href="http://fetchmail.berlios.de/">fetchmail</a> and <a href="http://www.procmail.org/">procmail</a>, and then with <a href="http://offlineimap.org/">offlineimap</a> (I’ll blog about this later). With offlineimap, I needed a way to fetch periodically my emails.</p>
+<p>I could have installed a cron system, but I don’t like installing such things to only use them for a single command. Since systemd handles natively cron jobs with its timers, I thought back to <code>systemd --session</code>.</p>
+<h2 id="one-problem-three-solutions-which-one-to-take">One problem, three solutions, which one to take?</h2>
+<p>The first solution was to run <code>systemd --session</code> as an autostart app for my session (e.g. writing a <code>.desktop</code> file for it and putting it in <code>/etc/xdg/autostart</code>: http://standards.freedesktop.org/autostart-spec/autostart-spec-latest.html.</p>
+<p>With this solution I would have ended up with a first session manager (gnome-session) launching a second one (systemd –user), and the latter would only have been used for offlineimap… Come on! We can do better.</p>
+<p>The second solution was to replace my X session with a new one, which would launch offlineimap on one side and gnome-session on the other, gnome-session taking care of all gnome-related stuff. This is way better! That’s the solution I adopted for a couple a hours and tries. I was pretty happy with it, but was still not convinced by the fact that two different software were managing my session at the same time. Here is my X session file: <a href="https://github.com/Keruspe/system-config/blob/master/data/systemd.desktop">https://github.com/Keruspe/system-config/blob/master/data/systemd.desktop</a>.</p>
+<p>Then comes the third solution, the one I’m currently running. Since my session was now directly managed by systemd, I decided to migrate everything launched by gnome-session to systemd services, in order to remove totally gnome-session. I found some helpful basis <a href="https://github.com/grawity/systemd-user-units/">here</a> and <a href="https://github.com/sofar/user-session-units">there</a>. I took some of them, modified them to fit my needs and wrote some myself, ending up with a nearly ready system.</p>
+<h2 id="last-problem-gnome-session-runtime-dependency">Last problem, gnome-session runtime dependency</h2>
+<p>Some of the <a href="http://www.gnome.org/">gnome</a> parts such as <a href="https://live.gnome.org/GnomeShell">gnome-shell</a> require gnome-session to be available at runtime, in order to synchronize a few informations across the session, such as the presence status or whether you want notifications to be displayed or ignored. This is all done via <a href="http://www.freedesktop.org/wiki/Software/dbus">DBus</a> but gnome-session does not use a helper to do so, it does it itself. Since we cannot get totally rid of gnome-session, I decided to create a dummy gnome session that gnome-session would launch.</p>
+<p>Next problem: gnome-session refuses to launch such a session… Yay! I thus patched it and <a href="https://bugzilla.gnome.org/show_bug.cgi?id=690866">opened a bug upstream</a> to allow it and provide the dummy session I created. With this patch applied locally, I could run <code>gnome-session --session=gnome-dummy</code> in my systemd service to get a session which does not launch anything. And then I realized that it was still starting autostart applications, which I did not want since I only wanted it for its DBus interface. Passing <code>-a /dev/null</code> as an extra arg to gnome-session so that it looks for autostart applications nowhere instead of in <code>/etx/xdg/autostart</code> did this last trick.</p>
+<p>My system user units are available there: <a href="https://github.com/Keruspe/system-config/tree/master/systemd/user">https://github.com/Keruspe/system-config/tree/master/systemd/user</a>.</p>
+    </section>
+</article>
+]]></description>
+    <pubDate>Tue, 01 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-01-01-systemd-as-a-session-manager.html</guid>
 </item>
 
     </channel> 
