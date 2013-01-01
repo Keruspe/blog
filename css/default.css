@@ -46,6 +46,15 @@ body>header a, body>header a:hover {
     margin-bottom: 0;
 }
 
+#index li {
+    list-style: square inside;
+    padding: 0.1em 0.5em;
+}
+
+#index li>a {
+    text-decoration: none;
+}
+
 article>header {
     margin-bottom: 1.5em;
     border-bottom: 1px solid;
