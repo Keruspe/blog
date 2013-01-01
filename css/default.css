@@ -41,7 +41,7 @@ body>header a, body>header a:hover {
     text-decoration: none;
 }
 
-.posts-list>h2 {
+.posts-list>h1, .posts-list>h2 {
     margin-top: 1em;
     margin-bottom: 0;
 }
