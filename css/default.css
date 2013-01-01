@@ -8,7 +8,7 @@ body {
 }
 
 a {
-    color: #4444EE;
+    color: #782725;
 }
 
 img {
@@ -52,7 +52,12 @@ body>header a, body>header a:hover {
 }
 
 #index li>a {
+    font-size: 1.1em;
     text-decoration: none;
+}
+
+#index li>em {
+    font-size: 0.9em;
 }
 
 article>header {
