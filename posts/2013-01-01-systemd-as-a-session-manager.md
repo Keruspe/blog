@@ -33,6 +33,7 @@ gnome-session on the other, gnome-session taking care of all gnome-related stuff
 solution I adopted for a couple a hours and tries. I was pretty happy with it, but was still not convinced by the fact
 that two different software were managing my session at the same time. Here is my X session file:
 [https://github.com/Keruspe/system-config/blob/master/data/systemd.desktop](https://github.com/Keruspe/system-config/blob/master/data/systemd.desktop).
+It has to be placed in `/usr/share/xsessions`.
 
 Then comes the third solution, the one I'm currently running. Since my session was now directly managed by systemd, I
 decided to migrate everything launched by gnome-session to systemd services, in order to remove totally gnome-session.
@@ -56,3 +57,4 @@ extra arg to gnome-session so that it looks for autostart applications nowhere i
 this last trick.
 
 My system user units are available there: [https://github.com/Keruspe/system-config/tree/master/systemd/user](https://github.com/Keruspe/system-config/tree/master/systemd/user).
+This folder corresponds to your `${HOME}/.config/systemd/user/`.
