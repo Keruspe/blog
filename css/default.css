@@ -41,6 +41,11 @@ body>header a, body>header a:hover {
     text-decoration: none;
 }
 
+#index>h2 {
+    margin-top: 1em;
+    margin-bottom: 0;
+}
+
 article>header {
     margin-bottom: 1.5em;
     border-bottom: 1px solid;
