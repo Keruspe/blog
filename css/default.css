@@ -41,22 +41,22 @@ body>header a, body>header a:hover {
     text-decoration: none;
 }
 
-#index>h2 {
+.posts-list>h2 {
     margin-top: 1em;
     margin-bottom: 0;
 }
 
-#index li {
+.posts-list li {
     list-style: square inside;
     padding: 0.1em 0.5em;
 }
 
-#index li>a {
+.posts-list li>a {
     font-size: 1.1em;
     text-decoration: none;
 }
 
-#index li>em {
+.posts-list li>em {
     font-size: 0.9em;
 }
 
