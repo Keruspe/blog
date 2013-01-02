@@ -23,7 +23,7 @@ Since systemd handles natively cron jobs with its timers, I thought back to `sys
 ## One problem, three solutions, which one to take?
 
 The first solution was to run `systemd --session` as an autostart app for my session (e.g. writing a `.desktop` file for
-it and putting it in `/etc/xdg/autostart`: http://standards.freedesktop.org/autostart-spec/autostart-spec-latest.html.
+it and putting it in `/etc/xdg/autostart`: [http://standards.freedesktop.org/autostart-spec/autostart-spec-latest.html](http://standards.freedesktop.org/autostart-spec/autostart-spec-latest.html).
 
 With this solution I would have ended up with a first session manager (gnome-session) launching a second one (systemd
 --user), and the latter would only have been used for offlineimap… Come on! We can do better.
