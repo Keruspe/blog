@@ -489,11 +489,11 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
     <guid>http://www.imagination-land.org/posts/2012-12-27-knowing-your-system---part-6---source-based-distributions-discovering-exherbo.html</guid>
 </item>
 <item>
-    <title>Systemd as a session manager</title>
+    <title>systemd as a session manager</title>
     <link>http://www.imagination-land.org/posts/2013-01-01-systemd-as-a-session-manager.html</link>
     <description><![CDATA[<article>
     <header>
-        <h1>Systemd as a session manager</h1>
+        <h1>systemd as a session manager</h1>
         <p>by <em>Marc-Antoine Perennou</em> on <strong>January  1, 2013</strong></p>
         <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/systemd.html">systemd</a>, <a href="/tags/gnome.html">gnome</a>.</p>
     </header>
