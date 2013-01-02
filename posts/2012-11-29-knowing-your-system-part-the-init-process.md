@@ -71,7 +71,7 @@ Runit can read and handle SysVInit runlevels through an external compatibility l
 it is intended to be run.
 
 Runit's goal is to be as small and light as possible, it does exactly what you ask it to, and nothing more. You end up
-with a system as small as possible, but you do not have to forget anything since it won't automatically do it for you.
+with a system as small as possible, but you must not forget anything since it won't automatically do it for you.
 
 ### Upstart
 
