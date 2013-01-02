@@ -1,5 +1,5 @@
 ---
-title: Systemd as a session manager
+title: systemd as a session manager
 author: Marc-Antoine Perennou
 tags: gnu, linux, sysadmin, systemd, gnome
 ---
