@@ -69,8 +69,8 @@
 <li>I upload my patch with <code>git pe HEAD~&amp;lt;number of commits&amp;gt; | wgetpaste -r -s poundpython</code> (I’ll explain this command later)</li>
 <li><p>I put a copy of my patch in my autopatch directory (which I’ll explain after):</p>
 <pre><code>mkdir -p /etc/paludis/autopatch/&amp;lt;repository&amp;gt;
-curl &amp;lt;patch url&amp;gt; &amp;gt; /etc/paludis.autopatch/&amp;lt;repository&amp;gt;/my.patch</code></pre></li>
-<li>I sync the repository so that the autopatch gets applied: <code>cave sync &amp;lt;repository&amp;gt;</code></li>
+curl &lt;patch url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</code></pre></li>
+<li>I sync the repository so that the autopatch gets applied: <code>cave sync &lt;repository&gt;</code></li>
 <li>I try my patch compiling the related packages</li>
 <li><p>If everything succeeds, I submit my patch, otherwise, I get back to step 2 to fix my patch</p></li>
 </ul>
