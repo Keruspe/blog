@@ -18,11 +18,11 @@ around.
 
 Zebrapig is exherbo's IRC patchbot. You can use three commands to interact with it:
 
-* !pq <patch url> ::<repository> => Use this to submit the patch available at the given URL (use `git format-patch --stdout -M -C -C -1 | wgetpaste -r`
+* !pq &lt;patch url&gt; ::&lt;repository&gt; =&gt; Use this to submit the patch available at the given URL (use `git format-patch --stdout -M -C -C -1 | wgetpaste -r`
   to get an URL for your git commit) to the repository you specified.
-* !pd <pattern> => Use this to mark all the patches matching the given pattern as done, useful when you want to
+* !pd &lt;pattern&gt; =&gt; Use this to mark all the patches matching the given pattern as done, useful when you want to
   resubmit an updated version of your patch.
-* pl <pattern> => Don't ever use it in the channel, only use it in a private query with zebrapig. It will list all
+* pl &lt;pattern&gt; =&gt; Don't ever use it in the channel, only use it in a private query with zebrapig. It will list all
   patches matching this pattern (which is optional).
 
 A special use-case is to submit your personal repository, you'll submit it as a patch, given its git URL and specifying
@@ -40,14 +40,14 @@ When I want to contribute to a repository, for a version bump or any bug fix, I 
 
 * If I do not have a copy of the repository locally I clone it, otherwise I pull new changes from upstream
 * I write my patch and commit it
-* I upload my patch with `git pe HEAD~<number of commits> | wgetpaste -r -s poundpython` (I'll explain this command
+* I upload my patch with `git pe HEAD~&lt;number of commits&gt; | wgetpaste -r -s poundpython` (I'll explain this command
   later)
 * I put a copy of my patch in my autopatch directory (which I'll explain after):
 
-        mkdir -p /etc/paludis/autopatch/<repository>
-        curl <patch url> > /etc/paludis.autopatch/<repository>/my.patch
+        mkdir -p /etc/paludis/autopatch/&lt;repository&gt;
+        curl &lt;patch url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch
 
-* I sync the repository so that the autopatch gets applied: `cave sync <repository>`
+* I sync the repository so that the autopatch gets applied: `cave sync &lt;repository&gt;`
 * I try my patch compiling the related packages
 * If everything succeeds, I submit my patch, otherwise, I get back to step 2 to fix my patch
 
@@ -56,7 +56,7 @@ and takes as an argument the commits to publish, `HEAD~3` means 3 commits for ex
 args for `wgetpaste` since gist.github.com which is the default fails quite often for me.
 
 The other interesting part of it is how I manage the autopatch system. I have [a paludis hook](https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/sync_post/local_update.bash)
-placed in `/etc/paludis/hooks/sync_post` which cause every patch located in `/etc/paludis/autopatch/<repository>/` to be
+placed in `/etc/paludis/hooks/sync_post` which cause every patch located in `/etc/paludis/autopatch/&lt;repository&gt;/` to be
 applied each time I sync the said repository.
 
 
