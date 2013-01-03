@@ -45,9 +45,9 @@ When I want to contribute to a repository, for a version bump or any bug fix, I 
 * I put a copy of my patch in my autopatch directory (which I'll explain after):
 
         mkdir -p /etc/paludis/autopatch/&lt;repository&gt;
-        curl &lt;patch url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch
+        curl <patch url> > /etc/paludis.autopatch/<repository>/my.patch
 
-* I sync the repository so that the autopatch gets applied: `cave sync &lt;repository&gt;`
+* I sync the repository so that the autopatch gets applied: `cave sync <repository>`
 * I try my patch compiling the related packages
 * If everything succeeds, I submit my patch, otherwise, I get back to step 2 to fix my patch
 
