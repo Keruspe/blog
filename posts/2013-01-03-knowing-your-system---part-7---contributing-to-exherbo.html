@@ -54,7 +54,7 @@
 <h2 id="using-zebrapig">Using zebrapig</h2>
 <p>Zebrapig is exherbo’s IRC patchbot. You can use three commands to interact with it:</p>
 <ul>
-<li>!pq &lt;patch url&gt; ::&lt;repository&gt; =&gt; Use this to submit the patch available at the given URL (use <code>git format-patch --stdout -M -C -C -1 | wgetpaste -r</code> to get an URL for your git commit) to the repository you specified.</li>
+<li>!pq &lt;patch_url&gt; ::&lt;repository&gt; =&gt; Use this to submit the patch available at the given URL (use <code>git format-patch --stdout -M -C -C -1 | wgetpaste -r</code> to get an URL for your git commit) to the repository you specified.</li>
 <li>!pd &lt;pattern&gt; =&gt; Use this to mark all the patches matching the given pattern as done, useful when you want to resubmit an updated version of your patch.</li>
 <li>pl &lt;pattern&gt; =&gt; Don’t ever use it in the channel, only use it in a private query with zebrapig. It will list all patches matching this pattern (which is optional).</li>
 </ul>
@@ -66,10 +66,10 @@
 <ul>
 <li>If I do not have a copy of the repository locally I clone it, otherwise I pull new changes from upstream</li>
 <li>I write my patch and commit it</li>
-<li>I upload my patch with <code>git pe HEAD~&amp;lt;number of commits&amp;gt; | wgetpaste -r -s poundpython</code> (I’ll explain this command later)</li>
+<li>I upload my patch with <code>git pe HEAD~&lt;number_of_commits&gt; | wgetpaste -r -s poundpython</code> (I’ll explain this command later)</li>
 <li><p>I put a copy of my patch in my autopatch directory (which I’ll explain after):</p>
 <pre><code>mkdir -p /etc/paludis/autopatch/&amp;lt;repository&amp;gt;
-curl &lt;patch url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</code></pre></li>
+curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</code></pre></li>
 <li>I sync the repository so that the autopatch gets applied: <code>cave sync &lt;repository&gt;</code></li>
 <li>I try my patch compiling the related packages</li>
 <li><p>If everything succeeds, I submit my patch, otherwise, I get back to step 2 to fix my patch</p></li>
