@@ -18,7 +18,7 @@ around.
 
 Zebrapig is exherbo's IRC patchbot. You can use three commands to interact with it:
 
-* !pq &lt;patch url&gt; ::&lt;repository&gt; =&gt; Use this to submit the patch available at the given URL (use `git format-patch --stdout -M -C -C -1 | wgetpaste -r`
+* !pq &lt;patch_url&gt; ::&lt;repository&gt; =&gt; Use this to submit the patch available at the given URL (use `git format-patch --stdout -M -C -C -1 | wgetpaste -r`
   to get an URL for your git commit) to the repository you specified.
 * !pd &lt;pattern&gt; =&gt; Use this to mark all the patches matching the given pattern as done, useful when you want to
   resubmit an updated version of your patch.
@@ -40,12 +40,12 @@ When I want to contribute to a repository, for a version bump or any bug fix, I 
 
 * If I do not have a copy of the repository locally I clone it, otherwise I pull new changes from upstream
 * I write my patch and commit it
-* I upload my patch with `git pe HEAD~&lt;number of commits&gt; | wgetpaste -r -s poundpython` (I'll explain this command
+* I upload my patch with `git pe HEAD~<number_of_commits> | wgetpaste -r -s poundpython` (I'll explain this command
   later)
 * I put a copy of my patch in my autopatch directory (which I'll explain after):
 
         mkdir -p /etc/paludis/autopatch/&lt;repository&gt;
-        curl <patch url> > /etc/paludis.autopatch/<repository>/my.patch
+        curl <patch_url> > /etc/paludis.autopatch/<repository>/my.patch
 
 * I sync the repository so that the autopatch gets applied: `cave sync <repository>`
 * I try my patch compiling the related packages
