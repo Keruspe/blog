@@ -32,7 +32,7 @@ main = hakyll $ do
             >>> arr (renderDateField "date" "%B %e, %Y" "Date unknown")
             >>> renderTagsField "prettytags" (fromCapture "tags/*")
             >>> applyTemplateCompiler "templates/post.html"
-            >>> (absoluteUrlsCompiler $ feedRoot feedConfiguration)
+            >>> (externalizeUrlsCompiler $ feedRoot feedConfiguration)
             >>> (arr $ copyBodyToField "description")
             >>> applyTemplateCompiler "templates/posts-js.html"
             >>> applyTemplateCompiler "templates/default.html"
@@ -112,14 +112,14 @@ feedConfiguration = FeedConfiguration
     , feedRoot        = "http://www.imagination-land.org"
     }
 
-absoluteUrlsCompiler :: String -> Compiler (Page String) (Page String)
-absoluteUrlsCompiler root = getRoute &&& id >>^ uncurry absolute
+externalizeUrlsCompiler :: String -> Compiler (Page String) (Page String)
+externalizeUrlsCompiler root = getRoute &&& id >>^ uncurry externalize
   where
-    absolute _ = fmap (absoluteUrls root)
+    externalize _ = fmap (externalizeUrls root)
 
-absoluteUrls :: String  -- ^ Path to the site root
-             -> String  -- ^ HTML to relativize
-             -> String  -- ^ Resulting HTML
-absoluteUrls root = withUrls abs
+externalizeUrls :: String  -- ^ Path to the site root
+                -> String  -- ^ HTML to relativize
+                -> String  -- ^ Resulting HTML
+externalizeUrls root = withUrls abs
   where
     abs x = if isExternal x then x else root ++ x
