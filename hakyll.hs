@@ -116,9 +116,7 @@ feedConfiguration = FeedConfiguration
     }
 
 externalizeUrlsCompiler :: String -> Compiler (Page String) (Page String)
-externalizeUrlsCompiler root = getRoute &&& id >>^ uncurry externalize
-  where
-    externalize _ = fmap (externalizeUrls root)
+externalizeUrlsCompiler root = arr $ fmap (externalizeUrls root)
 
 externalizeUrls :: String  -- ^ Path to the site root
                 -> String  -- ^ HTML to externalize
@@ -128,9 +126,7 @@ externalizeUrls root = withUrls ext
     ext x = if isExternal x then x else root ++ x
 
 unExternalizeUrlsCompiler :: String -> Compiler (Page String) (Page String)
-unExternalizeUrlsCompiler root = getRoute &&& id >>^ uncurry unExternalize
-  where
-    unExternalize _ = fmap (unExternalizeUrls root)
+unExternalizeUrlsCompiler root = arr $ fmap (unExternalizeUrls root)
 
 unExternalizeUrls :: String  -- ^ Path to the site root
                   -> String  -- ^ HTML to unExternalize
