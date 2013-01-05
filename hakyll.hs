@@ -33,7 +33,7 @@ main = hakyll $ do
             >>> renderTagsField "prettytags" (fromCapture "tags/*")
             >>> applyTemplateCompiler "templates/post.html"
             >>> (arr $ copyBodyToField "description")
-            >>> applyTemplateCompiler "templates/disqus.html"
+            >>> applyTemplateCompiler "templates/posts-js.html"
             >>> applyTemplateCompiler "templates/default.html"
             >>> relativizeUrlsCompiler
 
