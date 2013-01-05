@@ -2,7 +2,7 @@
 module Main where
 
 import Prelude hiding (id)
-import Control.Arrow ((>>>), (***), arr)
+import Control.Arrow ((&&&), (>>^), (>>>), (***), arr)
 import Control.Category (id)
 import Data.Monoid (mempty, mconcat)
 
@@ -32,6 +32,7 @@ main = hakyll $ do
             >>> arr (renderDateField "date" "%B %e, %Y" "Date unknown")
             >>> renderTagsField "prettytags" (fromCapture "tags/*")
             >>> applyTemplateCompiler "templates/post.html"
+            >>> (absoluteUrlsCompiler $ feedRoot feedConfiguration)
             >>> (arr $ copyBodyToField "description")
             >>> applyTemplateCompiler "templates/posts-js.html"
             >>> applyTemplateCompiler "templates/default.html"
@@ -110,3 +111,15 @@ feedConfiguration = FeedConfiguration
     , feedAuthorEmail = "Marc-Antoine@Perennou.com"
     , feedRoot        = "http://www.imagination-land.org"
     }
+
+absoluteUrlsCompiler :: String -> Compiler (Page String) (Page String)
+absoluteUrlsCompiler root = getRoute &&& id >>^ uncurry absolute
+  where
+    absolute _ = fmap (absoluteUrls root)
+
+absoluteUrls :: String  -- ^ Path to the site root
+             -> String  -- ^ HTML to relativize
+             -> String  -- ^ Resulting HTML
+absoluteUrls root = withUrls abs
+  where
+    abs x = if isExternal x then x else root ++ x
