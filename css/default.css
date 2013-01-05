@@ -15,25 +15,23 @@ img {
     border-width: 0;
 }
 
-body>header hgroup {
+body>header>hgroup {
     font-family: 'Arvo', serif;
-    padding: 1em;
+    font-size: 1.6em;
+    padding: 0.625em;
 }
 
-body>header h1 {
-    font-size: 2.2em;
+body>header>hgroup>h1 {
+    padding-right: 1em;
+    font-size: 1.375em;
     display: inline;
 }
 
-body>header h2 {
-    font-size: 1.6em;
+body>header>hgroup>h2 {
+    padding-left: 1em;
+    font-size: 1em;
     font-weight: normal;
     display: inline;
-}
-
-body>header span {
-    font-size: 1.6em;
-    padding: 1em;
 }
 
 body>header a, body>header a:hover {
