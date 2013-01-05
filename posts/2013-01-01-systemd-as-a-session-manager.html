@@ -34,7 +34,7 @@
         <header>
             <hgroup>
                 <h1><a href="../">Keruspe's blag</a></h1>
-                <span>-</span>
+                -
                 <h2>Various free software hacking stuff</h2>
             </hgroup>
         </header>
@@ -50,14 +50,14 @@
         </nav>
         <section>
             <article>
-    <header>
-        <h1>systemd as a session manager</h1>
-        <p>by <em>Marc-Antoine Perennou</em> on <strong>January  1, 2013</strong></p>
-        <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/systemd.html">systemd</a>, <a href="../tags/gnome.html">gnome</a>.</p>
-    </header>
+                <header>
+                    <h1>systemd as a session manager</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January  1, 2013</strong></p>
+                    <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/systemd.html">systemd</a>, <a href="../tags/gnome.html">gnome</a>.</p>
+                </header>
 
-    <section>
-        <p>As we are supposed to take good resolutions for 2013, mine has been to switch from <code>gnome-session</code> to <a href="http://www.freedesktop.org/wiki/Software/systemd">systemd</a> for managing my user session. Here is how I replaced gnome-session with systemd.</p>
+                <section>
+<p>As we are supposed to take good resolutions for 2013, mine has been to switch from <code>gnome-session</code> to <a href="http://www.freedesktop.org/wiki/Software/systemd">systemd</a> for managing my user session. Here is how I replaced gnome-session with systemd.</p>
 <h2 id="how-did-it-come-to-my-mind">How did it come to my mind?</h2>
 <p>Since its beginning, systemd has been created for both system and session management. The default is obviously the system manager, aka <code>systemd --system</code>, but what less people know is that you also can run <code>systemd --user</code>.</p>
 <p>Since I’ve been using systemd as my init system for a while and have been quite happy with it, I often thought of trying a migration for my session. Recently, I started playing with my mails, first with <a href="http://fetchmail.berlios.de/">fetchmail</a> and <a href="http://www.procmail.org/">procmail</a>, and then with <a href="http://offlineimap.org/">offlineimap</a> (I’ll blog about this later). With offlineimap, I needed a way to fetch periodically my emails.</p>
@@ -71,14 +71,14 @@
 <p>Some of the <a href="http://www.gnome.org/">gnome</a> parts such as <a href="https://live.gnome.org/GnomeShell">gnome-shell</a> require gnome-session to be available at runtime, in order to synchronize a few informations across the session, such as the presence status or whether you want notifications to be displayed or ignored. This is all done via <a href="http://www.freedesktop.org/wiki/Software/dbus">DBus</a> but gnome-session does not use a helper to do so, it does it itself. Since we cannot get totally rid of gnome-session, I decided to create a dummy gnome session that gnome-session would launch.</p>
 <p>Next problem: gnome-session refuses to launch such a session… Yay! I thus patched it and <a href="https://bugzilla.gnome.org/show_bug.cgi?id=690866">opened a bug upstream</a> to allow it and provide the dummy session I created. With this patch applied locally, I could run <code>gnome-session --session=gnome-dummy</code> in my systemd service to get a session which does not launch anything. And then I realized that it was still starting autostart applications, which I did not want since I only wanted it for its DBus interface. Passing <code>-a /dev/null</code> as an extra arg to gnome-session so that it looks for autostart applications nowhere instead of in <code>/etx/xdg/autostart</code> did this last trick.</p>
 <p>My system user units are available there: <a href="https://github.com/Keruspe/system-config/tree/master/systemd/user">https://github.com/Keruspe/system-config/tree/master/systemd/user</a>. This folder corresponds to your <code>${HOME}/.config/systemd/user/</code>.</p>
-    </section>
-</article>
+                </section>
+            </article>
 
-<section class="social">
-    <!--<div class="g-plusone" data-align="right"></div>-->
-    <div id="disqus_thread"></div>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
+            <section class="social">
+                <!--<div class="g-plusone" data-align="right"></div>-->
+                <div id="disqus_thread"></div>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </section>
 
         </section>
         <footer>

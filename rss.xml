@@ -10,15 +10,15 @@
         <item>
     <title>Home sweet home</title>
     <link>http://www.imagination-land.org/posts/2012-11-21-home-sweet-home.html</link>
-    <description><![CDATA[<article>
-    <header>
-        <h1>Home sweet home</h1>
-        <p>by <em>Marc-Antoine Perennou</em> on <strong>November 21, 2012</strong></p>
-        <p>Tagged as: <a href="/tags/misc.html">misc</a>.</p>
-    </header>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Home sweet home</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>November 21, 2012</strong></p>
+                    <p>Tagged as: <a href="/tags/misc.html">misc</a>.</p>
+                </header>
 
-    <section>
-        <h2 id="welcome">Welcome</h2>
+                <section>
+<h2 id="welcome">Welcome</h2>
 <p>It has been a long time since I first wanted to get a blog.</p>
 <p>I’ll mostly speak here about free software and stuff I like to hack, from sysadmin to development and debugging. I write code mostly in Java for my job, but my language of choice is the C for my personal projects. This is why this blog is written in haskell.</p>
 <p>Just to be clear, what I mean by sysadmin is not</p>
@@ -28,8 +28,8 @@
 <p>This blog is powered by <a href="http://jaspervdj.be/hakyll/index.html">Hakyll</a>.</p>
 <p>It was written by <a href="https://clementd.cleverapps.io/posts/2012-10-21-blog-deployment-system.html">Clément Delafargue</a> and I shamelessly stole it from him.</p>
 <p>This blog is available as <a href="http://github.com/Keruspe/blog">a git repository</a> and hosted on <a href="http://clever-cloud.com">The Clever Cloud</a> which is the company I work for.</p>
-    </section>
-</article>
+                </section>
+            </article>
 ]]></description>
     <pubDate>Wed, 21 Nov 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-11-21-home-sweet-home.html</guid>
@@ -37,15 +37,15 @@
 <item>
     <title>Knowing your system - Part 1 - Basis on UNIX-like systems</title>
     <link>http://www.imagination-land.org/posts/2012-11-22-knowing-your-system-part-basics-on-unixlike-systems.html</link>
-    <description><![CDATA[<article>
-    <header>
-        <h1>Knowing your system - Part 1 - Basis on UNIX-like systems</h1>
-        <p>by <em>Marc-Antoine Perennou</em> on <strong>November 22, 2012</strong></p>
-        <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/unix.html">unix</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/knowingyoursystem.html">knowingyoursystem</a>.</p>
-    </header>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 1 - Basis on UNIX-like systems</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>November 22, 2012</strong></p>
+                    <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/unix.html">unix</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/knowingyoursystem.html">knowingyoursystem</a>.</p>
+                </header>
 
-    <section>
-        <p>Before starting to blog about more technical stuff, I’d like to recall a few basis about UNIX-like systems.</p>
+                <section>
+<p>Before starting to blog about more technical stuff, I’d like to recall a few basis about UNIX-like systems.</p>
 <p>I use a GNU/Linux based distribution most of the time, so I’ll speak about this kind of system, but most of it is true for any UNIX-like system such as the BSDs and Mac OS X.</p>
 <h2 id="what-is-gnulinux">What is GNU/Linux ?</h2>
 <p>First of all, let’s make things clear: I’m talking about “GNU/Linux”, not Linux. What is the difference? Linux is “only” a kernel, the heart of your system. Linux is the piece of your OS which will provide you several interfaces to interact with the hardware and to manage your processes. GNU is a set of libraries (a set of utilities for a developer) and tools such as the well known glibc, gcc, tar and sed. GNU is used most of the time on top of Linux, but can be used on top of other kernels, like Debian shown us with <a href="http://www.debian.org/ports/kfreebsd-gnu/">its GNU/kFreeBSD version</a>.</p>
@@ -101,8 +101,8 @@
 <li>Extra configuration for your kernel.</li>
 </ul>
 <p>When your kernel has successfully initialized everything, it then gives the power to a root process, commonly called “init”, which goal is to track all the other processes that you and your system will run. The init process will then reach a few breakpoints (which can be called runlevels, or targets). To each of these breakpoints correspond a list of process that must be started. This is how all the root components of your system are started in the right order. One of the last things to start is the graphical interface.</p>
-    </section>
-</article>
+                </section>
+            </article>
 ]]></description>
     <pubDate>Thu, 22 Nov 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-11-22-knowing-your-system-part-basics-on-unixlike-systems.html</guid>
@@ -110,15 +110,15 @@
 <item>
     <title>Knowing your system - Part 2 - The init process</title>
     <link>http://www.imagination-land.org/posts/2012-11-29-knowing-your-system-part-the-init-process.html</link>
-    <description><![CDATA[<article>
-    <header>
-        <h1>Knowing your system - Part 2 - The init process</h1>
-        <p>by <em>Marc-Antoine Perennou</em> on <strong>November 29, 2012</strong></p>
-        <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/unix.html">unix</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="/tags/systemd.html">systemd</a>.</p>
-    </header>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 2 - The init process</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>November 29, 2012</strong></p>
+                    <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/unix.html">unix</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="/tags/systemd.html">systemd</a>.</p>
+                </header>
 
-    <section>
-        <p><a href="http://www.imagination-land.org/posts/2012-11-22-knowing-your-system-part-basics-on-unixlike-systems.html">As we last saw</a>, when we start an UNIX-like system, the kernel gives the hand to a main process called “init”. We’ll now see how it works.</p>
+                <section>
+<p><a href="http://www.imagination-land.org/posts/2012-11-22-knowing-your-system-part-basics-on-unixlike-systems.html">As we last saw</a>, when we start an UNIX-like system, the kernel gives the hand to a main process called “init”. We’ll now see how it works.</p>
 <h2 id="the-goal-of-the-init-process">The goal of the init process</h2>
 <p>The init process is the most important software running on your system. Its goal is to start everything up in order for your system to work properly. It will manage everything, report errors (and maybe act regarding them) and supervise everything. When a process gets orphaned (because its father process, the one which started it, exits or dies), init will automatically become its father process.</p>
 <p>The init process allows you to get a trace of what your processes are doing, where they do come from, and whether they’re in a decent or zombie state.</p>
@@ -160,8 +160,8 @@
 <p>systemd is a real source of conflict between people against it and people in favor of it. The main argument of people which are against it is that it does too many things, it’s too complex and ships too many functionalities. I think this is a fake problem, since most of the functionalities are optional (and thus can be disabled), and everything is split into several binaries (systemd doesn’t do all this stuff itself but calls tools that it ships to do so). It is fully modular, and not modular like its “opponents”.</p>
 <p>One of the interesting tools provided by systemd is the “journal”. The journal is basically a logging utility directly integrated in the init process (well, it actually only communicates with it, it’s not <em>really</em> in it). This allows you to get rid of an external logging utility such as syslog-ng or rsyslog. You can browse all the logs with the “journalctl” command which allows you to apply a lot of filters on them.</p>
 <p>A really interesting serie of blog posts by Lennart Poettering (systemd’s lead developer) is available <a href="http://www.freedesktop.org/wiki/Software/systemd">here</a>.</p>
-    </section>
-</article>
+                </section>
+            </article>
 ]]></description>
     <pubDate>Thu, 29 Nov 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-11-29-knowing-your-system-part-the-init-process.html</guid>
@@ -169,15 +169,15 @@
 <item>
     <title>GPaste 2.9.1 released</title>
     <link>http://www.imagination-land.org/posts/2012-12-01-gpaste-released.html</link>
-    <description><![CDATA[<article>
-    <header>
-        <h1>GPaste 2.9.1 released</h1>
-        <p>by <em>Marc-Antoine Perennou</em> on <strong>December  1, 2012</strong></p>
-        <p>Tagged as: <a href="/tags/GPaste.html">GPaste</a>, <a href="/tags/release.html">release</a>, <a href="/tags/clipboard.html">clipboard</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/gnome.html">gnome</a>.</p>
-    </header>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 2.9.1 released</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December  1, 2012</strong></p>
+                    <p>Tagged as: <a href="/tags/GPaste.html">GPaste</a>, <a href="/tags/release.html">release</a>, <a href="/tags/clipboard.html">clipboard</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/gnome.html">gnome</a>.</p>
+                </header>
 
-    <section>
-        <p>It’s available <a href="https://github.com/Keruspe/GPaste/downloads">there</a>, get it while it’s hot!</p>
+                <section>
+<p>It’s available <a href="https://github.com/Keruspe/GPaste/downloads">there</a>, get it while it’s hot!</p>
 <h2 id="whats-new">What’s new?</h2>
 <ul>
 <li>Fix memory leak when handling images</li>
@@ -212,8 +212,8 @@
 </ul>
 <p>All development takes place on <a href="https://github.com/">github</a>, so feel free to contribute and to test it!</p>
 <p>GPaste is packaged by myself for the <a href="http://exherbo.org/">exherbo</a> GNU/Linux distribution and by other people for ubuntu, fedora, debian, archlinux and frugalware, at least.</p>
-    </section>
-</article>
+                </section>
+            </article>
 ]]></description>
     <pubDate>Sat, 01 Dec 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-12-01-gpaste-released.html</guid>
@@ -221,15 +221,15 @@
 <item>
     <title>Facron - fanotify cron system</title>
     <link>http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html</link>
-    <description><![CDATA[<article>
-    <header>
-        <h1>Facron - fanotify cron system</h1>
-        <p>by <em>Marc-Antoine Perennou</em> on <strong>December  4, 2012</strong></p>
-        <p>Tagged as: <a href="/tags/facron.html">facron</a>, <a href="/tags/fanotify.html">fanotify</a>, <a href="/tags/cron.html">cron</a>, <a href="/tags/sysadmin.html">sysadmin</a>.</p>
-    </header>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Facron - fanotify cron system</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December  4, 2012</strong></p>
+                    <p>Tagged as: <a href="/tags/facron.html">facron</a>, <a href="/tags/fanotify.html">fanotify</a>, <a href="/tags/cron.html">cron</a>, <a href="/tags/sysadmin.html">sysadmin</a>.</p>
+                </header>
 
-    <section>
-        <p>It’s available on github: <a href="https://github.com/Keruspe/facron">https://github.com/Keruspe/facron</a></p>
+                <section>
+<p>It’s available on github: <a href="https://github.com/Keruspe/facron">https://github.com/Keruspe/facron</a></p>
 <h2 id="the-filesystem-cron-principle">The filesystem cron principle</h2>
 <p>At <a href="http://www.clever-cloud.com">Clever Cloud</a>, we often have to manage stuff based on filesystem events. In order to react dynamically, we will sometimes have to reload some specific configurations when the config file has changed, or we’ll want to wrap some files which just appeared to grab them in the global flow.</p>
 <p>Filesystem crons allow you to do this kind of things. What you have to do is specify the files you want to monitor with the events you want to react to and the action you want to proceed when those events occur.</p>
@@ -263,8 +263,8 @@
 <p>A systemd service file and a release tarball will be provided soon.</p>
 <p>You can reload the configuration at any time by sending a <code>SIGUSR1</code> to facron:</p>
 <pre><code>kill -USR1 $(pidof facron)</code></pre>
-    </section>
-</article>
+                </section>
+            </article>
 ]]></description>
     <pubDate>Tue, 04 Dec 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html</guid>
@@ -272,15 +272,15 @@
 <item>
     <title>Facron 0.9 released</title>
     <link>http://www.imagination-land.org/posts/2012-12-07-facron-released.html</link>
-    <description><![CDATA[<article>
-    <header>
-        <h1>Facron 0.9 released</h1>
-        <p>by <em>Marc-Antoine Perennou</em> on <strong>December  7, 2012</strong></p>
-        <p>Tagged as: <a href="/tags/facron.html">facron</a>, <a href="/tags/fanotify.html">fanotify</a>, <a href="/tags/cron.html">cron</a>, <a href="/tags/sysadmin.html">sysadmin</a>.</p>
-    </header>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Facron 0.9 released</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December  7, 2012</strong></p>
+                    <p>Tagged as: <a href="/tags/facron.html">facron</a>, <a href="/tags/fanotify.html">fanotify</a>, <a href="/tags/cron.html">cron</a>, <a href="/tags/sysadmin.html">sysadmin</a>.</p>
+                </header>
 
-    <section>
-        <p>Usually, every Thursday I publish another post in <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">my “Knowing your system” saga</a>, but this week I was busy <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">working on facron</a>. I plan to publish the part three on next Monday, it will be about source-based GNU/Linux distributions.</p>
+                <section>
+<p>Usually, every Thursday I publish another post in <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">my “Knowing your system” saga</a>, but this week I was busy <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">working on facron</a>. I plan to publish the part three on next Monday, it will be about source-based GNU/Linux distributions.</p>
 <h2 id="whats-in-this-release">What’s in this release?</h2>
 <p>Since <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">last time I wrote about it</a>, a few things have changed: the code is more robust and much more cleaner, and several improvements have been made:</p>
 <ul>
@@ -311,8 +311,8 @@ sudo make install</code></pre>
 <p>Or for non-systemd systems</p>
 <pre><code>sudo kill -USR1 $(pidof facron)</code></pre>
 <p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute !</p>
-    </section>
-</article>
+                </section>
+            </article>
 ]]></description>
     <pubDate>Fri, 07 Dec 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-12-07-facron-released.html</guid>
@@ -320,15 +320,15 @@ sudo make install</code></pre>
 <item>
     <title>Knowing your system - Part 3 - Source-based distributions: The Gentoo example</title>
     <link>http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html</link>
-    <description><![CDATA[<article>
-    <header>
-        <h1>Knowing your system - Part 3 - Source-based distributions: The Gentoo example</h1>
-        <p>by <em>Marc-Antoine Perennou</em> on <strong>December 10, 2012</strong></p>
-        <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/unix.html">unix</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="/tags/source-based.html">source-based</a>.</p>
-    </header>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 3 - Source-based distributions: The Gentoo example</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December 10, 2012</strong></p>
+                    <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/unix.html">unix</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="/tags/source-based.html">source-based</a>.</p>
+                </header>
 
-    <section>
-        <p>After <a href="http://www.imagination-land.org/posts/2012-11-22-knowing-your-system-part-basics-on-unixlike-systems.html">a little reminder on UNIX-like systems</a> and <a href="http://www.imagination-land.org/posts/2012-11-29-knowing-your-system-part-the-init-process.html">a quick view to the init process</a>, we’ll now see the kind of distributions which I really love, where you really control everything.</p>
+                <section>
+<p>After <a href="http://www.imagination-land.org/posts/2012-11-22-knowing-your-system-part-basics-on-unixlike-systems.html">a little reminder on UNIX-like systems</a> and <a href="http://www.imagination-land.org/posts/2012-11-29-knowing-your-system-part-the-init-process.html">a quick view to the init process</a>, we’ll now see the kind of distributions which I really love, where you really control everything.</p>
 <h2 id="what-is-a-source-based-gnulinux-distribution">What is a source-based GNU/Linux distribution?</h2>
 <p>The principle may be a bit scary, but is actually simple.</p>
 <p>In most distributions (called binary distributions), software are packaged to be “ready to use”, all configured by the distribution maintainers, and you then get a list of available packages that you can install. When you ask for a package to be installed, it will download the software and its dependencies and install everything.</p>
@@ -343,8 +343,8 @@ sudo make install</code></pre>
 <p>I was a student at this time, and my class-mate (and now colleague) <a href="http://blog.kdecherf.com/">Kevin Decherf</a> told me he was using <a href="http://www.gentoo.org/">Gentoo</a>. on his server. I immediately asked him if he agreed to plan an Install Party the week just after that. During this session, I installed a minimal system, discovering the distribution. At the end of the day, it was barely booting to an xterm.</p>
 <p>I wanted to really explore my distribution to understand exactly how everything works, so I started “playing” with it, modifying packages, checking how things reacted. I broke my system and reinstalled it 5 times in 3 weeks, playing harder and harder, until I knew how to make my system work again after a wanted major breakage.</p>
 <p>You really should try source-based distributions, to really get how things work. It can take a few months to understand them if you just play a little with them on an irregular basis, but it’s really worth it. Gentoo was my choice since it’s the most popular source-based distribution, and the only one I heard of at this time. It’s quite good, but you’ll see in my next post that I didn’t really like its default package manager, and I no longer use Gentoo.</p>
-    </section>
-</article>
+                </section>
+            </article>
 ]]></description>
     <pubDate>Mon, 10 Dec 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html</guid>
@@ -352,15 +352,15 @@ sudo make install</code></pre>
 <item>
     <title>Knowing your system - Part 4 - Falling in love with paludis</title>
     <link>http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html</link>
-    <description><![CDATA[<article>
-    <header>
-        <h1>Knowing your system - Part 4 - Falling in love with paludis</h1>
-        <p>by <em>Marc-Antoine Perennou</em> on <strong>December 13, 2012</strong></p>
-        <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/unix.html">unix</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="/tags/source-based.html">source-based</a>, <a href="/tags/paludis.html">paludis</a>.</p>
-    </header>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 4 - Falling in love with paludis</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December 13, 2012</strong></p>
+                    <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/unix.html">unix</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="/tags/source-based.html">source-based</a>, <a href="/tags/paludis.html">paludis</a>.</p>
+                </header>
 
-    <section>
-        <h2 id="installing-a-source-based-gnulinux-distribution">Installing a source-based GNU/Linux distribution</h2>
+                <section>
+<h2 id="installing-a-source-based-gnulinux-distribution">Installing a source-based GNU/Linux distribution</h2>
 <p><a href="http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html">As we last saw</a>, I’m really fond of source-based distributions. Beyond the administration and the management of an installed system, you also have to install it in the first place. Because of the fact that you have to compile absolutely everything in your system, it may be really scary to install one.</p>
 <p>I formerly told you to keep in mind that your system is fully usable whilst you’re upgrading it…</p>
 <p>When you install a source-based distribution, it’s not using a shiny interface and clicking repeatedly on the “next” button. You have to use a “bootstrap” system, which can be a livecd such as the awesome <a href="http://www.sysresccd.org/">sysrescuecd</a>, but you also can decide to first install a binary distribution like <a href="http://fedoraproject.org/">Fedora</a> or <a href="http://www.ubuntu.com/">Ubuntu</a> (you may probably already have one, so you obviously can use it).</p>
@@ -395,8 +395,8 @@ sudo make install</code></pre>
 <pre><code>cave sync
 cave resolve world -c -km -Km -Cs</code></pre>
 <p>It syncs repositories with upstream to get latest versions of the packages, and then resolve <code>world</code> which is the set containing all the packages you have installed, with a complete dependency tree, as deep as it can, with <code>-c</code> aka <code>--complete</code> and reinstalling all packages for which metadata have changed because of <code>-km -Km</code> aka <code>--keep if-same-metadata --keep-targets if-same-metadata</code>. If a failure occurs, it continues to build the rest while the dependencies still are satisfied thanks to <code>-Cs</code> aka <code>--continue-on-failure if-satisfied</code>. I then run this last command again with <code>-x</code> aka <code>--execute</code> to apply the available updates.</p>
-    </section>
-</article>
+                </section>
+            </article>
 ]]></description>
     <pubDate>Thu, 13 Dec 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html</guid>
@@ -404,15 +404,15 @@ cave resolve world -c -km -Km -Cs</code></pre>
 <item>
     <title>Knowing your system - Part 5 - Source-based distributions: the binary way</title>
     <link>http://www.imagination-land.org/posts/2012-12-20-knowing-your-system---part-5---source-based-distributions:-the-binary-way.html</link>
-    <description><![CDATA[<article>
-    <header>
-        <h1>Knowing your system - Part 5 - Source-based distributions: the binary way</h1>
-        <p>by <em>Marc-Antoine Perennou</em> on <strong>December 20, 2012</strong></p>
-        <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/unix.html">unix</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="/tags/source-based.html">source-based</a>, <a href="/tags/paludis.html">paludis</a>.</p>
-    </header>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 5 - Source-based distributions: the binary way</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December 20, 2012</strong></p>
+                    <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/unix.html">unix</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="/tags/source-based.html">source-based</a>, <a href="/tags/paludis.html">paludis</a>.</p>
+                </header>
 
-    <section>
-        <p><a href="http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html">We last saw</a> the <a href="http://paludis.exherbo.org/">paludis</a> tool. Now, we’ll take a look at how we can handle a source-based distribution using paludis for large pools of servers.</p>
+                <section>
+<p><a href="http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html">We last saw</a> the <a href="http://paludis.exherbo.org/">paludis</a> tool. Now, we’ll take a look at how we can handle a source-based distribution using paludis for large pools of servers.</p>
 <h2 id="source-based-distributions-for-huge-server-pools">Source-based distributions for huge server pools</h2>
 <p>At <a href="http://www.clever-cloud.com/">Clever Cloud</a>, we decided to use a source-based GNU/Linux distribution called <a href="http://www.exherbo.org/">exherbo</a>, which I’ll blog about next week, because of its strictness and flexibility. Since we have to manage hundreds of servers and virtual machines, it would have been a big overload in energy consumption and in time invested if we managed it the “conventional” way. Indeed, compiling everything on the hypervisors could cause instabilities because of the CPUs being monopolised by the compilation process, leaving no power to virtual machines. The virtual machines would have the same problem, and for much longer, since you do not have the same power in a virtual machine than in an hypervisor, so compilations last longer.</p>
 <p>This is why we decided to manage everything using binary packages. Wait… What? Binary packages in a source-based distribution? How?!</p>
@@ -448,8 +448,8 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <pre><code>cave resolve -x --make binaries --make-dependencies all &lt;insert a package name here&gt;</code></pre>
 <p>It will create packages for all the dependencies, installing it afterwards, and finish by making the package for the software you asked.</p>
 <p>Don’t forget to push all changes on your git server!</p>
-    </section>
-</article>
+                </section>
+            </article>
 ]]></description>
     <pubDate>Thu, 20 Dec 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-12-20-knowing-your-system---part-5---source-based-distributions:-the-binary-way.html</guid>
@@ -457,15 +457,15 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <item>
     <title>Knowing your system - Part 6 - Source-based distributions: Discovering Exherbo</title>
     <link>http://www.imagination-land.org/posts/2012-12-27-knowing-your-system---part-6---source-based-distributions-discovering-exherbo.html</link>
-    <description><![CDATA[<article>
-    <header>
-        <h1>Knowing your system - Part 6 - Source-based distributions: Discovering Exherbo</h1>
-        <p>by <em>Marc-Antoine Perennou</em> on <strong>December 27, 2012</strong></p>
-        <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/unix.html">unix</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="/tags/source-based.html">source-based</a>, <a href="/tags/exherbo.html">exherbo</a>.</p>
-    </header>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 6 - Source-based distributions: Discovering Exherbo</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December 27, 2012</strong></p>
+                    <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/unix.html">unix</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="/tags/source-based.html">source-based</a>, <a href="/tags/exherbo.html">exherbo</a>.</p>
+                </header>
 
-    <section>
-        <h2 id="the-limits-of-gentoo">The limits of Gentoo</h2>
+                <section>
+<h2 id="the-limits-of-gentoo">The limits of Gentoo</h2>
 <p>As I said <a href="http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html">in part 3</a> of the <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowing your system</a> saga, I really started to dig into my system when I used <a href="http://www.gentoo.org/">Gentoo</a>. I quickly spotted the limits of portage, its default package manager <a href="http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html">and switched to paludis</a>. It really is easy to mess up your python installation, especially when you’re not a python developer and you don’t care about it. Of course there are tools to help you, such as <code>python-updater</code>, but it won’t be of great help if you’re not in a basic “breakage because of python update” case. Because of portage being written in python, you end up with an unmaintainable system which is painful.</p>
 <p>A pretty good example of this is when I tried install Gentoo on my Playstation 3. At this time, the powerpc stage was kinda old. During the base system installation and update, you ended with the linux headers version being incompatible with your python installation, and portage was unusable. After 3 attempts without success, I tired once starting by installing paludis, and then doing everything with it. It worked like a charm.</p>
 <p>Portage is not the only limitation of Gentoo. Its workflow is kinda insane. First of all, Gentoo aims to get every piece of software packaged in a same repository, external overlays being there only for testing purpose before merging. You end up with tons of packages being available on your machine, 95% of them won’t ever interest you. You could say it’s cool to get everything available without needing internet access to retrieve them, but you’ll still have to download the source tarballs so it’s pointless, it just make dependencies resolution slower.</p>
@@ -482,8 +482,8 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <p>One more thing: exherbo policy is to be as vanilla as possible. Every patch used in packages must contain the upstream status of it, since they all have to be submitted. We want to maintain as few patches as possible.</p>
 <p><a href="https://github.com/Keruspe/Keruspe-exhereses">My exherbo repository</a></p>
 <p><a href="https://github.com/CleverCloud/CleverCloud-exheres">Clever Cloud exherbo repository</a></p>
-    </section>
-</article>
+                </section>
+            </article>
 ]]></description>
     <pubDate>Thu, 27 Dec 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-12-27-knowing-your-system---part-6---source-based-distributions-discovering-exherbo.html</guid>
@@ -491,15 +491,15 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <item>
     <title>systemd as a session manager</title>
     <link>http://www.imagination-land.org/posts/2013-01-01-systemd-as-a-session-manager.html</link>
-    <description><![CDATA[<article>
-    <header>
-        <h1>systemd as a session manager</h1>
-        <p>by <em>Marc-Antoine Perennou</em> on <strong>January  1, 2013</strong></p>
-        <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/systemd.html">systemd</a>, <a href="/tags/gnome.html">gnome</a>.</p>
-    </header>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>systemd as a session manager</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January  1, 2013</strong></p>
+                    <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/systemd.html">systemd</a>, <a href="/tags/gnome.html">gnome</a>.</p>
+                </header>
 
-    <section>
-        <p>As we are supposed to take good resolutions for 2013, mine has been to switch from <code>gnome-session</code> to <a href="http://www.freedesktop.org/wiki/Software/systemd">systemd</a> for managing my user session. Here is how I replaced gnome-session with systemd.</p>
+                <section>
+<p>As we are supposed to take good resolutions for 2013, mine has been to switch from <code>gnome-session</code> to <a href="http://www.freedesktop.org/wiki/Software/systemd">systemd</a> for managing my user session. Here is how I replaced gnome-session with systemd.</p>
 <h2 id="how-did-it-come-to-my-mind">How did it come to my mind?</h2>
 <p>Since its beginning, systemd has been created for both system and session management. The default is obviously the system manager, aka <code>systemd --system</code>, but what less people know is that you also can run <code>systemd --user</code>.</p>
 <p>Since I’ve been using systemd as my init system for a while and have been quite happy with it, I often thought of trying a migration for my session. Recently, I started playing with my mails, first with <a href="http://fetchmail.berlios.de/">fetchmail</a> and <a href="http://www.procmail.org/">procmail</a>, and then with <a href="http://offlineimap.org/">offlineimap</a> (I’ll blog about this later). With offlineimap, I needed a way to fetch periodically my emails.</p>
@@ -513,8 +513,8 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <p>Some of the <a href="http://www.gnome.org/">gnome</a> parts such as <a href="https://live.gnome.org/GnomeShell">gnome-shell</a> require gnome-session to be available at runtime, in order to synchronize a few informations across the session, such as the presence status or whether you want notifications to be displayed or ignored. This is all done via <a href="http://www.freedesktop.org/wiki/Software/dbus">DBus</a> but gnome-session does not use a helper to do so, it does it itself. Since we cannot get totally rid of gnome-session, I decided to create a dummy gnome session that gnome-session would launch.</p>
 <p>Next problem: gnome-session refuses to launch such a session… Yay! I thus patched it and <a href="https://bugzilla.gnome.org/show_bug.cgi?id=690866">opened a bug upstream</a> to allow it and provide the dummy session I created. With this patch applied locally, I could run <code>gnome-session --session=gnome-dummy</code> in my systemd service to get a session which does not launch anything. And then I realized that it was still starting autostart applications, which I did not want since I only wanted it for its DBus interface. Passing <code>-a /dev/null</code> as an extra arg to gnome-session so that it looks for autostart applications nowhere instead of in <code>/etx/xdg/autostart</code> did this last trick.</p>
 <p>My system user units are available there: <a href="https://github.com/Keruspe/system-config/tree/master/systemd/user">https://github.com/Keruspe/system-config/tree/master/systemd/user</a>. This folder corresponds to your <code>${HOME}/.config/systemd/user/</code>.</p>
-    </section>
-</article>
+                </section>
+            </article>
 ]]></description>
     <pubDate>Tue, 01 Jan 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-01-01-systemd-as-a-session-manager.html</guid>
@@ -522,15 +522,15 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <item>
     <title>Knowing your system - Part 7 - Contributing to Exherbo</title>
     <link>http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html</link>
-    <description><![CDATA[<article>
-    <header>
-        <h1>Knowing your system - Part 7 - Contributing to Exherbo</h1>
-        <p>by <em>Marc-Antoine Perennou</em> on <strong>January  3, 2013</strong></p>
-        <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/unix.html">unix</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="/tags/source-based.html">source-based</a>, <a href="/tags/exherbo.html">exherbo</a>, <a href="/tags/paludis.html">paludis</a>.</p>
-    </header>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 7 - Contributing to Exherbo</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January  3, 2013</strong></p>
+                    <p>Tagged as: <a href="/tags/gnu.html">gnu</a>, <a href="/tags/unix.html">unix</a>, <a href="/tags/linux.html">linux</a>, <a href="/tags/sysadmin.html">sysadmin</a>, <a href="/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="/tags/source-based.html">source-based</a>, <a href="/tags/exherbo.html">exherbo</a>, <a href="/tags/paludis.html">paludis</a>.</p>
+                </header>
 
-    <section>
-        <h2 id="the-exherbo-contribution-mechanism">The exherbo contribution mechanism</h2>
+                <section>
+<h2 id="the-exherbo-contribution-mechanism">The exherbo contribution mechanism</h2>
 <p>Basically everything regarding <a href="http://www.exherbo.org/">exherbo</a> is discussed and managed via the <code>#exherbo</code> IRC channel on <code>irc.freenode.org</code>.</p>
 <p>Before contributing, you should first read the topic of the channel, <a href="http://www.exherbo.org/docs/patchbot.html">the zebrapig patchbot documentation</a>, <a href="http://exherbo.org/docs/exheres-for-smarties.html">the exheres for smarties tutorial</a> (You do not have to read the whole thing, but always keep it around), and you can also keep <a href="http://www.exherbo.org/docs/contributing.html">the contributing guide</a> around.</p>
 <h2 id="using-zebrapig">Using zebrapig</h2>
@@ -559,8 +559,8 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
 <p>The command which I run to upload my patch is a git alias, <code>git pe</code> means <code>git format-patch -M -C --find-copies-harder --stdout</code> and takes as an argument the commits to publish, <code>HEAD~3</code> means 3 commits for example, I put <code>-s poundpython</code> as extra args for <code>wgetpaste</code> since gist.github.com which is the default fails quite often for me.</p>
 <p>The other interesting part of it is how I manage the autopatch system. I have <a href="https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/sync_post/local_update.bash">a paludis hook</a> placed in <code>/etc/paludis/hooks/sync_post</code> which cause every patch located in <code>/etc/paludis/autopatch/&amp;lt;repository&amp;gt;/</code> to be applied each time I sync the said repository.</p>
 <p>Next time I’ll explain how I contribute to upstream projects using nearly the same scheme, pointing out even more how intuitive and integrated this process is in my every day work.</p>
-    </section>
-</article>
+                </section>
+            </article>
 ]]></description>
     <pubDate>Thu, 03 Jan 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html</guid>

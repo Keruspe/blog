@@ -34,7 +34,7 @@
         <header>
             <hgroup>
                 <h1><a href="../">Keruspe's blag</a></h1>
-                <span>-</span>
+                -
                 <h2>Various free software hacking stuff</h2>
             </hgroup>
         </header>
@@ -50,14 +50,14 @@
         </nav>
         <section>
             <article>
-    <header>
-        <h1>Knowing your system - Part 5 - Source-based distributions: the binary way</h1>
-        <p>by <em>Marc-Antoine Perennou</em> on <strong>December 20, 2012</strong></p>
-        <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/source-based.html">source-based</a>, <a href="../tags/paludis.html">paludis</a>.</p>
-    </header>
+                <header>
+                    <h1>Knowing your system - Part 5 - Source-based distributions: the binary way</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December 20, 2012</strong></p>
+                    <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/source-based.html">source-based</a>, <a href="../tags/paludis.html">paludis</a>.</p>
+                </header>
 
-    <section>
-        <p><a href="http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html">We last saw</a> the <a href="http://paludis.exherbo.org/">paludis</a> tool. Now, we’ll take a look at how we can handle a source-based distribution using paludis for large pools of servers.</p>
+                <section>
+<p><a href="http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html">We last saw</a> the <a href="http://paludis.exherbo.org/">paludis</a> tool. Now, we’ll take a look at how we can handle a source-based distribution using paludis for large pools of servers.</p>
 <h2 id="source-based-distributions-for-huge-server-pools">Source-based distributions for huge server pools</h2>
 <p>At <a href="http://www.clever-cloud.com/">Clever Cloud</a>, we decided to use a source-based GNU/Linux distribution called <a href="http://www.exherbo.org/">exherbo</a>, which I’ll blog about next week, because of its strictness and flexibility. Since we have to manage hundreds of servers and virtual machines, it would have been a big overload in energy consumption and in time invested if we managed it the “conventional” way. Indeed, compiling everything on the hypervisors could cause instabilities because of the CPUs being monopolised by the compilation process, leaving no power to virtual machines. The virtual machines would have the same problem, and for much longer, since you do not have the same power in a virtual machine than in an hypervisor, so compilations last longer.</p>
 <p>This is why we decided to manage everything using binary packages. Wait… What? Binary packages in a source-based distribution? How?!</p>
@@ -93,14 +93,14 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <pre><code>cave resolve -x --make binaries --make-dependencies all &lt;insert a package name here&gt;</code></pre>
 <p>It will create packages for all the dependencies, installing it afterwards, and finish by making the package for the software you asked.</p>
 <p>Don’t forget to push all changes on your git server!</p>
-    </section>
-</article>
+                </section>
+            </article>
 
-<section class="social">
-    <!--<div class="g-plusone" data-align="right"></div>-->
-    <div id="disqus_thread"></div>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
+            <section class="social">
+                <!--<div class="g-plusone" data-align="right"></div>-->
+                <div id="disqus_thread"></div>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </section>
 
         </section>
         <footer>

@@ -34,7 +34,7 @@
         <header>
             <hgroup>
                 <h1><a href="../">Keruspe's blag</a></h1>
-                <span>-</span>
+                -
                 <h2>Various free software hacking stuff</h2>
             </hgroup>
         </header>
@@ -50,14 +50,14 @@
         </nav>
         <section>
             <article>
-    <header>
-        <h1>Knowing your system - Part 4 - Falling in love with paludis</h1>
-        <p>by <em>Marc-Antoine Perennou</em> on <strong>December 13, 2012</strong></p>
-        <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/source-based.html">source-based</a>, <a href="../tags/paludis.html">paludis</a>.</p>
-    </header>
+                <header>
+                    <h1>Knowing your system - Part 4 - Falling in love with paludis</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December 13, 2012</strong></p>
+                    <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/source-based.html">source-based</a>, <a href="../tags/paludis.html">paludis</a>.</p>
+                </header>
 
-    <section>
-        <h2 id="installing-a-source-based-gnulinux-distribution">Installing a source-based GNU/Linux distribution</h2>
+                <section>
+<h2 id="installing-a-source-based-gnulinux-distribution">Installing a source-based GNU/Linux distribution</h2>
 <p><a href="http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html">As we last saw</a>, I’m really fond of source-based distributions. Beyond the administration and the management of an installed system, you also have to install it in the first place. Because of the fact that you have to compile absolutely everything in your system, it may be really scary to install one.</p>
 <p>I formerly told you to keep in mind that your system is fully usable whilst you’re upgrading it…</p>
 <p>When you install a source-based distribution, it’s not using a shiny interface and clicking repeatedly on the “next” button. You have to use a “bootstrap” system, which can be a livecd such as the awesome <a href="http://www.sysresccd.org/">sysrescuecd</a>, but you also can decide to first install a binary distribution like <a href="http://fedoraproject.org/">Fedora</a> or <a href="http://www.ubuntu.com/">Ubuntu</a> (you may probably already have one, so you obviously can use it).</p>
@@ -92,14 +92,14 @@
 <pre><code>cave sync
 cave resolve world -c -km -Km -Cs</code></pre>
 <p>It syncs repositories with upstream to get latest versions of the packages, and then resolve <code>world</code> which is the set containing all the packages you have installed, with a complete dependency tree, as deep as it can, with <code>-c</code> aka <code>--complete</code> and reinstalling all packages for which metadata have changed because of <code>-km -Km</code> aka <code>--keep if-same-metadata --keep-targets if-same-metadata</code>. If a failure occurs, it continues to build the rest while the dependencies still are satisfied thanks to <code>-Cs</code> aka <code>--continue-on-failure if-satisfied</code>. I then run this last command again with <code>-x</code> aka <code>--execute</code> to apply the available updates.</p>
-    </section>
-</article>
+                </section>
+            </article>
 
-<section class="social">
-    <!--<div class="g-plusone" data-align="right"></div>-->
-    <div id="disqus_thread"></div>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
+            <section class="social">
+                <!--<div class="g-plusone" data-align="right"></div>-->
+                <div id="disqus_thread"></div>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </section>
 
         </section>
         <footer>

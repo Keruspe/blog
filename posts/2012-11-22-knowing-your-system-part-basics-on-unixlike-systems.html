@@ -34,7 +34,7 @@
         <header>
             <hgroup>
                 <h1><a href="../">Keruspe's blag</a></h1>
-                <span>-</span>
+                -
                 <h2>Various free software hacking stuff</h2>
             </hgroup>
         </header>
@@ -50,14 +50,14 @@
         </nav>
         <section>
             <article>
-    <header>
-        <h1>Knowing your system - Part 1 - Basis on UNIX-like systems</h1>
-        <p>by <em>Marc-Antoine Perennou</em> on <strong>November 22, 2012</strong></p>
-        <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>.</p>
-    </header>
+                <header>
+                    <h1>Knowing your system - Part 1 - Basis on UNIX-like systems</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>November 22, 2012</strong></p>
+                    <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>.</p>
+                </header>
 
-    <section>
-        <p>Before starting to blog about more technical stuff, I’d like to recall a few basis about UNIX-like systems.</p>
+                <section>
+<p>Before starting to blog about more technical stuff, I’d like to recall a few basis about UNIX-like systems.</p>
 <p>I use a GNU/Linux based distribution most of the time, so I’ll speak about this kind of system, but most of it is true for any UNIX-like system such as the BSDs and Mac OS X.</p>
 <h2 id="what-is-gnulinux">What is GNU/Linux ?</h2>
 <p>First of all, let’s make things clear: I’m talking about “GNU/Linux”, not Linux. What is the difference? Linux is “only” a kernel, the heart of your system. Linux is the piece of your OS which will provide you several interfaces to interact with the hardware and to manage your processes. GNU is a set of libraries (a set of utilities for a developer) and tools such as the well known glibc, gcc, tar and sed. GNU is used most of the time on top of Linux, but can be used on top of other kernels, like Debian shown us with <a href="http://www.debian.org/ports/kfreebsd-gnu/">its GNU/kFreeBSD version</a>.</p>
@@ -113,14 +113,14 @@
 <li>Extra configuration for your kernel.</li>
 </ul>
 <p>When your kernel has successfully initialized everything, it then gives the power to a root process, commonly called “init”, which goal is to track all the other processes that you and your system will run. The init process will then reach a few breakpoints (which can be called runlevels, or targets). To each of these breakpoints correspond a list of process that must be started. This is how all the root components of your system are started in the right order. One of the last things to start is the graphical interface.</p>
-    </section>
-</article>
+                </section>
+            </article>
 
-<section class="social">
-    <!--<div class="g-plusone" data-align="right"></div>-->
-    <div id="disqus_thread"></div>
-    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</section>
+            <section class="social">
+                <!--<div class="g-plusone" data-align="right"></div>-->
+                <div id="disqus_thread"></div>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </section>
 
         </section>
         <footer>
