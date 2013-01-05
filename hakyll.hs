@@ -4,7 +4,9 @@ module Main where
 import Prelude hiding (id)
 import Control.Arrow ((&&&), (>>^), (>>>), (***), arr)
 import Control.Category (id)
+import Data.List (isPrefixOf)
 import Data.Monoid (mempty, mconcat)
+import Data.Text (pack,unpack,replace,empty)
 
 import Hakyll
 
@@ -34,6 +36,7 @@ main = hakyll $ do
             >>> applyTemplateCompiler "templates/post.html"
             >>> (externalizeUrlsCompiler $ feedRoot feedConfiguration)
             >>> (arr $ copyBodyToField "description")
+            >>> (unExternalizeUrlsCompiler $ feedRoot feedConfiguration)
             >>> applyTemplateCompiler "templates/posts-js.html"
             >>> applyTemplateCompiler "templates/default.html"
             >>> relativizeUrlsCompiler
@@ -118,8 +121,20 @@ externalizeUrlsCompiler root = getRoute &&& id >>^ uncurry externalize
     externalize _ = fmap (externalizeUrls root)
 
 externalizeUrls :: String  -- ^ Path to the site root
-                -> String  -- ^ HTML to relativize
+                -> String  -- ^ HTML to externalize
                 -> String  -- ^ Resulting HTML
-externalizeUrls root = withUrls abs
+externalizeUrls root = withUrls ext
   where
-    abs x = if isExternal x then x else root ++ x
+    ext x = if isExternal x then x else root ++ x
+
+unExternalizeUrlsCompiler :: String -> Compiler (Page String) (Page String)
+unExternalizeUrlsCompiler root = getRoute &&& id >>^ uncurry unExternalize
+  where
+    unExternalize _ = fmap (unExternalizeUrls root)
+
+unExternalizeUrls :: String  -- ^ Path to the site root
+                  -> String  -- ^ HTML to unExternalize
+                  -> String  -- ^ Resulting HTML
+unExternalizeUrls root = withUrls unExt
+  where
+    unExt x = if root `isPrefixOf` x then unpack $ replace (pack root) empty (pack x) else x
