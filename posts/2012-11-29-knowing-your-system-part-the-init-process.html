@@ -53,11 +53,11 @@
                 <header>
                     <h1>Knowing your system - Part 2 - The init process</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>November 29, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/systemd.html">systemd</a>.</p>
+                    <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/systemd.html">systemd</a>.</p>
                 </header>
 
                 <section>
-<p><a href="http://www.imagination-land.org/posts/2012-11-22-knowing-your-system-part-basics-on-unixlike-systems.html">As we last saw</a>, when we start an UNIX-like system, the kernel gives the hand to a main process called “init”. We’ll now see how it works.</p>
+<p><a href="../posts/2012-11-22-knowing-your-system-part-basics-on-unixlike-systems.html">As we last saw</a>, when we start an UNIX-like system, the kernel gives the hand to a main process called “init”. We’ll now see how it works.</p>
 <h2 id="the-goal-of-the-init-process">The goal of the init process</h2>
 <p>The init process is the most important software running on your system. Its goal is to start everything up in order for your system to work properly. It will manage everything, report errors (and maybe act regarding them) and supervise everything. When a process gets orphaned (because its father process, the one which started it, exits or dies), init will automatically become its father process.</p>
 <p>The init process allows you to get a trace of what your processes are doing, where they do come from, and whether they’re in a decent or zombie state.</p>

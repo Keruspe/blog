@@ -53,7 +53,7 @@
                 <header>
                     <h1>Knowing your system - Part 7 - Contributing to Exherbo</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>January  3, 2013</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
+                    <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/source-based.html">source-based</a>, <a href="../tags/exherbo.html">exherbo</a>, <a href="../tags/paludis.html">paludis</a>.</p>
                 </header>
 
                 <section>
@@ -84,7 +84,7 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
 <li><p>If everything succeeds, I submit my patch, otherwise, I get back to step 2 to fix my patch</p></li>
 </ul>
 <p>The command which I run to upload my patch is a git alias, <code>git pe</code> means <code>git format-patch -M -C --find-copies-harder --stdout</code> and takes as an argument the commits to publish, <code>HEAD~3</code> means 3 commits for example, I put <code>-s poundpython</code> as extra args for <code>wgetpaste</code> since gist.github.com which is the default fails quite often for me.</p>
-<p>The other interesting part of it is how I manage the autopatch system. I have <a href="https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/sync_post/local_update.bash">a paludis hook</a> placed in <code>/etc/paludis/hooks/sync_post</code> which cause every patch located in <code>/etc/paludis/autopatch/&amp;lt;repository&amp;gt;/</code> to be applied each time I sync the said repository.</p>
+<p>The other interesting part of it is how I manage the autopatch system. I have <a href="https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/sync_post/local_update.bash">a paludis hook</a> placed in <code>/etc/paludis/hooks/sync_post</code> which cause every patch located in <code>/etc/paludis/autopatch/&lt;repository&gt;/</code> to be applied each time I sync the said repository.</p>
 <p>Next time I’ll explain how I contribute to upstream projects using nearly the same scheme, pointing out even more how intuitive and integrated this process is in my every day work.</p>
                 </section>
             </article>

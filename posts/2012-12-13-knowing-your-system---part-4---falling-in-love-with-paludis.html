@@ -53,12 +53,12 @@
                 <header>
                     <h1>Knowing your system - Part 4 - Falling in love with paludis</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>December 13, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
+                    <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/source-based.html">source-based</a>, <a href="../tags/paludis.html">paludis</a>.</p>
                 </header>
 
                 <section>
 <h2 id="installing-a-source-based-gnulinux-distribution">Installing a source-based GNU/Linux distribution</h2>
-<p><a href="http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html">As we last saw</a>, I’m really fond of source-based distributions. Beyond the administration and the management of an installed system, you also have to install it in the first place. Because of the fact that you have to compile absolutely everything in your system, it may be really scary to install one.</p>
+<p><a href="../posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html">As we last saw</a>, I’m really fond of source-based distributions. Beyond the administration and the management of an installed system, you also have to install it in the first place. Because of the fact that you have to compile absolutely everything in your system, it may be really scary to install one.</p>
 <p>I formerly told you to keep in mind that your system is fully usable whilst you’re upgrading it…</p>
 <p>When you install a source-based distribution, it’s not using a shiny interface and clicking repeatedly on the “next” button. You have to use a “bootstrap” system, which can be a livecd such as the awesome <a href="http://www.sysresccd.org/">sysrescuecd</a>, but you also can decide to first install a binary distribution like <a href="http://fedoraproject.org/">Fedora</a> or <a href="http://www.ubuntu.com/">Ubuntu</a> (you may probably already have one, so you obviously can use it).</p>
 <p>When you have booted your “bootstrap” system, there will be 3 steps:</p>
@@ -87,7 +87,7 @@
 <li><code>cave fix-linkage</code> looks for broken binaries (because of libraries updates) and suggest you to rebuild them.</li>
 </ul>
 <p>A lot of other subcommands are available, and a lot of options for each of these. Amongst other things, cave allows you to stop the installation process at a certain phase, or resume at another. This allows you to abort at compile phase to apply custom patches, and them resume at compile phase to compile the package with your patches applied. It also support a hooks mechanism.</p>
-<p>We’ll see some more advanced paludis features in a next post of <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">the knowing your system saga</a>.</p>
+<p>We’ll see some more advanced paludis features in a next post of <a href="../tags/knowingyoursystem.html">the knowing your system saga</a>.</p>
 <p>Last thing, The way I update my system is:</p>
 <pre><code>cave sync
 cave resolve world -c -km -Km -Cs</code></pre>
