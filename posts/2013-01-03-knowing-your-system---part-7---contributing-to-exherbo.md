@@ -56,7 +56,7 @@ and takes as an argument the commits to publish, `HEAD~3` means 3 commits for ex
 args for `wgetpaste` since gist.github.com which is the default fails quite often for me.
 
 The other interesting part of it is how I manage the autopatch system. I have [a paludis hook](https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/sync_post/local_update.bash)
-placed in `/etc/paludis/hooks/sync_post` which cause every patch located in `/etc/paludis/autopatch/&lt;repository&gt;/` to be
+placed in `/etc/paludis/hooks/sync_post` which cause every patch located in `/etc/paludis/autopatch/<repository>/` to be
 applied each time I sync the said repository.
 
 
