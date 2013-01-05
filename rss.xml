@@ -14,7 +14,7 @@
                 <header>
                     <h1>Home sweet home</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>November 21, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/misc.html">misc</a>.</p>
+                    <p>Tagged as: <a href="../tags/misc.html">misc</a>.</p>
                 </header>
 
                 <section>
@@ -41,7 +41,7 @@
                 <header>
                     <h1>Knowing your system - Part 1 - Basis on UNIX-like systems</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>November 22, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>.</p>
+                    <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>.</p>
                 </header>
 
                 <section>
@@ -114,7 +114,7 @@
                 <header>
                     <h1>Knowing your system - Part 2 - The init process</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>November 29, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/systemd.html">systemd</a>.</p>
+                    <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/systemd.html">systemd</a>.</p>
                 </header>
 
                 <section>
@@ -173,7 +173,7 @@
                 <header>
                     <h1>GPaste 2.9.1 released</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>December  1, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                    <p>Tagged as: <a href="../tags/GPaste.html">GPaste</a>, <a href="../tags/release.html">release</a>, <a href="../tags/clipboard.html">clipboard</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/gnome.html">gnome</a>.</p>
                 </header>
 
                 <section>
@@ -225,7 +225,7 @@
                 <header>
                     <h1>Facron - fanotify cron system</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>December  4, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/facron.html">facron</a>, <a href="http://www.imagination-land.org/tags/fanotify.html">fanotify</a>, <a href="http://www.imagination-land.org/tags/cron.html">cron</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>.</p>
+                    <p>Tagged as: <a href="../tags/facron.html">facron</a>, <a href="../tags/fanotify.html">fanotify</a>, <a href="../tags/cron.html">cron</a>, <a href="../tags/sysadmin.html">sysadmin</a>.</p>
                 </header>
 
                 <section>
@@ -276,7 +276,7 @@
                 <header>
                     <h1>Facron 0.9 released</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>December  7, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/facron.html">facron</a>, <a href="http://www.imagination-land.org/tags/fanotify.html">fanotify</a>, <a href="http://www.imagination-land.org/tags/cron.html">cron</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>.</p>
+                    <p>Tagged as: <a href="../tags/facron.html">facron</a>, <a href="../tags/fanotify.html">fanotify</a>, <a href="../tags/cron.html">cron</a>, <a href="../tags/sysadmin.html">sysadmin</a>.</p>
                 </header>
 
                 <section>
@@ -324,7 +324,7 @@ sudo make install</code></pre>
                 <header>
                     <h1>Knowing your system - Part 3 - Source-based distributions: The Gentoo example</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>December 10, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>.</p>
+                    <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/source-based.html">source-based</a>.</p>
                 </header>
 
                 <section>
@@ -356,7 +356,7 @@ sudo make install</code></pre>
                 <header>
                     <h1>Knowing your system - Part 4 - Falling in love with paludis</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>December 13, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
+                    <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/source-based.html">source-based</a>, <a href="../tags/paludis.html">paludis</a>.</p>
                 </header>
 
                 <section>
@@ -408,7 +408,7 @@ cave resolve world -c -km -Km -Cs</code></pre>
                 <header>
                     <h1>Knowing your system - Part 5 - Source-based distributions: the binary way</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>December 20, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
+                    <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/source-based.html">source-based</a>, <a href="../tags/paludis.html">paludis</a>.</p>
                 </header>
 
                 <section>
@@ -461,7 +461,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
                 <header>
                     <h1>Knowing your system - Part 6 - Source-based distributions: Discovering Exherbo</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>December 27, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>.</p>
+                    <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/source-based.html">source-based</a>, <a href="../tags/exherbo.html">exherbo</a>.</p>
                 </header>
 
                 <section>
@@ -469,7 +469,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <p>As I said <a href="http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html">in part 3</a> of the <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowing your system</a> saga, I really started to dig into my system when I used <a href="http://www.gentoo.org/">Gentoo</a>. I quickly spotted the limits of portage, its default package manager <a href="http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html">and switched to paludis</a>. It really is easy to mess up your python installation, especially when you’re not a python developer and you don’t care about it. Of course there are tools to help you, such as <code>python-updater</code>, but it won’t be of great help if you’re not in a basic “breakage because of python update” case. Because of portage being written in python, you end up with an unmaintainable system which is painful.</p>
 <p>A pretty good example of this is when I tried install Gentoo on my Playstation 3. At this time, the powerpc stage was kinda old. During the base system installation and update, you ended with the linux headers version being incompatible with your python installation, and portage was unusable. After 3 attempts without success, I tired once starting by installing paludis, and then doing everything with it. It worked like a charm.</p>
 <p>Portage is not the only limitation of Gentoo. Its workflow is kinda insane. First of all, Gentoo aims to get every piece of software packaged in a same repository, external overlays being there only for testing purpose before merging. You end up with tons of packages being available on your machine, 95% of them won’t ever interest you. You could say it’s cool to get everything available without needing internet access to retrieve them, but you’ll still have to download the source tarballs so it’s pointless, it just make dependencies resolution slower.</p>
-<p>Another problem is contribution. To contribute to Gentoo, you’ll open a bug <a href="http://www.imagination-land.orgttps://bugs.gentoo.org/">on their bugzilla</a> with a patch attached (I’m fine with this first step, the next ones are awful). When a developer or a proxy maintainer sees it, he applies it locally and push it to the centralised CVS server (which you sync using rsync on client side…). There is a HUGE lack of consistency in this process:</p>
+<p>Another problem is contribution. To contribute to Gentoo, you’ll open a bug <a href="..ttps://bugs.gentoo.org/">on their bugzilla</a> with a patch attached (I’m fine with this first step, the next ones are awful). When a developer or a proxy maintainer sees it, he applies it locally and push it to the centralised CVS server (which you sync using rsync on client side…). There is a HUGE lack of consistency in this process:</p>
 <ul>
 <li>As a simple contributor, you won’t ever be the author of the real commit, at most you’ll be mentioned in the commit message</li>
 <li>You don’t use the same tool to pull changes in that the one developer use to push them.</li>
@@ -495,7 +495,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
                 <header>
                     <h1>systemd as a session manager</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>January  1, 2013</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/systemd.html">systemd</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                    <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/systemd.html">systemd</a>, <a href="../tags/gnome.html">gnome</a>.</p>
                 </header>
 
                 <section>
@@ -526,7 +526,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
                 <header>
                     <h1>Knowing your system - Part 7 - Contributing to Exherbo</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>January  3, 2013</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
+                    <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/source-based.html">source-based</a>, <a href="../tags/exherbo.html">exherbo</a>, <a href="../tags/paludis.html">paludis</a>.</p>
                 </header>
 
                 <section>
