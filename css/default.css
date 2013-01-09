@@ -15,6 +15,14 @@ img {
     border-width: 0;
 }
 
+::selection {
+    background-color: #BFBFBF;
+}
+
+::-moz-selection {
+    background-color: #BFBFBF;
+}
+
 body>header>hgroup {
     font-family: 'Arvo', serif;
     padding: 1em;
