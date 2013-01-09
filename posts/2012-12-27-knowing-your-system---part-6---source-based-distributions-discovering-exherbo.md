@@ -17,7 +17,7 @@ unmaintainable system which is painful.
 
 A pretty good example of this is when I tried install Gentoo on my Playstation 3. At this time, the powerpc stage was
 kinda old. During the base system installation and update, you ended with the linux headers version being incompatible
-with your python installation, and portage was unusable. After 3 attempts without success, I tired once starting by
+with your python installation, and portage was unusable. After 3 attempts without success, I tried once starting by
 installing paludis, and then doing everything with it. It worked like a charm.
 
 Portage is not the only limitation of Gentoo. Its workflow is kinda insane. First of all, Gentoo aims to get every piece
