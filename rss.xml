@@ -565,6 +565,30 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
     <pubDate>Thu, 03 Jan 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html</guid>
 </item>
+<item>
+    <title>Knowing your system - Part 8 - On the road to upstream</title>
+    <link>http://www.imagination-land.org/posts/2013-01-10-knowing-your-system---part-8---on-the-road-to-upstream.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 8 - On the road to upstream</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January 10, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<h2 id="how-did-i-start-contributing">How did I start contributing?</h2>
+<p>When I started to really dig into my system to fully understand how it works, breaking everything to know of to fix it, I decided to do even worse and started using <a href="http://en.wikipedia.org/wiki/Source_Control_Management">scm</a> packages. Scm packages download the source code directly for the upstream development repository using <a href="http://git-scm.com/">git</a>, <a href="http://subversion.tigris.org/">subversion</a>, <a href="http://mercurial.selenic.com/">mercurial</a> or whatever other <a href="http://en.wikipedia.org/wiki/Revision_control">vcs</a>.</p>
+<p>Doing this I ended up with a more-that-bleeding-edge system, causing a lot of breakages when stuff went incompatible with recent versions of other. That’s perfect, since that’s exactly the state I wanted to reach. If I wanted to recover a functional system, the easy solution that I adopted when I did not have much spare time was to revert my last changes and get back to an earlier version of the guilty package, but this was not the goal of the operation. What I really started to do at this point was to patch the broken stuff to make it compatible with the newer version of the guilty stuff which broke everything. It was sometimes really trivial, sometimes way less. I mostly did this for <a href="http://www.gnome.org/">Gnome</a> projects. It’s a really good experience since you have to dig in a lot of projects and documentation, making you know better how various parts of your system work internally. Once I had everything back working, I then submitted my patches to the developers of the projects upstream, so that it gets fixed for everyone.</p>
+<p>Now that I have way less spare time, I no longer have such a bleeding edge system, or at least I have way less scm packages. Sometimes I still need to patch stuff though, so I still use the same procedure.</p>
+<h2 id="my-work-flow">My work flow</h2>
+<p>My work flow for contributing to upstream is not much different to <a href="http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html">the one I use for contributing to Exherbo</a>. I also use an autopatch mechanism which is slightly different. My hook for automatically patch software is available there: <a href="https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/ebuild_prepare_pre/patches.bash">https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/ebuild_prepare_pre/patches.bash</a>. If I remember correctly it was initially written by <a href="http://ciaranm.wordpress.com/">Ciaran McCreesh</a>, the <a href="http://paludis.exherbo.org/">paludis</a>’s lead developer. When I want to patch something, I get a copy locally, I write and commit my patch, I generate a patch file and move it to <code>/etc/paludis/autopatch/&lt;category&gt;/&lt;package&gt;/</code> where &lt;category&gt; is for example “x11-dri” and &lt;package&gt; is “mesa”, according to exherbo’s packages name. Each time I install a package, it applies all this patches before configuring and compiling the software. If it works, I submit it upstream, if not, I fix it and retry.</p>
+<p>I highly recommend you to try contributing to open source projects, to fix or improve them, like adding new functionalities. The only risk is to learn a lot.</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Thu, 10 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-01-10-knowing-your-system---part-8---on-the-road-to-upstream.html</guid>
+</item>
 
     </channel> 
 </rss>

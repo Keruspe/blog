@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Keruspe's blag - Knowing your system - Part 8 - On the road to upstream</title>
+        <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="../css/default.css">
+        <link rel="alternate" type="application/rss+xml" title="Keruspe's blag" href="../rss.xml">
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-36525806-1']);
+            _gaq.push(['_setDomainName', 'imagination-land.org']);
+            _gaq.push(['_setAllowLinker', true]);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                /* Google Analytics */
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                /* Google Plus */
+                /*var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(po, ss);*/
+                /* Disqus */
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://keruspe.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+    </head>
+    <body>
+        <header>
+            <hgroup>
+                <h1><a href="../">Keruspe's blag</a></h1>
+                <h6>-</h6>
+                <h2>Various free software hacking stuff</h2>
+            </hgroup>
+        </header>
+        <nav>
+            <menu>
+                <a href="../">Home</a>
+                <a href="../posts.html">All posts</a>
+                <!-- <a href="http://marc-antoine.perennou.com">About me</a> -->
+                <a href="../rss.xml">RSS feed</a>
+                <a href="http://github.com/Keruspe">My projects</a>
+                <a href="http://www.clever-cloud.com">My company</a>
+            </menu>
+        </nav>
+        <section>
+            <article>
+                <header>
+                    <h1>Knowing your system - Part 8 - On the road to upstream</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January 10, 2013</strong></p>
+                    <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/source-based.html">source-based</a>, <a href="../tags/exherbo.html">exherbo</a>, <a href="../tags/paludis.html">paludis</a>, <a href="../tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<h2 id="how-did-i-start-contributing">How did I start contributing?</h2>
+<p>When I started to really dig into my system to fully understand how it works, breaking everything to know of to fix it, I decided to do even worse and started using <a href="http://en.wikipedia.org/wiki/Source_Control_Management">scm</a> packages. Scm packages download the source code directly for the upstream development repository using <a href="http://git-scm.com/">git</a>, <a href="http://subversion.tigris.org/">subversion</a>, <a href="http://mercurial.selenic.com/">mercurial</a> or whatever other <a href="http://en.wikipedia.org/wiki/Revision_control">vcs</a>.</p>
+<p>Doing this I ended up with a more-that-bleeding-edge system, causing a lot of breakages when stuff went incompatible with recent versions of other. That’s perfect, since that’s exactly the state I wanted to reach. If I wanted to recover a functional system, the easy solution that I adopted when I did not have much spare time was to revert my last changes and get back to an earlier version of the guilty package, but this was not the goal of the operation. What I really started to do at this point was to patch the broken stuff to make it compatible with the newer version of the guilty stuff which broke everything. It was sometimes really trivial, sometimes way less. I mostly did this for <a href="http://www.gnome.org/">Gnome</a> projects. It’s a really good experience since you have to dig in a lot of projects and documentation, making you know better how various parts of your system work internally. Once I had everything back working, I then submitted my patches to the developers of the projects upstream, so that it gets fixed for everyone.</p>
+<p>Now that I have way less spare time, I no longer have such a bleeding edge system, or at least I have way less scm packages. Sometimes I still need to patch stuff though, so I still use the same procedure.</p>
+<h2 id="my-work-flow">My work flow</h2>
+<p>My work flow for contributing to upstream is not much different to <a href="../posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html">the one I use for contributing to Exherbo</a>. I also use an autopatch mechanism which is slightly different. My hook for automatically patch software is available there: <a href="https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/ebuild_prepare_pre/patches.bash">https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/ebuild_prepare_pre/patches.bash</a>. If I remember correctly it was initially written by <a href="http://ciaranm.wordpress.com/">Ciaran McCreesh</a>, the <a href="http://paludis.exherbo.org/">paludis</a>’s lead developer. When I want to patch something, I get a copy locally, I write and commit my patch, I generate a patch file and move it to <code>/etc/paludis/autopatch/&lt;category&gt;/&lt;package&gt;/</code> where &lt;category&gt; is for example “x11-dri” and &lt;package&gt; is “mesa”, according to exherbo’s packages name. Each time I install a package, it applies all this patches before configuring and compiling the software. If it works, I submit it upstream, if not, I fix it and retry.</p>
+<p>I highly recommend you to try contributing to open source projects, to fix or improve them, like adding new functionalities. The only risk is to learn a lot.</p>
+                </section>
+            </article>
+
+            <section class="social">
+                <!--<div class="g-plusone" data-align="right"></div>-->
+                <div id="disqus_thread"></div>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </section>
+
+        </section>
+        <footer>
+            <p>
+                This  work is licensed under a
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                    Creative Commons Attribution-ShareAlike 3.0 Unported License
+                    <img id="cc-icon" alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png">
+                </a>.
+            </p>
+        </footer>
+    </body>
+</html>
