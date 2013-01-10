@@ -16,11 +16,11 @@ img {
 }
 
 ::selection {
-    background-color: #BFBFBF;
+    background-color: #AFAFAF;
 }
 
 ::-moz-selection {
-    background-color: #BFBFBF;
+    background-color: #AFAFAF;
 }
 
 body>header>hgroup {
