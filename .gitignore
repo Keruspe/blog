@@ -2,3 +2,4 @@ _cache/
 _site/
 hakyll
 hakyll.hi
+!files/*.tar.xz
