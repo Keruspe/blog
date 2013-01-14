@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Keruspe's blag - Posts tagged ‘GPaste’</title>
+        <title>Keruspe's blag - GPaste 2.99 released</title>
         <meta name="description" content="Keruspe's personal blog"></meta>
         <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type="text/css">
@@ -50,19 +50,40 @@
             </menu>
         </nav>
         <section>
-            <section class="posts-list">
-                <h1>Posts tagged ‘GPaste’</h1>
-                <ul>
-                    <li>
-                        <a href="../posts/2013-01-14-gpaste-2.99-released.html">GPaste 2.99 released</a>
-                        - <em>January 14, 2013</em> - by <em>Marc-Antoine Perennou</em>
-                    </li>
-                    <li>
-                        <a href="../posts/2012-12-01-gpaste-released.html">GPaste 2.9.1 released</a>
-                        - <em>December  1, 2012</em> - by <em>Marc-Antoine Perennou</em>
-                    </li>
+            <article>
+                <header>
+                    <h1>GPaste 2.99 released</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January 14, 2013</strong></p>
+                    <p>Tagged as: <a href="../tags/GPaste.html">GPaste</a>, <a href="../tags/release.html">release</a>, <a href="../tags/clipboard.html">clipboard</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/gnome.html">gnome</a>.</p>
+                </header>
 
-                </ul>
+                <section>
+<p>It’s available <a href="https://github.com/downloads/Keruspe/GPaste/gpaste-2.99.tar.xz">there</a>, get it while it’s hot!</p>
+<p>I’s still <a href="https://github.com/Keruspe/GPaste">hosted on github</a>.</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>Compatibility with recent development releases of gnome-shell</li>
+<li>“gpaste f” now defers the file reading to the GPaste daemon</li>
+<li>libgpaste-client does now fully cover the GPaste DBus API</li>
+<li>libgpaste-keybinder has been ported to use XInput2</li>
+<li>keybindings have been fixed</li>
+<li>The gnome-shell extension has been ported to use libgpaste-client</li>
+<li>A systemd user unit is now provided</li>
+<li>New library: libgpaste-settings-ui</li>
+<li>gpaste-settings has been ported to libgpaste-settings-ui</li>
+<li>The gnome-shell extension now has a pref.js module based on libgpaste-settings-ui</li>
+<li>An autostart desktop file is now provided with the legacy applet</li>
+<li>gobject-introspection and vala support are now optional</li>
+</ul>
+<p>This is actually 3.0 RC and no major changes should append before the 3.0 release.</p>
+<p>Feedback really appreciated!</p>
+                </section>
+            </article>
+
+            <section class="social">
+                <!--<div class="g-plusone" data-align="right"></div>-->
+                <div id="disqus_thread"></div>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
             </section>
 
         </section>
