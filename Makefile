@@ -1,6 +1,7 @@
 all: build
 
 build: hakyll
+	./hakyll clean
 	./hakyll build
 
 hakyll: hakyll.hs
@@ -19,6 +20,7 @@ publish: build
 	git stash pop || true
 
 preview: hakyll
+	./hakyll clean
 	./hakyll preview 9000
 
 clean: hakyll
