@@ -6,8 +6,44 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Tue, 15 Jan 2013 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Thu, 17 Jan 2013 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Knowing your system - Part 9 - Contributing to Exherbo: Updated and smoother method</title>
+    <link>http://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo:-updated-and-smoother-method.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 9 - Contributing to Exherbo: Updated and smoother method</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January 17, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
+                </header>
+
+                <section>
+<p>In the <a href="http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html">part 7</a>, I described my workflow for contributing to Exherbo. Since then I had a few remarks (from <a href="http://kloeri.livejournal.com/">kloeri</a>, the <a href="http://www.exherbo.org/">Exherbo</a>’s father, amongst others) on how I could improve it.</p>
+<h2 id="my-new-workflow">My new workflow</h2>
+<p>What I liked about my previous workflow is that it was exactly the same for contributing to Exherbo or <a href="http://www.imagination-land.org/posts/2013-01-10-knowing-your-system---part-8---on-the-road-to-upstream.html">to upstream</a>. This is why it isn’t completely done. Most of it is actually still here, but in another way. What’s new is <code>cave sync</code>’s option <code>-s</code>, aka <code>--source</code> which allows you to specify multiple sync sources for a repository. For each repository that I install, I edit its configuration file changing <code>sync = git://git.exherbo.org/arbor.git</code> to <code>sync = git://git.exherbo.org/arbor.git local: git+file:///home/keruspe/Exherbo/arbor</code>, for example.</p>
+<p>What I do now is:</p>
+<ul>
+<li>If I do not have a copy of the repository locally I clone it, otherwise I pull new changes from upstream</li>
+<li>I write my patch and commit it</li>
+<li>I sync the repository from my local patched clone: <code>cave sync -s local &lt;repository&gt;</code></li>
+<li>I try my patch, compiling the related packages</li>
+<li>If it fails, I go back to step two to fix my patch</li>
+<li>If it succeeds, I upload it with <code>git pe -&lt;number_of_commits&gt; | wgetpaste -r -s poundpython</code> and I submit it.</li>
+</ul>
+<h2 id="what-has-become-my-previous-workflow">What has become my previous workflow?</h2>
+<p>This does not at all look like my previous workflow, but I said I kept it around… Why?</p>
+<p>Actually, my previous workflow comes right after that. Once I’ve sumitted my patch, I add it to my autopatch folder:</p>
+<pre><code>mkdir -p /etc/paludis/autopatch/&lt;repository&gt;
+curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</code></pre>
+<p>This way, they automatically get applied when I sync back the real repository instead of my copy. If a sync fail, I rebase my patches and resubmit them. Once the patch is pushed, I can safely remove it from my autopatch directory.</p>
+<p>Note that this whole second step can fully be ignored for repositories you have push access to, simplifying even more this light workflow.</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Thu, 17 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo:-updated-and-smoother-method.html</guid>
+</item>
+<item>
     <title>GPaste 2.99.1 released</title>
     <link>http://www.imagination-land.org/posts/2013-01-15-gpaste-2.99.1-released.html</link>
     <description><![CDATA[            <article>
@@ -131,7 +167,7 @@
 <pre><code>mkdir -p /etc/paludis/autopatch/&lt;repository&gt;
 curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</code></pre></li>
 <li>I sync the repository so that the autopatch gets applied: <code>cave sync &lt;repository&gt;</code></li>
-<li>I try my patch compiling the related packages</li>
+<li>I try my patch, compiling the related packages</li>
 <li><p>If everything succeeds, I submit my patch, otherwise, I get back to step 2 to fix my patch</p></li>
 </ul>
 <p>The command which I run to upload my patch is a git alias, <code>git pe</code> means <code>git format-patch -M -C --find-copies-harder --stdout</code> and takes as an argument the commits to publish, <code>HEAD~3</code> means 3 commits for example, I put <code>-s poundpython</code> as extra args for <code>wgetpaste</code> since gist.github.com which is the default fails quite often for me.</p>

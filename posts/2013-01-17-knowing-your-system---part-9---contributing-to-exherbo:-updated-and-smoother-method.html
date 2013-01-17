@@ -2,7 +2,7 @@
 <html lang="fr">
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-        <title>Keruspe's blag - Knowing your system - Part 7 - Contributing to Exherbo</title>
+        <title>Keruspe's blag - Knowing your system - Part 9 - Contributing to Exherbo: Updated and smoother method</title>
         <meta name="description" content="Keruspe's personal blog">
         <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
         <link href="http://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type="text/css">
@@ -52,41 +52,31 @@
         <section>
             <article>
                 <header>
-                    <h1>Knowing your system - Part 7 - Contributing to Exherbo</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January  3, 2013</strong></p>
+                    <h1>Knowing your system - Part 9 - Contributing to Exherbo: Updated and smoother method</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January 17, 2013</strong></p>
                     <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/source-based.html">source-based</a>, <a href="../tags/exherbo.html">exherbo</a>, <a href="../tags/paludis.html">paludis</a>.</p>
                 </header>
 
                 <section>
-<h2 id="the-exherbo-contribution-mechanism">The exherbo contribution mechanism</h2>
-<p>Basically everything regarding <a href="http://www.exherbo.org/">exherbo</a> is discussed and managed via the <code>#exherbo</code> IRC channel on <code>irc.freenode.org</code>.</p>
-<p>Before contributing, you should first read the topic of the channel, <a href="http://www.exherbo.org/docs/patchbot.html">the zebrapig patchbot documentation</a>, <a href="http://exherbo.org/docs/exheres-for-smarties.html">the exheres for smarties tutorial</a> (You do not have to read the whole thing, but always keep it around), and you can also keep <a href="http://www.exherbo.org/docs/contributing.html">the contributing guide</a> around.</p>
-<h2 id="using-zebrapig">Using zebrapig</h2>
-<p>Zebrapig is exherbo’s IRC patchbot. You can use three commands to interact with it:</p>
-<ul>
-<li>!pq &lt;patch_url&gt; ::&lt;repository&gt; =&gt; Use this to submit the patch available at the given URL (use <code>git format-patch --stdout -M -C -C -1 | wgetpaste -r</code> to get an URL for your git commit) to the repository you specified.</li>
-<li>!pd &lt;pattern&gt; =&gt; Use this to mark all the patches matching the given pattern as done, useful when you want to resubmit an updated version of your patch.</li>
-<li>pl &lt;pattern&gt; =&gt; Don’t ever use it in the channel, only use it in a private query with zebrapig. It will list all patches matching this pattern (which is optional).</li>
-</ul>
-<p>A special use-case is to submit your personal repository, you’ll submit it as a patch, given its git URL and specifying ::unavailable-unofficial as the repository.</p>
-<p>Everything submitted to the bot will be reviewed by developers who’ll tell you what’s wrong in your patch and how you could improve it. You’re expected to be quite present in the channel if you start submitting stuff. Once your patch is ready, it will be pushed to the repository and available to everyone.</p>
-<p>What I love about this mechanism is that it’s really simple, handy and powerful.</p>
-<h2 id="my-personal-work-flow-for-contributing">My personal work flow for contributing</h2>
-<p>When I want to contribute to a repository, for a version bump or any bug fix, I proceed in 7 steps:</p>
+<p>In the <a href="../posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html">part 7</a>, I described my workflow for contributing to Exherbo. Since then I had a few remarks (from <a href="http://kloeri.livejournal.com/">kloeri</a>, the <a href="http://www.exherbo.org/">Exherbo</a>’s father, amongst others) on how I could improve it.</p>
+<h2 id="my-new-workflow">My new workflow</h2>
+<p>What I liked about my previous workflow is that it was exactly the same for contributing to Exherbo or <a href="../posts/2013-01-10-knowing-your-system---part-8---on-the-road-to-upstream.html">to upstream</a>. This is why it isn’t completely done. Most of it is actually still here, but in another way. What’s new is <code>cave sync</code>’s option <code>-s</code>, aka <code>--source</code> which allows you to specify multiple sync sources for a repository. For each repository that I install, I edit its configuration file changing <code>sync = git://git.exherbo.org/arbor.git</code> to <code>sync = git://git.exherbo.org/arbor.git local: git+file:///home/keruspe/Exherbo/arbor</code>, for example.</p>
+<p>What I do now is:</p>
 <ul>
 <li>If I do not have a copy of the repository locally I clone it, otherwise I pull new changes from upstream</li>
 <li>I write my patch and commit it</li>
-<li>I upload my patch with <code>git pe HEAD~&lt;number_of_commits&gt; | wgetpaste -r -s poundpython</code> (I’ll explain this command later)</li>
-<li><p>I put a copy of my patch in my autopatch directory (which I’ll explain after):</p>
-<pre><code>mkdir -p /etc/paludis/autopatch/&lt;repository&gt;
-curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</code></pre></li>
-<li>I sync the repository so that the autopatch gets applied: <code>cave sync &lt;repository&gt;</code></li>
+<li>I sync the repository from my local patched clone: <code>cave sync -s local &lt;repository&gt;</code></li>
 <li>I try my patch, compiling the related packages</li>
-<li><p>If everything succeeds, I submit my patch, otherwise, I get back to step 2 to fix my patch</p></li>
+<li>If it fails, I go back to step two to fix my patch</li>
+<li>If it succeeds, I upload it with <code>git pe -&lt;number_of_commits&gt; | wgetpaste -r -s poundpython</code> and I submit it.</li>
 </ul>
-<p>The command which I run to upload my patch is a git alias, <code>git pe</code> means <code>git format-patch -M -C --find-copies-harder --stdout</code> and takes as an argument the commits to publish, <code>HEAD~3</code> means 3 commits for example, I put <code>-s poundpython</code> as extra args for <code>wgetpaste</code> since gist.github.com which is the default fails quite often for me.</p>
-<p>The other interesting part of it is how I manage the autopatch system. I have <a href="https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/sync_post/local_update.bash">a paludis hook</a> placed in <code>/etc/paludis/hooks/sync_post</code> which cause every patch located in <code>/etc/paludis/autopatch/&lt;repository&gt;/</code> to be applied each time I sync the said repository.</p>
-<p>Next time I’ll explain how I contribute to upstream projects using nearly the same scheme, pointing out even more how intuitive and integrated this process is in my every day work.</p>
+<h2 id="what-has-become-my-previous-workflow">What has become my previous workflow?</h2>
+<p>This does not at all look like my previous workflow, but I said I kept it around… Why?</p>
+<p>Actually, my previous workflow comes right after that. Once I’ve sumitted my patch, I add it to my autopatch folder:</p>
+<pre><code>mkdir -p /etc/paludis/autopatch/&lt;repository&gt;
+curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</code></pre>
+<p>This way, they automatically get applied when I sync back the real repository instead of my copy. If a sync fail, I rebase my patches and resubmit them. Once the patch is pushed, I can safely remove it from my autopatch directory.</p>
+<p>Note that this whole second step can fully be ignored for repositories you have push access to, simplifying even more this light workflow.</p>
                 </section>
             </article>
 
