@@ -48,7 +48,7 @@ When I want to contribute to a repository, for a version bump or any bug fix, I 
         curl <patch_url> > /etc/paludis.autopatch/<repository>/my.patch
 
 * I sync the repository so that the autopatch gets applied: `cave sync <repository>`
-* I try my patch compiling the related packages
+* I try my patch, compiling the related packages
 * If everything succeeds, I submit my patch, otherwise, I get back to step 2 to fix my patch
 
 The command which I run to upload my patch is a git alias, `git pe` means `git format-patch -M -C --find-copies-harder --stdout`
