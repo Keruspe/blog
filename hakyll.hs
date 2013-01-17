@@ -69,7 +69,7 @@ main = hakyll $ do
             makeItem ""
                 >>= loadAndApplyTemplate "templates/posts.html"
                         (constField "title" title `mappend`
-                            constField "posts" list `mappend`
+                            constField "body" list `mappend`
                             defaultContext)
                 >>= loadAndApplyTemplate "templates/default.html" defaultContext
                 >>= relativizeUrls
