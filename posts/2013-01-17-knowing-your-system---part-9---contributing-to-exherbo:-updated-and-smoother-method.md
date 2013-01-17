@@ -25,6 +25,8 @@ What I do now is:
 * If it fails, I go back to step two to fix my patch
 * If it succeeds, I upload it with `git pe -<number_of_commits> | wgetpaste -r -s poundpython` and I submit it.
 
+For the record, the command which I run to upload my patch is a git alias, `git pe` means `git format-patch -M -C --find-copies-harder --stdout`
+
 ## What has become my previous workflow?
 
 This does not at all look like my previous workflow, but I said I kept it around… Why?
