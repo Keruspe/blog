@@ -26,7 +26,7 @@ end up with tons of packages being available on your machine, 95% of them won't 
 cool to get everything available without needing internet access to retrieve them, but you'll still have to download the
 source tarballs so it's pointless, it just make dependencies resolution slower.
 
-Another problem is contribution. To contribute to Gentoo, you'll open a bug [on their bugzilla](ttps://bugs.gentoo.org/)
+Another problem is contribution. To contribute to Gentoo, you'll open a bug [on their bugzilla](https://bugs.gentoo.org/)
 with a patch attached (I'm fine with this first step, the next ones are awful). When a developer or a proxy maintainer
 sees it, he applies it locally and push it to the centralised CVS server (which you sync using rsync on client side...).
 There is a HUGE lack of consistency in this process:

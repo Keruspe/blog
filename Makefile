@@ -26,3 +26,6 @@ preview: hakyll
 clean: hakyll
 	./hakyll clean
 	rm -f hakyll
+
+check: hakyll
+	./hakyll check

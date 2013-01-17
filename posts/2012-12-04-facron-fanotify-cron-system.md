@@ -17,7 +17,7 @@ the events you want to react to and the action you want to proceed when those ev
 
 ## Incron
 
-[Incron](http://incron.aiken.cz/) is the filesystem cron we've been using so far. It's based on the
+[Incron](http://inotify.aiken.cz/?section=incron&page=about&lang=en) is the filesystem cron we've been using so far. It's based on the
 [inotify](http://en.wikipedia.org/wiki/Inotify) linux system. Inotify was the replacement to dnotify which has been
 deprecated for quite a long time now. Thanks to inotify, incron watches for filesystem changes and act accordingly,
 given the configuration file you provide.

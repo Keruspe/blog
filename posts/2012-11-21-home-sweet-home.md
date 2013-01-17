@@ -24,7 +24,7 @@ about raw software over distro-specific ones.
 
 This blog is powered by [Hakyll](http://jaspervdj.be/hakyll/index.html).
 
-It was written by [Clément Delafargue](https://clementd.cleverapps.io/posts/2012-10-21-blog-deployment-system.html)
+It was written by [Clément Delafargue](http://blog.clement.delafargue.name/posts/2012-10-21-blog-deployment-system.html)
 and I shamelessly stole it from him.
 
 This blog is available as [a git repository](http://github.com/Keruspe/blog)
