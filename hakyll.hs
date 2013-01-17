@@ -44,9 +44,7 @@ main = hakyll $ do
     create ["posts.html"] $ do
         route idRoute
         compile $ do
-            posts   <- recentFirst <$> loadAll "posts/*"
-            itemTpl <- loadBody "templates/postitem.html"
-            list    <- applyTemplateList itemTpl postCtx posts
+            list <- postList tags "posts/*" recentFirst
             makeItem list
             >>= loadAndApplyTemplate "templates/posts.html" allPostsCtx
             >>= loadAndApplyTemplate "templates/default.html" allPostsCtx
@@ -56,9 +54,7 @@ main = hakyll $ do
     create ["index.html"] $ do
         route idRoute
         compile $ do
-            posts   <- take 10 . recentFirst <$> loadAll "posts/*"
-            itemTpl <- loadBody "templates/postitem.html"
-            list    <- applyTemplateList itemTpl postCtx posts
+            list <- postList tags "posts/*" (take 10 . recentFirst)
             makeItem list
             >>= loadAndApplyTemplate "templates/index.html" homeCtx
             >>= loadAndApplyTemplate "templates/default.html" homeCtx
@@ -66,9 +62,7 @@ main = hakyll $ do
 
     -- Post tags
     tagsRules tags $ \tag pattern -> do
-        let title = "Posts tagged " ++ tag
-
-        -- Copied from posts, need to refactor
+        let title = "Posts tagged '" ++ tag ++ "'"
         route idRoute
         compile $ do
             list <- postList tags pattern recentFirst
