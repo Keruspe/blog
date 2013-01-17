@@ -21,7 +21,7 @@ publish: build
 
 preview: hakyll
 	./hakyll clean
-	./hakyll preview 9000
+	./hakyll preview -p 9000
 
 clean: hakyll
 	./hakyll clean
