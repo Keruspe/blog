@@ -1,17 +1,18 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
-import Prelude hiding (id)
-import Control.Arrow ((&&&), (>>^), (>>>), (***), arr)
-import Control.Category (id)
+import Control.Applicative((<$>))
 import Data.List (isPrefixOf)
-import Data.Monoid (mempty, mconcat)
+import Data.Monoid(mappend)
 import Data.Text (pack,unpack,replace,empty)
 
 import Hakyll
 
 main :: IO ()
 main = hakyll $ do
+    -- Build tags
+    tags <- buildTags "posts/*" (fromCapture "tags/*.html")
+
     -- Compress CSS
     match "css/*" $ do
         route   idRoute
@@ -30,82 +31,93 @@ main = hakyll $ do
     -- Render posts
     match "posts/*" $ do
         route   $ setExtension ".html"
-        compile $ pageCompiler
-            >>> arr (renderDateField "date" "%B %e, %Y" "Date unknown")
-            >>> renderTagsField "prettytags" (fromCapture "tags/*")
-            >>> applyTemplateCompiler "templates/post.html"
-            >>> (externalizeUrlsCompiler $ feedRoot feedConfiguration)
-            >>> (arr $ copyBodyToField "description")
-            >>> (unExternalizeUrlsCompiler $ feedRoot feedConfiguration)
-            >>> applyTemplateCompiler "templates/posts-js.html"
-            >>> applyTemplateCompiler "templates/default.html"
-            >>> relativizeUrlsCompiler
+        compile $ pandocCompiler
+            >>= loadAndApplyTemplate "templates/post.html" (tagsCtx tags)
+            >>= (externalizeUrls $ feedRoot feedConfiguration)
+            >>= saveSnapshot "content"
+            >>= (unExternalizeUrls $ feedRoot feedConfiguration)
+            >>= loadAndApplyTemplate "templates/posts-js.html" (tagsCtx tags)
+            >>= loadAndApplyTemplate "templates/default.html" (tagsCtx tags)
+            >>= relativizeUrls
 
     -- Render posts list
-    match "posts.html" $ do
+    create ["posts.html"] $ do
         route idRoute
-        create "posts.html" $ constA mempty
-            >>> arr (setField "title" "All posts")
-            >>> requireAllA "posts/*" addPostList
-            >>> applyTemplateCompiler "templates/posts.html"
-            >>> applyTemplateCompiler "templates/default.html"
-            >>> relativizeUrlsCompiler
+        compile $ do
+            posts   <- recentFirst <$> loadAll "posts/*"
+            itemTpl <- loadBody "templates/postitem.html"
+            list    <- applyTemplateList itemTpl postCtx posts
+            makeItem list
+            >>= loadAndApplyTemplate "templates/posts.html" allPostsCtx
+            >>= loadAndApplyTemplate "templates/default.html" allPostsCtx
+            >>= relativizeUrls
 
     -- Index
-    match "index.html" $ do
+    create ["index.html"] $ do
         route idRoute
-        create "index.html" $ constA mempty
-            >>> arr (setField "title" "Home")
-            >>> requireAllA "posts/*" (id *** arr (take 10 . reverse . chronological) >>> addPostList)
-            >>> applyTemplateCompiler "templates/index.html"
-            >>> applyTemplateCompiler "templates/default.html"
-            >>> relativizeUrlsCompiler
+        compile $ do
+            posts   <- take 10 . recentFirst <$> loadAll "posts/*"
+            itemTpl <- loadBody "templates/postitem.html"
+            list    <- applyTemplateList itemTpl postCtx posts
+            makeItem list
+            >>= loadAndApplyTemplate "templates/index.html" homeCtx
+            >>= loadAndApplyTemplate "templates/default.html" homeCtx
+            >>= relativizeUrls
 
-    -- Tags
-    create "tags" $
-        requireAll "posts/*" (\_ ps -> readTags ps :: Tags String)
+    -- Post tags
+    tagsRules tags $ \tag pattern -> do
+        let title = "Posts tagged " ++ tag
 
-    -- Add a tag list compiler for every tag
-    match "tags/*" $ do
-        route $ setExtension ".html"
-        metaCompile $ require_ "tags"
-            >>> arr tagsMap
-            >>> arr (map (\(t, p) -> (tagIdentifier t, makeTagList t p)))
+        -- Copied from posts, need to refactor
+        route idRoute
+        compile $ do
+            list <- postList tags pattern recentFirst
+            makeItem ""
+                >>= loadAndApplyTemplate "templates/posts.html"
+                        (constField "title" title `mappend`
+                            constField "posts" list `mappend`
+                            defaultContext)
+                >>= loadAndApplyTemplate "templates/default.html" defaultContext
+                >>= relativizeUrls
 
     -- Render RSS feed
-    match "rss.xml" $ do
+    create ["rss.xml"] $ do
         route idRoute
-        create "rss.xml" $
-            requireAll_ "posts/*"
-                >>> arr (reverse . chronological)
-                >>> renderRss feedConfiguration
+        compile $ do
+            posts <- recentFirst <$> loadAllSnapshots "posts/*" "content"
+            renderRss feedConfiguration feedCtx posts
 
     -- Read templates
     match "templates/*" $ compile templateCompiler
-  where
-    tagIdentifier :: String -> Identifier (Page String)
-    tagIdentifier = fromCapture "tags/*"
 
--- | Auxiliary compiler: generate a post list from a list of given posts, and
--- add it to the current page under @$posts@
---
-addPostList :: Compiler (Page String, [Page String]) (Page String)
-addPostList = setFieldA "posts" $
-    arr (reverse . chronological)
-        >>> require "templates/postitem.html" (\p t -> map (applyTemplate t) p)
-        >>> arr mconcat
-        >>> arr pageBody
+-- Contexts
 
-makeTagList :: String
-            -> [Page String]
-            -> Compiler () (Page String)
-makeTagList tag posts =
-    constA (mempty, posts)
-        >>> addPostList
-        >>> arr (setField "title" ("Posts tagged &#8216;" ++ tag ++ "&#8217;"))
-        >>> applyTemplateCompiler "templates/posts.html"
-        >>> applyTemplateCompiler "templates/default.html"
-        >>> relativizeUrlsCompiler
+postCtx :: Context String
+postCtx =
+    dateField "date" "%B %e, %Y" `mappend`
+    defaultContext
+
+allPostsCtx :: Context String
+allPostsCtx =
+    constField "title" "All posts" `mappend`
+    postCtx
+
+homeCtx :: Context String
+homeCtx =
+    constField "title" "Home" `mappend`
+    postCtx
+
+feedCtx :: Context String
+feedCtx =
+    bodyField "description" `mappend`
+    postCtx
+
+tagsCtx :: Tags -> Context String
+tagsCtx tags =
+    tagsField "prettytags" tags `mappend`
+    postCtx
+
+-- Feed configuration
 
 feedConfiguration :: FeedConfiguration
 feedConfiguration = FeedConfiguration
@@ -116,22 +128,41 @@ feedConfiguration = FeedConfiguration
     , feedRoot        = "http://www.imagination-land.org"
     }
 
-externalizeUrlsCompiler :: String -> Compiler (Page String) (Page String)
-externalizeUrlsCompiler root = arr $ fmap (externalizeUrls root)
+-- Auxiliary compilers
 
-externalizeUrls :: String  -- ^ Path to the site root
-                -> String  -- ^ HTML to externalize
-                -> String  -- ^ Resulting HTML
-externalizeUrls root = withUrls ext
+-- TODO: clean me
+externalizeUrls :: String -> Item String -> Compiler (Item String)
+externalizeUrls root item = do
+    route <- getRoute $ itemIdentifier item
+    return $ case route of
+        Nothing -> item
+        Just r  -> fmap (externalizeUrlsWith root) item
+
+externalizeUrlsWith :: String  -- ^ Path to the site root
+                    -> String  -- ^ HTML to externalize
+                    -> String  -- ^ Resulting HTML
+externalizeUrlsWith root = withUrls ext
   where
     ext x = if isExternal x then x else root ++ x
 
-unExternalizeUrlsCompiler :: String -> Compiler (Page String) (Page String)
-unExternalizeUrlsCompiler root = arr $ fmap (unExternalizeUrls root)
+-- TODO: clean me
+unExternalizeUrls :: String -> Item String -> Compiler (Item String)
+unExternalizeUrls root item = do
+    route <- getRoute $ itemIdentifier item
+    return $ case route of
+        Nothing -> item
+        Just r  -> fmap (unExternalizeUrlsWith root) item
 
-unExternalizeUrls :: String  -- ^ Path to the site root
-                  -> String  -- ^ HTML to unExternalize
-                  -> String  -- ^ Resulting HTML
-unExternalizeUrls root = withUrls unExt
+unExternalizeUrlsWith :: String  -- ^ Path to the site root
+                      -> String  -- ^ HTML to unExternalize
+                      -> String  -- ^ Resulting HTML
+unExternalizeUrlsWith root = withUrls unExt
   where
     unExt x = if root `isPrefixOf` x then unpack $ replace (pack root) empty (pack x) else x
+
+postList :: Tags -> Pattern -> ([Item String] -> [Item String])
+         -> Compiler String
+postList tags pattern preprocess' = do
+    postItemTpl <- loadBody "templates/postitem.html"
+    posts <- preprocess' <$> loadAll pattern
+    applyTemplateList postItemTpl (tagsCtx tags) posts

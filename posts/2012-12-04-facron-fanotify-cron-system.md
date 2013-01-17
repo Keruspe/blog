@@ -37,11 +37,11 @@ at a stage where it's usable. It's not yet perfect and I want to improve it a li
 
 The configuration file (`/etc/facron.conf`) looks like:
 
-    /path/to/a/file FAN_MODIFY|FAN_EVENT_ON_CHILD /path/to/script fromFacron $$$$
+    /path/to/a/file FAN_MODIFY|FAN_EVENT_ON_CHILD /path/to/script fromFacron $$
 
 The first element is the file or directory to watch (of course multiple lines are supported), the second one corresponds
 to all fanotify events that you want to follow, and then your script or application (full path is recommended) + arguments.
-`$$$$` is a special token which will be replaced by the full path of the file which has emitted the event.
+`$$` is a special token which will be replaced by the full path of the file which has emitted the event.
 
 The available fanotify events are:
 
