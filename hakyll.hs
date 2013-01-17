@@ -126,13 +126,8 @@ feedConfiguration = FeedConfiguration
 
 -- Auxiliary compilers
 
--- TODO: clean me
 externalizeUrls :: String -> Item String -> Compiler (Item String)
-externalizeUrls root item = do
-    route <- getRoute $ itemIdentifier item
-    return $ case route of
-        Nothing -> item
-        Just r  -> fmap (externalizeUrlsWith root) item
+externalizeUrls root item = return $ fmap (externalizeUrlsWith root) item
 
 externalizeUrlsWith :: String  -- ^ Path to the site root
                     -> String  -- ^ HTML to externalize
@@ -141,13 +136,8 @@ externalizeUrlsWith root = withUrls ext
   where
     ext x = if isExternal x then x else root ++ x
 
--- TODO: clean me
 unExternalizeUrls :: String -> Item String -> Compiler (Item String)
-unExternalizeUrls root item = do
-    route <- getRoute $ itemIdentifier item
-    return $ case route of
-        Nothing -> item
-        Just r  -> fmap (unExternalizeUrlsWith root) item
+unExternalizeUrls root item = return $ fmap (unExternalizeUrlsWith root) item
 
 unExternalizeUrlsWith :: String  -- ^ Path to the site root
                       -> String  -- ^ HTML to unExternalize
