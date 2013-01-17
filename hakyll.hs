@@ -71,7 +71,9 @@ main = hakyll $ do
                         (constField "title" title `mappend`
                             constField "body" list `mappend`
                             defaultContext)
-                >>= loadAndApplyTemplate "templates/default.html" defaultContext
+                >>= loadAndApplyTemplate "templates/default.html"
+                        (constField "title" title `mappend`
+                            defaultContext)
                 >>= relativizeUrls
 
     -- Render RSS feed
