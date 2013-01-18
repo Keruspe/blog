@@ -29,7 +29,7 @@ main = hakyll $ do
         compile copyFileCompiler
 
     -- favicon
-    match "favicon.ico" $ do
+    match "favicon.png" $ do
         route   idRoute
         compile copyFileCompiler
 
