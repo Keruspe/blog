@@ -28,6 +28,11 @@ main = hakyll $ do
         route   idRoute
         compile copyFileCompiler
 
+    -- favicon
+    match "favicon.ico" $ do
+        route   idRoute
+        compile copyFileCompiler
+
     -- Render posts
     match "posts/*" $ do
         route   $ setExtension ".html"
