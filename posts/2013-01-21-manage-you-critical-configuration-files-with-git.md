@@ -40,7 +40,7 @@ I then create a `.git/info/attributes` file, in which I tell git to use my brand
 
 ## Example
 
-Let's not create the `myconf.conf` file we mentioned earlier, let's push it to the remote repository, and clone it from
+Let's now create the `myconf.conf` file we mentioned earlier, let's push it to the remote repository, and clone it from
 anywhere else, to see the result.
 
     keruspe@Lou ~/tmp/test (git)-[master] % cat > myconf.conf << EOF
