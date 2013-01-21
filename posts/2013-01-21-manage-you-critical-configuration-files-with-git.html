@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Keruspe's blag - Manage you critical configuration files with git</title>
+        <meta name="description" content="Keruspe's personal blog">
+        <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css">
+        <link href="http://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" type="text/css" href="../css/default.css">
+        <link rel="alternate" type="application/rss+xml" title="Keruspe's blag" href="../rss.xml">
+        <link rel="shortcut icon" href="../favicon.png">
+        <script type="text/javascript">
+            var _gaq = _gaq || [];
+            _gaq.push(['_setAccount', 'UA-36525806-1']);
+            _gaq.push(['_setDomainName', 'imagination-land.org']);
+            _gaq.push(['_setAllowLinker', true]);
+            _gaq.push(['_trackPageview']);
+
+            (function() {
+                /* Google Analytics */
+                var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+                ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+                var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+                /* Google Plus */
+                /*var po = document.createElement('script'); po.type = 'text/javascript'; po.async = true;
+                po.src = 'https://apis.google.com/js/plusone.js';
+                var ss = document.getElementsByTagName('script')[0]; ss.parentNode.insertBefore(po, ss);*/
+                /* Disqus */
+                var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+                dsq.src = 'http://keruspe.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+    </head>
+    <body>
+        <header>
+            <hgroup>
+                <h1><a href="../">Keruspe's blag</a></h1>
+                <h6>-</h6>
+                <h2>Various free software hacking stuff</h2>
+            </hgroup>
+        </header>
+        <nav>
+            <menu>
+                <a href="../">Home</a>
+                <a href="../posts.html">All posts</a>
+                <!-- <a href="http://marc-antoine.perennou.com">About me</a> -->
+                <a href="../rss.xml">RSS feed</a>
+                <a href="http://github.com/Keruspe">My projects</a>
+                <a href="http://www.clever-cloud.com">My company</a>
+            </menu>
+        </nav>
+        <section>
+            <article>
+                <header>
+                    <h1>Manage you critical configuration files with git</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January 21, 2013</strong></p>
+                    <p>Tagged as: <a href="../tags/gnu.html">gnu</a>, <a href="../tags/linux.html">linux</a>, <a href="../tags/unix.html">unix</a>, <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/git.html">git</a>.</p>
+                </header>
+
+                <section>
+<p>A few months ago, I decided to track my configuration files using git, which I use for pretty much everything now.</p>
+<p>The problem I had to face is that some of them contain passwords, so I couldn’t let them as is.</p>
+<h2 id="setting-up-the-test-environment">Setting up the test environment</h2>
+<pre><code>keruspe@Lou ~/tmp % mkdir test.git &amp;&amp; cd test.git &amp;&amp; git init --bare &amp;&amp; cd ..
+Initialized empty Git repository in /home/keruspe/tmp/test.git/
+keruspe@Lou ~/tmp % mkdir test &amp;&amp; cd test &amp;&amp; git init
+Initialized empty Git repository in /home/keruspe/tmp/test/.git/
+keruspe@Lou ~/tmp/test (git)-[master] % git remote add origin ../test.git </code></pre>
+<p>Ok, we now have a remote repository in <code>~/tmp/test.git</code> and a working directory in <code>~/tmp/test</code></p>
+<h2 id="configuring-the-working-directory-to-be-password-safe">Configuring the working directory to be “password-safe”</h2>
+<pre><code>keruspe@Lou ~/tmp/test (git)-[master] % git config filter.password.clean &quot;sed -e 's/mypassword/@PASSWORD@/' -e 's/anotherpassword/@PASSWORD2@/'&quot;
+keruspe@Lou ~/tmp/test (git)-[master] % git config filter.password.smuge &quot;sed -e 's/@PASSWORD@/mypassword/' -e 's/@PASSWORD2@/anotherpassword/'&quot;
+keruspe@Lou ~/tmp/test (git)-[master] % cat &gt; .git/info/attributes &lt;&lt; EOF
+myconf.conf filter=password
+EOF</code></pre>
+<p>Ok, what’s going on there?</p>
+<p>I’m creating a filter which I call “password”. A filter consist of two functions: * clean is called on each file when you’re committing, before creating the git objects corresponding to your commit. * smudge is called when you checkout, each time git is recreating your working directory from the git objects.</p>
+<p>You can note that this is not an in-place edition with sed, since I did not add the <code>-i</code> argument, these commands are called during a piping process, not directly on files.</p>
+<p>I then create a <code>.git/info/attributes</code> file, in which I tell git to use my brand new “filter” password for the file <code>myconf.conf</code>. You can use any pattern that git understands here, and can obviously add multiple lines.</p>
+<h2 id="example">Example</h2>
+<p>Let’s not create the <code>myconf.conf</code> file we mentioned earlier, let’s push it to the remote repository, and clone it from anywhere else, to see the result.</p>
+<pre><code>keruspe@Lou ~/tmp/test (git)-[master] % cat &gt; myconf.conf &lt;&lt; EOF
+user = johndoe
+password = mypassword
+bddurl = root:anotherpassword@mysql.local
+EOF
+keruspe@Lou ~/tmp/test (git)-[master] % git add myconf.conf &amp;&amp; git commit -m &quot;initial config&quot; &amp;&amp; git push origin master
+[master (root-commit) 46153a1] initial config
+ 1 file changed, 3 insertions(+)
+ create mode 100644 myconf.conf
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 283 bytes, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To ../test.git
+ * [new branch]      master -&gt; master
+keruspe@Lou ~/tmp/test (git)-[master] % cd ..
+keruspe@Lou ~/tmp % git clone test.git test2
+Cloning into 'test2'...
+done.
+keruspe@Lou ~/tmp % cat test/myconf.conf
+user = johndoe
+password = mypassword
+bddurl = root:anotherpassword@mysql.local
+keruspe@Lou ~/tmp % cat test2/myconf.conf
+user = johndoe
+password = @PASSWORD@
+bddurl = root:@PASSWORD2@@mysql.local</code></pre>
+<p>As you can see, in my <code>~/tmp/test</code> working directory, where I have my filter set up, nothing has changed at all, whereas in the brand new clone (and thus, in the server), each my passwords are masked and are not accessible. This way, you can track your configuration files using git and sharing it with other without even thinking of your passwords, as long as everything is in your filter.</p>
+                </section>
+            </article>
+
+            <section class="social">
+                <!--<div class="g-plusone" data-align="right"></div>-->
+                <div id="disqus_thread"></div>
+                <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+            </section>
+
+        </section>
+        <footer>
+            <p>
+                This  work is licensed under a
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/3.0/deed.en_US">
+                    Creative Commons Attribution-ShareAlike 3.0 Unported License
+                    <img id="cc-icon" alt="Creative Commons License" src="http://i.creativecommons.org/l/by-sa/3.0/88x31.png">
+                </a>.
+            </p>
+        </footer>
+    </body>
+</html>
