@@ -44,12 +44,12 @@ But there is also another kind of desktop managers which become more and more po
 * [i3](http://i3wm.org/)
 * [awesome](http://awesome.naquadah.org/)
 
-They all run on top of a graphical server which aim is to display what we ask it to: [X11](http://www.x.org/).
+They all run on top of a graphical server which aim is to display what we ask it to: [X11](http://www.x.org/wiki/).
 A new compositor (a part of a graphical server) is raising: [wayland](http://wayland.freedesktop.org/).
 Wayland will allow application to be a lot more flexible and will improve performances, but it will be
 lazier (applications will have to do more stuff by themselves).
 
-The X.org server, wayland, and all related libraries and tools are part of [the freedesktop project](http://www.freedesktop.org/).
+The X.org server, wayland, and all related libraries and tools are part of [the freedesktop project](http://www.freedesktop.org/wiki/).
 Freedesktop aims to provide a free and opensource grapical user experience to everyone.
 
 ## A GNU/Linux system structure.
