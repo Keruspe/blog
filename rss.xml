@@ -38,7 +38,7 @@ EOF</code></pre>
 <p>You can note that this is not an in-place edition with sed, since I did not add the <code>-i</code> argument, these commands are called during a piping process, not directly on files.</p>
 <p>I then create a <code>.git/info/attributes</code> file, in which I tell git to use my brand new “filter” password for the file <code>myconf.conf</code>. You can use any pattern that git understands here, and can obviously add multiple lines.</p>
 <h2 id="example">Example</h2>
-<p>Let’s not create the <code>myconf.conf</code> file we mentioned earlier, let’s push it to the remote repository, and clone it from anywhere else, to see the result.</p>
+<p>Let’s now create the <code>myconf.conf</code> file we mentioned earlier, let’s push it to the remote repository, and clone it from anywhere else, to see the result.</p>
 <pre><code>keruspe@Lou ~/tmp/test (git)-[master] % cat &gt; myconf.conf &lt;&lt; EOF
 user = johndoe
 password = mypassword
