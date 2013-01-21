@@ -73,6 +73,6 @@ anywhere else, to see the result.
     bddurl = root:@PASSWORD2@@mysql.local
 
 As you can see, in my `~/tmp/test` working directory, where I have my filter set up, nothing has changed at all, whereas
-in the brand new clone (and thus, in the server), each my passwords are masked and are not accessible. This way, you can
+in the brand new clone `~/tmp/test2` (and thus, in the server), all my passwords are masked and are not accessible. This way, you can
 track your configuration files using git and sharing it with other without even thinking of your passwords, as long as
 everything is in your filter.
