@@ -6,8 +6,37 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Mon, 21 Jan 2013 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Tue, 22 Jan 2013 00:00:00 UT</lastBuildDate>
         <item>
+    <title>GPaste 2.99.2 released</title>
+    <link>http://www.imagination-land.org/posts/2013-01-22-gpaste-2.99.2-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 2.99.2 released</h1>
+                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January 22, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>Followup to <a href="http://www.imagination-land.org/posts/2013-01-15-gpaste-2.99.1-released.html">last week’s release</a>, here is a new bugfix release.</p>
+<p>It’s available <a href="http://www.imagination-land.org/files/gpaste-2.99.2.tar.xz">there</a>, get it while it’s hot!</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>Fix a bug making gpaste settings ui a no-op</li>
+<li>Don’t close legacy applet menu when deleting an item</li>
+<li>Fix vala bindings</li>
+<li>Updated portuguese translation</li>
+</ul>
+<p>This is 3.0 RC3 and should be the latest RC before the 3.0 release.</p>
+<p>Feedback really appreciated!</p>
+<p>And don’t forget to run <code>gpaste dr</code> aka <code>gpaste daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Tue, 22 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-01-22-gpaste-2.99.2-released.html</guid>
+</item>
+<item>
     <title>Manage you critical configuration files with git</title>
     <link>http://www.imagination-land.org/posts/2013-01-21-manage-you-critical-configuration-files-with-git.html</link>
     <description><![CDATA[            <article>
@@ -133,7 +162,7 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
 <p>This is 3.0 RC2 and no major changes should append before the 3.0 release.</p>
 <p>Feedback really appreciated!</p>
 <p>And don’t forget to run <code>gpaste dr</code> aka <code>gpaste daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
-<p>EDIT: packagers should backport <a href="https://github.com/Keruspe/GPaste/commit/61947fa2b5ea6b19b2a9cdb7db2b328e4a703f85"><code class="url">https://github.com/Keruspe/GPaste/commit/61947fa2b5ea6b19b2a9cdb7db2b328e4a703f85</code></a> with this release.</p>
+<p>EDIT: packagers should backport <a href="https://github.com/Keruspe/GPaste/commit/61947fa2b5ea6b19b2a9cdb7db2b328e4a703f85">https://github.com/Keruspe/GPaste/commit/61947fa2b5ea6b19b2a9cdb7db2b328e4a703f85</a> with this release.</p>
                 </section>
             </article>
 ]]></description>
