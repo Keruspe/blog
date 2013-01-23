@@ -154,6 +154,7 @@ myConfiguration :: Configuration
 myConfiguration = defaultConfiguration {ignoreFile = ignoreFile'}
   where
     ignoreFile' x
-        | x == ".htaccess" = False
-        | otherwise        = ignoreFile defaultConfiguration x
+        | x == ".htaccess"       = False
+        | x == "files/.htaccess" = False
+        | otherwise              = ignoreFile defaultConfiguration x
 
