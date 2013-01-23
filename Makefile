@@ -11,13 +11,17 @@ new:
 	@./new_post.sh
 
 publish: build
+	git add .
 	git stash save
 	git checkout publish
-	rsync -r --delete _site/{,.}* ./
+	find . -maxdepth 1 ! -name '.git*' ! -name '_site' -exec rm -rf {} +
+	mv _site/{,.}* .
+	rmdir _site
 	git add -A && git co "Publish" || true
 	git push
 	git push clever publish:master
 	git checkout master
+	git clean -fdx
 	git stash pop || true
 
 preview: hakyll
