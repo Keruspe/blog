@@ -9,7 +9,7 @@ import Data.Text (pack,unpack,replace,empty)
 import Hakyll
 
 main :: IO ()
-main = hakyll $ do
+main = hakyllWith myConfiguration $ do
     -- Build tags
     tags <- buildTags "posts/*" (fromCapture "tags/*.html")
 
@@ -147,3 +147,13 @@ postList tags pattern preprocess' = do
     postItemTpl <- loadBody "templates/postitem.html"
     posts <- preprocess' <$> loadAll pattern
     applyTemplateList postItemTpl (tagsCtx tags) posts
+
+-- Custom configuration
+
+myConfiguration :: Configuration
+myConfiguration = defaultConfiguration {ignoreFile = ignoreFile'}
+  where
+    ignoreFile' x
+        | x == ".htaccess" = False
+        | otherwise        = ignoreFile defaultConfiguration x
+

@@ -13,7 +13,7 @@ new:
 publish: build
 	git stash save
 	git checkout publish
-	rsync -r --delete --exclude .htaccess _site/* ./
+	rsync -r --delete _site/{,.}* ./
 	git add -A && git co "Publish" || true
 	git push
 	git push clever publish:master
