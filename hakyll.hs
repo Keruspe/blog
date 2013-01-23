@@ -18,18 +18,8 @@ main = hakyll $ do
         route   idRoute
         compile compressCssCompiler
 
-    -- Copy Files
-    match "files/*" $ do
-        route   idRoute
-        compile copyFileCompiler
-
-    -- robots.txt
-    match "robots.txt" $ do
-        route   idRoute
-        compile copyFileCompiler
-
-    -- favicon
-    match "favicon.png" $ do
+    -- Copy Files, robots.txt, favicon and htaccess
+    match ("files/*" .||. "robots.txt" .||. "favicon.png" .||. ".htaccess") $ do
         route   idRoute
         compile copyFileCompiler
 
