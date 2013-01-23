@@ -14,7 +14,7 @@
                 <header>
                     <h1>GPaste 2.99.2 released</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>January 22, 2013</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
                 </header>
 
                 <section>
@@ -43,7 +43,7 @@
                 <header>
                     <h1>Manage you critical configuration files with git</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>January 21, 2013</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/git.html">git</a>.</p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/git.html">git</a>.</p>
                 </header>
 
                 <section>
@@ -110,7 +110,7 @@ bddurl = root:@PASSWORD2@@mysql.local</code></pre>
                 <header>
                     <h1>Knowing your system - Part 9 - Contributing to Exherbo: Updated and smoother method</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>January 17, 2013</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
                 </header>
 
                 <section>
@@ -147,7 +147,7 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
                 <header>
                     <h1>GPaste 2.99.1 released</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>January 15, 2013</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
                 </header>
 
                 <section>
@@ -176,7 +176,7 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
                 <header>
                     <h1>GPaste 2.99 released</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>January 14, 2013</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
                 </header>
 
                 <section>
@@ -213,7 +213,7 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
                 <header>
                     <h1>Knowing your system - Part 8 - On the road to upstream</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>January 10, 2013</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
                 </header>
 
                 <section>
@@ -237,7 +237,7 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
                 <header>
                     <h1>Knowing your system - Part 7 - Contributing to Exherbo</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>January  3, 2013</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
                 </header>
 
                 <section>
@@ -283,7 +283,7 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
                 <header>
                     <h1>systemd as a session manager</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>January  1, 2013</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/systemd.html">systemd</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/systemd.html">systemd</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
                 </header>
 
                 <section>
@@ -314,7 +314,7 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
                 <header>
                     <h1>Knowing your system - Part 6 - Source-based distributions: Discovering Exherbo</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>December 27, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>.</p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>.</p>
                 </header>
 
                 <section>
@@ -348,7 +348,7 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
                 <header>
                     <h1>Knowing your system - Part 5 - Source-based distributions: the binary way</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>December 20, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
                 </header>
 
                 <section>
@@ -401,7 +401,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
                 <header>
                     <h1>Knowing your system - Part 4 - Falling in love with paludis</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>December 13, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
                 </header>
 
                 <section>
@@ -453,7 +453,7 @@ cave resolve world -c -km -Km -Cs</code></pre>
                 <header>
                     <h1>Knowing your system - Part 3 - Source-based distributions: The Gentoo example</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>December 10, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>.</p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>.</p>
                 </header>
 
                 <section>
@@ -584,7 +584,7 @@ sudo make install</code></pre>
                 <header>
                     <h1>GPaste 2.9.1 released</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>December  1, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
                 </header>
 
                 <section>
@@ -636,7 +636,7 @@ sudo make install</code></pre>
                 <header>
                     <h1>Knowing your system - Part 2 - The init process</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>November 29, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/systemd.html">systemd</a>.</p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/systemd.html">systemd</a>.</p>
                 </header>
 
                 <section>
@@ -695,7 +695,7 @@ sudo make install</code></pre>
                 <header>
                     <h1>Knowing your system - Part 1 - Basis on UNIX-like systems</h1>
                     <p>by <em>Marc-Antoine Perennou</em> on <strong>November 22, 2012</strong></p>
-                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/gnu.html">gnu</a>, <a href="http://www.imagination-land.org/tags/unix.html">unix</a>, <a href="http://www.imagination-land.org/tags/linux.html">linux</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>.</p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>.</p>
                 </header>
 
                 <section>
