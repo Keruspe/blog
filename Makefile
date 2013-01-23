@@ -13,8 +13,8 @@ new:
 publish: build
 	git stash save
 	git checkout publish
-	cp -r _site/* ./
-	git add . &&  git co "Publish" || true
+	rsync -r --delete _site/{.,}* ./
+	git add -A && git co "Publish" || true
 	git push clever publish:master
 	git checkout master
 	git stash pop || true
