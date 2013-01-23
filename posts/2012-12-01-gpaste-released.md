@@ -1,7 +1,7 @@
 ---
 title: GPaste 2.9.1 released
 author: Marc-Antoine Perennou
-tags: GPaste, release, clipboard, linux, gnome
+tags: GPaste, release, clipboard, gnome
 ---
 
 It's available [there](https://github.com/Keruspe/GPaste/downloads), get it while it's hot!

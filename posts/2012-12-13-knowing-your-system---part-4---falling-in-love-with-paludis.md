@@ -1,7 +1,7 @@
 ---
 title: Knowing your system - Part 4 - Falling in love with paludis
 author: Marc-Antoine Perennou
-tags: gnu, unix, linux, sysadmin, knowingyoursystem, source-based, paludis
+tags: sysadmin, knowingyoursystem, source-based, paludis
 ---
 
 ## Installing a source-based GNU/Linux distribution

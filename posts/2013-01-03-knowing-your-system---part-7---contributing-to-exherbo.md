@@ -1,7 +1,7 @@
 ---
 title: Knowing your system - Part 7 - Contributing to Exherbo
 author: Marc-Antoine Perennou
-tags: gnu, unix, linux, sysadmin, knowingyoursystem, source-based, exherbo, paludis
+tags: sysadmin, knowingyoursystem, source-based, exherbo, paludis
 ---
 
 ## The exherbo contribution mechanism

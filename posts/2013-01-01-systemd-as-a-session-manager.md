@@ -1,7 +1,7 @@
 ---
 title: systemd as a session manager
 author: Marc-Antoine Perennou
-tags: gnu, linux, sysadmin, systemd, gnome
+tags: sysadmin, systemd, gnome
 ---
 
 As we are supposed to take good resolutions for 2013, mine has been to switch from `gnome-session` to [systemd](http://www.freedesktop.org/wiki/Software/systemd)

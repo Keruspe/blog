@@ -1,7 +1,7 @@
 ---
 title: Manage you critical configuration files with git
 author: Marc-Antoine Perennou
-tags: gnu, linux, unix, sysadmin, git
+tags: sysadmin, git
 ---
 
 A few months ago, I decided to track my configuration files using git, which I use for pretty much everything now.

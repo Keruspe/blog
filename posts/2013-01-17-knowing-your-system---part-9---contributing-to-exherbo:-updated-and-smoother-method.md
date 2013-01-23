@@ -1,7 +1,7 @@
 ---
 title: Knowing your system - Part 9 - Contributing to Exherbo: Updated and smoother method
 author: Marc-Antoine Perennou
-tags: gnu, unix, linux, sysadmin, knowingyoursystem, source-based, exherbo, paludis
+tags: sysadmin, knowingyoursystem, source-based, exherbo, paludis
 ---
 
 In the [part 7](http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html),

@@ -1,7 +1,7 @@
 ---
 title: Knowing your system - Part 5 - Source-based distributions: the binary way
 author: Marc-Antoine Perennou
-tags: gnu, unix, linux, sysadmin, knowingyoursystem, source-based, paludis
+tags: sysadmin, knowingyoursystem, source-based, paludis
 ---
 
 [We last saw](http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html)

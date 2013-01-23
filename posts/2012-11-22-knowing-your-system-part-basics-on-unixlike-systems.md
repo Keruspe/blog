@@ -1,7 +1,7 @@
 ---
 title: Knowing your system - Part 1 - Basis on UNIX-like systems
 author: Marc-Antoine Perennou
-tags: gnu, unix, linux, sysadmin, knowingyoursystem
+tags: sysadmin, knowingyoursystem
 ---
 
 Before starting to blog about more technical stuff, I'd like to recall a few basis

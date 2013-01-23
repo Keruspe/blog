@@ -1,7 +1,7 @@
 ---
 title: Knowing your system - Part 6 - Source-based distributions: Discovering Exherbo
 author: Marc-Antoine Perennou
-tags: gnu, unix, linux, sysadmin, knowingyoursystem, source-based, exherbo
+tags: sysadmin, knowingyoursystem, source-based, exherbo
 ---
 
 ## The limits of Gentoo

@@ -1,7 +1,7 @@
 ---
 title: Knowing your system - Part 3 - Source-based distributions: The Gentoo example
 author: Marc-Antoine Perennou
-tags: gnu, unix, linux, sysadmin, knowingyoursystem, source-based
+tags: sysadmin, knowingyoursystem, source-based
 ---
 
 After [a little reminder on UNIX-like systems](http://www.imagination-land.org/posts/2012-11-22-knowing-your-system-part-basics-on-unixlike-systems.html)

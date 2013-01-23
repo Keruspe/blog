@@ -1,7 +1,7 @@
 ---
 title: Knowing your system - Part 8 - On the road to upstream
 author: Marc-Antoine Perennou
-tags: gnu, unix, linux, sysadmin, knowingyoursystem, source-based, exherbo, paludis, gnome
+tags: sysadmin, knowingyoursystem, source-based, exherbo, paludis, gnome
 ---
 
 ## How did I start contributing?
