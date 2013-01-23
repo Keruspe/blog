@@ -15,7 +15,7 @@ publish: build
 	git stash save
 	git checkout publish
 	find . -maxdepth 1 ! -name '.' ! -name '.git*' ! -name '_site' -exec rm -rf {} +
-	mv _site/{,.}* .
+	find _site -maxdepth 1 -exec mv {} . \;
 	rmdir _site
 	git add -A && git co "Publish" || true
 	git push
