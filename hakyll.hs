@@ -18,9 +18,14 @@ main = hakyllWith myConfiguration $ do
         route   idRoute
         compile compressCssCompiler
 
-    -- Copy Files, robots.txt, favicon and htaccess
-    match ("files/*" .||. "images/*" .||. "robots.txt" .||. "favicon.png" .||. ".htaccess") $ do
+    -- Copy files and images
+    match ("files/*" .||. "images/*") $ do
         route   idRoute
+        compile copyFileCompiler
+
+    -- Copy favicon, htaccess...
+    match "data/*" $ do
+        route   $ gsubRoute "data/" (const "")
         compile copyFileCompiler
 
     -- Render posts
@@ -154,7 +159,7 @@ myConfiguration :: Configuration
 myConfiguration = defaultConfiguration {ignoreFile = ignoreFile'}
   where
     ignoreFile' x
-        | x == ".htaccess"       = False
+        | x == "data/.htaccess"  = False
         | x == "files/.htaccess" = False
         | otherwise              = ignoreFile defaultConfiguration x
 
