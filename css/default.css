@@ -96,7 +96,7 @@ body>nav menu a img {
     width: 20px;
 }
 
-#octocat {
+body>nav menu a img.bigger {
     height: 24px;
     vertical-align: -30%;
     width: 24px;
