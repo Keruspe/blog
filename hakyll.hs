@@ -19,7 +19,7 @@ main = hakyllWith myConfiguration $ do
         compile compressCssCompiler
 
     -- Copy Files, robots.txt, favicon and htaccess
-    match ("files/*" .||. "robots.txt" .||. "favicon.png" .||. ".htaccess") $ do
+    match ("files/*" .||. "images/*" .||. "robots.txt" .||. "favicon.png" .||. ".htaccess") $ do
         route   idRoute
         compile copyFileCompiler
 
