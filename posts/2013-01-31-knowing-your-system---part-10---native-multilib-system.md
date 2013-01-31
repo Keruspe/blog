@@ -30,7 +30,7 @@ cannot run 32-bits binaries from a 64-bits system (the opposite is also true). S
 switched all our applicative systems to multilib, at Clever Cloud.
 
 Solution: On your 64-bits system, you can install 32-bits libraries in parallel of 64-bits one (the former will be in
-/usr/lib32, the latter in /usr/lib64, usually). Doing so allows you to run both 64 and 32-bits binaries on your system
+`/usr/lib32`, the latter in `/usr/lib64`, usually). Doing so allows you to run both 64 and 32-bits binaries on your system
 as long as you have the dependencies installed both for 64 and 32-bits. A good example is skype, which do not release a
 proper 64-bits version, so you need to run the 32-bits one, no matter your system.
 
