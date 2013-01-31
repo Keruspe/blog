@@ -1,10 +1,10 @@
 body {
-    min-width: 20em;
-    max-width: 70em;
-    margin: auto;
-    padding: 1em;
     background-color: #DEDEDE;
     font-family: ABeeZee, Helvetica, sans-serif;
+    margin: auto;
+    max-width: 70em;
+    min-width: 20em;
+    padding: 1em;
 }
 
 a {
@@ -29,20 +29,20 @@ body>header>hgroup {
 }
 
 body>header>hgroup>h1 {
-    font-size: 2.2em;
     display: inline;
+    font-size: 2.2em;
 }
 
 body>header>hgroup>h2 {
+    display: inline;
     font-size: 1.6em;
     font-weight: normal;
-    display: inline;
 }
 
 body>header>hgroup>h6 {
-    padding: 1em;
-    font-size: 1.6em;
     display: inline;
+    font-size: 1.6em;
+    padding: 1em;
 }
 
 body>header a, body>header a:hover {
@@ -51,8 +51,8 @@ body>header a, body>header a:hover {
 }
 
 .posts-list>h1, .posts-list>h2 {
-    margin-top: 1em;
     margin-bottom: 0;
+    margin-top: 1em;
 }
 
 .posts-list li {
@@ -70,8 +70,8 @@ body>header a, body>header a:hover {
 }
 
 article>header {
-    margin-bottom: 1.5em;
     border-bottom: 1px solid;
+    margin-bottom: 1.5em;
 }
 
 body>nav, body>footer {
@@ -81,8 +81,8 @@ body>nav, body>footer {
 
 body>nav menu a {
     color: black;
-    text-decoration: none;
     padding: 0 1.5em;
+    text-decoration: none;
 }
 
 body>nav menu a:hover {
@@ -92,14 +92,14 @@ body>nav menu a:hover {
 
 body>nav menu a img {
     height: 20px;
-    width: 20px;
     vertical-align: -18%;
+    width: 20px;
 }
 
 #octocat {
     height: 24px;
-    width: 24px;
     vertical-align: -30%;
+    width: 24px;
 }
 
 article {
@@ -109,9 +109,9 @@ article {
 article header h1 {
     font-family: 'Arvo', serif;
     font-size: 1.6em;
-    text-decoration: underline;
     margin-bottom: 0;
     padding-bottom: 0;
+    text-decoration: underline;
 }
 
 article h2 {
@@ -123,24 +123,24 @@ article h3 {
 }
 
 code {
+    background-color: #D2D2D2;
     display: inline-block;
     padding: 0.5em;
-    background-color: #D2D2D2;
 }
 
 #disqus_thread {
+    border-top: 1px solid black;
     margin-top: 1em;
     padding-top: 1em;
-    border-top: 1px solid black;
 }
 
 body>footer {
-    text-align: center;
     padding: 0.2em;
+    text-align: center;
 }
 
 #cc-icon {
-    margin-top: -0.3em;
-    margin-right: 1em;
     float: right;
+    margin-right: 1em;
+    margin-top: -0.3em;
 }
