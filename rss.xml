@@ -19,7 +19,7 @@
 
                 <section>
 <h2 id="why-no-post-last-week">Why no post last week?</h2>
-<p>Last week, we were quite busy at <a href="http://www.clever-cloud.com/">Clever Cloud</a>, since we were releasing <a href="http://blog.clever-cloud.com/Press/2013/01/30/open-cloud-month.html">an awesome offer</a> and it took us quite some time since we migrated amongst other things from <a href="http://www.imagination-land.orgttp://www.openstack.org/">openstack</a> to a custom home made solution which better fits our needs.</p>
+<p>Last week, we were quite busy at <a href="http://www.clever-cloud.com/">Clever Cloud</a>, since we were releasing <a href="http://blog.clever-cloud.com/Press/2013/01/30/open-cloud-month.html">an awesome offer</a> and it took us quite some time since we migrated amongst other things from <a href="http://www.openstack.org/">openstack</a> to a custom home made solution which better fits our needs.</p>
 <h2 id="the-future-of-knowing-your-system">The future of “Knowing your system”</h2>
 <p>Two weeks ago, with <a href="http://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo:-updated-and-smoother-method.html">Part 9</a>, I actually finished my initial Roadmap for this saga of posts, so I won’t continue to make 1 post per week. I’ll keep posting them on Thursdays, as I find out interesting stuff about system internals.</p>
 <p>I recommend you reading <a href="http://0pointer.de/blog/projects/the-biggest-myths">last Lennart’s post</a> which explains a lot of things about the common myths regarding systemd.</p>
