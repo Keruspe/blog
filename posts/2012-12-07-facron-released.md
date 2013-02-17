@@ -30,31 +30,41 @@ You must have fanotify included in your kernel (most recent systems should have 
 
 Here are the steps you need to run in order to get it up and running:
 
-    wget https://github.com/downloads/Keruspe/facron/facron-0.9.tar.xz
-    tar xf facron-0.9.tar.xz
-    cd facron-0.9
-    ./configure --sysconfdir=/etc --with-systemdsystemunitdir=/usr/lib/systemd/system
-    make
-    sudo make install
+```bash
+wget https://github.com/downloads/Keruspe/facron/facron-0.9.tar.xz
+tar xf facron-0.9.tar.xz
+cd facron-0.9
+./configure --sysconfdir=/etc --with-systemdsystemunitdir=/usr/lib/systemd/system
+make
+sudo make install
+```
 
 Then just create your configuration file [as I said in the previous post](http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html)
 or following the manual instructions (man facron).
 
 When everything is ready, you just have to run
 
-    sudo systemctl start facron.service
+```bash
+sudo systemctl start facron.service
+```
 
 Or for non-systemd systems
 
-    sudo facron --background
+```bash
+sudo facron --background
+```
 
 If you edit the configuration file, you can reload it without restarting the daemon by running
 
-    sudo systemctl reload facron.service
+```bash
+sudo systemctl reload facron.service
+```
 
 Or for non-systemd systems
 
-    sudo kill -USR1 $(pidof facron)
+```bash
+sudo kill -USR1 $(pidof facron)
+```
 
 
 I hope you'll enjoy it. Feel free to propose new features and/or to contribute !

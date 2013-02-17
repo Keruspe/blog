@@ -33,8 +33,10 @@ This does not at all look like my previous workflow, but I said I kept it around
 
 Actually, my previous workflow comes right after that. Once I've sumitted my patch, I add it to my autopatch folder: 
 
-    mkdir -p /etc/paludis/autopatch/<repository>
-    curl <patch_url> > /etc/paludis.autopatch/<repository>/my.patch
+```bash
+mkdir -p /etc/paludis/autopatch/<repository>
+curl <patch_url> > /etc/paludis.autopatch/<repository>/my.patch
+```
 
 This way, they automatically get applied when I sync back the real repository instead of my copy. If a sync fail, I
 rebase my patches and resubmit them. Once the patch is pushed, I can safely remove it from my autopatch directory.

@@ -75,8 +75,10 @@ We'll see some more advanced paludis features in a next post of [the knowing you
 
 Last thing, The way I update my system is:
 
-    cave sync
-    cave resolve world -c -km -Km -Cs
+```bash
+cave sync
+cave resolve world -c -km -Km -Cs
+```
 
 It syncs repositories with upstream to get latest versions of the packages, and then resolve `world` which is the set
 containing all the packages you have installed, with a complete dependency tree, as deep as it can, with `-c` aka

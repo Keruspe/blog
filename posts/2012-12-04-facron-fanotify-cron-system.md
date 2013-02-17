@@ -67,4 +67,6 @@ A systemd service file and a release tarball will be provided soon.
 
 You can reload the configuration at any time by sending a `SIGUSR1` to facron:
 
-    kill -USR1 $(pidof facron)
+``` bash
+kill -USR1 $(pidof facron)
+```

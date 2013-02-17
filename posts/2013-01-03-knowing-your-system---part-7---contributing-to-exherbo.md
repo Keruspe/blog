@@ -18,7 +18,7 @@ around.
 
 Zebrapig is exherbo's IRC patchbot. You can use three commands to interact with it:
 
-* !pq &lt;patch_url&gt; ::&lt;repository&gt; =&gt; Use this to submit the patch available at the given URL (use `git format-patch --stdout -M -C -C -1 | wgetpaste -r`
+* !pq &lt;patch\_url&gt; ::&lt;repository&gt; =&gt; Use this to submit the patch available at the given URL (use `git format-patch --stdout -M -C -C -1 | wgetpaste -r`
   to get an URL for your git commit) to the repository you specified.
 * !pd &lt;pattern&gt; =&gt; Use this to mark all the patches matching the given pattern as done, useful when you want to
   resubmit an updated version of your patch.
@@ -44,8 +44,10 @@ When I want to contribute to a repository, for a version bump or any bug fix, I 
   later)
 * I put a copy of my patch in my autopatch directory (which I'll explain after):
 
-        mkdir -p /etc/paludis/autopatch/<repository>
-        curl <patch_url> > /etc/paludis.autopatch/<repository>/my.patch
+```bash
+mkdir -p /etc/paludis/autopatch/<repository>
+curl <patch_url> > /etc/paludis.autopatch/<repository>/my.patch
+```
 
 * I sync the repository so that the autopatch gets applied: `cave sync <repository>`
 * I try my patch, compiling the related packages
@@ -58,7 +60,6 @@ args for `wgetpaste` since gist.github.com which is the default fails quite ofte
 The other interesting part of it is how I manage the autopatch system. I have [a paludis hook](https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/sync_post/local_update.bash)
 placed in `/etc/paludis/hooks/sync_post` which cause every patch located in `/etc/paludis/autopatch/<repository>/` to be
 applied each time I sync the said repository.
-
 
 Next time I'll explain how I contribute to upstream projects using nearly the same scheme, pointing out even more how
 intuitive and integrated this process is in my every day work.

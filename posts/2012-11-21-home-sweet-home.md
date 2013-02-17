@@ -15,7 +15,9 @@ This is why this blog is written in haskell.
 
 Just to be clear, what I mean by sysadmin is not 
 
-    sudo apt-get install kde
+``` bash
+sudo apt-get install kde
+```
 
 I'm a source-based distributions enthusiast and prefer tutorials and tips
 about raw software over distro-specific ones.

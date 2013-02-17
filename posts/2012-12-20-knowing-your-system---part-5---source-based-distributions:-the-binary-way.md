@@ -67,14 +67,18 @@ packages without having to compile them on all of your machines.
 It's pretty simple to make binary packages, all you have to do is first to generate the binaries for everything you have
 installed:
 
-    cave resolve -xc world --make binaries --make-dependencies all
+```bash
+cave resolve -xc world --make binaries --make-dependencies all
+```
 
 It will automatically generate packages and put tarballs in your distfiles directory. If you run this after updating
 your compilation box, it will only generate new binary packages for those that have changed.
 
 Last thing you might want to know: to create a binary package for a package you do not have installed yet, just run
 
-    cave resolve -x --make binaries --make-dependencies all <insert a package name here>
+```bash
+cave resolve -x --make binaries --make-dependencies all <insert a package name here>
+```
 
 It will create packages for all the dependencies, installing it afterwards, and finish by making the package for the
 software you asked.
