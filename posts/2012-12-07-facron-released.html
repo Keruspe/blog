@@ -7,6 +7,7 @@
         <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
         <link href="http://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
+        <link rel="stylesheet" type="text/css" href="../css/syntax.css" />
         <link rel="alternate" type="application/rss+xml" title="Keruspe's blag" href="../rss.xml" />
         <link rel="shortcut icon" href="../favicon.png" />
         <script type="text/javascript">
@@ -54,7 +55,7 @@
             <article>
                 <header>
                     <h1>Facron 0.9 released</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December  7, 2012</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>December  7, 2012</strong></p>
                     <p>Tagged as: <a href="../tags/facron.html">facron</a>, <a href="../tags/fanotify.html">fanotify</a>, <a href="../tags/cron.html">cron</a>, <a href="../tags/sysadmin.html">sysadmin</a>.</p>
                 </header>
 
@@ -74,21 +75,21 @@
 <p>The release tarball is available <a href="https://github.com/Keruspe/facron/downloads">there: https://github.com/Keruspe/facron/downloads</a>.</p>
 <p>You must have fanotify included in your kernel (most recent systems should have it by default).</p>
 <p>Here are the steps you need to run in order to get it up and running:</p>
-<pre><code>wget https://github.com/downloads/Keruspe/facron/facron-0.9.tar.xz
-tar xf facron-0.9.tar.xz
-cd facron-0.9
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">wget</span> https://github.com/downloads/Keruspe/facron/facron-0.9.tar.xz
+<span class="kw">tar</span> xf facron-0.9.tar.xz
+<span class="kw">cd</span> facron-0.9
 ./configure --sysconfdir=/etc --with-systemdsystemunitdir=/usr/lib/systemd/system
-make
-sudo make install</code></pre>
+<span class="kw">make</span>
+<span class="kw">sudo</span> <span class="kw">make</span> <span class="kw">install</span></code></pre>
 <p>Then just create your configuration file <a href="../posts/2012-12-04-facron-fanotify-cron-system.html">as I said in the previous post</a> or following the manual instructions (man facron).</p>
 <p>When everything is ready, you just have to run</p>
-<pre><code>sudo systemctl start facron.service</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> systemctl start facron.service</code></pre>
 <p>Or for non-systemd systems</p>
-<pre><code>sudo facron --background</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> facron --background</code></pre>
 <p>If you edit the configuration file, you can reload it without restarting the daemon by running</p>
-<pre><code>sudo systemctl reload facron.service</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> systemctl reload facron.service</code></pre>
 <p>Or for non-systemd systems</p>
-<pre><code>sudo kill -USR1 $(pidof facron)</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> <span class="kw">kill</span> -USR1 <span class="ot">$(</span><span class="kw">pidof</span> facron<span class="ot">)</span></code></pre>
 <p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute !</p>
                 </section>
             </article>

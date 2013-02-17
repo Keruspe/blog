@@ -7,6 +7,7 @@
         <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
         <link href="http://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
+        <link rel="stylesheet" type="text/css" href="../css/syntax.css" />
         <link rel="alternate" type="application/rss+xml" title="Keruspe's blag" href="../rss.xml" />
         <link rel="shortcut icon" href="../favicon.png" />
         <script type="text/javascript">
@@ -54,7 +55,7 @@
             <article>
                 <header>
                     <h1>Knowing your system - Part 4 - Falling in love with paludis</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December 13, 2012</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>December 13, 2012</strong></p>
                     <p>Tagged as: <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="../tags/source-based.html">source-based</a>, <a href="../tags/paludis.html">paludis</a>.</p>
                 </header>
 
@@ -91,7 +92,7 @@
 <p>A lot of other subcommands are available, and a lot of options for each of these. Amongst other things, cave allows you to stop the installation process at a certain phase, or resume at another. This allows you to abort at compile phase to apply custom patches, and them resume at compile phase to compile the package with your patches applied. It also support a hooks mechanism.</p>
 <p>We’ll see some more advanced paludis features in a next post of <a href="../tags/knowingyoursystem.html">the knowing your system saga</a>.</p>
 <p>Last thing, The way I update my system is:</p>
-<pre><code>cave sync
+<pre class="sourceCode bash"><code class="sourceCode bash">cave <span class="kw">sync</span>
 cave resolve world -c -km -Km -Cs</code></pre>
 <p>It syncs repositories with upstream to get latest versions of the packages, and then resolve <code>world</code> which is the set containing all the packages you have installed, with a complete dependency tree, as deep as it can, with <code>-c</code> aka <code>--complete</code> and reinstalling all packages for which metadata have changed because of <code>-km -Km</code> aka <code>--keep if-same-metadata --keep-targets if-same-metadata</code>. If a failure occurs, it continues to build the rest while the dependencies still are satisfied thanks to <code>-Cs</code> aka <code>--continue-on-failure if-satisfied</code>. I then run this last command again with <code>-x</code> aka <code>--execute</code> to apply the available updates.</p>
                 </section>

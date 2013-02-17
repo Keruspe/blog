@@ -7,6 +7,7 @@
         <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
         <link href="http://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
+        <link rel="stylesheet" type="text/css" href="../css/syntax.css" />
         <link rel="alternate" type="application/rss+xml" title="Keruspe's blag" href="../rss.xml" />
         <link rel="shortcut icon" href="../favicon.png" />
         <script type="text/javascript">
@@ -54,7 +55,7 @@
             <article>
                 <header>
                     <h1>Facron - fanotify cron system</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December  4, 2012</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>December  4, 2012</strong></p>
                     <p>Tagged as: <a href="../tags/facron.html">facron</a>, <a href="../tags/fanotify.html">fanotify</a>, <a href="../tags/cron.html">cron</a>, <a href="../tags/sysadmin.html">sysadmin</a>.</p>
                 </header>
 
@@ -92,7 +93,7 @@
 <p>Two more special tokens will appear: <code>$@</code> which will contain the dirname of the file, and <code>$#</code> which will contain its basename.</p>
 <p>A systemd service file and a release tarball will be provided soon.</p>
 <p>You can reload the configuration at any time by sending a <code>SIGUSR1</code> to facron:</p>
-<pre><code>kill -USR1 $(pidof facron)</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">kill</span> -USR1 <span class="ot">$(</span><span class="kw">pidof</span> facron<span class="ot">)</span></code></pre>
                 </section>
             </article>
 

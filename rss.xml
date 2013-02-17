@@ -13,7 +13,7 @@
     <description><![CDATA[            <article>
                 <header>
                     <h1>Knowing your system - Part 10 - Native multilib system</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January 31, 2013</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January 31, 2013</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/systemd.html">systemd</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>.</p>
                 </header>
 
@@ -43,7 +43,7 @@
     <description><![CDATA[            <article>
                 <header>
                     <h1>GPaste 2.99.2 released</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January 22, 2013</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January 22, 2013</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
                 </header>
 
@@ -72,7 +72,7 @@
     <description><![CDATA[            <article>
                 <header>
                     <h1>Manage you critical configuration files with git</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January 21, 2013</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January 21, 2013</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/git.html">git</a>.</p>
                 </header>
 
@@ -80,25 +80,27 @@
 <p>A few months ago, I decided to track my configuration files using git, which I use for pretty much everything now.</p>
 <p>The problem I had to face is that some of them contain passwords, so I couldn’t let them as is.</p>
 <h2 id="setting-up-the-test-environment">Setting up the test environment</h2>
-<pre><code>keruspe@Lou ~/tmp % mkdir test.git &amp;&amp; cd test.git &amp;&amp; git init --bare &amp;&amp; cd ..
-Initialized empty Git repository in /home/keruspe/tmp/test.git/
-keruspe@Lou ~/tmp % mkdir test &amp;&amp; cd test &amp;&amp; git init
-Initialized empty Git repository in /home/keruspe/tmp/test/.git/
-keruspe@Lou ~/tmp/test (git)-[master] % git remote add origin ../test.git </code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash">keruspe@Lou ~/tmp % <span class="kw">mkdir</span> test.git <span class="kw">&amp;&amp;</span> <span class="kw">cd</span> test.git <span class="kw">&amp;&amp;</span> git init --bare <span class="kw">&amp;&amp;</span> <span class="kw">cd</span> ..
+Initialized empty Git repository <span class="kw">in</span> /home/keruspe/tmp/test.git/
+keruspe@Lou ~/tmp % <span class="kw">mkdir</span> <span class="kw">test</span> <span class="kw">&amp;&amp;</span> <span class="kw">cd</span> <span class="kw">test</span> <span class="kw">&amp;&amp;</span> git init
+Initialized empty Git repository <span class="kw">in</span> /home/keruspe/tmp/test/.git/
+keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % git remote add origin ../test.git </code></pre>
 <p>Ok, we now have a remote repository in <code>~/tmp/test.git</code> and a working directory in <code>~/tmp/test</code></p>
 <h2 id="configuring-the-working-directory-to-be-password-safe">Configuring the working directory to be “password-safe”</h2>
-<pre><code>keruspe@Lou ~/tmp/test (git)-[master] % git config filter.password.clean &quot;sed -e 's/mypassword/@PASSWORD@/' -e 's/anotherpassword/@PASSWORD2@/'&quot;
-keruspe@Lou ~/tmp/test (git)-[master] % git config filter.password.smuge &quot;sed -e 's/@PASSWORD@/mypassword/' -e 's/@PASSWORD2@/anotherpassword/'&quot;
-keruspe@Lou ~/tmp/test (git)-[master] % cat &gt; .git/info/attributes &lt;&lt; EOF
-myconf.conf filter=password
+<pre class="sourceCode bash"><code class="sourceCode bash">keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % git config filter.password.clean <span class="st">&quot;sed -e 's/mypassword/@PASSWORD@/' -e 's/anotherpassword/@PASSWORD2@/'&quot;</span>
+keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % git config filter.password.smuge <span class="st">&quot;sed -e 's/@PASSWORD@/mypassword/' -e 's/@PASSWORD2@/anotherpassword/'&quot;</span>
+keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % <span class="kw">cat</span> <span class="kw">&gt;</span> .git/info/attributes &lt;&lt; EOF
+myconf.conf filter=pa<span class="kw">s</span>sword
 EOF</code></pre>
 <p>Ok, what’s going on there?</p>
-<p>I’m creating a filter which I call “password”. A filter consist of two functions: * clean is called on each file when you’re committing, before creating the git objects corresponding to your commit. * smudge is called when you checkout, each time git is recreating your working directory from the git objects.</p>
+<p>I’m creating a filter which I call “password”. A filter consist of two functions:</p>
+<pre><code>* clean is called on each file when you're committing, before creating the git objects corresponding to your commit.
+* smudge is called when you checkout, each time git is recreating your working directory from the git objects.</code></pre>
 <p>You can note that this is not an in-place edition with sed, since I did not add the <code>-i</code> argument, these commands are called during a piping process, not directly on files.</p>
 <p>I then create a <code>.git/info/attributes</code> file, in which I tell git to use my brand new “filter” password for the file <code>myconf.conf</code>. You can use any pattern that git understands here, and can obviously add multiple lines.</p>
 <h2 id="example">Example</h2>
 <p>Let’s now create the <code>myconf.conf</code> file we mentioned earlier, let’s push it to the remote repository, and clone it from anywhere else, to see the result.</p>
-<pre><code>keruspe@Lou ~/tmp/test (git)-[master] % cat &gt; myconf.conf &lt;&lt; EOF
+<pre class="sourceCode bash"><code class="sourceCode bash">keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % <span class="kw">cat</span> <span class="kw">&gt;</span> myconf.conf &lt;&lt; EOF
 user = johndoe
 password = mypassword
 bddurl = root:anotherpassword@mysql.local
@@ -113,7 +115,7 @@ Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 283 bytes, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To ../test.git
- * [new branch]      master -&gt; master
+ * [new branch]      master -<span class="kw">&gt;</span> master
 keruspe@Lou ~/tmp/test (git)-[master] % cd ..
 keruspe@Lou ~/tmp % git clone test.git test2
 Cloning into 'test2'...
@@ -139,7 +141,7 @@ bddurl = root:@PASSWORD2@@mysql.local</code></pre>
     <description><![CDATA[            <article>
                 <header>
                     <h1>Knowing your system - Part 9 - Contributing to Exherbo: Updated and smoother method</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January 17, 2013</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January 17, 2013</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
                 </header>
 
@@ -160,8 +162,8 @@ bddurl = root:@PASSWORD2@@mysql.local</code></pre>
 <h2 id="what-has-become-my-previous-workflow">What has become my previous workflow?</h2>
 <p>This does not at all look like my previous workflow, but I said I kept it around… Why?</p>
 <p>Actually, my previous workflow comes right after that. Once I’ve sumitted my patch, I add it to my autopatch folder:</p>
-<pre><code>mkdir -p /etc/paludis/autopatch/&lt;repository&gt;
-curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> -p /etc/paludis/autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>
+curl <span class="kw">&lt;</span>patch_url<span class="kw">&gt;</span> <span class="kw">&gt;</span> /etc/paludis.autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>/my.patch</code></pre>
 <p>This way, they automatically get applied when I sync back the real repository instead of my copy. If a sync fail, I rebase my patches and resubmit them. Once the patch is pushed, I can safely remove it from my autopatch directory.</p>
 <p>Note that this whole second step can fully be ignored for repositories you have push access to, simplifying even more this light workflow.</p>
                 </section>
@@ -176,7 +178,7 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
     <description><![CDATA[            <article>
                 <header>
                     <h1>GPaste 2.99.1 released</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January 15, 2013</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January 15, 2013</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
                 </header>
 
@@ -205,7 +207,7 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
     <description><![CDATA[            <article>
                 <header>
                     <h1>GPaste 2.99 released</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January 14, 2013</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January 14, 2013</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
                 </header>
 
@@ -242,7 +244,7 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
     <description><![CDATA[            <article>
                 <header>
                     <h1>Knowing your system - Part 8 - On the road to upstream</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January 10, 2013</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January 10, 2013</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
                 </header>
 
@@ -266,7 +268,7 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
     <description><![CDATA[            <article>
                 <header>
                     <h1>Knowing your system - Part 7 - Contributing to Exherbo</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January  3, 2013</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January  3, 2013</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
                 </header>
 
@@ -290,12 +292,14 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
 <li>If I do not have a copy of the repository locally I clone it, otherwise I pull new changes from upstream</li>
 <li>I write my patch and commit it</li>
 <li>I upload my patch with <code>git pe HEAD~&lt;number_of_commits&gt; | wgetpaste -r -s poundpython</code> (I’ll explain this command later)</li>
-<li><p>I put a copy of my patch in my autopatch directory (which I’ll explain after):</p>
-<pre><code>mkdir -p /etc/paludis/autopatch/&lt;repository&gt;
-curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</code></pre></li>
+<li>I put a copy of my patch in my autopatch directory (which I’ll explain after):</li>
+</ul>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> -p /etc/paludis/autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>
+curl <span class="kw">&lt;</span>patch_url<span class="kw">&gt;</span> <span class="kw">&gt;</span> /etc/paludis.autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>/my.patch</code></pre>
+<ul>
 <li>I sync the repository so that the autopatch gets applied: <code>cave sync &lt;repository&gt;</code></li>
 <li>I try my patch, compiling the related packages</li>
-<li><p>If everything succeeds, I submit my patch, otherwise, I get back to step 2 to fix my patch</p></li>
+<li>If everything succeeds, I submit my patch, otherwise, I get back to step 2 to fix my patch</li>
 </ul>
 <p>The command which I run to upload my patch is a git alias, <code>git pe</code> means <code>git format-patch -M -C --find-copies-harder --stdout</code> and takes as an argument the commits to publish, <code>HEAD~3</code> means 3 commits for example, I put <code>-s poundpython</code> as extra args for <code>wgetpaste</code> since gist.github.com which is the default fails quite often for me.</p>
 <p>The other interesting part of it is how I manage the autopatch system. I have <a href="https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/sync_post/local_update.bash">a paludis hook</a> placed in <code>/etc/paludis/hooks/sync_post</code> which cause every patch located in <code>/etc/paludis/autopatch/&lt;repository&gt;/</code> to be applied each time I sync the said repository.</p>
@@ -312,7 +316,7 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
     <description><![CDATA[            <article>
                 <header>
                     <h1>systemd as a session manager</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January  1, 2013</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January  1, 2013</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/systemd.html">systemd</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
                 </header>
 
@@ -343,7 +347,7 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
     <description><![CDATA[            <article>
                 <header>
                     <h1>Knowing your system - Part 6 - Source-based distributions: Discovering Exherbo</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December 27, 2012</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>December 27, 2012</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>.</p>
                 </header>
 
@@ -377,7 +381,7 @@ curl &lt;patch_url&gt; &gt; /etc/paludis.autopatch/&lt;repository&gt;/my.patch</
     <description><![CDATA[            <article>
                 <header>
                     <h1>Knowing your system - Part 5 - Source-based distributions: the binary way</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December 20, 2012</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>December 20, 2012</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
                 </header>
 
@@ -412,10 +416,10 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <h3 id="usage">Usage</h3>
 <p>You’re now fully ready! All you have to do is create the binary packages on your compilation node, push the updated repository to your git server, sync it on the other boxes and you will be able to install your freshly made binary packages without having to compile them on all of your machines.</p>
 <p>It’s pretty simple to make binary packages, all you have to do is first to generate the binaries for everything you have installed:</p>
-<pre><code>cave resolve -xc world --make binaries --make-dependencies all</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash">cave resolve -xc world --make binaries --make-dependencies all</code></pre>
 <p>It will automatically generate packages and put tarballs in your distfiles directory. If you run this after updating your compilation box, it will only generate new binary packages for those that have changed.</p>
 <p>Last thing you might want to know: to create a binary package for a package you do not have installed yet, just run</p>
-<pre><code>cave resolve -x --make binaries --make-dependencies all &lt;insert a package name here&gt;</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash">cave resolve -x --make binaries --make-dependencies all <span class="kw">&lt;</span>insert a package name here<span class="kw">&gt;</span></code></pre>
 <p>It will create packages for all the dependencies, installing it afterwards, and finish by making the package for the software you asked.</p>
 <p>Don’t forget to push all changes on your git server!</p>
                 </section>
@@ -430,7 +434,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
     <description><![CDATA[            <article>
                 <header>
                     <h1>Knowing your system - Part 4 - Falling in love with paludis</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December 13, 2012</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>December 13, 2012</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
                 </header>
 
@@ -467,7 +471,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <p>A lot of other subcommands are available, and a lot of options for each of these. Amongst other things, cave allows you to stop the installation process at a certain phase, or resume at another. This allows you to abort at compile phase to apply custom patches, and them resume at compile phase to compile the package with your patches applied. It also support a hooks mechanism.</p>
 <p>We’ll see some more advanced paludis features in a next post of <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">the knowing your system saga</a>.</p>
 <p>Last thing, The way I update my system is:</p>
-<pre><code>cave sync
+<pre class="sourceCode bash"><code class="sourceCode bash">cave <span class="kw">sync</span>
 cave resolve world -c -km -Km -Cs</code></pre>
 <p>It syncs repositories with upstream to get latest versions of the packages, and then resolve <code>world</code> which is the set containing all the packages you have installed, with a complete dependency tree, as deep as it can, with <code>-c</code> aka <code>--complete</code> and reinstalling all packages for which metadata have changed because of <code>-km -Km</code> aka <code>--keep if-same-metadata --keep-targets if-same-metadata</code>. If a failure occurs, it continues to build the rest while the dependencies still are satisfied thanks to <code>-Cs</code> aka <code>--continue-on-failure if-satisfied</code>. I then run this last command again with <code>-x</code> aka <code>--execute</code> to apply the available updates.</p>
                 </section>
@@ -482,7 +486,7 @@ cave resolve world -c -km -Km -Cs</code></pre>
     <description><![CDATA[            <article>
                 <header>
                     <h1>Knowing your system - Part 3 - Source-based distributions: The Gentoo example</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December 10, 2012</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>December 10, 2012</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>.</p>
                 </header>
 
@@ -514,7 +518,7 @@ cave resolve world -c -km -Km -Cs</code></pre>
     <description><![CDATA[            <article>
                 <header>
                     <h1>Facron 0.9 released</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December  7, 2012</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>December  7, 2012</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/facron.html">facron</a>, <a href="http://www.imagination-land.org/tags/fanotify.html">fanotify</a>, <a href="http://www.imagination-land.org/tags/cron.html">cron</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>.</p>
                 </header>
 
@@ -534,21 +538,21 @@ cave resolve world -c -km -Km -Cs</code></pre>
 <p>The release tarball is available <a href="https://github.com/Keruspe/facron/downloads">there: https://github.com/Keruspe/facron/downloads</a>.</p>
 <p>You must have fanotify included in your kernel (most recent systems should have it by default).</p>
 <p>Here are the steps you need to run in order to get it up and running:</p>
-<pre><code>wget https://github.com/downloads/Keruspe/facron/facron-0.9.tar.xz
-tar xf facron-0.9.tar.xz
-cd facron-0.9
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">wget</span> https://github.com/downloads/Keruspe/facron/facron-0.9.tar.xz
+<span class="kw">tar</span> xf facron-0.9.tar.xz
+<span class="kw">cd</span> facron-0.9
 ./configure --sysconfdir=/etc --with-systemdsystemunitdir=/usr/lib/systemd/system
-make
-sudo make install</code></pre>
+<span class="kw">make</span>
+<span class="kw">sudo</span> <span class="kw">make</span> <span class="kw">install</span></code></pre>
 <p>Then just create your configuration file <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">as I said in the previous post</a> or following the manual instructions (man facron).</p>
 <p>When everything is ready, you just have to run</p>
-<pre><code>sudo systemctl start facron.service</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> systemctl start facron.service</code></pre>
 <p>Or for non-systemd systems</p>
-<pre><code>sudo facron --background</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> facron --background</code></pre>
 <p>If you edit the configuration file, you can reload it without restarting the daemon by running</p>
-<pre><code>sudo systemctl reload facron.service</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> systemctl reload facron.service</code></pre>
 <p>Or for non-systemd systems</p>
-<pre><code>sudo kill -USR1 $(pidof facron)</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> <span class="kw">kill</span> -USR1 <span class="ot">$(</span><span class="kw">pidof</span> facron<span class="ot">)</span></code></pre>
 <p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute !</p>
                 </section>
             </article>
@@ -562,7 +566,7 @@ sudo make install</code></pre>
     <description><![CDATA[            <article>
                 <header>
                     <h1>Facron - fanotify cron system</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December  4, 2012</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>December  4, 2012</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/facron.html">facron</a>, <a href="http://www.imagination-land.org/tags/fanotify.html">fanotify</a>, <a href="http://www.imagination-land.org/tags/cron.html">cron</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>.</p>
                 </header>
 
@@ -600,7 +604,7 @@ sudo make install</code></pre>
 <p>Two more special tokens will appear: <code>$@</code> which will contain the dirname of the file, and <code>$#</code> which will contain its basename.</p>
 <p>A systemd service file and a release tarball will be provided soon.</p>
 <p>You can reload the configuration at any time by sending a <code>SIGUSR1</code> to facron:</p>
-<pre><code>kill -USR1 $(pidof facron)</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">kill</span> -USR1 <span class="ot">$(</span><span class="kw">pidof</span> facron<span class="ot">)</span></code></pre>
                 </section>
             </article>
 ]]></description>
@@ -613,7 +617,7 @@ sudo make install</code></pre>
     <description><![CDATA[            <article>
                 <header>
                     <h1>GPaste 2.9.1 released</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>December  1, 2012</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>December  1, 2012</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
                 </header>
 
@@ -665,7 +669,7 @@ sudo make install</code></pre>
     <description><![CDATA[            <article>
                 <header>
                     <h1>Knowing your system - Part 2 - The init process</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>November 29, 2012</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>November 29, 2012</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/systemd.html">systemd</a>.</p>
                 </header>
 
@@ -724,7 +728,7 @@ sudo make install</code></pre>
     <description><![CDATA[            <article>
                 <header>
                     <h1>Knowing your system - Part 1 - Basis on UNIX-like systems</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>November 22, 2012</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>November 22, 2012</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>.</p>
                 </header>
 
@@ -797,7 +801,7 @@ sudo make install</code></pre>
     <description><![CDATA[            <article>
                 <header>
                     <h1>Home sweet home</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>November 21, 2012</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>November 21, 2012</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/misc.html">misc</a>.</p>
                 </header>
 
@@ -806,7 +810,7 @@ sudo make install</code></pre>
 <p>It has been a long time since I first wanted to get a blog.</p>
 <p>I’ll mostly speak here about free software and stuff I like to hack, from sysadmin to development and debugging. I write code mostly in Java for my job, but my language of choice is the C for my personal projects. This is why this blog is written in haskell.</p>
 <p>Just to be clear, what I mean by sysadmin is not</p>
-<pre><code>sudo apt-get install kde</code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> apt-get <span class="kw">install</span> kde</code></pre>
 <p>I’m a source-based distributions enthusiast and prefer tutorials and tips about raw software over distro-specific ones.</p>
 <h2 id="special-thanks">Special thanks</h2>
 <p>This blog is powered by <a href="http://jaspervdj.be/hakyll/index.html">Hakyll</a>.</p>

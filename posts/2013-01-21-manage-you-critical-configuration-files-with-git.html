@@ -7,6 +7,7 @@
         <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
         <link href="http://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
+        <link rel="stylesheet" type="text/css" href="../css/syntax.css" />
         <link rel="alternate" type="application/rss+xml" title="Keruspe's blag" href="../rss.xml" />
         <link rel="shortcut icon" href="../favicon.png" />
         <script type="text/javascript">
@@ -54,7 +55,7 @@
             <article>
                 <header>
                     <h1>Manage you critical configuration files with git</h1>
-                    <p>by <em>Marc-Antoine Perennou</em> on <strong>January 21, 2013</strong></p>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January 21, 2013</strong></p>
                     <p>Tagged as: <a href="../tags/sysadmin.html">sysadmin</a>, <a href="../tags/git.html">git</a>.</p>
                 </header>
 
@@ -62,25 +63,27 @@
 <p>A few months ago, I decided to track my configuration files using git, which I use for pretty much everything now.</p>
 <p>The problem I had to face is that some of them contain passwords, so I couldn’t let them as is.</p>
 <h2 id="setting-up-the-test-environment">Setting up the test environment</h2>
-<pre><code>keruspe@Lou ~/tmp % mkdir test.git &amp;&amp; cd test.git &amp;&amp; git init --bare &amp;&amp; cd ..
-Initialized empty Git repository in /home/keruspe/tmp/test.git/
-keruspe@Lou ~/tmp % mkdir test &amp;&amp; cd test &amp;&amp; git init
-Initialized empty Git repository in /home/keruspe/tmp/test/.git/
-keruspe@Lou ~/tmp/test (git)-[master] % git remote add origin ../test.git </code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash">keruspe@Lou ~/tmp % <span class="kw">mkdir</span> test.git <span class="kw">&amp;&amp;</span> <span class="kw">cd</span> test.git <span class="kw">&amp;&amp;</span> git init --bare <span class="kw">&amp;&amp;</span> <span class="kw">cd</span> ..
+Initialized empty Git repository <span class="kw">in</span> /home/keruspe/tmp/test.git/
+keruspe@Lou ~/tmp % <span class="kw">mkdir</span> <span class="kw">test</span> <span class="kw">&amp;&amp;</span> <span class="kw">cd</span> <span class="kw">test</span> <span class="kw">&amp;&amp;</span> git init
+Initialized empty Git repository <span class="kw">in</span> /home/keruspe/tmp/test/.git/
+keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % git remote add origin ../test.git </code></pre>
 <p>Ok, we now have a remote repository in <code>~/tmp/test.git</code> and a working directory in <code>~/tmp/test</code></p>
 <h2 id="configuring-the-working-directory-to-be-password-safe">Configuring the working directory to be “password-safe”</h2>
-<pre><code>keruspe@Lou ~/tmp/test (git)-[master] % git config filter.password.clean &quot;sed -e 's/mypassword/@PASSWORD@/' -e 's/anotherpassword/@PASSWORD2@/'&quot;
-keruspe@Lou ~/tmp/test (git)-[master] % git config filter.password.smuge &quot;sed -e 's/@PASSWORD@/mypassword/' -e 's/@PASSWORD2@/anotherpassword/'&quot;
-keruspe@Lou ~/tmp/test (git)-[master] % cat &gt; .git/info/attributes &lt;&lt; EOF
-myconf.conf filter=password
+<pre class="sourceCode bash"><code class="sourceCode bash">keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % git config filter.password.clean <span class="st">&quot;sed -e 's/mypassword/@PASSWORD@/' -e 's/anotherpassword/@PASSWORD2@/'&quot;</span>
+keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % git config filter.password.smuge <span class="st">&quot;sed -e 's/@PASSWORD@/mypassword/' -e 's/@PASSWORD2@/anotherpassword/'&quot;</span>
+keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % <span class="kw">cat</span> <span class="kw">&gt;</span> .git/info/attributes &lt;&lt; EOF
+myconf.conf filter=pa<span class="kw">s</span>sword
 EOF</code></pre>
 <p>Ok, what’s going on there?</p>
-<p>I’m creating a filter which I call “password”. A filter consist of two functions: * clean is called on each file when you’re committing, before creating the git objects corresponding to your commit. * smudge is called when you checkout, each time git is recreating your working directory from the git objects.</p>
+<p>I’m creating a filter which I call “password”. A filter consist of two functions:</p>
+<pre><code>* clean is called on each file when you're committing, before creating the git objects corresponding to your commit.
+* smudge is called when you checkout, each time git is recreating your working directory from the git objects.</code></pre>
 <p>You can note that this is not an in-place edition with sed, since I did not add the <code>-i</code> argument, these commands are called during a piping process, not directly on files.</p>
 <p>I then create a <code>.git/info/attributes</code> file, in which I tell git to use my brand new “filter” password for the file <code>myconf.conf</code>. You can use any pattern that git understands here, and can obviously add multiple lines.</p>
 <h2 id="example">Example</h2>
 <p>Let’s now create the <code>myconf.conf</code> file we mentioned earlier, let’s push it to the remote repository, and clone it from anywhere else, to see the result.</p>
-<pre><code>keruspe@Lou ~/tmp/test (git)-[master] % cat &gt; myconf.conf &lt;&lt; EOF
+<pre class="sourceCode bash"><code class="sourceCode bash">keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % <span class="kw">cat</span> <span class="kw">&gt;</span> myconf.conf &lt;&lt; EOF
 user = johndoe
 password = mypassword
 bddurl = root:anotherpassword@mysql.local
@@ -95,7 +98,7 @@ Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 283 bytes, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To ../test.git
- * [new branch]      master -&gt; master
+ * [new branch]      master -<span class="kw">&gt;</span> master
 keruspe@Lou ~/tmp/test (git)-[master] % cd ..
 keruspe@Lou ~/tmp % git clone test.git test2
 Cloning into 'test2'...
