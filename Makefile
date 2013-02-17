@@ -1,11 +1,11 @@
 all: build
 
 build: hakyll
-	./hakyll clean
 	./hakyll build
 
 hakyll: hakyll.hs
 	ghc --make hakyll.hs
+	./hakyll clean
 
 new:
 	@./new_post.sh

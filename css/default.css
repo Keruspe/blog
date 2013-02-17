@@ -15,6 +15,14 @@ img {
     border-width: 0;
 }
 
+p {
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;
+    word-break: hyphenate;
+}
+
 ::selection {
     background-color: #AFAFAF;
 }
@@ -76,6 +84,16 @@ body>header a, body>header a:hover {
 article>header {
     border-bottom: 1px solid;
     margin-bottom: 1.5em;
+    padding-bottom: 1em;
+}
+
+article>header p {
+    margin: 0.3em;
+    margin-left: 1.5em;
+}
+
+article>header p.by {
+    padding-top: 0.5em;
 }
 
 body>nav, body>footer {
@@ -126,10 +144,19 @@ article h3 {
     font-size: 1.1em;
 }
 
+article p {
+    margin: 0.3em;
+}
+
+article section>p {
+    text-indent: 1.5em;
+}
+
 code {
     background-color: #D2D2D2;
     display: inline-block;
     padding: 0.5em;
+    text-indent: 0;
 }
 
 #disqus_thread {
