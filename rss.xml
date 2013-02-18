@@ -88,7 +88,7 @@ keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[ma
 <p>Ok, we now have a remote repository in <code>~/tmp/test.git</code> and a working directory in <code>~/tmp/test</code></p>
 <h2 id="configuring-the-working-directory-to-be-password-safe">Configuring the working directory to be “password-safe”</h2>
 <pre class="sourceCode bash"><code class="sourceCode bash">keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % git config filter.password.clean <span class="st">&quot;sed -e 's/mypassword/@PASSWORD@/' -e 's/anotherpassword/@PASSWORD2@/'&quot;</span>
-keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % git config filter.password.smuge <span class="st">&quot;sed -e 's/@PASSWORD@/mypassword/' -e 's/@PASSWORD2@/anotherpassword/'&quot;</span>
+keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % git config filter.password.smudge <span class="st">&quot;sed -e 's/@PASSWORD@/mypassword/' -e 's/@PASSWORD2@/anotherpassword/'&quot;</span>
 keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % <span class="kw">cat</span> <span class="kw">&gt;</span> .git/info/attributes &lt;&lt; EOF
 myconf.conf filter=pa<span class="kw">s</span>sword
 EOF</code></pre>
