@@ -24,7 +24,7 @@ Ok, we now have a remote repository in `~/tmp/test.git` and a working directory 
 
 ```bash
 keruspe@Lou ~/tmp/test (git)-[master] % git config filter.password.clean "sed -e 's/mypassword/@PASSWORD@/' -e 's/anotherpassword/@PASSWORD2@/'"
-keruspe@Lou ~/tmp/test (git)-[master] % git config filter.password.smuge "sed -e 's/@PASSWORD@/mypassword/' -e 's/@PASSWORD2@/anotherpassword/'"
+keruspe@Lou ~/tmp/test (git)-[master] % git config filter.password.smudge "sed -e 's/@PASSWORD@/mypassword/' -e 's/@PASSWORD2@/anotherpassword/'"
 keruspe@Lou ~/tmp/test (git)-[master] % cat > .git/info/attributes << EOF
 myconf.conf filter=password
 EOF
