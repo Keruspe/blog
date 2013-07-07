@@ -54,7 +54,7 @@ main = hakyllWith myConfiguration $ do
     create ["index.html"] $ do
         route idRoute
         compile $ do
-            list <- postList tags "posts/*" (take 10 . recentFirst)
+            list <- postList tags "posts/*" (fmap (take 10) . recentFirst)
             makeItem list
             >>= loadAndApplyTemplate "templates/index.html" homeCtx
             >>= loadAndApplyTemplate "templates/default.html" homeCtx
@@ -80,8 +80,9 @@ main = hakyllWith myConfiguration $ do
     create ["rss.xml"] $ do
         route idRoute
         compile $ do
-            posts <- recentFirst <$> loadAllSnapshots "posts/*" "content"
-            renderRss feedConfiguration feedCtx posts
+            loadAllSnapshots "posts/*" "content"
+                >>= recentFirst
+                >>= renderRss feedConfiguration feedCtx
 
     -- Read templates
     match "templates/*" $ compile templateCompiler
@@ -146,11 +147,11 @@ unExternalizeUrlsWith root = withUrls unExt
   where
     unExt x = if root `isPrefixOf` x then unpack $ replace (pack root) empty (pack x) else x
 
-postList :: Tags -> Pattern -> ([Item String] -> [Item String])
+postList :: Tags -> Pattern -> ([Item String] -> Compiler [Item String])
          -> Compiler String
 postList tags pattern preprocess' = do
     postItemTpl <- loadBody "templates/postitem.html"
-    posts <- preprocess' <$> loadAll pattern
+    posts <- preprocess' =<< loadAll pattern
     applyTemplateList postItemTpl (tagsCtx tags) posts
 
 -- Custom configuration
