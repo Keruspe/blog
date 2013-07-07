@@ -238,7 +238,7 @@ bddurl = root:@PASSWORD2@@mysql.local</code></pre>
 </item>
 <item>
     <title>Knowing your system - Part 9 - Contributing to Exherbo: Updated and smoother method</title>
-    <link>http://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo:-updated-and-smoother-method.html</link>
+    <link>http://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo%3A-updated-and-smoother-method.html</link>
     <description><![CDATA[            <article>
                 <header>
                     <h1>Knowing your system - Part 9 - Contributing to Exherbo: Updated and smoother method</h1>
@@ -271,7 +271,7 @@ curl <span class="kw">&lt;</span>patch_url<span class="kw">&gt;</span> <span cla
             </article>
 ]]></description>
     <pubDate>Thu, 17 Jan 2013 00:00:00 UT</pubDate>
-    <guid>http://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo:-updated-and-smoother-method.html</guid>
+    <guid>http://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo%3A-updated-and-smoother-method.html</guid>
 </item>
 <item>
     <title>GPaste 2.99.1 released</title>
@@ -478,7 +478,7 @@ curl <span class="kw">&lt;</span>patch_url<span class="kw">&gt;</span> <span cla
 </item>
 <item>
     <title>Knowing your system - Part 5 - Source-based distributions: the binary way</title>
-    <link>http://www.imagination-land.org/posts/2012-12-20-knowing-your-system---part-5---source-based-distributions:-the-binary-way.html</link>
+    <link>http://www.imagination-land.org/posts/2012-12-20-knowing-your-system---part-5---source-based-distributions%3A-the-binary-way.html</link>
     <description><![CDATA[            <article>
                 <header>
                     <h1>Knowing your system - Part 5 - Source-based distributions: the binary way</h1>
@@ -527,7 +527,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
             </article>
 ]]></description>
     <pubDate>Thu, 20 Dec 2012 00:00:00 UT</pubDate>
-    <guid>http://www.imagination-land.org/posts/2012-12-20-knowing-your-system---part-5---source-based-distributions:-the-binary-way.html</guid>
+    <guid>http://www.imagination-land.org/posts/2012-12-20-knowing-your-system---part-5---source-based-distributions%3A-the-binary-way.html</guid>
 </item>
 <item>
     <title>Knowing your system - Part 4 - Falling in love with paludis</title>
