@@ -11,7 +11,7 @@ new:
 	@./new_post.sh
 
 publish: build
-	./hakyll publish
+	./hakyll deploy
 
 preview: build
 	./hakyll preview -p 9000
