@@ -158,9 +158,13 @@ postList tags pattern preprocess' = do
 -- Custom configuration
 
 myConfiguration :: Configuration
-myConfiguration = defaultConfiguration {ignoreFile = ignoreFile''}
+myConfiguration = defaultConfiguration
+    { tmpDirectory  = "/tmp/hakyll"
+    , ignoreFile    = ignoreFile'
+    , deployCommand = "./deploy.sh"
+    }
   where
-    ignoreFile'' path
+    ignoreFile' path
         | fileName == ".htaccess" = False
         | otherwise               = ignoreFile defaultConfiguration path
       where

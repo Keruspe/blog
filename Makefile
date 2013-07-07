@@ -11,7 +11,7 @@ new:
 	@./new_post.sh
 
 publish: build
-	@./publish.sh
+	./hakyll publish
 
 preview: hakyll
 	./hakyll clean
