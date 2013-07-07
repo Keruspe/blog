@@ -1,0 +1,4 @@
+RewriteEngine on
+RewriteCond %{HTTP_HOST}   !^www\.imagination-land\.org [NC]
+RewriteCond %{HTTP_HOST}   !^$
+RewriteRule ^(.*)         http://www.imagination-land.org/$1 [L,R]
