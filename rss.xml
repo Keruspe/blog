@@ -6,8 +6,35 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sat, 01 Jun 2013 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Sun, 07 Jul 2013 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Becoming an official Exherbo developer</title>
+    <link>http://www.imagination-land.org/posts/2013-07-07-becoming-an-official-exherbo-developer.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Becoming an official Exherbo developer</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>July  7, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>.</p>
+                </header>
+
+                <section>
+<h2 id="my-experience-and-evolution">My experience and evolution</h2>
+<p>I am not a old great guru with a heavy beard using linux since the 90s. I started using computers quite late, back in year 2000 or such. My first computer was running Windows XP (yes, I know…). Believe it or not, at this time, my computer didn’t attract me at all and I did not want to know more of it.</p>
+<p>A couple of years before taking my Bachelor degree, my maths teacher taught me how to write tiny programs to get stuff automatically done on a calculator. This introduction to software writing was like a revelation to me. I decided a few years after to start learning computer sciences, in 2007. I couldn’t stand using this crappy m$ thingie anymore, so I decided to install “linux”, understand &quot;whatever GNU/Linux distribution one would recommend me.</p>
+<p>This is how I started using <a href="http://www.ubuntu.com/">Ubuntu</a>. I stood with it for a little more than a year, starting to learn the basics. After that, I felt it was becoming ugly and sloooooow, so I decided to change. <a href="http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html">As I said before</a>, I then decided to give <a href="http://www.gentoo.org/">Gentoo</a> a try, since I wanted to really start learning a system’s internals. It was quite a good choice and I really learnt a lot.</p>
+<h2 id="contributing-to-exherbo">Contributing to Exherbo</h2>
+<p>You know after I discovered (and then contributed) to <a href="http://paludis.exherbo.org/">paludis</a>, <a href="http://www.imagination-land.org/posts/2012-12-27-knowing-your-system---part-6---source-based-distributions-discovering-exherbo.html">I decided to switch</a> to another source-based distribution: <a href="http://exherbo.org/">Exherbo</a>. If <a href="https://galileo.mailstation.de/egitstats/authors.html">statistics</a> are correct, I have contributed to Exherbo for the first time 743 days ago, at the time I’m writing this, which appears to be 2011, June the 25th. Not sure how long I had been using Exherbo before that though.</p>
+<p>After 2 years and 1 day of contributions, discussions and support in the Exherbo community, I was finally asked on June, the 26th to join the team and become <a href="http://exherbo.org/developers.html">an official Exherbo developer</a>.</p>
+<h2 id="becoming-an-exherbo-developer">Becoming an Exherbo developer</h2>
+<p>Exherbo takes a huge place both in my hobbies since I love to contribute to it ( <a href="http://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo:-updated-and-smoother-method.html">it’s really an easy thing to do</a>) and in my work. Some of my colleagues were running Gentoo on their laptops (which was a little because of me) and I felt quite sad for them, since their system broke quite often (so did mine when I was running Gentoo). With my shiny robust Exherbo system, I convinced them to switch, and they now are full Exherbo users too. Others are even currently switching too. This seem quite logical to us to use for production in <a href="http://www.clever-cloud.com/">our company</a> the distribution we know the best and we know that works the best, so we chose Exherbo. Regarding this both personal and professional involvement into the Exherbo community, I couldn’t say anything but “Yes, of course I’ll join you!”.</p>
+<p>So here I am, Exherbo evangelist, and now official developer!</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Sun, 07 Jul 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-07-07-becoming-an-official-exherbo-developer.html</guid>
+</item>
+<item>
     <title>GPaste 3.0.2 released</title>
     <link>http://www.imagination-land.org/posts/2013-06-01-gpaste-3.0.2-released.html</link>
     <description><![CDATA[            <article>
