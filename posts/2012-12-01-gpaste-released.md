@@ -4,7 +4,7 @@ author: Marc-Antoine Perennou
 tags: GPaste, release, clipboard, gnome
 ---
 
-It's available [there](https://github.com/Keruspe/GPaste/downloads), get it while it's hot!
+It's available [there](http://www.imagination-land.org/files/gpaste/gpaste-2.9.1.tar.xz), get it while it's hot!
 
 ## What's new?
 
