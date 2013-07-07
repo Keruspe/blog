@@ -3,4 +3,4 @@ hakyll
 *.o
 _site
 _cache
-!files/*.tar.xz
+!files/*/*.tar.xz
