@@ -1,0 +1,928 @@
+<?xml version="1.0" encoding="utf-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>Keruspe's blag - RSS feed</title>
+        <link>http://www.imagination-land.org</link>
+        <description><![CDATA[Various free software hacking stuff]]></description>
+        <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
+                   type="application/rss+xml" />
+        <lastBuildDate>Sun, 07 Jul 2013 00:00:00 UT</lastBuildDate>
+        <item>
+    <title>Becoming an official Exherbo developer</title>
+    <link>http://www.imagination-land.org/posts/2013-07-07-becoming-an-official-exherbo-developer.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Becoming an official Exherbo developer</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>July  7, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>.</p>
+                </header>
+
+                <section>
+<h2 id="my-experience-and-evolution">My experience and evolution</h2>
+<p>I am not a old great guru with a heavy beard using linux since the 90s. I started using computers quite late, back in year 2000 or such. My first computer was running Windows XP (yes, I know…). Believe it or not, at this time, my computer didn’t attract me at all and I did not want to know more of it.</p>
+<p>A couple of years before taking my Bachelor degree, my maths teacher taught me how to write tiny programs to get stuff automatically done on a calculator. This introduction to software writing was like a revelation to me. I decided a few years after to start learning computer sciences, in 2007. I couldn’t stand using this crappy m$ thingie anymore, so I decided to install “linux”, understand &quot;whatever GNU/Linux distribution one would recommend me.</p>
+<p>This is how I started using <a href="http://www.ubuntu.com/">Ubuntu</a>. I stood with it for a little more than a year, starting to learn the basics. After that, I felt it was becoming ugly and sloooooow, so I decided to change. <a href="http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html">As I said before</a>, I then decided to give <a href="http://www.gentoo.org/">Gentoo</a> a try, since I wanted to really start learning a system’s internals. It was quite a good choice and I really learnt a lot.</p>
+<h2 id="contributing-to-exherbo">Contributing to Exherbo</h2>
+<p>You know after I discovered (and then contributed) to <a href="http://paludis.exherbo.org/">paludis</a>, <a href="http://www.imagination-land.org/posts/2012-12-27-knowing-your-system---part-6---source-based-distributions-discovering-exherbo.html">I decided to switch</a> to another source-based distribution: <a href="http://exherbo.org/">Exherbo</a>. If <a href="https://galileo.mailstation.de/egitstats/authors.html">statistics</a> are correct, I have contributed to Exherbo for the first time 743 days ago, at the time I’m writing this, which appears to be 2011, June the 25th. Not sure how long I had been using Exherbo before that though.</p>
+<p>After 2 years and 1 day of contributions, discussions and support in the Exherbo community, I was finally asked on June, the 26th to join the team and become <a href="http://exherbo.org/developers.html">an official Exherbo developer</a>.</p>
+<h2 id="becoming-an-exherbo-developer">Becoming an Exherbo developer</h2>
+<p>Exherbo takes a huge place both in my hobbies since I love to contribute to it ( <a href="http://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo:-updated-and-smoother-method.html">it’s really an easy thing to do</a>) and in my work. Some of my colleagues were running Gentoo on their laptops (which was a little because of me) and I felt quite sad for them, since their system broke quite often (so did mine when I was running Gentoo). With my shiny robust Exherbo system, I convinced them to switch, and they now are full Exherbo users too. Others are even currently switching too. This seem quite logical to us to use for production in <a href="http://www.clever-cloud.com/">our company</a> the distribution we know the best and we know that works the best, so we chose Exherbo. Regarding this both personal and professional involvement into the Exherbo community, I couldn’t say anything but “Yes, of course I’ll join you!”.</p>
+<p>So here I am, Exherbo evangelist, and now official developer!</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Sun, 07 Jul 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-07-07-becoming-an-official-exherbo-developer.html</guid>
+</item>
+<item>
+    <title>GPaste 3.0.2 released</title>
+    <link>http://www.imagination-land.org/posts/2013-06-01-gpaste-3.0.2-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 3.0.2 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>June  1, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>It’s available <a href="http://www.imagination-land.org/files/gpaste-3.0.2.tar.xz">there</a>, get it while it’s hot!</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>Fix build without gnome-control-center installed</li>
+<li>Fix focus when using &lt;Ctrl&gt;&lt;Alt&gt;&lt;H&gt; in gnome-shel extension</li>
+</ul>
+<p>And don’t forget to run <code>gpaste dr</code> aka <code>gpaste daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Sat, 01 Jun 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-06-01-gpaste-3.0.2-released.html</guid>
+</item>
+<item>
+    <title>GPaste 3.0.1 released</title>
+    <link>http://www.imagination-land.org/posts/2013-04-13-gpaste-3.0.1-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 3.0.1 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>April 13, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>The release tarball for 3.0 was corrupted, release 3.0.1 with a sane one.</p>
+<p>It’s available <a href="http://www.imagination-land.org/files/gpaste-3.0.1.tar.xz">there</a>, get it while it’s hot!</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>Fix build</li>
+</ul>
+<p>And don’t forget to run <code>gpaste dr</code> aka <code>gpaste daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Sat, 13 Apr 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-04-13-gpaste-3.0.1-released.html</guid>
+</item>
+<item>
+    <title>GPaste 3.0 released</title>
+    <link>http://www.imagination-land.org/posts/2013-04-13-gpaste-3.0-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 3.0 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>April 13, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>Finally version 3.0 is there. It’s lacking a few things that I wanted in, but I miss a lot of time these days, so I postponed these for 3.1.</p>
+<p>It’s available <a href="http://www.imagination-land.org/files/gpaste-3.0.tar.xz">there</a>, get it while it’s hot!</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>Various build fixes</li>
+<li>Support of gnome-control-center for setting keybindings</li>
+<li>Compatibility with newer gnome-shell</li>
+</ul>
+<p>And don’t forget to run <code>gpaste dr</code> aka <code>gpaste daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Sat, 13 Apr 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-04-13-gpaste-3.0-released.html</guid>
+</item>
+<item>
+    <title>Knowing your system - Part 10 - Native multilib system</title>
+    <link>http://www.imagination-land.org/posts/2013-01-31-knowing-your-system---part-10---native-multilib-system.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 10 - Native multilib system</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January 31, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/systemd.html">systemd</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>.</p>
+                </header>
+
+                <section>
+<h2 id="why-no-post-last-week">Why no post last week?</h2>
+<p>Last week, we were quite busy at <a href="http://www.clever-cloud.com/">Clever Cloud</a>, since we were releasing <a href="http://blog.clever-cloud.com/Press/2013/01/30/open-cloud-month.html">an awesome offer</a> and it took us quite some time since we migrated amongst other things from <a href="http://www.openstack.org/">openstack</a> to a custom home made solution which better fits our needs.</p>
+<h2 id="the-future-of-knowing-your-system">The future of “Knowing your system”</h2>
+<p>Two weeks ago, with <a href="http://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo:-updated-and-smoother-method.html">Part 9</a>, I actually finished my initial Roadmap for this saga of posts, so I won’t continue to make 1 post per week. I’ll keep posting them on Thursdays, as I find out interesting stuff about system internals.</p>
+<p>I recommend you reading <a href="http://0pointer.de/blog/projects/the-biggest-myths">last Lennart’s post</a> which explains a lot of things about the common myths regarding systemd.</p>
+<h2 id="what-is-multilib">What is multilib?</h2>
+<p>On classical systems running on machines with Intel or AMD processors (the vast majority of systems), you have the choice between installing a 32-bits (x86) or 64-bits (x86_64) system.</p>
+<p>Most systems used to be 32-bits, but these last years, 64-bits systems mostly became the standard. Point is that you cannot run 32-bits binaries from a 64-bits system (the opposite is also true). Since some clients may need it, we switched all our applicative systems to multilib, at Clever Cloud.</p>
+<p>Solution: On your 64-bits system, you can install 32-bits libraries in parallel of 64-bits one (the former will be in <code>/usr/lib32</code>, the latter in <code>/usr/lib64</code>, usually). Doing so allows you to run both 64 and 32-bits binaries on your system as long as you have the dependencies installed both for 64 and 32-bits. A good example is skype, which do not release a proper 64-bits version, so you need to run the 32-bits one, no matter your system.</p>
+<h2 id="multilib-system-the-right-way">Multilib system: the right way</h2>
+<p>Multilib is implemented in different ways depending on the distribution. Some of them like Debian or Gentoo provide huge packages with a while set of libraries in them, and only a subset or your system is available in 32-bits. For fedora, it’s kinda better, multilib packages are installed with <code>&lt;packages_name&gt;.i386</code> for the 32-bits version and <code>&lt;package_name&gt;.amd64</code> for the 64-bits version.</p>
+<p>The only distribution I know of which allow you real native multilib installation is, you’ll have guessed it, <a href="http://www.exherbo.org/">Exherbo</a>. The tutorial to switch to a multilib system is quite simple: <a href="http://www.mailstation.de/wordpress/?p=118">http://www.mailstation.de/wordpress/?p=118</a>, and once this is done, the only thing you have to do is enabling the <code>multibuild_c: 32</code> option to all the packages that you want to be available in 32-bits too. That’s it, you can get your whole system in both 64 and 32-bits just like this, natively.</p>
+<p>A good example of this is <a href="http://blog.clement.delafargue.name/posts/2013-01-08-dwarf-fortress-and-multilib-on-exherbo.html">Clement’s article</a> telling how he switched his system to multilib in order to be able to run dwarf fortress on Exherbo.</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Thu, 31 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-01-31-knowing-your-system---part-10---native-multilib-system.html</guid>
+</item>
+<item>
+    <title>GPaste 2.99.2 released</title>
+    <link>http://www.imagination-land.org/posts/2013-01-22-gpaste-2.99.2-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 2.99.2 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January 22, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>Followup to <a href="http://www.imagination-land.org/posts/2013-01-15-gpaste-2.99.1-released.html">last week’s release</a>, here is a new bugfix release.</p>
+<p>It’s available <a href="http://www.imagination-land.org/files/gpaste-2.99.2.tar.xz">there</a>, get it while it’s hot!</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>Fix a bug making gpaste settings ui a no-op</li>
+<li>Don’t close legacy applet menu when deleting an item</li>
+<li>Fix vala bindings</li>
+<li>Updated portuguese translation</li>
+</ul>
+<p>This is 3.0 RC3 and should be the latest RC before the 3.0 release.</p>
+<p>Feedback really appreciated!</p>
+<p>And don’t forget to run <code>gpaste dr</code> aka <code>gpaste daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Tue, 22 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-01-22-gpaste-2.99.2-released.html</guid>
+</item>
+<item>
+    <title>Manage you critical configuration files with git</title>
+    <link>http://www.imagination-land.org/posts/2013-01-21-manage-you-critical-configuration-files-with-git.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Manage you critical configuration files with git</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January 21, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/git.html">git</a>.</p>
+                </header>
+
+                <section>
+<p>A few months ago, I decided to track my configuration files using git, which I use for pretty much everything now.</p>
+<p>The problem I had to face is that some of them contain passwords, so I couldn’t let them as is.</p>
+<h2 id="setting-up-the-test-environment">Setting up the test environment</h2>
+<pre class="sourceCode bash"><code class="sourceCode bash">keruspe@Lou ~/tmp % <span class="kw">mkdir</span> test.git <span class="kw">&amp;&amp;</span> <span class="kw">cd</span> test.git <span class="kw">&amp;&amp;</span> git init --bare <span class="kw">&amp;&amp;</span> <span class="kw">cd</span> ..
+Initialized empty Git repository <span class="kw">in</span> /home/keruspe/tmp/test.git/
+keruspe@Lou ~/tmp % <span class="kw">mkdir</span> <span class="kw">test</span> <span class="kw">&amp;&amp;</span> <span class="kw">cd</span> <span class="kw">test</span> <span class="kw">&amp;&amp;</span> git init
+Initialized empty Git repository <span class="kw">in</span> /home/keruspe/tmp/test/.git/
+keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % git remote add origin ../test.git </code></pre>
+<p>Ok, we now have a remote repository in <code>~/tmp/test.git</code> and a working directory in <code>~/tmp/test</code></p>
+<h2 id="configuring-the-working-directory-to-be-password-safe">Configuring the working directory to be “password-safe”</h2>
+<pre class="sourceCode bash"><code class="sourceCode bash">keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % git config filter.password.clean <span class="st">&quot;sed -e 's/mypassword/@PASSWORD@/' -e 's/anotherpassword/@PASSWORD2@/'&quot;</span>
+keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % git config filter.password.smudge <span class="st">&quot;sed -e 's/@PASSWORD@/mypassword/' -e 's/@PASSWORD2@/anotherpassword/'&quot;</span>
+keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % <span class="kw">cat</span> <span class="kw">&gt;</span> .git/info/attributes &lt;&lt; EOF
+myconf.conf filter=pa<span class="kw">s</span>sword
+EOF</code></pre>
+<p>Ok, what’s going on there?</p>
+<p>I’m creating a filter which I call “password”. A filter consist of two functions:</p>
+<pre><code>* clean is called on each file when you're committing, before creating the git objects corresponding to your commit.
+* smudge is called when you checkout, each time git is recreating your working directory from the git objects.</code></pre>
+<p>You can note that this is not an in-place edition with sed, since I did not add the <code>-i</code> argument, these commands are called during a piping process, not directly on files.</p>
+<p>I then create a <code>.git/info/attributes</code> file, in which I tell git to use my brand new “filter” password for the file <code>myconf.conf</code>. You can use any pattern that git understands here, and can obviously add multiple lines.</p>
+<h2 id="example">Example</h2>
+<p>Let’s now create the <code>myconf.conf</code> file we mentioned earlier, let’s push it to the remote repository, and clone it from anywhere else, to see the result.</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">keruspe@Lou ~/tmp/test <span class="kw">(</span>git<span class="kw">)</span>-[master] % <span class="kw">cat</span> <span class="kw">&gt;</span> myconf.conf &lt;&lt; EOF
+user = johndoe
+password = mypassword
+bddurl = root:anotherpassword@mysql.local
+EOF
+keruspe@Lou ~/tmp/test (git)-[master] % git add myconf.conf &amp;&amp; git commit -m &quot;initial config&quot; &amp;&amp; git push origin master
+[master (root-commit) 46153a1] initial config
+ 1 file changed, 3 insertions(+)
+ create mode 100644 myconf.conf
+Counting objects: 3, done.
+Delta compression using up to 8 threads.
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 283 bytes, done.
+Total 3 (delta 0), reused 0 (delta 0)
+To ../test.git
+ * [new branch]      master -<span class="kw">&gt;</span> master
+keruspe@Lou ~/tmp/test (git)-[master] % cd ..
+keruspe@Lou ~/tmp % git clone test.git test2
+Cloning into 'test2'...
+done.
+keruspe@Lou ~/tmp % cat test/myconf.conf
+user = johndoe
+password = mypassword
+bddurl = root:anotherpassword@mysql.local
+keruspe@Lou ~/tmp % cat test2/myconf.conf
+user = johndoe
+password = @PASSWORD@
+bddurl = root:@PASSWORD2@@mysql.local</code></pre>
+<p>As you can see, in my <code>~/tmp/test</code> working directory, where I have my filter set up, nothing has changed at all, whereas in the brand new clone <code>~/tmp/test2</code> (and thus, in the server), all my passwords are masked and are not accessible. This way, you can track your configuration files using git and sharing it with other without even thinking of your passwords, as long as everything is in your filter.</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Mon, 21 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-01-21-manage-you-critical-configuration-files-with-git.html</guid>
+</item>
+<item>
+    <title>Knowing your system - Part 9 - Contributing to Exherbo: Updated and smoother method</title>
+    <link>http://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo:-updated-and-smoother-method.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 9 - Contributing to Exherbo: Updated and smoother method</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January 17, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
+                </header>
+
+                <section>
+<p>In the <a href="http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html">part 7</a>, I described my workflow for contributing to Exherbo. Since then I had a few remarks (from <a href="http://kloeri.livejournal.com/">kloeri</a>, the <a href="http://www.exherbo.org/">Exherbo</a>’s father, amongst others) on how I could improve it.</p>
+<h2 id="my-new-workflow">My new workflow</h2>
+<p>What I liked about my previous workflow is that it was exactly the same for contributing to Exherbo or <a href="http://www.imagination-land.org/posts/2013-01-10-knowing-your-system---part-8---on-the-road-to-upstream.html">to upstream</a>. This is why it isn’t completely done. Most of it is actually still here, but in another way. What’s new is <code>cave sync</code>’s option <code>-s</code>, aka <code>--source</code> which allows you to specify multiple sync sources for a repository. For each repository that I install, I edit its configuration file changing <code>sync = git://git.exherbo.org/arbor.git</code> to <code>sync = git://git.exherbo.org/arbor.git local: git+file:///home/keruspe/Exherbo/arbor</code>, for example.</p>
+<p>What I do now is:</p>
+<ul>
+<li>If I do not have a copy of the repository locally I clone it, otherwise I pull new changes from upstream</li>
+<li>I write my patch and commit it</li>
+<li>I sync the repository from my local patched clone: <code>cave sync -s local &lt;repository&gt;</code></li>
+<li>I try my patch, compiling the related packages</li>
+<li>If it fails, I go back to step two to fix my patch</li>
+<li>If it succeeds, I upload it with <code>git pe -&lt;number_of_commits&gt; | wgetpaste -r -s poundpython</code> and I submit it.</li>
+</ul>
+<p>For the record, the command which I run to upload my patch is a git alias, <code>git pe</code> means <code>git format-patch -M -C --find-copies-harder --stdout</code></p>
+<h2 id="what-has-become-my-previous-workflow">What has become my previous workflow?</h2>
+<p>This does not at all look like my previous workflow, but I said I kept it around… Why?</p>
+<p>Actually, my previous workflow comes right after that. Once I’ve sumitted my patch, I add it to my autopatch folder:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> -p /etc/paludis/autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>
+curl <span class="kw">&lt;</span>patch_url<span class="kw">&gt;</span> <span class="kw">&gt;</span> /etc/paludis.autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>/my.patch</code></pre>
+<p>This way, they automatically get applied when I sync back the real repository instead of my copy. If a sync fail, I rebase my patches and resubmit them. Once the patch is pushed, I can safely remove it from my autopatch directory.</p>
+<p>Note that this whole second step can fully be ignored for repositories you have push access to, simplifying even more this light workflow.</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Thu, 17 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo:-updated-and-smoother-method.html</guid>
+</item>
+<item>
+    <title>GPaste 2.99.1 released</title>
+    <link>http://www.imagination-land.org/posts/2013-01-15-gpaste-2.99.1-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 2.99.1 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January 15, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>Followup to <a href="http://www.imagination-land.org/posts/2013-01-14-gpaste-2.99-released.html">yesterday release</a>, here is a bugfix release getting a few cutting edge problems solved.</p>
+<p>It’s available <a href="http://www.imagination-land.org/files/gpaste-2.99.1.tar.xz">there</a>, get it while it’s hot!</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>Fix a few typos in the conditional code for applet and extension</li>
+<li>Fix make install when GPaste is not yet installed</li>
+<li>Clean desktop files</li>
+</ul>
+<p>This is 3.0 RC2 and no major changes should append before the 3.0 release.</p>
+<p>Feedback really appreciated!</p>
+<p>And don’t forget to run <code>gpaste dr</code> aka <code>gpaste daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
+<p>EDIT: packagers should backport <a href="https://github.com/Keruspe/GPaste/commit/61947fa2b5ea6b19b2a9cdb7db2b328e4a703f85">https://github.com/Keruspe/GPaste/commit/61947fa2b5ea6b19b2a9cdb7db2b328e4a703f85</a> with this release.</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Tue, 15 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-01-15-gpaste-2.99.1-released.html</guid>
+</item>
+<item>
+    <title>GPaste 2.99 released</title>
+    <link>http://www.imagination-land.org/posts/2013-01-14-gpaste-2.99-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 2.99 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January 14, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>It’s available <a href="http://www.imagination-land.org/files/gpaste-2.99.tar.xz">there</a>, get it while it’s hot!</p>
+<p>I’s still <a href="https://github.com/Keruspe/GPaste">hosted on github</a>.</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>Compatibility with recent development releases of <code>gnome-shell</code></li>
+<li><code>gpaste f</code> now defers the file reading to the GPaste daemon</li>
+<li><code>libgpaste-client</code> does now fully cover the GPaste DBus API</li>
+<li><code>libgpaste-keybinder</code> has been ported to use <code>XInput2</code></li>
+<li>keybindings have been fixed</li>
+<li>The <code>gnome-shell</code> extension has been ported to use <code>libgpaste-client</code></li>
+<li>A <code>systemd</code> user unit is now provided</li>
+<li>New library: <code>libgpaste-settings-ui</code></li>
+<li><code>gpaste-settings</code> has been ported to <code>libgpaste-settings-ui</code></li>
+<li>The <code>gnome-shell</code> extension now has a pref.js module based on <code>libgpaste-settings-ui</code></li>
+<li>An autostart desktop file is now provided with the legacy applet</li>
+<li><code>gobject-introspection</code> and <code>vala</code> support are now optional</li>
+</ul>
+<p>This is actually 3.0 RC and no major changes should append before the 3.0 release.</p>
+<p>Feedback really appreciated!</p>
+<p>And don’t forget to run <code>gpaste dr</code> aka <code>gpaste daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Mon, 14 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-01-14-gpaste-2.99-released.html</guid>
+</item>
+<item>
+    <title>Knowing your system - Part 8 - On the road to upstream</title>
+    <link>http://www.imagination-land.org/posts/2013-01-10-knowing-your-system---part-8---on-the-road-to-upstream.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 8 - On the road to upstream</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January 10, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<h2 id="how-did-i-start-contributing">How did I start contributing?</h2>
+<p>When I started to really dig into my system to fully understand how it works, breaking everything to know of to fix it, I decided to do even worse and started using <a href="http://en.wikipedia.org/wiki/Source_Control_Management">scm</a> packages. Scm packages download the source code directly for the upstream development repository using <a href="http://git-scm.com/">git</a>, <a href="http://subversion.tigris.org/">subversion</a>, <a href="http://mercurial.selenic.com/">mercurial</a> or whatever other <a href="http://en.wikipedia.org/wiki/Revision_control">vcs</a>.</p>
+<p>Doing this I ended up with a more-that-bleeding-edge system, causing a lot of breakages when stuff went incompatible with recent versions of other. That’s perfect, since that’s exactly the state I wanted to reach. If I wanted to recover a functional system, the easy solution that I adopted when I did not have much spare time was to revert my last changes and get back to an earlier version of the guilty package, but this was not the goal of the operation. What I really started to do at this point was to patch the broken stuff to make it compatible with the newer version of the guilty stuff which broke everything. It was sometimes really trivial, sometimes way less. I mostly did this for <a href="http://www.gnome.org/">Gnome</a> projects. It’s a really good experience since you have to dig in a lot of projects and documentation, making you know better how various parts of your system work internally. Once I had everything back working, I then submitted my patches to the developers of the projects upstream, so that it gets fixed for everyone.</p>
+<p>Now that I have way less spare time, I no longer have such a bleeding edge system, or at least I have way less scm packages. Sometimes I still need to patch stuff though, so I still use the same procedure.</p>
+<h2 id="my-work-flow">My work flow</h2>
+<p>My work flow for contributing to upstream is not much different to <a href="http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html">the one I use for contributing to Exherbo</a>. I also use an autopatch mechanism which is slightly different. My hook for automatically patch software is available there: <a href="https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/ebuild_prepare_pre/patches.bash">https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/ebuild_prepare_pre/patches.bash</a>. If I remember correctly it was initially written by <a href="http://ciaranm.wordpress.com/">Ciaran McCreesh</a>, the <a href="http://paludis.exherbo.org/">paludis</a>’s lead developer. When I want to patch something, I get a copy locally, I write and commit my patch, I generate a patch file and move it to <code>/etc/paludis/autopatch/&lt;category&gt;/&lt;package&gt;/</code> where &lt;category&gt; is for example “x11-dri” and &lt;package&gt; is “mesa”, according to exherbo’s packages name. Each time I install a package, it applies all this patches before configuring and compiling the software. If it works, I submit it upstream, if not, I fix it and retry.</p>
+<p>I highly recommend you to try contributing to open source projects, to fix or improve them, like adding new functionalities. The only risk is to learn a lot.</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Thu, 10 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-01-10-knowing-your-system---part-8---on-the-road-to-upstream.html</guid>
+</item>
+<item>
+    <title>Knowing your system - Part 7 - Contributing to Exherbo</title>
+    <link>http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 7 - Contributing to Exherbo</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January  3, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
+                </header>
+
+                <section>
+<h2 id="the-exherbo-contribution-mechanism">The exherbo contribution mechanism</h2>
+<p>Basically everything regarding <a href="http://www.exherbo.org/">exherbo</a> is discussed and managed via the <code>#exherbo</code> IRC channel on <code>irc.freenode.org</code>.</p>
+<p>Before contributing, you should first read the topic of the channel, <a href="http://www.exherbo.org/docs/patchbot.html">the zebrapig patchbot documentation</a>, <a href="http://exherbo.org/docs/exheres-for-smarties.html">the exheres for smarties tutorial</a> (You do not have to read the whole thing, but always keep it around), and you can also keep <a href="http://www.exherbo.org/docs/contributing.html">the contributing guide</a> around.</p>
+<h2 id="using-zebrapig">Using zebrapig</h2>
+<p>Zebrapig is exherbo’s IRC patchbot. You can use three commands to interact with it:</p>
+<ul>
+<li>!pq &lt;patch_url&gt; ::&lt;repository&gt; =&gt; Use this to submit the patch available at the given URL (use <code>git format-patch --stdout -M -C -C -1 | wgetpaste -r</code> to get an URL for your git commit) to the repository you specified.</li>
+<li>!pd &lt;pattern&gt; =&gt; Use this to mark all the patches matching the given pattern as done, useful when you want to resubmit an updated version of your patch.</li>
+<li>pl &lt;pattern&gt; =&gt; Don’t ever use it in the channel, only use it in a private query with zebrapig. It will list all patches matching this pattern (which is optional).</li>
+</ul>
+<p>A special use-case is to submit your personal repository, you’ll submit it as a patch, given its git URL and specifying ::unavailable-unofficial as the repository.</p>
+<p>Everything submitted to the bot will be reviewed by developers who’ll tell you what’s wrong in your patch and how you could improve it. You’re expected to be quite present in the channel if you start submitting stuff. Once your patch is ready, it will be pushed to the repository and available to everyone.</p>
+<p>What I love about this mechanism is that it’s really simple, handy and powerful.</p>
+<h2 id="my-personal-work-flow-for-contributing">My personal work flow for contributing</h2>
+<p>When I want to contribute to a repository, for a version bump or any bug fix, I proceed in 7 steps:</p>
+<ul>
+<li>If I do not have a copy of the repository locally I clone it, otherwise I pull new changes from upstream</li>
+<li>I write my patch and commit it</li>
+<li>I upload my patch with <code>git pe HEAD~&lt;number_of_commits&gt; | wgetpaste -r -s poundpython</code> (I’ll explain this command later)</li>
+<li>I put a copy of my patch in my autopatch directory (which I’ll explain after):</li>
+</ul>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> -p /etc/paludis/autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>
+curl <span class="kw">&lt;</span>patch_url<span class="kw">&gt;</span> <span class="kw">&gt;</span> /etc/paludis.autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>/my.patch</code></pre>
+<ul>
+<li>I sync the repository so that the autopatch gets applied: <code>cave sync &lt;repository&gt;</code></li>
+<li>I try my patch, compiling the related packages</li>
+<li>If everything succeeds, I submit my patch, otherwise, I get back to step 2 to fix my patch</li>
+</ul>
+<p>The command which I run to upload my patch is a git alias, <code>git pe</code> means <code>git format-patch -M -C --find-copies-harder --stdout</code> and takes as an argument the commits to publish, <code>HEAD~3</code> means 3 commits for example, I put <code>-s poundpython</code> as extra args for <code>wgetpaste</code> since gist.github.com which is the default fails quite often for me.</p>
+<p>The other interesting part of it is how I manage the autopatch system. I have <a href="https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/sync_post/local_update.bash">a paludis hook</a> placed in <code>/etc/paludis/hooks/sync_post</code> which cause every patch located in <code>/etc/paludis/autopatch/&lt;repository&gt;/</code> to be applied each time I sync the said repository.</p>
+<p>Next time I’ll explain how I contribute to upstream projects using nearly the same scheme, pointing out even more how intuitive and integrated this process is in my every day work.</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Thu, 03 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html</guid>
+</item>
+<item>
+    <title>systemd as a session manager</title>
+    <link>http://www.imagination-land.org/posts/2013-01-01-systemd-as-a-session-manager.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>systemd as a session manager</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January  1, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/systemd.html">systemd</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>As we are supposed to take good resolutions for 2013, mine has been to switch from <code>gnome-session</code> to <a href="http://www.freedesktop.org/wiki/Software/systemd">systemd</a> for managing my user session. Here is how I replaced gnome-session with systemd.</p>
+<h2 id="how-did-it-come-to-my-mind">How did it come to my mind?</h2>
+<p>Since its beginning, systemd has been created for both system and session management. The default is obviously the system manager, aka <code>systemd --system</code>, but what less people know is that you also can run <code>systemd --user</code>.</p>
+<p>Since I’ve been using systemd as my init system for a while and have been quite happy with it, I often thought of trying a migration for my session. Recently, I started playing with my mails, first with <a href="http://fetchmail.berlios.de/">fetchmail</a> and <a href="http://www.procmail.org/">procmail</a>, and then with <a href="http://offlineimap.org/">offlineimap</a> (I’ll blog about this later). With offlineimap, I needed a way to fetch periodically my emails.</p>
+<p>I could have installed a cron system, but I don’t like installing such things to only use them for a single command. Since systemd handles natively cron jobs with its timers, I thought back to <code>systemd --session</code>.</p>
+<h2 id="one-problem-three-solutions-which-one-to-take">One problem, three solutions, which one to take?</h2>
+<p>The first solution was to run <code>systemd --session</code> as an autostart app for my session (e.g. writing a <code>.desktop</code> file for it and putting it in <code>/etc/xdg/autostart</code>: <a href="http://standards.freedesktop.org/autostart-spec/autostart-spec-latest.html">http://standards.freedesktop.org/autostart-spec/autostart-spec-latest.html</a>.</p>
+<p>With this solution I would have ended up with a first session manager (gnome-session) launching a second one (systemd –user), and the latter would only have been used for offlineimap… Come on! We can do better.</p>
+<p>The second solution was to replace my X session with a new one, which would launch offlineimap on one side and gnome-session on the other, gnome-session taking care of all gnome-related stuff. This is way better! That’s the solution I adopted for a couple a hours and tries. I was pretty happy with it, but was still not convinced by the fact that two different software were managing my session at the same time. Here is my X session file: <a href="https://github.com/Keruspe/system-config/blob/master/data/systemd.desktop">https://github.com/Keruspe/system-config/blob/master/data/systemd.desktop</a>. It has to be placed in <code>/usr/share/xsessions</code>.</p>
+<p>Then comes the third solution, the one I’m currently running. Since my session was now directly managed by systemd, I decided to migrate everything launched by gnome-session to systemd services, in order to remove totally gnome-session. I found some helpful basis <a href="https://github.com/grawity/systemd-user-units/">here</a> and <a href="https://github.com/sofar/user-session-units">there</a>. I took some of them, modified them to fit my needs and wrote some myself, ending up with a nearly ready system.</p>
+<h2 id="last-problem-gnome-session-runtime-dependency">Last problem, gnome-session runtime dependency</h2>
+<p>Some of the <a href="http://www.gnome.org/">gnome</a> parts such as <a href="https://live.gnome.org/GnomeShell">gnome-shell</a> require gnome-session to be available at runtime, in order to synchronize a few informations across the session, such as the presence status or whether you want notifications to be displayed or ignored. This is all done via <a href="http://www.freedesktop.org/wiki/Software/dbus">DBus</a> but gnome-session does not use a helper to do so, it does it itself. Since we cannot get totally rid of gnome-session, I decided to create a dummy gnome session that gnome-session would launch.</p>
+<p>Next problem: gnome-session refuses to launch such a session… Yay! I thus patched it and <a href="https://bugzilla.gnome.org/show_bug.cgi?id=690866">opened a bug upstream</a> to allow it and provide the dummy session I created. With this patch applied locally, I could run <code>gnome-session --session=gnome-dummy</code> in my systemd service to get a session which does not launch anything. And then I realized that it was still starting autostart applications, which I did not want since I only wanted it for its DBus interface. Passing <code>-a /dev/null</code> as an extra arg to gnome-session so that it looks for autostart applications nowhere instead of in <code>/etx/xdg/autostart</code> did this last trick.</p>
+<p>My system user units are available there: <a href="https://github.com/Keruspe/system-config/tree/master/systemd/user">https://github.com/Keruspe/system-config/tree/master/systemd/user</a>. This folder corresponds to your <code>${HOME}/.config/systemd/user/</code>.</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Tue, 01 Jan 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-01-01-systemd-as-a-session-manager.html</guid>
+</item>
+<item>
+    <title>Knowing your system - Part 6 - Source-based distributions: Discovering Exherbo</title>
+    <link>http://www.imagination-land.org/posts/2012-12-27-knowing-your-system---part-6---source-based-distributions-discovering-exherbo.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 6 - Source-based distributions: Discovering Exherbo</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>December 27, 2012</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>.</p>
+                </header>
+
+                <section>
+<h2 id="the-limits-of-gentoo">The limits of Gentoo</h2>
+<p>As I said <a href="http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html">in part 3</a> of the <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowing your system</a> saga, I really started to dig into my system when I used <a href="http://www.gentoo.org/">Gentoo</a>. I quickly spotted the limits of portage, its default package manager <a href="http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html">and switched to paludis</a>. It really is easy to mess up your python installation, especially when you’re not a python developer and you don’t care about it. Of course there are tools to help you, such as <code>python-updater</code>, but it won’t be of great help if you’re not in a basic “breakage because of python update” case. Because of portage being written in python, you end up with an unmaintainable system which is painful.</p>
+<p>A pretty good example of this is when I tried install Gentoo on my Playstation 3. At this time, the powerpc stage was kinda old. During the base system installation and update, you ended with the linux headers version being incompatible with your python installation, and portage was unusable. After 3 attempts without success, I tried once starting by installing paludis, and then doing everything with it. It worked like a charm.</p>
+<p>Portage is not the only limitation of Gentoo. Its workflow is kinda insane. First of all, Gentoo aims to get every piece of software packaged in a same repository, external overlays being there only for testing purpose before merging. You end up with tons of packages being available on your machine, 95% of them won’t ever interest you. You could say it’s cool to get everything available without needing internet access to retrieve them, but you’ll still have to download the source tarballs so it’s pointless, it just make dependencies resolution slower.</p>
+<p>Another problem is contribution. To contribute to Gentoo, you’ll open a bug <a href="https://bugs.gentoo.org/">on their bugzilla</a> with a patch attached (I’m fine with this first step, the next ones are awful). When a developer or a proxy maintainer sees it, he applies it locally and push it to the centralised CVS server (which you sync using rsync on client side…). There is a HUGE lack of consistency in this process:</p>
+<ul>
+<li>As a simple contributor, you won’t ever be the author of the real commit, at most you’ll be mentioned in the commit message</li>
+<li>You don’t use the same tool to pull changes in that the one developer use to push them.</li>
+</ul>
+<h2 id="exherbo-is-awesome">Exherbo is awesome</h2>
+<p>After having used <a href="http://paludis.exherbo.org/">paludis</a> on Gentoo for one year or so, I decided to involve myself in its community. I started to send a couple of patches for my purpose, and to help beginners to deal with it. I then heard of another bigger project they were launching: a brand new source-based distribution, a kind of Gentoo rewritten from scratch in a more modern, modular, clean and strict way.</p>
+<p>While I was still using Gentoo, I started to install <a href="http://www.exherbo.org/">exherbo</a> in a chroot, to give it a try. First thing I really enjoyed was that everything is split into several repositories. If I do not have any C# application installed, the repository containing the mono stuff won’t be installed and those packages won’t be available on my system. If I finally decide to install mono, I will automatically be suggested to install the mono repository, and running <code>cave resolve -x1 repository/mono</code> will do all the stuff for you. Everything is managed by git both on the developer and “user” side. Being an exherbo “user” is kinda special, since every user is considered as a developer by the community.</p>
+<p>Contributing to exherbo is really easy and smooth, I’ll explain my contribution workflow next week.</p>
+<p>As exherbo is a “new” distribution, not every package is available, so you’ll probably end up creating your own repository to package your software. Once you get enough packages in it and you want to share it with the community, you just have to submit it, people will review it and tell you how you can make it better. It will then be added to the list of available repositories so that people will be guided to it when they try to install software you’ll have packaged. For example, at <a href="http://www.clever-cloud.com/">Clever Cloud</a>, we use <a href="http://www.openstack.org/">openstack</a> for now, and we had to package it and its dependencies. Everything is available in our repository.</p>
+<p>One more thing: exherbo policy is to be as vanilla as possible. Every patch used in packages must contain the upstream status of it, since they all have to be submitted. We want to maintain as few patches as possible.</p>
+<p><a href="https://github.com/Keruspe/Keruspe-exhereses">My exherbo repository</a></p>
+<p><a href="https://github.com/CleverCloud/CleverCloud-exheres">Clever Cloud exherbo repository</a></p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Thu, 27 Dec 2012 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2012-12-27-knowing-your-system---part-6---source-based-distributions-discovering-exherbo.html</guid>
+</item>
+<item>
+    <title>Knowing your system - Part 5 - Source-based distributions: the binary way</title>
+    <link>http://www.imagination-land.org/posts/2012-12-20-knowing-your-system---part-5---source-based-distributions:-the-binary-way.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 5 - Source-based distributions: the binary way</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>December 20, 2012</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
+                </header>
+
+                <section>
+<p><a href="http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html">We last saw</a> the <a href="http://paludis.exherbo.org/">paludis</a> tool. Now, we’ll take a look at how we can handle a source-based distribution using paludis for large pools of servers.</p>
+<h2 id="source-based-distributions-for-huge-server-pools">Source-based distributions for huge server pools</h2>
+<p>At <a href="http://www.clever-cloud.com/">Clever Cloud</a>, we decided to use a source-based GNU/Linux distribution called <a href="http://www.exherbo.org/">exherbo</a>, which I’ll blog about next week, because of its strictness and flexibility. Since we have to manage hundreds of servers and virtual machines, it would have been a big overload in energy consumption and in time invested if we managed it the “conventional” way. Indeed, compiling everything on the hypervisors could cause instabilities because of the CPUs being monopolised by the compilation process, leaving no power to virtual machines. The virtual machines would have the same problem, and for much longer, since you do not have the same power in a virtual machine than in an hypervisor, so compilations last longer.</p>
+<p>This is why we decided to manage everything using binary packages. Wait… What? Binary packages in a source-based distribution? How?!</p>
+<h2 id="the-search-is-over-paludis-pbins">The search is over: paludis’ pbins</h2>
+<h3 id="setup">Setup</h3>
+<p>Paludis comes with a very nice feature: <a href="http://paludis.exherbo.org/overview/pbins.html">pbins</a>.</p>
+<p>The concept is simple:</p>
+<ul>
+<li>You create an empty repository, anywhere in your filesystem, containing an empty <code>packages</code> directory, a <code>profiles</code> directory containing a file named <code>repo_name</code> which contents is your binary repository name, like <code>mybinaries</code>.</li>
+<li>In your repository, create a <code>metadata</code> containing a <code>layout.conf</code> file, with <code>masters = arbor</code> in it.</li>
+<li>On your compilation node, create a configuration file for you binary repository</li>
+<li>On the other nodes, create a configuration file for it too. It’s the same, without the lines starting with <code>binary_</code> and modifying the <code>sync</code> line</li>
+</ul>
+<p>A sample configuration file:</p>
+<pre><code>format = e
+location = /var/db/paludis/repositories/mybinaries
+sync = file:///var/db/paludis/repositories/mybinaries
+importance = 100
+binary_destination = true
+binary_distdir = /var/cache/paludis/distfiles
+binary_keywords_filter = amd64 ~amd64
+binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
+<p><code>location</code> is the place where you put your empty repository.</p>
+<p><code>sync</code> is the same that <code>location</code> on the compilation node, and may refer to a git repository where you’ll publish your binary repository on the other nodes.</p>
+<p><code>binary_distdir</code> is the directory where binary tarballs will be placed. I recommend you to make it point to the same place as where paludis downloads its distfiles, since it will be easier to maintain in further use. That’s why I left the default value here.</p>
+<p><code>binary_prefix</code> is the URL where the generated tarballs will be available for the other nodes. Ensure that the /var/cache/paludis/distfiles directory is available via http at this URL.</p>
+<h3 id="usage">Usage</h3>
+<p>You’re now fully ready! All you have to do is create the binary packages on your compilation node, push the updated repository to your git server, sync it on the other boxes and you will be able to install your freshly made binary packages without having to compile them on all of your machines.</p>
+<p>It’s pretty simple to make binary packages, all you have to do is first to generate the binaries for everything you have installed:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">cave resolve -xc world --make binaries --make-dependencies all</code></pre>
+<p>It will automatically generate packages and put tarballs in your distfiles directory. If you run this after updating your compilation box, it will only generate new binary packages for those that have changed.</p>
+<p>Last thing you might want to know: to create a binary package for a package you do not have installed yet, just run</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">cave resolve -x --make binaries --make-dependencies all <span class="kw">&lt;</span>insert a package name here<span class="kw">&gt;</span></code></pre>
+<p>It will create packages for all the dependencies, installing it afterwards, and finish by making the package for the software you asked.</p>
+<p>Don’t forget to push all changes on your git server!</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Thu, 20 Dec 2012 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2012-12-20-knowing-your-system---part-5---source-based-distributions:-the-binary-way.html</guid>
+</item>
+<item>
+    <title>Knowing your system - Part 4 - Falling in love with paludis</title>
+    <link>http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 4 - Falling in love with paludis</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>December 13, 2012</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>, <a href="http://www.imagination-land.org/tags/paludis.html">paludis</a>.</p>
+                </header>
+
+                <section>
+<h2 id="installing-a-source-based-gnulinux-distribution">Installing a source-based GNU/Linux distribution</h2>
+<p><a href="http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html">As we last saw</a>, I’m really fond of source-based distributions. Beyond the administration and the management of an installed system, you also have to install it in the first place. Because of the fact that you have to compile absolutely everything in your system, it may be really scary to install one.</p>
+<p>I formerly told you to keep in mind that your system is fully usable whilst you’re upgrading it…</p>
+<p>When you install a source-based distribution, it’s not using a shiny interface and clicking repeatedly on the “next” button. You have to use a “bootstrap” system, which can be a livecd such as the awesome <a href="http://www.sysresccd.org/">sysrescuecd</a>, but you also can decide to first install a binary distribution like <a href="http://fedoraproject.org/">Fedora</a> or <a href="http://www.ubuntu.com/">Ubuntu</a> (you may probably already have one, so you obviously can use it).</p>
+<p>When you have booted your “bootstrap” system, there will be 3 steps:</p>
+<ul>
+<li>Mounting the target partition to anywhere in your filesystem, like <code>/mnt/newsystem</code></li>
+<li>Unpacking the base filesystem of your distribution into that folder (these are commonly called “stages tarballs”)</li>
+<li>Chrooting into this folder (you may have to mount several subsystems such as /dev beforehand, refer to the distribution documentation)</li>
+</ul>
+<p>One you have chrooted, you will actually be (for the current shell) in your bare new system. However you can start to manage and install it from a shell within your “bootstrap” system that you can hopefully use to work during the installation. Note that you can also leave your computer do all the compilations during your idle time at night.</p>
+<p>Here are two install guides that I recommend you to follow:</p>
+<ul>
+<li><a href="http://www.gentoo.org/doc/en/handbook/handbook-x86.xml">Gentoo install guide</a></li>
+<li><a href="http://www.exherbo.org/docs/install-guide.html">Exherbo install guide</a></li>
+</ul>
+<h2 id="paludis-the-other-package-mangler">Paludis, the other package mangler</h2>
+<p>Now that you have all the minimal informations needed to understand what is a source-based GNU/Linux distribution and to understand how it works globally, We’ll give a closer look to the heart of the distribution: the package manager.</p>
+<p>On Gentoo, the official package manager is portage, with the <code>emerge</code> command line. I used it the first weeks I tried Gentoo, but when I really wanted to play with my system, it was too restrictive so I decided to switch. Moreover, portage is written in python (so are a lot of core components of gentoo), and when your python installation gets broken… Game over.</p>
+<p>When exploring the list of available packages, I found out <a href="http://paludis.exherbo.org/">paludis</a> and decided to give it a try. Thanks to <a href="http://git.exherbo.org/paludis/paludis-scripts.git/tree/portage2paludis.bash">a provided script</a>, I translated roughly my portage configuration to a paludis one (Paludis can use portage configuration but this is not recommended). It was not perfect, but was a good start. After cleaning and updating it a little by myself (<a href="http://paludis.exherbo.org/">the documentation is really exhaustive</a>), I could start using it. The man pages are also really complete.</p>
+<p>You can see my current configuration here: <a href="https://github.com/Keruspe/paludis-config">https://github.com/Keruspe/paludis-config</a>. A first configuration will be a lot lighter, this is a configuration that have evolved during 4 years, from Gentoo to Exherbo.</p>
+<p>Paludis command line <code>cave</code> is a modular tool which allow you to do a lot of things. Basically everything you would ever want to do, and some more.</p>
+<p>The main <code>cave</code> subcommands are:</p>
+<ul>
+<li><code>cave resolve</code> looks for the whole dependency tree of a package, in pretend mode by default, and you then can apply this resolution (to install stuff) by specifying the <code>-x</code> argument</li>
+<li><code>cave uninstall</code> is the pendent of <code>cave resolve</code> for uninstalling</li>
+<li><code>cave purge</code> looks for unused packages (as for all commands, pretending by default, and execution with <code>-x</code>)</li>
+<li><code>cave fix-linkage</code> looks for broken binaries (because of libraries updates) and suggest you to rebuild them.</li>
+</ul>
+<p>A lot of other subcommands are available, and a lot of options for each of these. Amongst other things, cave allows you to stop the installation process at a certain phase, or resume at another. This allows you to abort at compile phase to apply custom patches, and them resume at compile phase to compile the package with your patches applied. It also support a hooks mechanism.</p>
+<p>We’ll see some more advanced paludis features in a next post of <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">the knowing your system saga</a>.</p>
+<p>Last thing, The way I update my system is:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash">cave <span class="kw">sync</span>
+cave resolve world -c -km -Km -Cs</code></pre>
+<p>It syncs repositories with upstream to get latest versions of the packages, and then resolve <code>world</code> which is the set containing all the packages you have installed, with a complete dependency tree, as deep as it can, with <code>-c</code> aka <code>--complete</code> and reinstalling all packages for which metadata have changed because of <code>-km -Km</code> aka <code>--keep if-same-metadata --keep-targets if-same-metadata</code>. If a failure occurs, it continues to build the rest while the dependencies still are satisfied thanks to <code>-Cs</code> aka <code>--continue-on-failure if-satisfied</code>. I then run this last command again with <code>-x</code> aka <code>--execute</code> to apply the available updates.</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Thu, 13 Dec 2012 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html</guid>
+</item>
+<item>
+    <title>Knowing your system - Part 3 - Source-based distributions: The Gentoo example</title>
+    <link>http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 3 - Source-based distributions: The Gentoo example</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>December 10, 2012</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/source-based.html">source-based</a>.</p>
+                </header>
+
+                <section>
+<p>After <a href="http://www.imagination-land.org/posts/2012-11-22-knowing-your-system-part-basics-on-unixlike-systems.html">a little reminder on UNIX-like systems</a> and <a href="http://www.imagination-land.org/posts/2012-11-29-knowing-your-system-part-the-init-process.html">a quick view to the init process</a>, we’ll now see the kind of distributions which I really love, where you really control everything.</p>
+<h2 id="what-is-a-source-based-gnulinux-distribution">What is a source-based GNU/Linux distribution?</h2>
+<p>The principle may be a bit scary, but is actually simple.</p>
+<p>In most distributions (called binary distributions), software are packaged to be “ready to use”, all configured by the distribution maintainers, and you then get a list of available packages that you can install. When you ask for a package to be installed, it will download the software and its dependencies and install everything.</p>
+<p>In source-based, the package manager will also handle all the dependencies, downloading and installing stuff. The thing which changes with them is the thing you actually download, and what is being done between the downloading and the installing phases of the process.</p>
+<p>Instead of downloading the software, the package mangler will download its source code, unpack it, configure it and then compile it. You’re basically compiling your whole system with those distributions.</p>
+<h2 id="why-wasting-that-much-time-makes-sense">Why “wasting” that much time makes sense?</h2>
+<p>As you probably know, compiling can be very long. It mostly depends on your hardware, and most of the projects will compile in a couple of minutes, but some of them, like the compiler itself or your web browser can take up to several hours on certain boxes.</p>
+<p>This can be seen as a PITA but this is the price of real liberty. With source-based distributions, you can choose which components of each software you want to build, and exactly which options you want. With binary distributions, if you’re missing a feature, you’ll have to do everything by yourself outside your package manager, and this will really be a PITA to maintain. With source-based distribution, it’s way easier to contribute, as we’ll see in a later post of <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">this saga of posts</a>. The package does not contain all the binaries, it’s just a text file you have to edit to add an option you’re missing. Everything becomes easier to customize, you become the God of your system.</p>
+<p>You must also keep in mind that while you’re compiling stuff, your system is still fully usable, so you can just do it in background.</p>
+<h2 id="the-gentoo-example-my-beginning-with-source-based-distributions">The Gentoo example: My beginning with source-based distributions</h2>
+<p>My first GNU/Linux distribution was Ubuntu, which seemed to be popular (and which still is), a binary distribution of course. I was quite happy with it for the first months, but as soon as I wanted to explore my system more deeply, like compiling my own kernel, or when I wanted to do really specific operations, I was immediately limited by the design of this distribution.</p>
+<p>I was a student at this time, and my class-mate (and now colleague) <a href="http://blog.kdecherf.com/">Kevin Decherf</a> told me he was using <a href="http://www.gentoo.org/">Gentoo</a>. on his server. I immediately asked him if he agreed to plan an Install Party the week just after that. During this session, I installed a minimal system, discovering the distribution. At the end of the day, it was barely booting to an xterm.</p>
+<p>I wanted to really explore my distribution to understand exactly how everything works, so I started “playing” with it, modifying packages, checking how things reacted. I broke my system and reinstalled it 5 times in 3 weeks, playing harder and harder, until I knew how to make my system work again after a wanted major breakage.</p>
+<p>You really should try source-based distributions, to really get how things work. It can take a few months to understand them if you just play a little with them on an irregular basis, but it’s really worth it. Gentoo was my choice since it’s the most popular source-based distribution, and the only one I heard of at this time. It’s quite good, but you’ll see in my next post that I didn’t really like its default package manager, and I no longer use Gentoo.</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Mon, 10 Dec 2012 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html</guid>
+</item>
+<item>
+    <title>Facron 0.9 released</title>
+    <link>http://www.imagination-land.org/posts/2012-12-07-facron-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Facron 0.9 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>December  7, 2012</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/facron.html">facron</a>, <a href="http://www.imagination-land.org/tags/fanotify.html">fanotify</a>, <a href="http://www.imagination-land.org/tags/cron.html">cron</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>.</p>
+                </header>
+
+                <section>
+<p>Usually, every Thursday I publish another post in <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">my “Knowing your system” saga</a>, but this week I was busy <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">working on facron</a>. I plan to publish the part three on next Monday, it will be about source-based GNU/Linux distributions.</p>
+<h2 id="whats-in-this-release">What’s in this release?</h2>
+<p>Since <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">last time I wrote about it</a>, a few things have changed: the code is more robust and much more cleaner, and several improvements have been made:</p>
+<ul>
+<li>You’re now able to pass arguments containing spaces if you surround them with quotes or double quotes in the configuration file.</li>
+<li>The fanotify flags handling have slightly changed with a new separator, the comma. If you specify <code>FAN_MODIFY|FAN_CLOSE_WRITE,FAN_OPEN</code> the event caught will be: either <code>FAN_MODIFY</code> AND <code>FAN_CLOSE_WRITE</code>, or <code>FAN_OPEN</code>.</li>
+<li><code>$@</code> is now the dirname of the file, <code>$#</code> the basename (<code>$$</code> is still the full path)</li>
+<li>A manual is now provided</li>
+<li>A systemd service is now provided (supporting the reload action to reload the configuration)</li>
+<li>You can now pass the <code>--background</code> argument to facron to launch it in background on non-systemd systems.</li>
+</ul>
+<h2 id="how-do-i-get-it">How do I get it?</h2>
+<p>The release tarball is available <a href="https://github.com/Keruspe/facron/downloads">there: https://github.com/Keruspe/facron/downloads</a>.</p>
+<p>You must have fanotify included in your kernel (most recent systems should have it by default).</p>
+<p>Here are the steps you need to run in order to get it up and running:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">wget</span> https://github.com/downloads/Keruspe/facron/facron-0.9.tar.xz
+<span class="kw">tar</span> xf facron-0.9.tar.xz
+<span class="kw">cd</span> facron-0.9
+./configure --sysconfdir=/etc --with-systemdsystemunitdir=/usr/lib/systemd/system
+<span class="kw">make</span>
+<span class="kw">sudo</span> <span class="kw">make</span> <span class="kw">install</span></code></pre>
+<p>Then just create your configuration file <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">as I said in the previous post</a> or following the manual instructions (man facron).</p>
+<p>When everything is ready, you just have to run</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> systemctl start facron.service</code></pre>
+<p>Or for non-systemd systems</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> facron --background</code></pre>
+<p>If you edit the configuration file, you can reload it without restarting the daemon by running</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> systemctl reload facron.service</code></pre>
+<p>Or for non-systemd systems</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> <span class="kw">kill</span> -USR1 <span class="ot">$(</span><span class="kw">pidof</span> facron<span class="ot">)</span></code></pre>
+<p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute !</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Fri, 07 Dec 2012 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2012-12-07-facron-released.html</guid>
+</item>
+<item>
+    <title>Facron - fanotify cron system</title>
+    <link>http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Facron - fanotify cron system</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>December  4, 2012</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/facron.html">facron</a>, <a href="http://www.imagination-land.org/tags/fanotify.html">fanotify</a>, <a href="http://www.imagination-land.org/tags/cron.html">cron</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>.</p>
+                </header>
+
+                <section>
+<p>It’s available on github: <a href="https://github.com/Keruspe/facron">https://github.com/Keruspe/facron</a></p>
+<h2 id="the-filesystem-cron-principle">The filesystem cron principle</h2>
+<p>At <a href="http://www.clever-cloud.com">Clever Cloud</a>, we often have to manage stuff based on filesystem events. In order to react dynamically, we will sometimes have to reload some specific configurations when the config file has changed, or we’ll want to wrap some files which just appeared to grab them in the global flow.</p>
+<p>Filesystem crons allow you to do this kind of things. What you have to do is specify the files you want to monitor with the events you want to react to and the action you want to proceed when those events occur.</p>
+<h2 id="incron">Incron</h2>
+<p><a href="http://inotify.aiken.cz/?section=incron&amp;page=about&amp;lang=en">Incron</a> is the filesystem cron we’ve been using so far. It’s based on the <a href="http://en.wikipedia.org/wiki/Inotify">inotify</a> linux system. Inotify was the replacement to dnotify which has been deprecated for quite a long time now. Thanks to inotify, incron watches for filesystem changes and act accordingly, given the configuration file you provide.</p>
+<p>Incron does not support <a href="http://fuse.sourceforge.net">FUSE</a> which is used by several filesystems, since inotify doesn’t support it either.</p>
+<p>We experienced quite a few instabilities with incron which was not as reliable as we expected, ending up with ugly bash hacks to do the job correctly. That’s why I decided we needed our own solution.</p>
+<h2 id="facron">Facron</h2>
+<p><a href="https://github.com/Keruspe/facron">Facron</a> is my vision of the filesystem cron problematic. It is based on the “new” <a href="http://lwn.net/Articles/339253">fanotify</a> <a href="http://en.wikipedia.org/wiki/Application_binary_interface">ABI</a> which is more reliable and have better performances than the now deprecated inotify one. I started to write it two days ago, it’s at a stage where it’s usable. It’s not yet perfect and I want to improve it a little but you already can try it.</p>
+<p>The configuration file (<code>/etc/facron.conf</code>) looks like:</p>
+<pre><code>/path/to/a/file FAN_MODIFY|FAN_EVENT_ON_CHILD /path/to/script fromFacron $$</code></pre>
+<p>The first element is the file or directory to watch (of course multiple lines are supported), the second one corresponds to all fanotify events that you want to follow, and then your script or application (full path is recommended) + arguments. <code>$$</code> is a special token which will be replaced by the full path of the file which has emitted the event.</p>
+<p>The available fanotify events are:</p>
+<ul>
+<li><code>FAN_ACCESS</code></li>
+<li><code>FAN_MODIFY</code></li>
+<li><code>FAN_CLOSE_WRITE</code></li>
+<li><code>FAN_CLOSE_NOWRITE</code></li>
+<li><code>FAN_OPEN</code></li>
+<li><code>FAN_Q_OVERFLOW</code></li>
+<li><code>FAN_OPEN_PERM</code></li>
+<li><code>FAN_ACCESS_PERM</code></li>
+<li><code>FAN_ONDIR</code></li>
+<li><code>FAN_EVENT_ON_CHILD</code></li>
+<li><code>FAN_CLOSE</code></li>
+<li><code>FAN_ALL_EVENTS</code></li>
+<li><code>FAN_ALL_PERM_EVENTS</code></li>
+<li><code>FAN_ALL_OUTGOING_EVENTS</code></li>
+</ul>
+<p>Two more special tokens will appear: <code>$@</code> which will contain the dirname of the file, and <code>$#</code> which will contain its basename.</p>
+<p>A systemd service file and a release tarball will be provided soon.</p>
+<p>You can reload the configuration at any time by sending a <code>SIGUSR1</code> to facron:</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">kill</span> -USR1 <span class="ot">$(</span><span class="kw">pidof</span> facron<span class="ot">)</span></code></pre>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Tue, 04 Dec 2012 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html</guid>
+</item>
+<item>
+    <title>GPaste 2.9.1 released</title>
+    <link>http://www.imagination-land.org/posts/2012-12-01-gpaste-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 2.9.1 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>December  1, 2012</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>It’s available <a href="https://github.com/Keruspe/GPaste/downloads">there</a>, get it while it’s hot!</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>Fix memory leak when handling images</li>
+<li>Fix duplicated images in history</li>
+<li>Fix “changed” signal in GPasteSettings</li>
+</ul>
+<h2 id="introduction-to-clipboard-managers">Introduction to clipboard managers</h2>
+<p>I started to use some clipboards manager a few years ago. If you’re a developer and you don’t use one yet, I highly recommend you to do so!</p>
+<h3 id="what-is-a-clipboard-manager">What is a clipboard manager?</h3>
+<p>A clipboard manager is a tool which allows you to keep a trace of what you’re copying and pasting. Is is really useful when you go through tons of documentation and you want to keep around a bunch of functions you might want to use, for example. The clipboard manager will store an history of everything you do, so that you can get back to older copies you now want to paste.</p>
+<p>If you never tried using one, download and install one and give it a try for a few days. Chances are high that you’ll immediately get addicted.</p>
+<h3 id="which-one-should-i-use">Which one should I use?</h3>
+<p>Well, it depends on your operating system. If you’re on a non UNIX-like one, I won’t be of great help to find yours. If you’re running Mac OS X, a lot of friends of mine use <a href="http://jumpcut.sourceforge.net/">JumpCut</a> and are really happy with it.</p>
+<p>If you’re running a GNU/Linux system like me, here is my experience:</p>
+<p>I tried around ten different clipboards manager. I used <a href="http://parcellite.sourceforge.net/">parcellite</a> for a couple of years, it was kinda great and lightweight. But then it got unmaintained and used some deprecated stuff. I then forked it and made <a href="https://github.com/Keruspe/parcellite3">parcellite3</a> which was parcellite ported to gtk+-3 and with many bugs fixed. But then I was not happy at all with the way it worked internally. At this time, I was student at university and wanted to learn <a href="https://live.gnome.org/Vala/">vala</a> (which is a great language by the way) and decided to write my own clipboard manager: <a href="https://github.com/Keruspe/GPaste/">GPaste</a>. GPaste aims to be a new generation parcellite. For some reasons, I since rewrote a large part of it in C, but that will be another story in another post.</p>
+<p>GPaste structure is really modular. It’s split in a few libraries:</p>
+<ul>
+<li>libgpaste-setting to handle user settings using <a href="https://live.gnome.org/dconf">dconf</a></li>
+<li>libgpaste-keybinder to handle keybindings leading to actions in the daemon</li>
+<li>libgpaste-core is the place where the history and the items composing it are managed</li>
+<li>libgpaste-daemon is a set of functions to create your own GPaste daemon</li>
+<li>libgpaste-client is a set of function to easily create your own client application</li>
+</ul>
+<p>All these libraries are written with a full <a href="https://live.gnome.org/GObjectIntrospection">gobject-introspection</a> compatibility, so you can use them from any compatible language (python, javascript, perl…). Vala bindings are also shipped.</p>
+<p>On top of these libraries, the components of the GPaste stack are:</p>
+<ul>
+<li>gpasted, the daemon which is available over <a href="http://www.freedesktop.org/wiki/Software/dbus">dbus</a></li>
+<li>gpaste, a command line tool to manage gpasted</li>
+<li>gpaste-settings, a graphical interface to manager GPaste settings</li>
+<li>gpaste-applet, the legacy applet which shows you the list of the history managed by GPaste</li>
+<li>gnome-shell-extensions-gpaste, a <a href="https://live.gnome.org/GnomeShell">gnome-shell</a> extension similar to gpaste-applet</li>
+</ul>
+<p>All development takes place on <a href="https://github.com/">github</a>, so feel free to contribute and to test it!</p>
+<p>GPaste is packaged by myself for the <a href="http://exherbo.org/">exherbo</a> GNU/Linux distribution and by other people for ubuntu, fedora, debian, archlinux and frugalware, at least.</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Sat, 01 Dec 2012 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2012-12-01-gpaste-released.html</guid>
+</item>
+<item>
+    <title>Knowing your system - Part 2 - The init process</title>
+    <link>http://www.imagination-land.org/posts/2012-11-29-knowing-your-system-part-the-init-process.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 2 - The init process</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>November 29, 2012</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>, <a href="http://www.imagination-land.org/tags/systemd.html">systemd</a>.</p>
+                </header>
+
+                <section>
+<p><a href="http://www.imagination-land.org/posts/2012-11-22-knowing-your-system-part-basics-on-unixlike-systems.html">As we last saw</a>, when we start an UNIX-like system, the kernel gives the hand to a main process called “init”. We’ll now see how it works.</p>
+<h2 id="the-goal-of-the-init-process">The goal of the init process</h2>
+<p>The init process is the most important software running on your system. Its goal is to start everything up in order for your system to work properly. It will manage everything, report errors (and maybe act regarding them) and supervise everything. When a process gets orphaned (because its father process, the one which started it, exits or dies), init will automatically become its father process.</p>
+<p>The init process allows you to get a trace of what your processes are doing, where they do come from, and whether they’re in a decent or zombie state.</p>
+<h2 id="the-legacy-system-v-init">The legacy System V init</h2>
+<p>UNIX System V is probably the most known UNIX system. It was one of the most used operating systems in the 80s-90s for servers. Its init system is the base of most of our actual systems’ ones.</p>
+<p><a href="http://savannah.nongnu.org/projects/sysvinit">SysVInit</a> design splits the boot process into several steps (usually 6 or 7 for recent versions) called “runlevels”:</p>
+<ul>
+<li>the runlevel 0 corresponds to the system shutdown</li>
+<li>the runlevel 1 corresponds to the “single user” mode, it’s the step when the system’s basic components are started</li>
+<li>the runlevel 2 corresponds to the “multi user” mode, all things that do not require networking are started there</li>
+<li>the runlevel 3 corresponds to the “multi user with network” mode, all things requiring networking are started there</li>
+<li>the runlevel 4 is usually unused, you can use it for specific custom purpose</li>
+<li>the runlevel 5 usually starts the graphical user interface, but a lot of distributions already does it in runlevel 3</li>
+<li>the runlevel 6 is used to reboot the system</li>
+</ul>
+<p>Services that need to be started when you start the system must provide what is called an “init script” which will tell SysVInit how to start the said service. This is usually a bash script which takes as argument either start, stop or restart. If none is provided by upstream, you still can write your own one. You then assign these services to some runlevels, and they will be started in a random order when SysVInit will reach this runlevel. Usually they are started in alphabetical order so you can specify the order you want by prefixing the init scripts with a numerical value such as “03” or “99” so start in n early or late stage of this runlevel. Everything is done one after another, each task waits for the previous one to finish before starting.</p>
+<p>In /etc/inittab, you specify which runlevel you want to reach by default at startup, so you can tell it to stop at runlevel 3 for example. You will be able later to run “init 5” to start everything for example. You also can run “init 6” which is equivalent to “reboot” or “init 0” which is equivalent to “shutdown now”</p>
+<h2 id="the-new-generation-init-systems">The new generation init systems</h2>
+<p>Here are four examples of alternatives to SysVInit. There are other but these are the most used.</p>
+<h3 id="openrc">OpenRC</h3>
+<p><a href="http://www.gentoo.org/proj/en/base/openrc/">OpenRC</a> is <a href="http://www.gentoo.org/">Gentoo</a>’s init process. It is not a standalone one as it relies on SysVInit, it’s only there to add handy features and performance to SysVInit.</p>
+<p>OpenRC allows you to explicitly specify dependencies between services, which makes the task a lot easier than having to prepend numbers to services names. It also adds the ability to get configuration files separated from init scripts.</p>
+<h3 id="runit">Runit</h3>
+<p><a href="http://smarden.org/runit/">Runit</a> is a replacement to SysVInit that also handles runlevels. It is not compatible with the legacy ones, though. Runit splits the init process into three runlevels named “stages”:</p>
+<ul>
+<li>the stage 1 corresponds to the system initialization. If anything goes wrong here, runit drops you to a rescue shell.</li>
+<li>the stage 2 corresponds to everything that needs to be started (like SysVInit’s runlevel 5)</li>
+<li>the stage 3 corresponds to shutdown tasks.</li>
+</ul>
+<p>Runit can read and handle SysVInit runlevels through an external compatibility layer called runsvdir but this is not how it is intended to be run.</p>
+<p>Runit’s goal is to be as small and light as possible, it does exactly what you ask it to, and nothing more. You end up with a system as small as possible, but you must not forget anything since it won’t automatically do it for you.</p>
+<h3 id="upstart">Upstart</h3>
+<p><a href="http://upstart.ubuntu.com/">Upstart</a> is an <a href="http://www.ubuntu.com/">Ubuntu</a> attempt to make the system boot faster. It is fully event-driven and hence only waits for stuff that needs to be waited for when it starts every process needed by the system. It allows to start all these processes in parallel making them wait for dependencies only once they need them. When a process fails or crashes, Upstart can handle this event to restart it automatically.</p>
+<p>Upstart is fully compatible with SysVInit and the transition should be smooth and quite easy. Some software may need specific init scripts though, especially to take advantage of upstart features.</p>
+<h3 id="systemd">systemd</h3>
+<p><a href="http://www.freedesktop.org/wiki/Software/systemd">systemd</a> (yes, no caps here) is <a href="http://www.redhat.com/">Red Hat</a>’s attempt to make the boot smarter (and thus faster), especially for its desktop distribution: <a href="http://fedoraproject.org/">Fedora</a>. systemd is widely inspired from Upstart, the Upstart’s TODO list, and from Apple’s Mac OS X init system: launchd.</p>
+<p>systemd is as lazy as possible. It does not handle “runlevels” but rather “targets”. Everything handled by systemd is called a “unit”. A unit can either be a “target” (runlevel equivalent) or a “service” (the software itself), a “socket”, a “mount” operation, an “automount” operation or even a “timer” (cron-like) which will run your service in a regular fashion.</p>
+<p>Some targets are provided by default but you can create your owns as you wish, with the names you want. You can specify which target has to be reached by default at system startup. In each unit, you can specify before or after which unit it should be started, whether it requires or is required by other units, if it conflicts with other units, and to which target it belongs. This allows systemd to know which targets and services it should start before starting the specified default target. To each target corresponds a target.wants directory, where the unit which should be started with this target are symbolic-linked. The sockets and mount operations are kinda more specific. Mount and automount operations are auto-generated from /etc/fstab (auto-mounting means that the filesystem appears to be mounted, but it really is mounted only once it has been accessed, which leads to a consequent gain of time). If a socket unit corresponds to a service one, systemd supports the socket activation of this service, which means that the service will really be started only when another service starts to communicate with it.</p>
+<p>systemd is a real source of conflict between people against it and people in favor of it. The main argument of people which are against it is that it does too many things, it’s too complex and ships too many functionalities. I think this is a fake problem, since most of the functionalities are optional (and thus can be disabled), and everything is split into several binaries (systemd doesn’t do all this stuff itself but calls tools that it ships to do so). It is fully modular, and not modular like its “opponents”.</p>
+<p>One of the interesting tools provided by systemd is the “journal”. The journal is basically a logging utility directly integrated in the init process (well, it actually only communicates with it, it’s not <em>really</em> in it). This allows you to get rid of an external logging utility such as syslog-ng or rsyslog. You can browse all the logs with the “journalctl” command which allows you to apply a lot of filters on them.</p>
+<p>A really interesting serie of blog posts by Lennart Poettering (systemd’s lead developer) is available <a href="http://www.freedesktop.org/wiki/Software/systemd">here</a>.</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Thu, 29 Nov 2012 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2012-11-29-knowing-your-system-part-the-init-process.html</guid>
+</item>
+<item>
+    <title>Knowing your system - Part 1 - Basis on UNIX-like systems</title>
+    <link>http://www.imagination-land.org/posts/2012-11-22-knowing-your-system-part-basics-on-unixlike-systems.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Knowing your system - Part 1 - Basis on UNIX-like systems</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>November 22, 2012</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">knowingyoursystem</a>.</p>
+                </header>
+
+                <section>
+<p>Before starting to blog about more technical stuff, I’d like to recall a few basis about UNIX-like systems.</p>
+<p>I use a GNU/Linux based distribution most of the time, so I’ll speak about this kind of system, but most of it is true for any UNIX-like system such as the BSDs and Mac OS X.</p>
+<h2 id="what-is-gnulinux">What is GNU/Linux ?</h2>
+<p>First of all, let’s make things clear: I’m talking about “GNU/Linux”, not Linux. What is the difference? Linux is “only” a kernel, the heart of your system. Linux is the piece of your OS which will provide you several interfaces to interact with the hardware and to manage your processes. GNU is a set of libraries (a set of utilities for a developer) and tools such as the well known glibc, gcc, tar and sed. GNU is used most of the time on top of Linux, but can be used on top of other kernels, like Debian shown us with <a href="http://www.debian.org/ports/kfreebsd-gnu/">its GNU/kFreeBSD version</a>.</p>
+<p>GNU/Linux is not a full system, it’s only the kernel with only a few set of core components on top of it. This set can be <em>distributed</em> in several different ways, with different team managing them: the GNU/Linux distributions. The most common desktop distributions are:</p>
+<ul>
+<li><a href="http://www.debian.org/">Debian GNU/Linux</a></li>
+<li><a href="http://www.ubuntu.com/">Ubuntu GNU/Linux</a> (Which is Debian-based)</li>
+<li><a href="http://fedoraproject.org/">Fedora GNU/Linux</a></li>
+</ul>
+<h2 id="its-better-with-colors">It’s better with colors</h2>
+<p>These distributions provide the GNU/Linux set packaged with a bunch of other software, like a graphical environment (aka desktop/window manager). The most common desktop managers are:</p>
+<ul>
+<li><a href="http://www.gnome.org/">GNOME</a></li>
+<li><a href="http://www.kde.org/">KDE</a></li>
+<li><a href="http://xfce.org/">XFCE</a></li>
+</ul>
+<p>But there is also another kind of desktop managers which become more and more popular, like:</p>
+<ul>
+<li><a href="http://xmonad.org/">xmonad</a></li>
+<li><a href="http://i3wm.org/">i3</a></li>
+<li><a href="http://awesome.naquadah.org/">awesome</a></li>
+</ul>
+<p>They all run on top of a graphical server which aim is to display what we ask it to: <a href="http://www.x.org/wiki/">X11</a>. A new compositor (a part of a graphical server) is raising: <a href="http://wayland.freedesktop.org/">wayland</a>. Wayland will allow application to be a lot more flexible and will improve performances, but it will be lazier (applications will have to do more stuff by themselves).</p>
+<p>The X.org server, wayland, and all related libraries and tools are part of <a href="http://www.freedesktop.org/wiki/">the freedesktop project</a>. Freedesktop aims to provide a free and opensource grapical user experience to everyone.</p>
+<h2 id="a-gnulinux-system-structure.">A GNU/Linux system structure.</h2>
+<p>On a UNIX-like system, everything is a file. A folder is just a specific kind of file, which can contain some other files. Each piece of harware stuff is seen as a file. You write and read this file to interact with the real hardware. All of these files are stored in a tree respecting the <a href="http://en.wikipedia.org/wiki/Filesystem_Hierarchy_Standard">Filesystem Hierarchy Standard</a>.</p>
+<ul>
+<li><code>/</code> is the parent folder of everything, we call it “slash”.</li>
+<li><code>/boot</code> is the folder where everything needed by the bootloader (The menu where you select which OS to start) is stored.</li>
+<li><code>/dev</code> contains all the files corresponding to hardware devices or core functionalities.</li>
+<li><code>/etc</code> contains all the system-wide configuration files.</li>
+<li><code>/home</code> contains the personal directories of the users.</li>
+<li><code>/media</code> used to be the place where external storage devices used to be automounted (the place where we accessed their files).</li>
+<li><code>/mnt</code> is the place where we explicitly mount external (or internal) storage devices.</li>
+<li><code>/opt</code> is the place where we put software we install system-wide using automatic installers</li>
+<li><code>/proc</code> contains data specific to currently running processes</li>
+<li><code>/root</code> is the home directory of “root” (administrator)</li>
+<li><code>/tmp</code> is the place where are stored temporary data</li>
+<li><code>/var</code> is the place where will be stored variable content such as logs and databases content</li>
+<li><code>/run</code> is the folder used by software to store runtime specific data</li>
+<li><code>/run/media</code> is the replacement to the deprecated <code>/media</code></li>
+<li><code>/lib</code> is the place where are stored libraries (there also can be <code>/lib32</code> and/or <code>/lib64</code>)</li>
+<li><code>/bin</code> is the place where the executables are stored</li>
+<li><code>/sbin</code> is the place where administrative executables are stored</li>
+<li><code>/usr</code> (unix shared resources) is a legacy directory where we used to put all the binaries, libraries and data which were not necessary to boot the system, when the main hard drive was too small to store everything. It’s now becoming the standard place in which are moved <code>/bin</code>, <code>/sbin</code> and <code>/lib</code>.</li>
+</ul>
+<p>There is now a standard filesystem hierarchy for data stored in each user home directory, guided by freedesktop: <a href="http://standards.freedesktop.org/basedir-spec/basedir-spec-latest.html">The XDG base directory specification</a>.</p>
+<h2 id="the-gnulinux-boot-process">The GNU/Linux boot process</h2>
+<p>When you start your computer, you (usually) get to a bootloader. This bootloader asks you to select which system you want to start. What you actually do when you select an entry is to select a couple of informations:</p>
+<ul>
+<li>A kernel (you can have several ones installed at the same time, but you only boot using one of them).</li>
+<li>The part of your hard drive where your system lays.</li>
+<li>Extra configuration for your kernel.</li>
+</ul>
+<p>When your kernel has successfully initialized everything, it then gives the power to a root process, commonly called “init”, which goal is to track all the other processes that you and your system will run. The init process will then reach a few breakpoints (which can be called runlevels, or targets). To each of these breakpoints correspond a list of process that must be started. This is how all the root components of your system are started in the right order. One of the last things to start is the graphical interface.</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Thu, 22 Nov 2012 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2012-11-22-knowing-your-system-part-basics-on-unixlike-systems.html</guid>
+</item>
+<item>
+    <title>Home sweet home</title>
+    <link>http://www.imagination-land.org/posts/2012-11-21-home-sweet-home.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Home sweet home</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>November 21, 2012</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/misc.html">misc</a>.</p>
+                </header>
+
+                <section>
+<h2 id="welcome">Welcome</h2>
+<p>It has been a long time since I first wanted to get a blog.</p>
+<p>I’ll mostly speak here about free software and stuff I like to hack, from sysadmin to development and debugging. I write code mostly in Java for my job, but my language of choice is the C for my personal projects. This is why this blog is written in haskell.</p>
+<p>Just to be clear, what I mean by sysadmin is not</p>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> apt-get <span class="kw">install</span> kde</code></pre>
+<p>I’m a source-based distributions enthusiast and prefer tutorials and tips about raw software over distro-specific ones.</p>
+<h2 id="special-thanks">Special thanks</h2>
+<p>This blog is powered by <a href="http://jaspervdj.be/hakyll/index.html">Hakyll</a>.</p>
+<p>It was written by <a href="http://blog.clement.delafargue.name/posts/2012-10-21-blog-deployment-system.html">Clément Delafargue</a> and I shamelessly stole it from him.</p>
+<p>This blog is available as <a href="http://github.com/Keruspe/blog">a git repository</a> and hosted on <a href="http://clever-cloud.com">The Clever Cloud</a> which is the company I work for.</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Wed, 21 Nov 2012 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2012-11-21-home-sweet-home.html</guid>
+</item>
+
+    </channel> 
+</rss>
