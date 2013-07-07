@@ -1,10 +1,11 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
-import Control.Applicative((<$>))
-import Data.List (isPrefixOf)
-import Data.Monoid(mappend)
-import Data.Text (pack,unpack,replace,empty)
+import Control.Applicative ((<$>))
+import Data.List           (isPrefixOf)
+import Data.Monoid         (mappend)
+import Data.Text           (pack,unpack,replace,empty)
+import System.FilePath     (takeFileName)
 
 import Hakyll
 
@@ -157,10 +158,11 @@ postList tags pattern preprocess' = do
 -- Custom configuration
 
 myConfiguration :: Configuration
-myConfiguration = defaultConfiguration {ignoreFile = ignoreFile'}
+myConfiguration = defaultConfiguration {ignoreFile = ignoreFile''}
   where
-    ignoreFile' x
-        | x == "data/.htaccess"  = False
-        | x == "files/.htaccess" = False
-        | otherwise              = ignoreFile defaultConfiguration x
+    ignoreFile'' path
+        | fileName == ".htaccess" = False
+        | otherwise               = ignoreFile defaultConfiguration path
+      where
+        fileName = takeFileName path
 
