@@ -32,5 +32,5 @@ clean: hakyll
 	./hakyll clean
 	rm -f hakyll
 
-check: hakyll
+check: build
 	./hakyll check
