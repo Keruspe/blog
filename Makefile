@@ -13,13 +13,13 @@ new:
 publish: build
 	./hakyll publish
 
-preview: hakyll
-	./hakyll clean
+preview: build
 	./hakyll preview -p 9000
-
-clean: hakyll
-	./hakyll clean
-	rm -f hakyll
 
 check: build
 	./hakyll check
+
+clean: hakyll
+	rm -f hakyll
+
+.PHONY: all build new publish preview clean check
