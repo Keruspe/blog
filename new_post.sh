@@ -1,16 +1,18 @@
 #!/bin/sh
 
-date_pattern=`date "+%Y-%m-%d"`-
+date_pattern=$(date "+%Y-%m-%d")-
 
 read -r -p "Post name > "
 title=${REPLY}
-clean_title=`echo $title | tr "[:upper:]" "[:lower:]"]` #Lower Case
-clean_title=`echo $clean_title | iconv -f utf-8 -t ascii//translit` #Remove accents
-clean_title=`echo $clean_title | tr -dc '[a-z0-9\. -_]'` #Keep spaces and letters
-clean_title=`echo $clean_title | tr " " "-"` #Replace spaces by dashes
+# to ascii, to lowercase, keep only alphanum and ._- space and turn spaces into dashes
+clean_title=$(echo $title \
+    | iconv -f utf8 -t ascii//translit \
+    | tr '[:upper:]' '[:lower:]' \
+    | tr -dc 'a-z0-9. _-' \
+    | tr ' ' '-')
 
 filename=$date_pattern$clean_title.md
-author=`git config --get user.name`
+author=$(git config --get user.name)
 
 cat > "posts/"$filename <<EOF
 ---
