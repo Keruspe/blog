@@ -6,8 +6,8 @@ tags: sysadmin, knowingyoursystem, systemd, source-based, exherbo
 
 ## Why no post last week?
 
-Last week, we were quite busy at [Clever Cloud](http://www.clever-cloud.com/), since we were releasing
-[an awesome offer](http://blog.clever-cloud.com/Press/2013/01/30/open-cloud-month.html) and it took us quite some time
+Last week, we were quite busy at [Clever Cloud](http://www.clever-cloud.com/en/), since we were releasing
+[an awesome offer](http://blog.clever-cloud.com/press/2013/01/30/open-cloud-month.html) and it took us quite some time
 since we migrated amongst other things from [openstack](http://www.openstack.org/) to a custom home made solution which
 better fits our needs.
 

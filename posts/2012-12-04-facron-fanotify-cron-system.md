@@ -8,7 +8,7 @@ It's available on github: [https://github.com/Keruspe/facron](https://github.com
 
 ## The filesystem cron principle
 
-At [Clever Cloud](http://www.clever-cloud.com), we often have to manage stuff based on filesystem events. In order to
+At [Clever Cloud](http://www.clever-cloud.com/en/), we often have to manage stuff based on filesystem events. In order to
 react dynamically, we will sometimes have to reload some specific configurations when the config file has changed, or
 we'll want to wrap some files which just appeared to grab them in the global flow.
 
@@ -31,7 +31,7 @@ hacks to do the job correctly. That's why I decided we needed our own solution.
 ## Facron
 
 [Facron](https://github.com/Keruspe/facron) is my vision of the filesystem cron problematic. It is based on the "new"
-[fanotify](http://lwn.net/Articles/339253) [ABI](http://en.wikipedia.org/wiki/Application_binary_interface) which is
+[fanotify](https://lwn.net/Articles/339253/) [ABI](http://en.wikipedia.org/wiki/Application_binary_interface) which is
 more reliable and have better performances than the now deprecated inotify one. I started to write it two days ago, it's
 at a stage where it's usable. It's not yet perfect and I want to improve it a little but you already can try it.
 

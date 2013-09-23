@@ -10,7 +10,7 @@ using paludis for large pools of servers.
 
 ## Source-based distributions for huge server pools
 
-At [Clever Cloud](http://www.clever-cloud.com/), we decided to use a source-based GNU/Linux distribution called
+At [Clever Cloud](http://www.clever-cloud.com/en/), we decided to use a source-based GNU/Linux distribution called
 [exherbo](http://www.exherbo.org/), which I'll blog about next week, because of its strictness and flexibility. Since we
 have to manage hundreds of servers and virtual machines, it would have been a big overload in energy consumption and in
 time invested if we managed it the "conventional" way. Indeed, compiling everything on the hypervisors could cause

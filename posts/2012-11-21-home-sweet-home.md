@@ -30,4 +30,4 @@ It was written by [Clément Delafargue](http://blog.clement.delafargue.name/post
 and I shamelessly stole it from him.
 
 This blog is available as [a git repository](http://github.com/Keruspe/blog)
-and hosted on [The Clever Cloud](http://clever-cloud.com) which is the company I work for.
+and hosted on [The Clever Cloud](http://clever-cloud.com/en/) which is the company I work for.

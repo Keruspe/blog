@@ -55,7 +55,7 @@ As exherbo is a "new" distribution, not every package is available, so you'll pr
 repository to package your software. Once you get enough packages in it and you want to share it with the community, you
 just have to submit it, people will review it and tell you how you can make it better. It will then be added to the list
 of available repositories so that people will be guided to it when they try to install software you'll have packaged.
-For example, at [Clever Cloud](http://www.clever-cloud.com/), we use [openstack](http://www.openstack.org/) for now, and
+For example, at [Clever Cloud](http://www.clever-cloud.com/en/), we use [openstack](http://www.openstack.org/) for now, and
 we had to package it and its dependencies. Everything is available in our repository.
 
 One more thing: exherbo policy is to be as vanilla as possible. Every patch used in packages must contain the upstream

@@ -39,7 +39,7 @@ Exherbo takes a huge place both in my hobbies since I love to contribute to it (
 and in my work. Some of my colleagues were running Gentoo on their laptops (which was a little because of me) and I felt
 quite sad for them, since their system broke quite often (so did mine when I was running Gentoo). With my shiny robust
 Exherbo system, I convinced them to switch, and they now are full Exherbo users too. Others are even currently switching
-too. This seem quite logical to us to use for production in [our company](http://www.clever-cloud.com/) the distribution
+too. This seem quite logical to us to use for production in [our company](http://www.clever-cloud.com/en/) the distribution
 we know the best and we know that works the best, so we chose Exherbo. Regarding this both personal and professional
 involvement into the Exherbo community, I couldn't say anything but "Yes, of course I'll join you!".
 
