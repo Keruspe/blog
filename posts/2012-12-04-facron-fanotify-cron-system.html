@@ -47,7 +47,7 @@
                 <a href="../posts.html"><img src="../images/list.png" alt="list" /> All posts</a>
                 <!-- <a href="http://marc-antoine.perennou.com">About me</a> -->
                 <a href="http://github.com/Keruspe"><img class="bigger" src="../images/octocat.png" alt="octocat" /> My projects</a>
-                <a href="http://www.clever-cloud.com"><img class="bigger" src="../images/clever-cloud.png" alt="clever-cloud" /> My company</a>
+                <a href="http://www.clever-cloud.com/en/"><img class="bigger" src="../images/clever-cloud.png" alt="clever-cloud" /> My company</a>
                 <a href="../rss.xml"><img src="../images/rss.png" alt="rss" /> RSS</a>
             </menu>
         </nav>
@@ -62,14 +62,14 @@
                 <section>
 <p>It’s available on github: <a href="https://github.com/Keruspe/facron">https://github.com/Keruspe/facron</a></p>
 <h2 id="the-filesystem-cron-principle">The filesystem cron principle</h2>
-<p>At <a href="http://www.clever-cloud.com">Clever Cloud</a>, we often have to manage stuff based on filesystem events. In order to react dynamically, we will sometimes have to reload some specific configurations when the config file has changed, or we’ll want to wrap some files which just appeared to grab them in the global flow.</p>
+<p>At <a href="http://www.clever-cloud.com/en/">Clever Cloud</a>, we often have to manage stuff based on filesystem events. In order to react dynamically, we will sometimes have to reload some specific configurations when the config file has changed, or we’ll want to wrap some files which just appeared to grab them in the global flow.</p>
 <p>Filesystem crons allow you to do this kind of things. What you have to do is specify the files you want to monitor with the events you want to react to and the action you want to proceed when those events occur.</p>
 <h2 id="incron">Incron</h2>
 <p><a href="http://inotify.aiken.cz/?section=incron&amp;page=about&amp;lang=en">Incron</a> is the filesystem cron we’ve been using so far. It’s based on the <a href="http://en.wikipedia.org/wiki/Inotify">inotify</a> linux system. Inotify was the replacement to dnotify which has been deprecated for quite a long time now. Thanks to inotify, incron watches for filesystem changes and act accordingly, given the configuration file you provide.</p>
 <p>Incron does not support <a href="http://fuse.sourceforge.net">FUSE</a> which is used by several filesystems, since inotify doesn’t support it either.</p>
 <p>We experienced quite a few instabilities with incron which was not as reliable as we expected, ending up with ugly bash hacks to do the job correctly. That’s why I decided we needed our own solution.</p>
 <h2 id="facron">Facron</h2>
-<p><a href="https://github.com/Keruspe/facron">Facron</a> is my vision of the filesystem cron problematic. It is based on the “new” <a href="http://lwn.net/Articles/339253">fanotify</a> <a href="http://en.wikipedia.org/wiki/Application_binary_interface">ABI</a> which is more reliable and have better performances than the now deprecated inotify one. I started to write it two days ago, it’s at a stage where it’s usable. It’s not yet perfect and I want to improve it a little but you already can try it.</p>
+<p><a href="https://github.com/Keruspe/facron">Facron</a> is my vision of the filesystem cron problematic. It is based on the “new” <a href="https://lwn.net/Articles/339253/">fanotify</a> <a href="http://en.wikipedia.org/wiki/Application_binary_interface">ABI</a> which is more reliable and have better performances than the now deprecated inotify one. I started to write it two days ago, it’s at a stage where it’s usable. It’s not yet perfect and I want to improve it a little but you already can try it.</p>
 <p>The configuration file (<code>/etc/facron.conf</code>) looks like:</p>
 <pre><code>/path/to/a/file FAN_MODIFY|FAN_EVENT_ON_CHILD /path/to/script fromFacron $$</code></pre>
 <p>The first element is the file or directory to watch (of course multiple lines are supported), the second one corresponds to all fanotify events that you want to follow, and then your script or application (full path is recommended) + arguments. <code>$$</code> is a special token which will be replaced by the full path of the file which has emitted the event.</p>
