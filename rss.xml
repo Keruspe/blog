@@ -6,8 +6,35 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sun, 07 Jul 2013 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Mon, 23 Sep 2013 00:00:00 UT</lastBuildDate>
         <item>
+    <title>GPaste 3.1 released</title>
+    <link>http://www.imagination-land.org/posts/2013-09-23-gpaste-3.1-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 3.1 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>September 23, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>It’s available <a href="http://www.imagination-land.org/files/gpaste/gpaste-3.1.tar.xz">there</a>, get it while it’s hot!</p>
+<p>This release and the couple of following releases (3.2, maybe 3.3 and 3.4) are the last releases supporting GNOME &lt;3.10. 3.2 will includea new setting to manage the maximum memory usage of GPaste, and come internal enhancement. 3.3 and 3.4 will be bugfixes/maintainance releases if needed.</p>
+<p>This code is now managed in <a href="https://github.com/Keruspe/GPaste/tree/3.0">the 3.0 branch of the Gpaste repository</a>.</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>Compatibility with gnome-shell up to 3.9.5</li>
+<li>New keybinding to sync the clipboard to the primary selection</li>
+<li>New keybinding to sync the primary selection to the clipboard</li>
+</ul>
+<p>And don’t forget to run <code>gpaste dr</code> aka <code>gpaste daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Mon, 23 Sep 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-09-23-gpaste-3.1-released.html</guid>
+</item>
+<item>
     <title>Becoming an official Exherbo developer</title>
     <link>http://www.imagination-land.org/posts/2013-07-07-becoming-an-official-exherbo-developer.html</link>
     <description><![CDATA[            <article>
