@@ -19,7 +19,9 @@
 
                 <section>
 <p>It’s available <a href="http://www.imagination-land.org/files/gpaste/gpaste-3.1.tar.xz">there</a>, get it while it’s hot!</p>
-<p>This release and the couple of following releases (3.2, maybe 3.3 and 3.4) are the last releases supporting GNOME &lt;3.10. 3.2 will includea new setting to manage the maximum memory usage of GPaste, and come internal enhancement. 3.3 and 3.4 will be bugfixes/maintainance releases if needed.</p>
+<p>This release and the couple of following ones (3.2, maybe 3.3 and 3.4) are the last releases supporting GNOME &lt;3.10.</p>
+<p>3.2 will include a new setting to manage the maximum memory usage of GPaste, and some internal enhancement.</p>
+<p>3.3 and 3.4 will be bugfixes/maintainance releases if needed.</p>
 <p>This code is now managed in <a href="https://github.com/Keruspe/GPaste/tree/3.0">the 3.0 branch of the Gpaste repository</a>.</p>
 <h2 id="whats-new">What’s new?</h2>
 <ul>
