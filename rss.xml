@@ -6,8 +6,41 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Wed, 16 Oct 2013 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Thu, 17 Oct 2013 00:00:00 UT</lastBuildDate>
         <item>
+    <title>GPaste 3.6 released</title>
+    <link>http://www.imagination-land.org/posts/2013-10-17-gpaste-3.6-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 3.6 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>October 17, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>It’s available <a href="http://www.imagination-land.org/files/gpaste/gpaste-3.6.tar.xz">there</a>, get it while it’s hot!</p>
+<p>This release is only compatible with GNOME 3.9.90 and above. if you’re still using an older version, please check <a href="http://www.imagination-land.org/posts/2013-10-16-gpaste-3.2-released.html">GPaste 3.2</a>.</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>GPaste settings look has been updated to better fit with recent GNOME</li>
+<li>Performance improvements</li>
+<li>Daemon now fully evenmential (no more polling, less power consuption)</li>
+<li>GPasteClipboard now has a “owner-change” signal similar to GtkClipboard’s one</li>
+<li>Misc. bugfixes</li>
+<li>New setting to set the maximum amount of memory used by data in history</li>
+<li>FIFO mode has been dropped (lacking design)</li>
+<li>Code cleanup and modernisation</li>
+<li>g_paste_history_add is now transfer full</li>
+<li>g_paste_keybinder_add_keybinding is now transfer full</li>
+</ul>
+<p>And don’t forget to run <code>gpaste dr</code> aka <code>gpaste daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Thu, 17 Oct 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-10-17-gpaste-3.6-released.html</guid>
+</item>
+<item>
     <title>GPaste 3.2 released</title>
     <link>http://www.imagination-land.org/posts/2013-10-16-gpaste-3.2-released.html</link>
     <description><![CDATA[            <article>
