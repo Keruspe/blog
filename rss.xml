@@ -6,8 +6,35 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Thu, 17 Oct 2013 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Sat, 19 Oct 2013 00:00:00 UT</lastBuildDate>
         <item>
+    <title>GPaste 3.2.1 released</title>
+    <link>http://www.imagination-land.org/posts/2013-10-19-gpaste-3.2.1-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 3.2.1 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>October 19, 2013</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>It’s available <a href="http://www.imagination-land.org/files/gpaste/gpaste-3.2.1.tar.xz">there</a>, get it while it’s hot!</p>
+<p>This release and the couple of following ones (3.3 and maybe 3.4) are the last releases supporting GNOME &lt;3.10.</p>
+<p>3.3 will add an ubuntu unity applet.</p>
+<p>3.4 will be bugfixes/maintainance release if needed.</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>Update translations</li>
+<li>Fix build with old glib</li>
+</ul>
+<p>And don’t forget to run <code>gpaste dr</code> aka <code>gpaste daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Sat, 19 Oct 2013 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2013-10-19-gpaste-3.2.1-released.html</guid>
+</item>
+<item>
     <title>GPaste 3.6 released</title>
     <link>http://www.imagination-land.org/posts/2013-10-17-gpaste-3.6-released.html</link>
     <description><![CDATA[            <article>
