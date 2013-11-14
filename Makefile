@@ -10,7 +10,7 @@ hakyll: hakyll.hs
 new:
 	@./new_post.sh
 
-publish: build
+publish: hakyll
 	./hakyll deploy
 
 preview: build

@@ -2,6 +2,11 @@
 
 git add .
 git stash save
+make clean
+git checkout publish
+git pull
+git checkout master
+make
 git checkout publish
 find . -maxdepth 1 ! -name '.' ! -name '.git*' ! -name '_site' -exec rm -rf {} +
 find _site -maxdepth 1 -exec mv {} . \;
