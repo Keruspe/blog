@@ -31,6 +31,19 @@
 <div class="figure">
 <img src="http://www.imagination-land.org/files/bento.jpg" alt="Exherbo bento" /><p class="caption">Exherbo bento</p>
 </div>
+<p><code>cave show keruspe</code> (the command line written under zebrapig outputs this, on my machine:</p>
+<pre><code>* repository/keruspe
+::repository              0 {no slot}
+::unavailable             (0)A {no slot}
+::unavailable-unofficial  (0)A* {no slot}
+repository/keruspe-0::repository
+repository/keruspe-0::unavailable-unofficial
+Repository description    Keruspe's dev repository
+Repository format         e
+Repository homepage       http://www.exherbo.org
+Repository sync           git://git.exherbo.org/dev/keruspe.git
+    Masked
+        already configured This repository is already configured</code></pre>
                 </section>
             </article>
 ]]></description>
