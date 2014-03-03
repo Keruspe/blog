@@ -27,3 +27,19 @@ Tonight, my girlfriend made me the surprise of cooking me the *geekest* bento ev
 Pure Japanese awesomeness.
 
 ![Exherbo bento](http://www.imagination-land.org/files/bento.jpg)
+
+`cave show keruspe` (the command line written under zebrapig outputs this, on my machine:
+
+    * repository/keruspe
+    ::repository              0 {no slot}
+    ::unavailable             (0)A {no slot}
+    ::unavailable-unofficial  (0)A* {no slot}
+    repository/keruspe-0::repository
+    repository/keruspe-0::unavailable-unofficial
+    Repository description    Keruspe's dev repository
+    Repository format         e
+    Repository homepage       http://www.exherbo.org
+    Repository sync           git://git.exherbo.org/dev/keruspe.git
+        Masked
+            already configured This repository is already configured
+
