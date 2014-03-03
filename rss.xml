@@ -6,8 +6,38 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sat, 22 Feb 2014 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Mon, 03 Mar 2014 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Exherbo and Japanese food</title>
+    <link>http://www.imagination-land.org/posts/2014-03-03-exherbo-and-japanese-food.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Exherbo and Japanese food</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>March  3, 2014</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/exherbo.html">exherbo</a>, <a href="http://www.imagination-land.org/tags/misc.html">misc</a>.</p>
+                </header>
+
+                <section>
+<p>Blogging about my personal life is not one of my habits, but tonight is the exception, because it’s worth it.</p>
+<h2 id="context">Context</h2>
+<p>Since September, 2013, I’m living in Japan, near <a href="http://en.wikipedia.org/wiki/Nagoya">Nagoya</a>.</p>
+<p>In Japan, there’s a traditional kind of meal called <a href="http://en.wikipedia.org/wiki/Bento">bento</a>.</p>
+<p>A bento is basically a meal better served cold, often brought as a picnic or quick lunch, carried in a special box.</p>
+<p>Japanese people really like so-called “cute” things and tend to make their bentos as artistic as possible, like some kinds of paintings.</p>
+<h2 id="exherbo-bento">Exherbo + bento = ?</h2>
+<p>Tonight, my girlfriend made me the surprise of cooking me the <em>geekest</em> bento ever.</p>
+<p><a href="http://www.exherbo.org/">Exherbo</a>’s mascot: <a href="http://dev.exherbo.org/~zebrapig/">2ebrapig</a> as a plate, <a href="https://github.com/">github</a>’s mascot: octocat as a desert.</p>
+<p>Pure Japanese awesomeness.</p>
+<div class="figure">
+<img src="http://www.imagination-land.org/files/bento.jpg" alt="Exherbo bento" /><p class="caption">Exherbo bento</p>
+</div>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Mon, 03 Mar 2014 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2014-03-03-exherbo-and-japanese-food.html</guid>
+</item>
+<item>
     <title>GPaste 3.3 released</title>
     <link>http://www.imagination-land.org/posts/2014-02-22-gpaste-3.3-released.html</link>
     <description><![CDATA[            <article>
