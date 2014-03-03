@@ -22,7 +22,7 @@ kinds of paintings.
 Tonight, my girlfriend made me the surprise of cooking me the *geekest* bento ever.
 
 [Exherbo](http://www.exherbo.org/)'s mascot: [Zebrapig](http://dev.exherbo.org/~zebrapig/) as a plate,
-[github](https://github.com/)'s mascot: octocat as a desert.
+[github](https://github.com/)'s mascot: octocat as a dessert.
 
 Pure Japanese awesomeness.
 
