@@ -26,7 +26,7 @@ Tonight, my girlfriend made me the surprise of cooking me the *geekest* bento ev
 
 Pure Japanese awesomeness.
 
-<img alt="Exherbo bento" src="http://www.imagination-land.org/files/bento.jpg" style="width: 50em;" />
+<img alt="Exherbo bento" src="http://www.imagination-land.org/images/bento.jpg" style="width: 50em;" />
 
 `cave show keruspe` (the command line written under zebrapig outputs this, on my machine:
 
