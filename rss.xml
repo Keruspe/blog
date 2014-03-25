@@ -6,8 +6,60 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sat, 22 Mar 2014 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Tue, 25 Mar 2014 00:00:00 UT</lastBuildDate>
         <item>
+    <title>GPaste 3.10 released</title>
+    <link>http://www.imagination-land.org/posts/2014-03-25-gpaste-3.10-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 3.10 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>March 25, 2014</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>It’s available <a href="http://www.imagination-land.org/files/gpaste/gpaste-3.10.tar.xz">there</a>, get it while it’s hot!</p>
+<p>This release is only compatible with GNOME 3.9.90 and above. if you’re still using an older version, please check <a href="http://www.imagination-land.org/posts/2014-03-22-gpaste-3.3.1-released.html">GPaste 3.3.1</a>.</p>
+<p>Starting with this huge release, GPaste will follow the GNOME versionning system (or it would have been 4.0). This is the recommended version for use with GNOME 3.10 and above, 3.12 will follow soon.</p>
+<p>This is the first release compatible with Unity (for Ubuntu 14.04 LTS and higher). Sadly, due to how Unity indicator work, there is no way to delete an item from the history from the indicator, you’ll have to do it with the command line.</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>Follow GNOME versionning</li>
+<li>Don’t display error on daemon-reexec</li>
+<li>Fix coredumps due to g_error</li>
+<li>New library: libgpaste-applet</li>
+<li>Unity support (for Ubuntu 14.04 and above) using libgpaste-applet</li>
+<li>Port legacy applet to libgpaste-applet and rename to StatusIcon</li>
+<li>Redesign GPaste StatusIcon to make it simpler and similar to gnome-shell extension</li>
+<li>Vala is no longer required to build the applet (rewritten in C)</li>
+<li>Lower automake dependency to 1.11</li>
+<li>Be compatible with gnome-shell up to 3.12</li>
+<li>libgpaste-settings: add reset</li>
+<li>gpaste settings: add reset buttons</li>
+<li>gpaste settings: add a switch to enable the gnome-shell extension</li>
+<li>The gnome-shell gsettings schema is now required when –enable-gnome-shell-extension is provided (default)</li>
+<li>gpasted: GetElement now returns the display string</li>
+<li>gpasted now forwards the full history via dbus, letting the client manage the display limit</li>
+<li>gpasted gained GetHistoryLength, GetRawHistory, GetRawElement and About</li>
+<li>gpasted gained a new Version property</li>
+<li>Add about dialog to all components</li>
+<li>Prefer dark theme</li>
+<li>Display more info at the end of configure</li>
+<li>Provide appdata files</li>
+<li>Parallel build fixes</li>
+<li>Fix build issues for Fedora, Ubuntu and Debian</li>
+<li>clang related fixes</li>
+<li>Fix warnings</li>
+<li>Translations update</li>
+</ul>
+<p>And don’t forget to run <code>gpaste dr</code> aka <code>gpaste daemon-reexec</code> after upgrading GPaste to activate new functionalities ;) You then can run <code>gpaste daemon-version</code> to check that the correct daemon is running.</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Tue, 25 Mar 2014 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2014-03-25-gpaste-3.10-released.html</guid>
+</item>
+<item>
     <title>GPaste 3.3.1 released</title>
     <link>http://www.imagination-land.org/posts/2014-03-22-gpaste-3.3.1-released.html</link>
     <description><![CDATA[            <article>
