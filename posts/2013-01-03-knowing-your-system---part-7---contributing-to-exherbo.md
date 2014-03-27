@@ -63,3 +63,7 @@ applied each time I sync the said repository.
 
 Next time I'll explain how I contribute to upstream projects using nearly the same scheme, pointing out even more how
 intuitive and integrated this process is in my every day work.
+
+## Next chapter
+
+[Read the continuation](http://www.imagination-land.org/posts/2013-01-10-knowing-your-system---part-8---on-the-road-to-upstream.html)

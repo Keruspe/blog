@@ -86,3 +86,7 @@ containing all the packages you have installed, with a complete dependency tree,
 if-same-metadata --keep-targets if-same-metadata`. If a failure occurs, it continues to build the rest while the
 dependencies still are satisfied thanks to `-Cs` aka `--continue-on-failure if-satisfied`. I then run this last
 command again with `-x` aka `--execute` to apply the available updates.
+
+## Next chapter
+
+[Read the continuation](http://www.imagination-land.org/posts/2012-12-20-knowing-your-system---part-5---source-based-distributions%3A-the-binary-way.html)

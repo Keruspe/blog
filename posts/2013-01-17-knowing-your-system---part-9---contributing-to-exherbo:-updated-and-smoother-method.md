@@ -43,3 +43,7 @@ rebase my patches and resubmit them. Once the patch is pushed, I can safely remo
 
 Note that this whole second step can fully be ignored for repositories you have push access to, simplifying even more
 this light workflow.
+
+## Next chapter
+
+[Read the continuation](http://www.imagination-land.org/posts/2013-01-31-knowing-your-system---part-10---native-multilib-system.html)

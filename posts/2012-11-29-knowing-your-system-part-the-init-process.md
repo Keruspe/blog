@@ -118,3 +118,7 @@ to get rid of an external logging utility such as syslog-ng or rsyslog. You can 
 
 A really interesting serie of blog posts by Lennart Poettering (systemd's lead developer) is available
 [here](http://www.freedesktop.org/wiki/Software/systemd).
+
+## Next chapter
+
+[Read the continuation](http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html)

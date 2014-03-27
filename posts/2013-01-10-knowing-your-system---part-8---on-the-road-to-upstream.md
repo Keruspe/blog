@@ -39,3 +39,7 @@ upstream, if not, I fix it and retry.
 
 I highly recommend you to try contributing to open source projects, to fix or improve them, like adding new
 functionalities. The only risk is to learn a lot.
+
+## Next chapter
+
+[Read the continuation](http://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo%3A-updated-and-smoother-method.html)

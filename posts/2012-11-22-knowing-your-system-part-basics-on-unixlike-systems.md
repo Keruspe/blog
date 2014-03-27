@@ -98,3 +98,7 @@ called "init", which goal is to track all the other processes that you and your 
 The init process will then reach a few breakpoints (which can be called runlevels, or targets). To each of these
 breakpoints correspond a list of process that must be started. This is how all the root components of your system are
 started in the right order. One of the last things to start is the graphical interface.
+
+## Next chapter
+
+[Read the continuation](http://www.imagination-land.org/posts/2012-11-29-knowing-your-system-part-the-init-process.html)

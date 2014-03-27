@@ -59,3 +59,7 @@ You really should try source-based distributions, to really get how things work.
 them if you just play a little with them on an irregular basis, but it's really worth it. Gentoo was my choice since
 it's the most popular source-based distribution, and the only one I heard of at this time. It's quite good, but you'll
 see in my next post that I didn't really like its default package manager, and I no longer use Gentoo.
+
+## Next chapter
+
+[Read the continuation](http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html)

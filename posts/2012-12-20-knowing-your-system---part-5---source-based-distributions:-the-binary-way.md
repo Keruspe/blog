@@ -84,3 +84,7 @@ It will create packages for all the dependencies, installing it afterwards, and 
 software you asked.
 
 Don't forget to push all changes on your git server!
+
+## Next chapter
+
+[Read the continuation](http://www.imagination-land.org/posts/2012-12-27-knowing-your-system---part-6---source-based-distributions-discovering-exherbo.html)

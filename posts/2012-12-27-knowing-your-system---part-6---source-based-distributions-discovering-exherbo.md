@@ -61,6 +61,10 @@ we had to package it and its dependencies. Everything is available in our reposi
 One more thing: exherbo policy is to be as vanilla as possible. Every patch used in packages must contain the upstream
 status of it, since they all have to be submitted. We want to maintain as few patches as possible.
 
-[My exherbo repository](https://github.com/Keruspe/Keruspe-exhereses)
+[My exherbo repository](http://git.exherbo.org/dev/keruspe.git/)
 
 [Clever Cloud exherbo repository](https://github.com/CleverCloud/CleverCloud-exheres)
+
+## Next chapter
+
+[Read the continuation](http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html)
