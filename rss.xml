@@ -661,6 +661,8 @@ bddurl = root:@PASSWORD2@@mysql.local</code></pre>
 curl <span class="kw">&lt;</span>patch_url<span class="kw">&gt;</span> <span class="kw">&gt;</span> /etc/paludis.autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>/my.patch</code></pre>
 <p>This way, they automatically get applied when I sync back the real repository instead of my copy. If a sync fail, I rebase my patches and resubmit them. Once the patch is pushed, I can safely remove it from my autopatch directory.</p>
 <p>Note that this whole second step can fully be ignored for repositories you have push access to, simplifying even more this light workflow.</p>
+<h2 id="next-chapter">Next chapter</h2>
+<p><a href="http://www.imagination-land.org/posts/2013-01-31-knowing-your-system---part-10---native-multilib-system.html">Read the continuation</a></p>
                 </section>
             </article>
 ]]></description>
@@ -751,6 +753,8 @@ curl <span class="kw">&lt;</span>patch_url<span class="kw">&gt;</span> <span cla
 <h2 id="my-work-flow">My work flow</h2>
 <p>My work flow for contributing to upstream is not much different to <a href="http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html">the one I use for contributing to Exherbo</a>. I also use an autopatch mechanism which is slightly different. My hook for automatically patch software is available there: <a href="https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/ebuild_prepare_pre/patches.bash">https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/ebuild_prepare_pre/patches.bash</a>. If I remember correctly it was initially written by <a href="http://ciaranm.wordpress.com/">Ciaran McCreesh</a>, the <a href="http://paludis.exherbo.org/">paludis</a>’s lead developer. When I want to patch something, I get a copy locally, I write and commit my patch, I generate a patch file and move it to <code>/etc/paludis/autopatch/&lt;category&gt;/&lt;package&gt;/</code> where &lt;category&gt; is for example “x11-dri” and &lt;package&gt; is “mesa”, according to exherbo’s packages name. Each time I install a package, it applies all this patches before configuring and compiling the software. If it works, I submit it upstream, if not, I fix it and retry.</p>
 <p>I highly recommend you to try contributing to open source projects, to fix or improve them, like adding new functionalities. The only risk is to learn a lot.</p>
+<h2 id="next-chapter">Next chapter</h2>
+<p><a href="http://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo%3A-updated-and-smoother-method.html">Read the continuation</a></p>
                 </section>
             </article>
 ]]></description>
@@ -799,6 +803,8 @@ curl <span class="kw">&lt;</span>patch_url<span class="kw">&gt;</span> <span cla
 <p>The command which I run to upload my patch is a git alias, <code>git pe</code> means <code>git format-patch -M -C --find-copies-harder --stdout</code> and takes as an argument the commits to publish, <code>HEAD~3</code> means 3 commits for example, I put <code>-s poundpython</code> as extra args for <code>wgetpaste</code> since gist.github.com which is the default fails quite often for me.</p>
 <p>The other interesting part of it is how I manage the autopatch system. I have <a href="https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/sync_post/local_update.bash">a paludis hook</a> placed in <code>/etc/paludis/hooks/sync_post</code> which cause every patch located in <code>/etc/paludis/autopatch/&lt;repository&gt;/</code> to be applied each time I sync the said repository.</p>
 <p>Next time I’ll explain how I contribute to upstream projects using nearly the same scheme, pointing out even more how intuitive and integrated this process is in my every day work.</p>
+<h2 id="next-chapter">Next chapter</h2>
+<p><a href="http://www.imagination-land.org/posts/2013-01-10-knowing-your-system---part-8---on-the-road-to-upstream.html">Read the continuation</a></p>
                 </section>
             </article>
 ]]></description>
@@ -862,8 +868,10 @@ curl <span class="kw">&lt;</span>patch_url<span class="kw">&gt;</span> <span cla
 <p>Contributing to exherbo is really easy and smooth, I’ll explain my contribution workflow next week.</p>
 <p>As exherbo is a “new” distribution, not every package is available, so you’ll probably end up creating your own repository to package your software. Once you get enough packages in it and you want to share it with the community, you just have to submit it, people will review it and tell you how you can make it better. It will then be added to the list of available repositories so that people will be guided to it when they try to install software you’ll have packaged. For example, at <a href="http://www.clever-cloud.com/en/">Clever Cloud</a>, we use <a href="http://www.openstack.org/">openstack</a> for now, and we had to package it and its dependencies. Everything is available in our repository.</p>
 <p>One more thing: exherbo policy is to be as vanilla as possible. Every patch used in packages must contain the upstream status of it, since they all have to be submitted. We want to maintain as few patches as possible.</p>
-<p><a href="https://github.com/Keruspe/Keruspe-exhereses">My exherbo repository</a></p>
+<p><a href="http://git.exherbo.org/dev/keruspe.git/">My exherbo repository</a></p>
 <p><a href="https://github.com/CleverCloud/CleverCloud-exheres">Clever Cloud exherbo repository</a></p>
+<h2 id="next-chapter">Next chapter</h2>
+<p><a href="http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html">Read the continuation</a></p>
                 </section>
             </article>
 ]]></description>
@@ -917,6 +925,8 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <pre class="sourceCode bash"><code class="sourceCode bash">cave resolve -x --make binaries --make-dependencies all <span class="kw">&lt;</span>insert a package name here<span class="kw">&gt;</span></code></pre>
 <p>It will create packages for all the dependencies, installing it afterwards, and finish by making the package for the software you asked.</p>
 <p>Don’t forget to push all changes on your git server!</p>
+<h2 id="next-chapter">Next chapter</h2>
+<p><a href="http://www.imagination-land.org/posts/2012-12-27-knowing-your-system---part-6---source-based-distributions-discovering-exherbo.html">Read the continuation</a></p>
                 </section>
             </article>
 ]]></description>
@@ -969,6 +979,8 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <pre class="sourceCode bash"><code class="sourceCode bash">cave <span class="kw">sync</span>
 cave resolve world -c -km -Km -Cs</code></pre>
 <p>It syncs repositories with upstream to get latest versions of the packages, and then resolve <code>world</code> which is the set containing all the packages you have installed, with a complete dependency tree, as deep as it can, with <code>-c</code> aka <code>--complete</code> and reinstalling all packages for which metadata have changed because of <code>-km -Km</code> aka <code>--keep if-same-metadata --keep-targets if-same-metadata</code>. If a failure occurs, it continues to build the rest while the dependencies still are satisfied thanks to <code>-Cs</code> aka <code>--continue-on-failure if-satisfied</code>. I then run this last command again with <code>-x</code> aka <code>--execute</code> to apply the available updates.</p>
+<h2 id="next-chapter">Next chapter</h2>
+<p><a href="http://www.imagination-land.org/posts/2012-12-20-knowing-your-system---part-5---source-based-distributions%3A-the-binary-way.html">Read the continuation</a></p>
                 </section>
             </article>
 ]]></description>
@@ -1001,6 +1013,8 @@ cave resolve world -c -km -Km -Cs</code></pre>
 <p>I was a student at this time, and my class-mate (and now colleague) <a href="http://blog.kdecherf.com/">Kevin Decherf</a> told me he was using <a href="http://www.gentoo.org/">Gentoo</a>. on his server. I immediately asked him if he agreed to plan an Install Party the week just after that. During this session, I installed a minimal system, discovering the distribution. At the end of the day, it was barely booting to an xterm.</p>
 <p>I wanted to really explore my distribution to understand exactly how everything works, so I started “playing” with it, modifying packages, checking how things reacted. I broke my system and reinstalled it 5 times in 3 weeks, playing harder and harder, until I knew how to make my system work again after a wanted major breakage.</p>
 <p>You really should try source-based distributions, to really get how things work. It can take a few months to understand them if you just play a little with them on an irregular basis, but it’s really worth it. Gentoo was my choice since it’s the most popular source-based distribution, and the only one I heard of at this time. It’s quite good, but you’ll see in my next post that I didn’t really like its default package manager, and I no longer use Gentoo.</p>
+<h2 id="next-chapter">Next chapter</h2>
+<p><a href="http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html">Read the continuation</a></p>
                 </section>
             </article>
 ]]></description>
@@ -1211,6 +1225,8 @@ cave resolve world -c -km -Km -Cs</code></pre>
 <p>systemd is a real source of conflict between people against it and people in favor of it. The main argument of people which are against it is that it does too many things, it’s too complex and ships too many functionalities. I think this is a fake problem, since most of the functionalities are optional (and thus can be disabled), and everything is split into several binaries (systemd doesn’t do all this stuff itself but calls tools that it ships to do so). It is fully modular, and not modular like its “opponents”.</p>
 <p>One of the interesting tools provided by systemd is the “journal”. The journal is basically a logging utility directly integrated in the init process (well, it actually only communicates with it, it’s not <em>really</em> in it). This allows you to get rid of an external logging utility such as syslog-ng or rsyslog. You can browse all the logs with the “journalctl” command which allows you to apply a lot of filters on them.</p>
 <p>A really interesting serie of blog posts by Lennart Poettering (systemd’s lead developer) is available <a href="http://www.freedesktop.org/wiki/Software/systemd">here</a>.</p>
+<h2 id="next-chapter">Next chapter</h2>
+<p><a href="http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html">Read the continuation</a></p>
                 </section>
             </article>
 ]]></description>
@@ -1284,6 +1300,8 @@ cave resolve world -c -km -Km -Cs</code></pre>
 <li>Extra configuration for your kernel.</li>
 </ul>
 <p>When your kernel has successfully initialized everything, it then gives the power to a root process, commonly called “init”, which goal is to track all the other processes that you and your system will run. The init process will then reach a few breakpoints (which can be called runlevels, or targets). To each of these breakpoints correspond a list of process that must be started. This is how all the root components of your system are started in the right order. One of the last things to start is the graphical interface.</p>
+<h2 id="next-chapter">Next chapter</h2>
+<p><a href="http://www.imagination-land.org/posts/2012-11-29-knowing-your-system-part-the-init-process.html">Read the continuation</a></p>
                 </section>
             </article>
 ]]></description>

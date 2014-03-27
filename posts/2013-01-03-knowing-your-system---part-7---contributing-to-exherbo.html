@@ -91,6 +91,8 @@ curl <span class="kw">&lt;</span>patch_url<span class="kw">&gt;</span> <span cla
 <p>The command which I run to upload my patch is a git alias, <code>git pe</code> means <code>git format-patch -M -C --find-copies-harder --stdout</code> and takes as an argument the commits to publish, <code>HEAD~3</code> means 3 commits for example, I put <code>-s poundpython</code> as extra args for <code>wgetpaste</code> since gist.github.com which is the default fails quite often for me.</p>
 <p>The other interesting part of it is how I manage the autopatch system. I have <a href="https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/sync_post/local_update.bash">a paludis hook</a> placed in <code>/etc/paludis/hooks/sync_post</code> which cause every patch located in <code>/etc/paludis/autopatch/&lt;repository&gt;/</code> to be applied each time I sync the said repository.</p>
 <p>Next time I’ll explain how I contribute to upstream projects using nearly the same scheme, pointing out even more how intuitive and integrated this process is in my every day work.</p>
+<h2 id="next-chapter">Next chapter</h2>
+<p><a href="../posts/2013-01-10-knowing-your-system---part-8---on-the-road-to-upstream.html">Read the continuation</a></p>
                 </section>
             </article>
 
