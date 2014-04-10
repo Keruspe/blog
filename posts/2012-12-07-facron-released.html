@@ -78,9 +78,9 @@
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">wget</span> https://github.com/downloads/Keruspe/facron/facron-0.9.tar.xz
 <span class="kw">tar</span> xf facron-0.9.tar.xz
 <span class="kw">cd</span> facron-0.9
-./configure --sysconfdir=/etc --with-systemdsystemunitdir=/usr/lib/systemd/system
+<span class="kw">./configure</span> --sysconfdir=/etc --with-systemdsystemunitdir=/usr/lib/systemd/system
 <span class="kw">make</span>
-<span class="kw">sudo</span> <span class="kw">make</span> <span class="kw">install</span></code></pre>
+<span class="kw">sudo</span> make install</code></pre>
 <p>Then just create your configuration file <a href="../posts/2012-12-04-facron-fanotify-cron-system.html">as I said in the previous post</a> or following the manual instructions (man facron).</p>
 <p>When everything is ready, you just have to run</p>
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> systemctl start facron.service</code></pre>
@@ -89,7 +89,7 @@
 <p>If you edit the configuration file, you can reload it without restarting the daemon by running</p>
 <pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> systemctl reload facron.service</code></pre>
 <p>Or for non-systemd systems</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> <span class="kw">kill</span> -USR1 <span class="ot">$(</span><span class="kw">pidof</span> facron<span class="ot">)</span></code></pre>
+<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> kill -USR1 <span class="ot">$(</span><span class="kw">pidof</span> facron<span class="ot">)</span></code></pre>
 <p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute !</p>
                 </section>
             </article>
