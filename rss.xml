@@ -6,8 +6,98 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Fri, 02 May 2014 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Wed, 16 Jul 2014 00:00:00 UT</lastBuildDate>
         <item>
+    <title>GPaste 3.12.1 released</title>
+    <link>http://www.imagination-land.org/posts/2014-07-16-gpaste-3.12.1-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 3.12.1 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>July 16, 2014</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>It’s available <a href="http://www.imagination-land.org/files/gpaste/gpaste-3.12.1.tar.xz">there</a>, get it while it’s hot!</p>
+<p>This release is for using with with GNOME 3.12.</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>systemd support has been removed</li>
+<li>GPaste is now compliant with https://wiki.gnome.org/HowDoI/DBusApplicationLaunching</li>
+<li>GPaste now has built-in support for managing passwords, blog post coming.</li>
+<li>Completions and man pages have been updated</li>
+<li>Translations have been updated</li>
+<li>Miscellaneous bugfixes with static analysis</li>
+<li>The search feature of the gnome-shell extension has been improved</li>
+</ul>
+<p>If your distribution does not provide a appdata-tools package (like ubuntu 14.04), you can use <code>ubuntu-patches/0001-ubuntu-disable-appdata-stuff.patch</code></p>
+<p>If your distribution ships with gnome-settings 3.8 and thus a patched version of gnome-shell 3.10 (like ubuntu 14.04), you can use <code>ubuntu-patches/0002-ubuntu-fix-for-ubuntu-breaking-gnome-shell-API-compa.patch</code></p>
+<p>And don’t forget to run <code>gpaste dr</code> aka <code>gpaste daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
+<p>You then can run <code>gpaste daemon-version</code> to check that the correct daemon is running.</p>
+<h2 id="screenshots">Screenshots</h2>
+<h3 id="gnome-shell-extension">Gnome-shell extension</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/Extension-2.png" alt="Extension-2" /></p>
+<h3 id="ubuntu-application-indicator">Ubuntu application indicator</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/AppIndicator-1.png" alt="AppIndicator-1" /></p>
+<h3 id="status-icon">Status icon</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/Applet-1.png" alt="Applet-1" /></p>
+<h3 id="settings-utility">Settings utility</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/Settings-1-1.png" alt="Settings-1-1" /></p>
+<p><img src="http://www.imagination-land.org/images/GPaste/Settings-2-1.png" alt="Settings-2-1" /></p>
+<p><img src="http://www.imagination-land.org/images/GPaste/Settings-3-1.png" alt="Settings-3-1" /></p>
+<p><img src="http://www.imagination-land.org/images/GPaste/Settings-4-1.png" alt="Settings-4-1" /></p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Wed, 16 Jul 2014 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2014-07-16-gpaste-3.12.1-released.html</guid>
+</item>
+<item>
+    <title>GPaste 3.10.2 released</title>
+    <link>http://www.imagination-land.org/posts/2014-07-16-gpaste-3.10.2-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 3.10.2 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>July 16, 2014</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>It’s available <a href="http://www.imagination-land.org/files/gpaste/gpaste-3.10.2.tar.xz">there</a>, get it while it’s hot!</p>
+<p>This release is only compatible with GNOME 3.9.90 and above. if you’re still using an older version, please check <a href="http://www.imagination-land.org/posts/2014-03-22-gpaste-3.3.1-released.html">GPaste 3.3.1</a>.</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>systemd support has been removed</li>
+<li>GPaste is now compliant with https://wiki.gnome.org/HowDoI/DBusApplicationLaunching</li>
+<li>GPaste now has built-in support for managing passwords, blog post coming.</li>
+<li>Completions and man pages have been updated</li>
+<li>Translations have been updated</li>
+<li>Miscellaneous bugfixes with static analysis</li>
+<li>The search feature of the gnome-shell extension has been improved</li>
+</ul>
+<p>If your distribution does not provide a appdata-tools package (like ubuntu 14.04), you can use <code>ubuntu-patches/0001-ubuntu-disable-appdata-stuff.patch</code></p>
+<p>If your distribution ships with gnome-settings 3.8 and thus a patched version of gnome-shell 3.10 (like ubuntu 14.04), you can use <code>ubuntu-patches/0002-ubuntu-fix-for-ubuntu-breaking-gnome-shell-API-compa.patch</code></p>
+<p>And don’t forget to run <code>gpaste dr</code> aka <code>gpaste daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
+<p>You then can run <code>gpaste daemon-version</code> to check that the correct daemon is running.</p>
+<h2 id="screenshots">Screenshots</h2>
+<h3 id="gnome-shell-extension">Gnome-shell extension</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/Extension-2.png" alt="Extension-2" /></p>
+<h3 id="ubuntu-application-indicator">Ubuntu application indicator</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/AppIndicator-1.png" alt="AppIndicator-1" /></p>
+<h3 id="status-icon">Status icon</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/Applet-1.png" alt="Applet-1" /></p>
+<h3 id="settings-utility">Settings utility</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/Settings-1-1.png" alt="Settings-1-1" /></p>
+<p><img src="http://www.imagination-land.org/images/GPaste/Settings-2-1.png" alt="Settings-2-1" /></p>
+<p><img src="http://www.imagination-land.org/images/GPaste/Settings-3-1.png" alt="Settings-3-1" /></p>
+<p><img src="http://www.imagination-land.org/images/GPaste/Settings-4-1.png" alt="Settings-4-1" /></p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Wed, 16 Jul 2014 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2014-07-16-gpaste-3.10.2-released.html</guid>
+</item>
+<item>
     <title>GPaste 3.12 released</title>
     <link>http://www.imagination-land.org/posts/2014-05-02-gpaste-3.12-released.html</link>
     <description><![CDATA[            <article>
