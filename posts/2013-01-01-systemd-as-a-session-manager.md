@@ -13,7 +13,7 @@ Since its beginning, systemd has been created for both system and session manage
 system manager, aka `systemd --system`, but what less people know is that you also can run `systemd --user`.
 
 Since I've been using systemd as my init system for a while and have been quite happy with it, I often thought of trying
-a migration for my session. Recently, I started playing with my mails, first with [fetchmail](http://fetchmail.berlios.de/)
+a migration for my session. Recently, I started playing with my mails, first with [fetchmail](http://www.fetchmail.info/)
 and [procmail](http://www.procmail.org/), and then with [offlineimap](http://offlineimap.org/) (I'll blog about this
 later). With offlineimap, I needed a way to fetch periodically my emails.
 
