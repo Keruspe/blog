@@ -1,0 +1,72 @@
+==================================================================
+https://keybase.io/keruspe
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of http://www.imagination-land.org
+  * I am keruspe (https://keybase.io/keruspe) on keybase.
+  * I have a public key with fingerprint 775A 6068 6C21 27CD 1E1F  32A2 9F8E E9FB FC9F 3D4D
+
+To claim this, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "fingerprint": "775a60686c2127cd1e1f32a29f8ee9fbfc9f3d4d",
+            "host": "keybase.io",
+            "key_id": "9f8ee9fbfc9f3d4d",
+            "kid": "01010268c1f35fcc265f43ba2bc5bb2c57a010c21c082b909c87d4726553b406c8e30a",
+            "uid": "f5ce00861e7a6cfd86fce7e5f9b10200",
+            "username": "keruspe"
+        },
+        "service": {
+            "hostname": "www.imagination-land.org",
+            "protocol": "http:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "ctime": 1421416588,
+    "expire_in": 157680000,
+    "prev": "6cf80c400f3b77432dcb9081e5fb9bbe24d8d8614502d6e21bab18db92adfb07",
+    "seqno": 4,
+    "tag": "signature"
+}
+
+with the aforementioned key, yielding the PGP signature:
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v2
+
+owFtkntQVFUcx5dFGiTUoBjQGLJbAUM87r17X7szBDuTJlazxOBMFux677nnLhfk
+3mUfPAfwMSlCIU06o4K77GQZVsNkgSHaKDQgwwhlI6QQEmIig0IgCS09zjL2X+f8
+ceb8zvf3+f2+vzkN6wI12gBP/T3fiif1zYD+e4ImuyPqaAUmqGIZZqjACuDqIcmK
+FdptdllxYgaMZWmewRmOASRBskAkICHpSJ7USxyEekmQgF7SiZSIJWJ5qsOfgTAC
+74DJsopi6GKRRRT9H33B6gNOoE0yHEBcWgKAZGiJ0gk8KQBaEEhAszwSoOoA50hB
+j+sBx4oUi2S0TqBwBnBQh/MI51rFSTSAOM4xBGR5Bkgix0gAspCW9AIqg+N+oQPa
+Fb4QrvZqdzlsEKtMxFCwWAbQPwG/kceCkpKSZLmQt8oK75RVJWk3r4jJqt2KMDa7
+6lSBuhup8pxOm8EPcZbZVrOgYHnMswiyIqKJooRiaHcgBmYgkBI4ZX8BgiIJimBo
+jkvEYKlNtkOL7FfQLMPhaPnLwGKERF44HFA4LukElqV0pAjQMDgCORP0ggBJSuSQ
+WYKicVJkIEkIvEBwoqAneVEScBbzOyxSVMxAoTZ5K0KGOmQrsuWyI/8hh7TRazQB
+Ws0TQVr/r9CErH3qv69SM7bhb3p8OvFo8GjYI8/7BnEPKZ/NiBh6J3TDp0MDXc/d
+NTYWHrjBnN54nNxReiLZN+Mzb203tv4yUVYb/vG5vn7idkF1/LWQzpUGi+bm5kNf
+rwSIk+Fp3r2+hn92bjWl9CW0LER/VZfVPZ1aFO3uzuZvBc4aPMGnxnK6vF+w+8wv
+nBxT1r5N3zk+fJsgsnroLd9si61ilvmcy7mvTMBQUMj2xKS64uJmYoaWdLcS1Ssp
+irfqzvqysIqwtuYrZ1PNp7pNh8ubI/+cj/6er4175kxrdvH18Ictp1eCmDos7a2E
+tJ15P7oj7u8fsBib546oedNL4vbiT+YmrbXD9PKXsGNaaTxTX/fdxtaOCyO9DRrT
+Z6MVCQ0uzUzb5Mh6SyXTczBiYcus4j6RW+O9dPPz9F2DEz9cXAndlP6w6/es6qre
+B5d/rj6wnF8ec6wr6OLsyeuZhvH8N0wv7nhQf8n9buYYUb5pfJ8FnMvovXEtKn5x
+KOTXUO+34PDBwfmkPR/uLV/4zdQWeaTro27HhYL7GcaR56+GNMcOuKZML+c//Z62
+s2mqSrtu0DgT9lNMxLN8e64R++tuX8+jl/7Iajn/+rbhvCfT42Pdk7u2j786cj4p
+I2zz3Gvz0bqFyDWxHyxmLcXEM56rZrwjuPFY5aK3n0uJz2ndb24vsqs1TVPdGZnJ
+TYEJneZS32h+1L8=
+=/GvQ
+-----END PGP MESSAGE-----
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/keruspe
+
+==================================================================
