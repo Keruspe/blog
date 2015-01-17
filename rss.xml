@@ -24,7 +24,7 @@
 <ul>
 <li>search is now always done by the daemon, not the gnome-shell extension</li>
 <li>new gpaste subcomand: search</li>
-<li>gpaste now accepts –online –raw and –zero options</li>
+<li>gpaste now accepts <code>--online</code> <code>--raw</code> and <code>--zero</code> options</li>
 <li>search is now async</li>
 <li>various gnome-shell extension fixes</li>
 <li>updated completions</li>
