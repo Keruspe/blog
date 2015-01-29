@@ -6,8 +6,44 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sat, 17 Jan 2015 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Thu, 29 Jan 2015 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Facron 1.0 released</title>
+    <link>http://www.imagination-land.org/posts/2015-01-29-facron-1.0-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Facron 1.0 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January 29, 2015</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/facron.html">facron</a>, <a href="http://www.imagination-land.org/tags/fanotify.html">fanotify</a>, <a href="http://www.imagination-land.org/tags/cron.html">cron</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>.</p>
+                </header>
+
+                <section>
+<h2 id="what-is-facron">What is facron?</h2>
+<p>A full description of facron is available in these two articles from 2012:</p>
+<ul>
+<li><a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html</a></li>
+<li><a href="http://www.imagination-land.org/posts/2012-12-07-facron-released.html">http://www.imagination-land.org/posts/2012-12-07-facron-released.html</a></li>
+</ul>
+<h2 id="how-do-i-get-it">How do I get it?</h2>
+<p>facron is available <a href="https://github.com/Keruspe/facron">on github</a></p>
+<p>1.0 release tarball is available <a href="http://www.imagination-land.org/files/facron/facron-1.0.tar.xz">here</a>, get it while it’s hot!</p>
+<p>You must have fanotify included in your kernel (most recent systems should have it by default).</p>
+<h2 id="whats-new-in-this-release">What’s new in this release?</h2>
+<ul>
+<li>fixed systemd unit</li>
+<li><code>$*</code> stands for accessing process pid</li>
+<li>new internal counter with <code>$+</code> <code>$-</code> and <code>$=</code></li>
+<li>customisable config file</li>
+<li>fix interaction with folders</li>
+</ul>
+<p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute !</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Thu, 29 Jan 2015 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2015-01-29-facron-1.0-released.html</guid>
+</item>
+<item>
     <title>GPaste 3.14.1 released</title>
     <link>http://www.imagination-land.org/posts/2015-01-17-gpaste-3.14.1-released.html</link>
     <description><![CDATA[            <article>
