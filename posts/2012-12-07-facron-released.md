@@ -67,5 +67,5 @@ sudo kill -USR1 $(pidof facron)
 ```
 
 
-I hope you'll enjoy it. Feel free to propose new features and/or to contribute !
+I hope you'll enjoy it. Feel free to propose new features and/or to contribute!
 
