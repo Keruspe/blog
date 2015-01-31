@@ -6,8 +6,40 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Thu, 29 Jan 2015 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Sat, 31 Jan 2015 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Germinal 7 released</title>
+    <link>http://www.imagination-land.org/posts/2015-01-31-germinal-7-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Germinal 7 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January 31, 2015</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/germinal.html">germinal</a>, <a href="http://www.imagination-land.org/tags/terminal.html">terminal</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>.</p>
+                </header>
+
+                <section>
+<h2 id="what-is-germinal">What is Germinal?</h2>
+<p>Germinal is a minimaliste terminal emulator based on vte and tmux.</p>
+<p>It starts as a maximised borderless window which allows you to have a “fullscreen” terminal not overriding your status bar.</p>
+<p>The default startup command attaches a tmux session, but it’s customisable through dconf.</p>
+<p>The default startup command requires you to have a <code>~/.tmux.conf</code> file containing</p>
+<pre><code>new-session</code></pre>
+<p>This will cause tmux to automatically start a new session if you use <code>tmux a</code> and none exists.</p>
+<h2 id="how-do-i-get-it">How do I get it?</h2>
+<p>Germinal is available <a href="https://github.com/Keruspe/Germinal">on github</a></p>
+<p>Version 7 release tarball is available <a href="http://www.imagination-land.org/files/germinal/germinal-7.tar.xz">here</a>, get it while it’s hot!</p>
+<h2 id="whats-new-in-this-release">What’s new in this release?</h2>
+<ul>
+<li>port to new vte API</li>
+</ul>
+<p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute!</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Sat, 31 Jan 2015 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2015-01-31-germinal-7-released.html</guid>
+</item>
+<item>
     <title>Facron 1.0 released</title>
     <link>http://www.imagination-land.org/posts/2015-01-29-facron-1.0-released.html</link>
     <description><![CDATA[            <article>
