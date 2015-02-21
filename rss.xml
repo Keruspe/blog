@@ -6,8 +6,33 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Thu, 19 Feb 2015 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Sun, 22 Feb 2015 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Germinal 10 released</title>
+    <link>http://www.imagination-land.org/posts/2015-02-22-germinal-10-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Germinal 10 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>February 22, 2015</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/germinal.html">germinal</a>, <a href="http://www.imagination-land.org/tags/terminal.html">terminal</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>.</p>
+                </header>
+
+                <section>
+<h2 id="how-do-i-get-it">How do I get it?</h2>
+<p>Germinal is available <a href="https://github.com/Keruspe/Germinal">on github</a></p>
+<p>Version 10 release tarball is available <a href="http://www.imagination-land.org/files/germinal/germinal-10.tar.xz">here</a>, get it while it’s hot!</p>
+<h2 id="whats-new-in-this-release">What’s new in this release?</h2>
+<ul>
+<li>Fix running on wayland</li>
+</ul>
+<p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute!</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Sun, 22 Feb 2015 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2015-02-22-germinal-10-released.html</guid>
+</item>
+<item>
     <title>Germinal 9 released</title>
     <link>http://www.imagination-land.org/posts/2015-02-19-germinal-9-released.html</link>
     <description><![CDATA[            <article>
