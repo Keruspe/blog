@@ -1,6 +1,7 @@
 body {
     background-color: #DEDEDE;
     font-family: ABeeZee, Helvetica, sans-serif;
+    font-size: 16px;
     margin: auto;
     max-width: 70em;
     min-width: 20em;
@@ -38,18 +39,18 @@ body>header>hgroup {
 
 body>header>hgroup>h1 {
     display: inline;
-    font-size: 2.2em;
+    font-size: 26px;
 }
 
 body>header>hgroup>h2 {
     display: inline;
-    font-size: 1.6em;
+    font-size: 22px;
     font-weight: normal;
 }
 
 body>header>hgroup>h6 {
     display: inline;
-    font-size: 1.6em;
+    font-size 22px;
     padding: 1em;
 }
 
@@ -78,15 +79,6 @@ body>header a, body>header a:hover {
 .posts-list li {
     list-style: square inside;
     padding: 0.1em 0.5em;
-}
-
-.posts-list li>a {
-    font-size: 1.1em;
-    text-decoration: none;
-}
-
-.posts-list li>em {
-    font-size: 0.9em;
 }
 
 article>header {
@@ -138,18 +130,18 @@ article {
 
 article header h1 {
     font-family: 'Arvo', serif;
-    font-size: 1.6em;
+    font-size: 22px;
     margin-bottom: 0;
     padding-bottom: 0;
     text-decoration: underline;
 }
 
 article h2 {
-    font-size: 1.3em;
+    font-size: 20px
 }
 
 article h3 {
-    font-size: 1.1em;
+    font-size: 18px
 }
 
 article p {
