@@ -13,8 +13,8 @@ new:
 publish: hakyll
 	./hakyll deploy
 
-preview: build
-	./hakyll preview -p 9000
+watch: build
+	./hakyll watch -p 9000
 
 check: build
 	./hakyll check
