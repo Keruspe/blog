@@ -171,3 +171,10 @@ body>footer {
     margin-right: 1em;
     margin-top: -0.3em;
 }
+
+@media screen and (max-width: 800px) {
+    body>nav menu a:after {
+        content:"\a\a";
+        white-space: pre;
+    }
+}
