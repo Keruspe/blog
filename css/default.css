@@ -173,6 +173,10 @@ body>footer {
 }
 
 @media screen and (max-width: 800px) {
+    .posts-list li,.posts-list ul,.posts-list>h3 {
+        padding: 0;
+    }
+
     body>nav menu a:after {
         content:"\a\a";
         white-space: pre;
