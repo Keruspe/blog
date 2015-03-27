@@ -178,7 +178,7 @@ body>footer {
     }
 
     body>nav menu a:after {
-        content:"\e\e";
+        content:"\a\a";
         white-space: pre;
     }
 }
