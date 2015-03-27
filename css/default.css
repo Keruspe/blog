@@ -14,6 +14,8 @@ a {
 
 img {
     border-width: 0;
+    max-width: 100%;
+    height: auto;
 }
 
 p {
@@ -113,15 +115,13 @@ body>nav menu a:hover {
 }
 
 body>nav menu a img {
-    height: 20px;
     vertical-align: -18%;
-    width: 20px;
+    min-width: 20px;
 }
 
 body>nav menu a img.bigger {
-    height: 24px;
     vertical-align: -30%;
-    width: 24px;
+    min-width: 24px;
 }
 
 article header h1 {
