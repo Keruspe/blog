@@ -6,8 +6,38 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Mon, 23 Mar 2015 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Fri, 03 Apr 2015 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Germinal 11 released</title>
+    <link>http://www.imagination-land.org/posts/2015-04-03-germinal-11-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Germinal 11 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>April  3, 2015</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/germinal.html">germinal</a>, <a href="http://www.imagination-land.org/tags/terminal.html">terminal</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>.</p>
+                </header>
+
+                <section>
+<h2 id="how-do-i-get-it">How do I get it?</h2>
+<p>Germinal is available <a href="https://github.com/Keruspe/Germinal">on github</a></p>
+<p>Version 11 release tarball is available <a href="http://www.imagination-land.org/files/germinal/germinal-11.tar.xz">here</a>, get it while it’s hot!</p>
+<h2 id="whats-new-in-this-release">What’s new in this release?</h2>
+<ul>
+<li>depend on glib 2.44</li>
+<li>depend on vte 0.40</li>
+<li>use new g_autoptr stuff from glib</li>
+<li>new setting: word-char-exceptions matching the new one from vte</li>
+<li>fix live changes from settings with new glib</li>
+<li>you can now quit from the right click menu or with ctrl-shit-q</li>
+</ul>
+<p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute!</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Fri, 03 Apr 2015 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2015-04-03-germinal-11-released.html</guid>
+</item>
+<item>
     <title>GPaste 3.16 released</title>
     <link>http://www.imagination-land.org/posts/2015-03-23-gpaste-3.16-released.html</link>
     <description><![CDATA[            <article>
