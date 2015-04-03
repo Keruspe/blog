@@ -17,7 +17,7 @@ Version 11 release tarball is available [here](http://www.imagination-land.org/f
 - use new g\_autoptr stuff from glib
 - new setting: word-char-exceptions matching the new one from vte
 - fix live changes from settings with new glib
-- you can now quit from the right click menu or with ctrl-shit-q
+- you can now quit from the right click menu or with ctrl-shift-q
 
 I hope you'll enjoy it. Feel free to propose new features and/or to contribute!
 
