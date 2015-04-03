@@ -28,7 +28,7 @@
 <li>use new g_autoptr stuff from glib</li>
 <li>new setting: word-char-exceptions matching the new one from vte</li>
 <li>fix live changes from settings with new glib</li>
-<li>you can now quit from the right click menu or with ctrl-shit-q</li>
+<li>you can now quit from the right click menu or with ctrl-shift-q</li>
 </ul>
 <p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute!</p>
                 </section>
