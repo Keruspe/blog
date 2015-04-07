@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"
+    xmlns:dc="http://purl.org/dc/elements/1.1/">
     <channel>
         <title>Keruspe's blag - RSS feed</title>
         <link>http://www.imagination-land.org</link>
@@ -36,6 +37,7 @@
 ]]></description>
     <pubDate>Fri, 03 Apr 2015 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2015-04-03-germinal-11-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.16 released</title>
@@ -99,6 +101,7 @@
 ]]></description>
     <pubDate>Mon, 23 Mar 2015 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2015-03-23-gpaste-3.16-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.14.3 released</title>
@@ -137,6 +140,7 @@
 ]]></description>
     <pubDate>Sat, 21 Mar 2015 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2015-03-21-gpaste-3.14.3-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.14.2 released</title>
@@ -176,6 +180,7 @@
 ]]></description>
     <pubDate>Sat, 07 Mar 2015 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2015-03-07-gpaste-3.14.2-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Germinal 10 released</title>
@@ -201,6 +206,7 @@
 ]]></description>
     <pubDate>Sun, 22 Feb 2015 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2015-02-22-germinal-10-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Germinal 9 released</title>
@@ -227,6 +233,7 @@
 ]]></description>
     <pubDate>Thu, 19 Feb 2015 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2015-02-19-germinal-9-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Germinal 8 released</title>
@@ -252,6 +259,7 @@
 ]]></description>
     <pubDate>Thu, 19 Feb 2015 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2015-02-19-germinal-8-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Germinal 7 released</title>
@@ -284,6 +292,7 @@
 ]]></description>
     <pubDate>Sat, 31 Jan 2015 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2015-01-31-germinal-7-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Facron 1.0 released</title>
@@ -299,8 +308,8 @@
 <h2 id="what-is-facron">What is facron?</h2>
 <p>A full description of facron is available in these two articles from 2012:</p>
 <ul>
-<li><a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html</a></li>
-<li><a href="http://www.imagination-land.org/posts/2012-12-07-facron-released.html">http://www.imagination-land.org/posts/2012-12-07-facron-released.html</a></li>
+<li><a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html" class="uri">http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html</a></li>
+<li><a href="http://www.imagination-land.org/posts/2012-12-07-facron-released.html" class="uri">http://www.imagination-land.org/posts/2012-12-07-facron-released.html</a></li>
 </ul>
 <h2 id="how-do-i-get-it">How do I get it?</h2>
 <p>facron is available <a href="https://github.com/Keruspe/facron">on github</a></p>
@@ -320,6 +329,7 @@
 ]]></description>
     <pubDate>Thu, 29 Jan 2015 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2015-01-29-facron-1.0-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.14.1 released</title>
@@ -364,6 +374,7 @@
 ]]></description>
     <pubDate>Sat, 17 Jan 2015 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2015-01-17-gpaste-3.14.1-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.14 released</title>
@@ -405,6 +416,7 @@
 ]]></description>
     <pubDate>Fri, 10 Oct 2014 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2014-10-10-gpaste-3.14-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.12.3.1 released</title>
@@ -446,6 +458,7 @@
 ]]></description>
     <pubDate>Thu, 09 Oct 2014 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2014-10-09-gpaste-3.12.3.1-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.10.4.1 released</title>
@@ -487,6 +500,7 @@
 ]]></description>
     <pubDate>Thu, 09 Oct 2014 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2014-10-09-gpaste-3.10.4.1-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.12.3 released</title>
@@ -533,6 +547,7 @@
 ]]></description>
     <pubDate>Thu, 25 Sep 2014 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2014-09-25-gpaste-3.12.3-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.10.4 released</title>
@@ -579,6 +594,7 @@
 ]]></description>
     <pubDate>Thu, 25 Sep 2014 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2014-09-25-gpaste-3.10.4-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.12.2 released</title>
@@ -623,6 +639,7 @@
 ]]></description>
     <pubDate>Mon, 28 Jul 2014 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2014-07-28-gpaste-3.12.2-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.10.3 released</title>
@@ -667,6 +684,7 @@
 ]]></description>
     <pubDate>Mon, 28 Jul 2014 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2014-07-28-gpaste-3.10.3-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.12.1 released</title>
@@ -712,6 +730,7 @@
 ]]></description>
     <pubDate>Wed, 16 Jul 2014 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2014-07-16-gpaste-3.12.1-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.10.2 released</title>
@@ -757,6 +776,7 @@
 ]]></description>
     <pubDate>Wed, 16 Jul 2014 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2014-07-16-gpaste-3.10.2-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.12 released</title>
@@ -793,6 +813,7 @@
 ]]></description>
     <pubDate>Fri, 02 May 2014 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2014-05-02-gpaste-3.12-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.10.1 released</title>
@@ -835,6 +856,7 @@
 ]]></description>
     <pubDate>Thu, 01 May 2014 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2014-05-01-gpaste-3.10.1-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.10 released</title>
@@ -900,6 +922,7 @@
 ]]></description>
     <pubDate>Tue, 25 Mar 2014 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2014-03-25-gpaste-3.10-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.3.1 released</title>
@@ -924,6 +947,7 @@
 ]]></description>
     <pubDate>Sat, 22 Mar 2014 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2014-03-22-gpaste-3.3.1-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Exherbo and Japanese food</title>
@@ -965,6 +989,7 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 ]]></description>
     <pubDate>Mon, 03 Mar 2014 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2014-03-03-exherbo-and-japanese-food.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.3 released</title>
@@ -989,6 +1014,7 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 ]]></description>
     <pubDate>Sat, 22 Feb 2014 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2014-02-22-gpaste-3.3-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.8 released</title>
@@ -1017,6 +1043,7 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 ]]></description>
     <pubDate>Mon, 10 Feb 2014 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2014-02-10-gpaste-3.8-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.7 released</title>
@@ -1050,6 +1077,7 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 ]]></description>
     <pubDate>Sat, 09 Nov 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-11-09-gpaste-3.7-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.2.2 released</title>
@@ -1078,6 +1106,7 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 ]]></description>
     <pubDate>Tue, 22 Oct 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-10-22-gpaste-3.2.2-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.2.1 released</title>
@@ -1105,6 +1134,7 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 ]]></description>
     <pubDate>Sat, 19 Oct 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-10-19-gpaste-3.2.1-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.6 released</title>
@@ -1138,6 +1168,7 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 ]]></description>
     <pubDate>Thu, 17 Oct 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-10-17-gpaste-3.6-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.2 released</title>
@@ -1170,6 +1201,7 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 ]]></description>
     <pubDate>Wed, 16 Oct 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-10-16-gpaste-3.2-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.5 released</title>
@@ -1200,6 +1232,7 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 ]]></description>
     <pubDate>Wed, 25 Sep 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-09-25-gpaste-3.5-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.1 released</title>
@@ -1229,6 +1262,7 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 ]]></description>
     <pubDate>Mon, 23 Sep 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-09-23-gpaste-3.1-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Becoming an official Exherbo developer</title>
@@ -1256,6 +1290,7 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 ]]></description>
     <pubDate>Sun, 07 Jul 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-07-07-becoming-an-official-exherbo-developer.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.0.2 released</title>
@@ -1280,6 +1315,7 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 ]]></description>
     <pubDate>Sat, 01 Jun 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-06-01-gpaste-3.0.2-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.0.1 released</title>
@@ -1304,6 +1340,7 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 ]]></description>
     <pubDate>Sat, 13 Apr 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-04-13-gpaste-3.0.1-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 3.0 released</title>
@@ -1330,6 +1367,7 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 ]]></description>
     <pubDate>Sat, 13 Apr 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-04-13-gpaste-3.0-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Knowing your system - Part 10 - Native multilib system</title>
@@ -1353,13 +1391,14 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 <p>Solution: On your 64-bits system, you can install 32-bits libraries in parallel of 64-bits one (the former will be in <code>/usr/lib32</code>, the latter in <code>/usr/lib64</code>, usually). Doing so allows you to run both 64 and 32-bits binaries on your system as long as you have the dependencies installed both for 64 and 32-bits. A good example is skype, which do not release a proper 64-bits version, so you need to run the 32-bits one, no matter your system.</p>
 <h2 id="multilib-system-the-right-way">Multilib system: the right way</h2>
 <p>Multilib is implemented in different ways depending on the distribution. Some of them like Debian or Gentoo provide huge packages with a while set of libraries in them, and only a subset or your system is available in 32-bits. For fedora, it’s kinda better, multilib packages are installed with <code>&lt;packages_name&gt;.i386</code> for the 32-bits version and <code>&lt;package_name&gt;.amd64</code> for the 64-bits version.</p>
-<p>The only distribution I know of which allow you real native multilib installation is, you’ll have guessed it, <a href="http://www.exherbo.org/">Exherbo</a>. The tutorial to switch to a multilib system is quite simple: <a href="http://www.mailstation.de/wordpress/?p=118">http://www.mailstation.de/wordpress/?p=118</a>, and once this is done, the only thing you have to do is enabling the <code>multibuild_c: 32</code> option to all the packages that you want to be available in 32-bits too. That’s it, you can get your whole system in both 64 and 32-bits just like this, natively.</p>
+<p>The only distribution I know of which allow you real native multilib installation is, you’ll have guessed it, <a href="http://www.exherbo.org/">Exherbo</a>. The tutorial to switch to a multilib system is quite simple: <a href="http://www.mailstation.de/wordpress/?p=118" class="uri">http://www.mailstation.de/wordpress/?p=118</a>, and once this is done, the only thing you have to do is enabling the <code>multibuild_c: 32</code> option to all the packages that you want to be available in 32-bits too. That’s it, you can get your whole system in both 64 and 32-bits just like this, natively.</p>
 <p>A good example of this is <a href="http://blog.clement.delafargue.name/posts/2013-01-08-dwarf-fortress-and-multilib-on-exherbo.html">Clement’s article</a> telling how he switched his system to multilib in order to be able to run dwarf fortress on Exherbo.</p>
                 </section>
             </article>
 ]]></description>
     <pubDate>Thu, 31 Jan 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-01-31-knowing-your-system---part-10---native-multilib-system.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 2.99.2 released</title>
@@ -1389,6 +1428,7 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 ]]></description>
     <pubDate>Tue, 22 Jan 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-01-22-gpaste-2.99.2-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Manage you critical configuration files with git</title>
@@ -1404,18 +1444,18 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 <p>A few months ago, I decided to track my configuration files using git, which I use for pretty much everything now.</p>
 <p>The problem I had to face is that some of them contain passwords, so I couldn’t let them as is.</p>
 <h2 id="setting-up-the-test-environment">Setting up the test environment</h2>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">keruspe@Lou</span> ~/tmp % mkdir test.git <span class="kw">&amp;&amp;</span> <span class="kw">cd</span> test.git <span class="kw">&amp;&amp;</span> <span class="kw">git</span> init --bare <span class="kw">&amp;&amp;</span> <span class="kw">cd</span> ..
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">keruspe@Lou</span> ~/tmp % mkdir test.git <span class="kw">&amp;&amp;</span> <span class="kw">cd</span> test.git <span class="kw">&amp;&amp;</span> <span class="kw">git</span> init --bare <span class="kw">&amp;&amp;</span> <span class="kw">cd</span> ..
 <span class="kw">Initialized</span> empty Git repository in /home/keruspe/tmp/test.git/
 <span class="kw">keruspe@Lou</span> ~/tmp % mkdir test <span class="kw">&amp;&amp;</span> <span class="kw">cd</span> test <span class="kw">&amp;&amp;</span> <span class="kw">git</span> init
 <span class="kw">Initialized</span> empty Git repository in /home/keruspe/tmp/test/.git/
-<span class="kw">keruspe@Lou</span> ~/tmp/test (git)<span class="kw">-</span>[master] % git remote add origin ../test.git </code></pre>
+<span class="kw">keruspe@Lou</span> ~/tmp/test (git)<span class="kw">-</span>[master] % git remote add origin ../test.git </code></pre></div>
 <p>Ok, we now have a remote repository in <code>~/tmp/test.git</code> and a working directory in <code>~/tmp/test</code></p>
 <h2 id="configuring-the-working-directory-to-be-password-safe">Configuring the working directory to be “password-safe”</h2>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">keruspe@Lou</span> ~/tmp/test (git)<span class="kw">-</span>[master] % git config filter.password.clean <span class="st">&quot;sed -e 's/mypassword/@PASSWORD@/' -e 's/anotherpassword/@PASSWORD2@/'&quot;</span>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">keruspe@Lou</span> ~/tmp/test (git)<span class="kw">-</span>[master] % git config filter.password.clean <span class="st">&quot;sed -e 's/mypassword/@PASSWORD@/' -e 's/anotherpassword/@PASSWORD2@/'&quot;</span>
 <span class="kw">keruspe@Lou</span> ~/tmp/test (git)<span class="kw">-</span>[master] % git config filter.password.smudge <span class="st">&quot;sed -e 's/@PASSWORD@/mypassword/' -e 's/@PASSWORD2@/anotherpassword/'&quot;</span>
 <span class="kw">keruspe@Lou</span> ~/tmp/test (git)<span class="kw">-</span>[master] % cat <span class="kw">&gt;</span> .git/info/attributes &lt;&lt; EOF
 myconf.conf filter=pa<span class="kw">ssword</span>
-EOF</code></pre>
+EOF</code></pre></div>
 <p>Ok, what’s going on there?</p>
 <p>I’m creating a filter which I call “password”. A filter consist of two functions:</p>
 <pre><code>* clean is called on each file when you're committing, before creating the git objects corresponding to your commit.
@@ -1424,7 +1464,7 @@ EOF</code></pre>
 <p>I then create a <code>.git/info/attributes</code> file, in which I tell git to use my brand new “filter” password for the file <code>myconf.conf</code>. You can use any pattern that git understands here, and can obviously add multiple lines.</p>
 <h2 id="example">Example</h2>
 <p>Let’s now create the <code>myconf.conf</code> file we mentioned earlier, let’s push it to the remote repository, and clone it from anywhere else, to see the result.</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">keruspe@Lou</span> ~/tmp/test (git)<span class="kw">-</span>[master] % cat <span class="kw">&gt;</span> myconf.conf &lt;&lt; EOF
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">keruspe@Lou</span> ~/tmp/test (git)<span class="kw">-</span>[master] % cat <span class="kw">&gt;</span> myconf.conf &lt;&lt; EOF
 user = johndoe
 password = mypassword
 bddurl = root:anotherpassword@mysql.local
@@ -1451,13 +1491,14 @@ bddurl = root:anotherpassword@mysql.local
 keruspe@Lou ~/tmp % cat test2/myconf.conf
 user = johndoe
 password = @PASSWORD@
-bddurl = root:@PASSWORD2@@mysql.local</code></pre>
+bddurl = root:@PASSWORD2@@mysql.local</code></pre></div>
 <p>As you can see, in my <code>~/tmp/test</code> working directory, where I have my filter set up, nothing has changed at all, whereas in the brand new clone <code>~/tmp/test2</code> (and thus, in the server), all my passwords are masked and are not accessible. This way, you can track your configuration files using git and sharing it with other without even thinking of your passwords, as long as everything is in your filter.</p>
                 </section>
             </article>
 ]]></description>
     <pubDate>Mon, 21 Jan 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-01-21-manage-you-critical-configuration-files-with-git.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Knowing your system - Part 9 - Contributing to Exherbo: Updated and smoother method</title>
@@ -1486,8 +1527,8 @@ bddurl = root:@PASSWORD2@@mysql.local</code></pre>
 <h2 id="what-has-become-my-previous-workflow">What has become my previous workflow?</h2>
 <p>This does not at all look like my previous workflow, but I said I kept it around… Why?</p>
 <p>Actually, my previous workflow comes right after that. Once I’ve sumitted my patch, I add it to my autopatch folder:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> -p /etc/paludis/autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>
-<span class="kw">curl</span> <span class="kw">&lt;</span>patch_url<span class="kw">&gt;</span> <span class="kw">&gt;</span> /etc/paludis.autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>/my.patch</code></pre>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> -p /etc/paludis/autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>
+<span class="kw">curl</span> <span class="kw">&lt;</span>patch_url<span class="kw">&gt;</span> <span class="kw">&gt;</span> /etc/paludis.autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>/my.patch</code></pre></div>
 <p>This way, they automatically get applied when I sync back the real repository instead of my copy. If a sync fail, I rebase my patches and resubmit them. Once the patch is pushed, I can safely remove it from my autopatch directory.</p>
 <p>Note that this whole second step can fully be ignored for repositories you have push access to, simplifying even more this light workflow.</p>
 <h2 id="next-chapter">Next chapter</h2>
@@ -1497,6 +1538,7 @@ bddurl = root:@PASSWORD2@@mysql.local</code></pre>
 ]]></description>
     <pubDate>Thu, 17 Jan 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo%3A-updated-and-smoother-method.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 2.99.1 released</title>
@@ -1520,12 +1562,13 @@ bddurl = root:@PASSWORD2@@mysql.local</code></pre>
 <p>This is 3.0 RC2 and no major changes should append before the 3.0 release.</p>
 <p>Feedback really appreciated!</p>
 <p>And don’t forget to run <code>gpaste dr</code> aka <code>gpaste daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
-<p>EDIT: packagers should backport <a href="https://github.com/Keruspe/GPaste/commit/61947fa2b5ea6b19b2a9cdb7db2b328e4a703f85">https://github.com/Keruspe/GPaste/commit/61947fa2b5ea6b19b2a9cdb7db2b328e4a703f85</a> with this release.</p>
+<p>EDIT: packagers should backport <a href="https://github.com/Keruspe/GPaste/commit/61947fa2b5ea6b19b2a9cdb7db2b328e4a703f85" class="uri">https://github.com/Keruspe/GPaste/commit/61947fa2b5ea6b19b2a9cdb7db2b328e4a703f85</a> with this release.</p>
                 </section>
             </article>
 ]]></description>
     <pubDate>Tue, 15 Jan 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-01-15-gpaste-2.99.1-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 2.99 released</title>
@@ -1563,6 +1606,7 @@ bddurl = root:@PASSWORD2@@mysql.local</code></pre>
 ]]></description>
     <pubDate>Mon, 14 Jan 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-01-14-gpaste-2.99-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Knowing your system - Part 8 - On the road to upstream</title>
@@ -1580,7 +1624,7 @@ bddurl = root:@PASSWORD2@@mysql.local</code></pre>
 <p>Doing this I ended up with a more-that-bleeding-edge system, causing a lot of breakages when stuff went incompatible with recent versions of other. That’s perfect, since that’s exactly the state I wanted to reach. If I wanted to recover a functional system, the easy solution that I adopted when I did not have much spare time was to revert my last changes and get back to an earlier version of the guilty package, but this was not the goal of the operation. What I really started to do at this point was to patch the broken stuff to make it compatible with the newer version of the guilty stuff which broke everything. It was sometimes really trivial, sometimes way less. I mostly did this for <a href="http://www.gnome.org/">Gnome</a> projects. It’s a really good experience since you have to dig in a lot of projects and documentation, making you know better how various parts of your system work internally. Once I had everything back working, I then submitted my patches to the developers of the projects upstream, so that it gets fixed for everyone.</p>
 <p>Now that I have way less spare time, I no longer have such a bleeding edge system, or at least I have way less scm packages. Sometimes I still need to patch stuff though, so I still use the same procedure.</p>
 <h2 id="my-work-flow">My work flow</h2>
-<p>My work flow for contributing to upstream is not much different to <a href="http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html">the one I use for contributing to Exherbo</a>. I also use an autopatch mechanism which is slightly different. My hook for automatically patch software is available there: <a href="https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/ebuild_prepare_pre/patches.bash">https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/ebuild_prepare_pre/patches.bash</a>. If I remember correctly it was initially written by <a href="http://ciaranm.wordpress.com/">Ciaran McCreesh</a>, the <a href="http://paludis.exherbo.org/">paludis</a>’s lead developer. When I want to patch something, I get a copy locally, I write and commit my patch, I generate a patch file and move it to <code>/etc/paludis/autopatch/&lt;category&gt;/&lt;package&gt;/</code> where &lt;category&gt; is for example “x11-dri” and &lt;package&gt; is “mesa”, according to exherbo’s packages name. Each time I install a package, it applies all this patches before configuring and compiling the software. If it works, I submit it upstream, if not, I fix it and retry.</p>
+<p>My work flow for contributing to upstream is not much different to <a href="http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html">the one I use for contributing to Exherbo</a>. I also use an autopatch mechanism which is slightly different. My hook for automatically patch software is available there: <a href="https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/ebuild_prepare_pre/patches.bash" class="uri">https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/ebuild_prepare_pre/patches.bash</a>. If I remember correctly it was initially written by <a href="http://ciaranm.wordpress.com/">Ciaran McCreesh</a>, the <a href="http://paludis.exherbo.org/">paludis</a>’s lead developer. When I want to patch something, I get a copy locally, I write and commit my patch, I generate a patch file and move it to <code>/etc/paludis/autopatch/&lt;category&gt;/&lt;package&gt;/</code> where &lt;category&gt; is for example “x11-dri” and &lt;package&gt; is “mesa”, according to exherbo’s packages name. Each time I install a package, it applies all this patches before configuring and compiling the software. If it works, I submit it upstream, if not, I fix it and retry.</p>
 <p>I highly recommend you to try contributing to open source projects, to fix or improve them, like adding new functionalities. The only risk is to learn a lot.</p>
 <h2 id="next-chapter">Next chapter</h2>
 <p><a href="http://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo%3A-updated-and-smoother-method.html">Read the continuation</a></p>
@@ -1589,6 +1633,7 @@ bddurl = root:@PASSWORD2@@mysql.local</code></pre>
 ]]></description>
     <pubDate>Thu, 10 Jan 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-01-10-knowing-your-system---part-8---on-the-road-to-upstream.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Knowing your system - Part 7 - Contributing to Exherbo</title>
@@ -1622,8 +1667,8 @@ bddurl = root:@PASSWORD2@@mysql.local</code></pre>
 <li>I upload my patch with <code>git pe HEAD~&lt;number_of_commits&gt; | wgetpaste -r -s poundpython</code> (I’ll explain this command later)</li>
 <li>I put a copy of my patch in my autopatch directory (which I’ll explain after):</li>
 </ul>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> -p /etc/paludis/autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>
-<span class="kw">curl</span> <span class="kw">&lt;</span>patch_url<span class="kw">&gt;</span> <span class="kw">&gt;</span> /etc/paludis.autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>/my.patch</code></pre>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> -p /etc/paludis/autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>
+<span class="kw">curl</span> <span class="kw">&lt;</span>patch_url<span class="kw">&gt;</span> <span class="kw">&gt;</span> /etc/paludis.autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>/my.patch</code></pre></div>
 <ul>
 <li>I sync the repository so that the autopatch gets applied: <code>cave sync &lt;repository&gt;</code></li>
 <li>I try my patch, compiling the related packages</li>
@@ -1639,6 +1684,7 @@ bddurl = root:@PASSWORD2@@mysql.local</code></pre>
 ]]></description>
     <pubDate>Thu, 03 Jan 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>systemd as a session manager</title>
@@ -1657,19 +1703,20 @@ bddurl = root:@PASSWORD2@@mysql.local</code></pre>
 <p>Since I’ve been using systemd as my init system for a while and have been quite happy with it, I often thought of trying a migration for my session. Recently, I started playing with my mails, first with <a href="http://www.fetchmail.info/">fetchmail</a> and <a href="http://www.procmail.org/">procmail</a>, and then with <a href="http://offlineimap.org/">offlineimap</a> (I’ll blog about this later). With offlineimap, I needed a way to fetch periodically my emails.</p>
 <p>I could have installed a cron system, but I don’t like installing such things to only use them for a single command. Since systemd handles natively cron jobs with its timers, I thought back to <code>systemd --session</code>.</p>
 <h2 id="one-problem-three-solutions-which-one-to-take">One problem, three solutions, which one to take?</h2>
-<p>The first solution was to run <code>systemd --session</code> as an autostart app for my session (e.g. writing a <code>.desktop</code> file for it and putting it in <code>/etc/xdg/autostart</code>: <a href="http://standards.freedesktop.org/autostart-spec/autostart-spec-latest.html">http://standards.freedesktop.org/autostart-spec/autostart-spec-latest.html</a>.</p>
+<p>The first solution was to run <code>systemd --session</code> as an autostart app for my session (e.g. writing a <code>.desktop</code> file for it and putting it in <code>/etc/xdg/autostart</code>: <a href="http://standards.freedesktop.org/autostart-spec/autostart-spec-latest.html" class="uri">http://standards.freedesktop.org/autostart-spec/autostart-spec-latest.html</a>.</p>
 <p>With this solution I would have ended up with a first session manager (gnome-session) launching a second one (systemd –user), and the latter would only have been used for offlineimap… Come on! We can do better.</p>
-<p>The second solution was to replace my X session with a new one, which would launch offlineimap on one side and gnome-session on the other, gnome-session taking care of all gnome-related stuff. This is way better! That’s the solution I adopted for a couple a hours and tries. I was pretty happy with it, but was still not convinced by the fact that two different software were managing my session at the same time. Here is my X session file: <a href="https://github.com/Keruspe/system-config/blob/master/data/systemd.desktop">https://github.com/Keruspe/system-config/blob/master/data/systemd.desktop</a>. It has to be placed in <code>/usr/share/xsessions</code>.</p>
+<p>The second solution was to replace my X session with a new one, which would launch offlineimap on one side and gnome-session on the other, gnome-session taking care of all gnome-related stuff. This is way better! That’s the solution I adopted for a couple a hours and tries. I was pretty happy with it, but was still not convinced by the fact that two different software were managing my session at the same time. Here is my X session file: <a href="https://github.com/Keruspe/system-config/blob/master/data/systemd.desktop" class="uri">https://github.com/Keruspe/system-config/blob/master/data/systemd.desktop</a>. It has to be placed in <code>/usr/share/xsessions</code>.</p>
 <p>Then comes the third solution, the one I’m currently running. Since my session was now directly managed by systemd, I decided to migrate everything launched by gnome-session to systemd services, in order to remove totally gnome-session. I found some helpful basis <a href="https://github.com/grawity/systemd-user-units/">here</a> and <a href="https://github.com/sofar/user-session-units">there</a>. I took some of them, modified them to fit my needs and wrote some myself, ending up with a nearly ready system.</p>
 <h2 id="last-problem-gnome-session-runtime-dependency">Last problem, gnome-session runtime dependency</h2>
 <p>Some of the <a href="http://www.gnome.org/">gnome</a> parts such as <a href="https://live.gnome.org/GnomeShell">gnome-shell</a> require gnome-session to be available at runtime, in order to synchronize a few informations across the session, such as the presence status or whether you want notifications to be displayed or ignored. This is all done via <a href="http://www.freedesktop.org/wiki/Software/dbus">DBus</a> but gnome-session does not use a helper to do so, it does it itself. Since we cannot get totally rid of gnome-session, I decided to create a dummy gnome session that gnome-session would launch.</p>
 <p>Next problem: gnome-session refuses to launch such a session… Yay! I thus patched it and <a href="https://bugzilla.gnome.org/show_bug.cgi?id=690866">opened a bug upstream</a> to allow it and provide the dummy session I created. With this patch applied locally, I could run <code>gnome-session --session=gnome-dummy</code> in my systemd service to get a session which does not launch anything. And then I realized that it was still starting autostart applications, which I did not want since I only wanted it for its DBus interface. Passing <code>-a /dev/null</code> as an extra arg to gnome-session so that it looks for autostart applications nowhere instead of in <code>/etx/xdg/autostart</code> did this last trick.</p>
-<p>My system user units are available there: <a href="https://github.com/Keruspe/system-config/tree/master/systemd/user">https://github.com/Keruspe/system-config/tree/master/systemd/user</a>. This folder corresponds to your <code>${HOME}/.config/systemd/user/</code>.</p>
+<p>My system user units are available there: <a href="https://github.com/Keruspe/system-config/tree/master/systemd/user" class="uri">https://github.com/Keruspe/system-config/tree/master/systemd/user</a>. This folder corresponds to your <code>${HOME}/.config/systemd/user/</code>.</p>
                 </section>
             </article>
 ]]></description>
     <pubDate>Tue, 01 Jan 2013 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2013-01-01-systemd-as-a-session-manager.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Knowing your system - Part 6 - Source-based distributions: Discovering Exherbo</title>
@@ -1706,6 +1753,7 @@ bddurl = root:@PASSWORD2@@mysql.local</code></pre>
 ]]></description>
     <pubDate>Thu, 27 Dec 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-12-27-knowing-your-system---part-6---source-based-distributions-discovering-exherbo.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Knowing your system - Part 5 - Source-based distributions: the binary way</title>
@@ -1748,10 +1796,10 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <h3 id="usage">Usage</h3>
 <p>You’re now fully ready! All you have to do is create the binary packages on your compilation node, push the updated repository to your git server, sync it on the other boxes and you will be able to install your freshly made binary packages without having to compile them on all of your machines.</p>
 <p>It’s pretty simple to make binary packages, all you have to do is first to generate the binaries for everything you have installed:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cave</span> resolve -xc world --make binaries --make-dependencies all</code></pre>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cave</span> resolve -xc world --make binaries --make-dependencies all</code></pre></div>
 <p>It will automatically generate packages and put tarballs in your distfiles directory. If you run this after updating your compilation box, it will only generate new binary packages for those that have changed.</p>
 <p>Last thing you might want to know: to create a binary package for a package you do not have installed yet, just run</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cave</span> resolve -x --make binaries --make-dependencies all <span class="kw">&lt;</span>insert a package name here<span class="kw">&gt;</span></code></pre>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cave</span> resolve -x --make binaries --make-dependencies all <span class="kw">&lt;</span>insert a package name here<span class="kw">&gt;</span></code></pre></div>
 <p>It will create packages for all the dependencies, installing it afterwards, and finish by making the package for the software you asked.</p>
 <p>Don’t forget to push all changes on your git server!</p>
 <h2 id="next-chapter">Next chapter</h2>
@@ -1761,6 +1809,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 ]]></description>
     <pubDate>Thu, 20 Dec 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-12-20-knowing-your-system---part-5---source-based-distributions%3A-the-binary-way.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Knowing your system - Part 4 - Falling in love with paludis</title>
@@ -1793,7 +1842,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <p>Now that you have all the minimal informations needed to understand what is a source-based GNU/Linux distribution and to understand how it works globally, We’ll give a closer look to the heart of the distribution: the package manager.</p>
 <p>On Gentoo, the official package manager is portage, with the <code>emerge</code> command line. I used it the first weeks I tried Gentoo, but when I really wanted to play with my system, it was too restrictive so I decided to switch. Moreover, portage is written in python (so are a lot of core components of gentoo), and when your python installation gets broken… Game over.</p>
 <p>When exploring the list of available packages, I found out <a href="http://paludis.exherbo.org/">paludis</a> and decided to give it a try. Thanks to <a href="http://git.exherbo.org/paludis/paludis-scripts.git/tree/portage2paludis.bash">a provided script</a>, I translated roughly my portage configuration to a paludis one (Paludis can use portage configuration but this is not recommended). It was not perfect, but was a good start. After cleaning and updating it a little by myself (<a href="http://paludis.exherbo.org/">the documentation is really exhaustive</a>), I could start using it. The man pages are also really complete.</p>
-<p>You can see my current configuration here: <a href="https://github.com/Keruspe/paludis-config">https://github.com/Keruspe/paludis-config</a>. A first configuration will be a lot lighter, this is a configuration that have evolved during 4 years, from Gentoo to Exherbo.</p>
+<p>You can see my current configuration here: <a href="https://github.com/Keruspe/paludis-config" class="uri">https://github.com/Keruspe/paludis-config</a>. A first configuration will be a lot lighter, this is a configuration that have evolved during 4 years, from Gentoo to Exherbo.</p>
 <p>Paludis command line <code>cave</code> is a modular tool which allow you to do a lot of things. Basically everything you would ever want to do, and some more.</p>
 <p>The main <code>cave</code> subcommands are:</p>
 <ul>
@@ -1805,8 +1854,8 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <p>A lot of other subcommands are available, and a lot of options for each of these. Amongst other things, cave allows you to stop the installation process at a certain phase, or resume at another. This allows you to abort at compile phase to apply custom patches, and them resume at compile phase to compile the package with your patches applied. It also support a hooks mechanism.</p>
 <p>We’ll see some more advanced paludis features in a next post of <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">the knowing your system saga</a>.</p>
 <p>Last thing, The way I update my system is:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cave</span> sync
-<span class="kw">cave</span> resolve world -c -km -Km -Cs</code></pre>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cave</span> sync
+<span class="kw">cave</span> resolve world -c -km -Km -Cs</code></pre></div>
 <p>It syncs repositories with upstream to get latest versions of the packages, and then resolve <code>world</code> which is the set containing all the packages you have installed, with a complete dependency tree, as deep as it can, with <code>-c</code> aka <code>--complete</code> and reinstalling all packages for which metadata have changed because of <code>-km -Km</code> aka <code>--keep if-same-metadata --keep-targets if-same-metadata</code>. If a failure occurs, it continues to build the rest while the dependencies still are satisfied thanks to <code>-Cs</code> aka <code>--continue-on-failure if-satisfied</code>. I then run this last command again with <code>-x</code> aka <code>--execute</code> to apply the available updates.</p>
 <h2 id="next-chapter">Next chapter</h2>
 <p><a href="http://www.imagination-land.org/posts/2012-12-20-knowing-your-system---part-5---source-based-distributions%3A-the-binary-way.html">Read the continuation</a></p>
@@ -1815,6 +1864,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 ]]></description>
     <pubDate>Thu, 13 Dec 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Knowing your system - Part 3 - Source-based distributions: The Gentoo example</title>
@@ -1849,6 +1899,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 ]]></description>
     <pubDate>Mon, 10 Dec 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Facron 0.9 released</title>
@@ -1876,27 +1927,28 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <p>The release tarball is available <a href="https://github.com/Keruspe/facron/downloads">there: https://github.com/Keruspe/facron/downloads</a>.</p>
 <p>You must have fanotify included in your kernel (most recent systems should have it by default).</p>
 <p>Here are the steps you need to run in order to get it up and running:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">wget</span> https://github.com/downloads/Keruspe/facron/facron-0.9.tar.xz
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">wget</span> https://github.com/downloads/Keruspe/facron/facron-0.9.tar.xz
 <span class="kw">tar</span> xf facron-0.9.tar.xz
 <span class="kw">cd</span> facron-0.9
 <span class="kw">./configure</span> --sysconfdir=/etc --with-systemdsystemunitdir=/usr/lib/systemd/system
 <span class="kw">make</span>
-<span class="kw">sudo</span> make install</code></pre>
+<span class="kw">sudo</span> make install</code></pre></div>
 <p>Then just create your configuration file <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">as I said in the previous post</a> or following the manual instructions (man facron).</p>
 <p>When everything is ready, you just have to run</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> systemctl start facron.service</code></pre>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> systemctl start facron.service</code></pre></div>
 <p>Or for non-systemd systems</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> facron --background</code></pre>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> facron --background</code></pre></div>
 <p>If you edit the configuration file, you can reload it without restarting the daemon by running</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> systemctl reload facron.service</code></pre>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> systemctl reload facron.service</code></pre></div>
 <p>Or for non-systemd systems</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> kill -USR1 <span class="ot">$(</span><span class="kw">pidof</span> facron<span class="ot">)</span></code></pre>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> kill -USR1 <span class="ot">$(</span><span class="kw">pidof</span> facron<span class="ot">)</span></code></pre></div>
 <p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute!</p>
                 </section>
             </article>
 ]]></description>
     <pubDate>Fri, 07 Dec 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-12-07-facron-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Facron - fanotify cron system</title>
@@ -1909,7 +1961,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
                 </header>
 
                 <section>
-<p>It’s available on github: <a href="https://github.com/Keruspe/facron">https://github.com/Keruspe/facron</a></p>
+<p>It’s available on github: <a href="https://github.com/Keruspe/facron" class="uri">https://github.com/Keruspe/facron</a></p>
 <h2 id="the-filesystem-cron-principle">The filesystem cron principle</h2>
 <p>At <a href="http://www.clever-cloud.com/en/">Clever Cloud</a>, we often have to manage stuff based on filesystem events. In order to react dynamically, we will sometimes have to reload some specific configurations when the config file has changed, or we’ll want to wrap some files which just appeared to grab them in the global flow.</p>
 <p>Filesystem crons allow you to do this kind of things. What you have to do is specify the files you want to monitor with the events you want to react to and the action you want to proceed when those events occur.</p>
@@ -1942,12 +1994,13 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <p>Two more special tokens will appear: <code>$@</code> which will contain the dirname of the file, and <code>$#</code> which will contain its basename.</p>
 <p>A systemd service file and a release tarball will be provided soon.</p>
 <p>You can reload the configuration at any time by sending a <code>SIGUSR1</code> to facron:</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">kill</span> -USR1 <span class="ot">$(</span><span class="kw">pidof</span> facron<span class="ot">)</span></code></pre>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">kill</span> -USR1 <span class="ot">$(</span><span class="kw">pidof</span> facron<span class="ot">)</span></code></pre></div>
                 </section>
             </article>
 ]]></description>
     <pubDate>Tue, 04 Dec 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>GPaste 2.9.1 released</title>
@@ -2000,6 +2053,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 ]]></description>
     <pubDate>Sat, 01 Dec 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-12-01-gpaste-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Knowing your system - Part 2 - The init process</title>
@@ -2061,6 +2115,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 ]]></description>
     <pubDate>Thu, 29 Nov 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-11-29-knowing-your-system-part-the-init-process.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Knowing your system - Part 1 - Basis on UNIX-like systems</title>
@@ -2136,6 +2191,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 ]]></description>
     <pubDate>Thu, 22 Nov 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-11-22-knowing-your-system-part-basics-on-unixlike-systems.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 <item>
     <title>Home sweet home</title>
@@ -2152,7 +2208,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <p>It has been a long time since I first wanted to get a blog.</p>
 <p>I’ll mostly speak here about free software and stuff I like to hack, from sysadmin to development and debugging. I write code mostly in Java for my job, but my language of choice is the C for my personal projects. This is why this blog is written in haskell.</p>
 <p>Just to be clear, what I mean by sysadmin is not</p>
-<pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> apt-get install kde</code></pre>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> apt-get install kde</code></pre></div>
 <p>I’m a source-based distributions enthusiast and prefer tutorials and tips about raw software over distro-specific ones.</p>
 <h2 id="special-thanks">Special thanks</h2>
 <p>This blog is powered by <a href="http://jaspervdj.be/hakyll/index.html">Hakyll</a>.</p>
@@ -2163,7 +2219,8 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 ]]></description>
     <pubDate>Wed, 21 Nov 2012 00:00:00 UT</pubDate>
     <guid>http://www.imagination-land.org/posts/2012-11-21-home-sweet-home.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
 </item>
 
-    </channel> 
+    </channel>
 </rss>
