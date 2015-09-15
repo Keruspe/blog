@@ -7,8 +7,42 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Mon, 14 Sep 2015 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Tue, 15 Sep 2015 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Facron 1.1 released</title>
+    <link>http://www.imagination-land.org/posts/2015-09-15-facron-1.1-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Facron 1.1 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>September 15, 2015</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/facron.html">facron</a>, <a href="http://www.imagination-land.org/tags/fanotify.html">fanotify</a>, <a href="http://www.imagination-land.org/tags/cron.html">cron</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>.</p>
+                </header>
+
+                <section>
+<h2 id="what-is-facron">What is facron?</h2>
+<p>A full description of facron is available in these two articles from 2012:</p>
+<ul>
+<li><a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html" class="uri">http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html</a></li>
+<li><a href="http://www.imagination-land.org/posts/2012-12-07-facron-released.html" class="uri">http://www.imagination-land.org/posts/2012-12-07-facron-released.html</a></li>
+</ul>
+<h2 id="how-do-i-get-it">How do I get it?</h2>
+<p>facron is available <a href="https://github.com/Keruspe/facron">on github</a></p>
+<p>1.1 release tarball is available <a href="http://www.imagination-land.org/files/facron/facron-1.1.tar.xz">here</a>, get it while it’s hot!</p>
+<p>You must have fanotify included in your kernel (most recent systems should have it by default).</p>
+<h2 id="whats-new-in-this-release">What’s new in this release?</h2>
+<ul>
+<li>fix a bug when reloading configuration</li>
+<li>code cleanup</li>
+</ul>
+<p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute!</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Tue, 15 Sep 2015 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2015-09-15-facron-1.1-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
+</item>
+<item>
     <title>Germinal 13 released</title>
     <link>http://www.imagination-land.org/posts/2015-09-14-germinal-13-released.html</link>
     <description><![CDATA[            <article>
