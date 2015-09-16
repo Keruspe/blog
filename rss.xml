@@ -7,8 +7,36 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Tue, 15 Sep 2015 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Wed, 16 Sep 2015 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Germinal 14 released</title>
+    <link>http://www.imagination-land.org/posts/2015-09-16-germinal-14-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Germinal 14 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>September 16, 2015</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/germinal.html">germinal</a>, <a href="http://www.imagination-land.org/tags/terminal.html">terminal</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>.</p>
+                </header>
+
+                <section>
+<h2 id="how-do-i-get-it">How do I get it?</h2>
+<p>Germinal is available <a href="https://github.com/Keruspe/Germinal">on github</a></p>
+<p>Version 14 release tarball is available <a href="http://www.imagination-land.org/files/germinal/germinal-14.tar.xz">here</a>, get it while it’s hot!</p>
+<p>Keybindings are documented <a href="https://github.com/Keruspe/Germinal/blob/master/README.md">here</a>.</p>
+<h2 id="whats-new-in-this-release">What’s new in this release?</h2>
+<ul>
+<li>gtk+ 3.10.0 is required</li>
+<li>fix a few bugs introduced in v13</li>
+</ul>
+<p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute!</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Wed, 16 Sep 2015 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2015-09-16-germinal-14-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
+</item>
+<item>
     <title>Facron 1.1 released</title>
     <link>http://www.imagination-land.org/posts/2015-09-15-facron-1.1-released.html</link>
     <description><![CDATA[            <article>
