@@ -9,11 +9,47 @@
                    type="application/rss+xml" />
         <lastBuildDate>Wed, 23 Sep 2015 00:00:00 UT</lastBuildDate>
         <item>
-    <title>GPaste 3.16.3 released</title>
+    <title>GPaste 3.18.1 released</title>
+    <link>http://www.imagination-land.org/posts/2015-09-23-gpaste-3.18.1-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 3.18.1 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>September 23, 2015</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>It’s available <a href="http://www.imagination-land.org/files/gpaste/gpaste-3.18.1.tar.xz">there</a>, get it while it’s hot!</p>
+<p>This release is the first release for using with with GNOME 3.18.</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>fix a regression in growing lines detection</li>
+</ul>
+<p>And don’t forget to run <code>gpaste-client dr</code> aka <code>gpaste-client daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
+<p>You then can run <code>gpaste-client daemon-version</code> to check that the correct daemon is running.</p>
+<h2 id="screenshots">Screenshots</h2>
+<h3 id="gnome-shell-extension">Gnome-shell extension</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Extension.png" alt="Extension" /></p>
+<h3 id="graphical-tool">Graphical tool</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Ui-1-full.png" alt="Ui-1" /></p>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Ui-2-full.png" alt="Ui-2" /></p>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Ui-3-full.png" alt="Ui-3" /></p>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Ui-4-full.png" alt="Ui-4" /></p>
+<h3 id="ubuntu-application-indicator-and-legacy-status-icon">Ubuntu application indicator and legacy status icon</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/2/AppIndicator.png" alt="AppIndicator" /></p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Wed, 23 Sep 2015 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2015-09-23-gpaste-3.18.1-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
+</item>
+<item>
+    <title>GPaste 3.16.3.1 released</title>
     <link>http://www.imagination-land.org/posts/2015-09-23-gpaste-3.16.3.1-released.html</link>
     <description><![CDATA[            <article>
                 <header>
-                    <h1>GPaste 3.16.3 released</h1>
+                    <h1>GPaste 3.16.3.1 released</h1>
                     <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>September 23, 2015</strong></p>
                     <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
                 </header>
