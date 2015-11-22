@@ -161,7 +161,7 @@ myConfiguration :: Configuration
 myConfiguration = defaultConfiguration
     { tmpDirectory  = "/tmp/hakyll"
     , ignoreFile    = ignoreFile'
-    , deployCommand = "./publish.sh"
+    , deployCommand = "./scripts/publish.sh"
     }
   where
     ignoreFile' path

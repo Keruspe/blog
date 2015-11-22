@@ -13,7 +13,7 @@ $(BLOG): src/Main.hs
 	@$(BLOG) clean
 
 new:
-	@./new_post.sh
+	@./scripts/new_post.sh
 
 publish: $(BLOG)
 	@$(BLOG) deploy
