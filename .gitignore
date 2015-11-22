@@ -1,6 +1,6 @@
-hakyll
-*.hi
-*.o
-_site
-_cache
-!files/*/*.tar.xz
+/.cabal-sandbox
+/cabal.sandbox.config
+/dist
+/_site
+/_cache
+!/files/*/*.tar.xz

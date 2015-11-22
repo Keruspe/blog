@@ -1,25 +1,32 @@
+BLOG=./dist/build/blog/blog
+
 all: build
 
-build: hakyll
-	./hakyll build
+build: $(BLOG)
+	@$(BLOG) build
 
-hakyll: hakyll.hs
-	ghc --make hakyll.hs
-	./hakyll clean
+$(BLOG): src/Main.hs
+	@cabal sandbox init
+	@cabal update
+	@cabal install --only-dependencies
+	@cabal build
+	@$(BLOG) clean
 
 new:
 	@./new_post.sh
 
-publish: hakyll
-	./hakyll deploy
+publish: $(BLOG)
+	@$(BLOG) deploy
 
 watch: build
-	./hakyll watch -p 9000
+	@$(BLOG) watch -p 9000
 
 check: build
-	./hakyll check
+	@$(BLOG) check
 
-clean: hakyll
-	rm -f hakyll
+clean: $(BLOG)
+	@$(BLOG) clean
+	@cabal clean
+	@cabal sandbox delete
 
 .PHONY: all build new publish preview clean check
