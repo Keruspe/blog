@@ -7,7 +7,7 @@ build: $(BLOG)
 
 $(BLOG): src/Main.hs
 	@cabal sandbox init
-	@cabal update
+	@cabal update || true
 	@cabal install --only-dependencies
 	@cabal build
 	@$(BLOG) clean
