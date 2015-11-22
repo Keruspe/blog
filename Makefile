@@ -5,10 +5,12 @@ all: build
 build: $(BLOG)
 	@$(BLOG) build
 
-$(BLOG): src/Main.hs
+sandbox:
 	@cabal sandbox init
 	@cabal update || true
 	@cabal install --only-dependencies
+
+$(BLOG): sandbox src/Main.hs
 	@cabal build
 	@$(BLOG) clean
 
@@ -27,6 +29,10 @@ check: build
 clean: $(BLOG)
 	@$(BLOG) clean
 	@cabal clean
+
+clean-sandbox:
 	@cabal sandbox delete
 
-.PHONY: all build new publish preview clean check
+clean-all: clean clean-sandbox
+
+.PHONY: all build sandbox new publish watch check clean clean-sandbox clean-all
