@@ -1,9 +1,7 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
-import Control.Applicative ((<$>))
 import Data.List           (isPrefixOf)
-import Data.Monoid         (mappend)
 import Data.Text           (pack,unpack,replace,empty)
 import System.FilePath     (takeFileName)
 
