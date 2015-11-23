@@ -1,9 +1,9 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
-import Data.List       (isPrefixOf)
+import Data.List       (stripPrefix)
+import Data.Maybe      (fromMaybe)
 import Data.Monoid     ((<>))
-import Data.Text       (pack,unpack,replace,empty)
 import System.FilePath (takeFileName)
 
 import Hakyll
@@ -54,18 +54,14 @@ feedConfiguration = FeedConfiguration
 -- Auxiliary compilers
 
 externalizeUrls :: String -> Item String -> Compiler (Item String)
-externalizeUrls root item = return $ fmap (externalizeUrlsWith root) item
+externalizeUrls root item = return $ withUrls ext <$> item
   where
-    externalizeUrlsWith root' = withUrls ext
-      where
-        ext x = if isExternal x then x else root' ++ x
+    ext x = if isExternal x then x else root ++ x
 
 unExternalizeUrls :: String -> Item String -> Compiler (Item String)
-unExternalizeUrls root item = return $ fmap (unExternalizeUrlsWith root) item
+unExternalizeUrls root item = return $ withUrls unExt <$> item
   where
-    unExternalizeUrlsWith root' = withUrls unExt
-      where
-        unExt x = if root' `isPrefixOf` x then unpack $ replace (pack root') empty (pack x) else x
+    unExt x = fromMaybe x $ stripPrefix root x
 
 postList :: Tags -> Pattern -> ([Item String] -> Compiler [Item String]) -> Compiler String
 postList tags pattern preprocess' = do
