@@ -25,20 +25,26 @@ configuration = defaultConfiguration
 
 -- Contexts
 
-postCtx :: Context String
-postCtx = dateField "date" "%B %e, %Y" <> defaultContext
+defaultCtx :: Context String
+defaultCtx = dateField "date" "%B %e, %Y" <> defaultContext
 
-allPostsCtx :: Context String
-allPostsCtx = constField "title" "All posts" <> postCtx
+basicCtx :: String -> Context String
+basicCtx title = constField "title" title <> defaultCtx
 
 homeCtx :: Context String
-homeCtx = constField "title" "Home" <> postCtx
+homeCtx = basicCtx "Home"
+
+allPostsCtx :: Context String
+allPostsCtx = basicCtx "All posts"
 
 feedCtx :: Context String
-feedCtx = bodyField "description" <> postCtx
+feedCtx = bodyField "description" <> defaultCtx
 
 tagsCtx :: Tags -> Context String
-tagsCtx tags = tagsField "prettytags" tags <> postCtx
+tagsCtx tags = tagsField "prettytags" tags <> defaultCtx
+
+postsCtx :: String -> String -> Context String
+postsCtx title list = constField "body" list <> basicCtx title
 
 -- Feed configuration
 
@@ -74,7 +80,8 @@ postList tags pattern preprocess' = do
 main :: IO ()
 main = hakyllWith configuration $ do
     -- Build tags
-    tags <- buildTags "posts/*" (fromCapture "tags/*.html")
+    tags <- buildTags "posts/*" $ fromCapture "tags/*.html"
+    let tagsCtx' = tagsCtx tags
 
     -- Compress CSS
     match "css/*" $ do
@@ -88,19 +95,22 @@ main = hakyllWith configuration $ do
 
     -- Copy favicon, htaccess...
     match "data/*" $ do
-        route   $ gsubRoute "data/" (const "")
+        route   $ gsubRoute "data/" $ const ""
         compile copyFileCompiler
+
+    -- Read templates
+    match "templates/*" $ compile templateCompiler
 
     -- Render posts
     match "posts/*" $ do
         route   $ setExtension ".html"
         compile $ pandocCompiler
-            >>= loadAndApplyTemplate "templates/post.html" (tagsCtx tags)
-            >>= (externalizeUrls $ feedRoot feedConfiguration)
-            >>= saveSnapshot "content"
-            >>= (unExternalizeUrls $ feedRoot feedConfiguration)
-            >>= loadAndApplyTemplate "templates/posts-js.html" (tagsCtx tags)
-            >>= loadAndApplyTemplate "templates/default.html" (tagsCtx tags)
+            >>= loadAndApplyTemplate "templates/post.html"     tagsCtx'
+            >>= (externalizeUrls     $ feedRoot feedConfiguration)
+            >>= saveSnapshot         "content"
+            >>= (unExternalizeUrls   $ feedRoot feedConfiguration)
+            >>= loadAndApplyTemplate "templates/posts-js.html" tagsCtx'
+            >>= loadAndApplyTemplate "templates/default.html"  tagsCtx'
             >>= relativizeUrls
 
     -- Render posts list
@@ -109,9 +119,9 @@ main = hakyllWith configuration $ do
         compile $ do
             list <- postList tags "posts/*" recentFirst
             makeItem list
-            >>= loadAndApplyTemplate "templates/posts.html" allPostsCtx
-            >>= loadAndApplyTemplate "templates/default.html" allPostsCtx
-            >>= relativizeUrls
+                >>= loadAndApplyTemplate "templates/posts.html"   allPostsCtx
+                >>= loadAndApplyTemplate "templates/default.html" allPostsCtx
+                >>= relativizeUrls
 
     -- Index
     create ["index.html"] $ do
@@ -119,24 +129,23 @@ main = hakyllWith configuration $ do
         compile $ do
             list <- postList tags "posts/*" (fmap (take 10) . recentFirst)
             makeItem list
-            >>= loadAndApplyTemplate "templates/index.html" homeCtx
-            >>= loadAndApplyTemplate "templates/default.html" homeCtx
-            >>= relativizeUrls
+                >>= loadAndApplyTemplate "templates/index.html"   homeCtx
+                >>= loadAndApplyTemplate "templates/default.html" homeCtx
+                >>= relativizeUrls
 
     -- Post tags
     tagsRules tags $ \tag pattern -> do
-        let title = "Posts tagged '" ++ tag ++ "'"
         route idRoute
         compile $ do
             list <- postList tags pattern recentFirst
+
+            let title       = "Posts tagged '" ++ tag ++ "'"
+            let defaultCtx' = basicCtx title
+            let postsCtx'   = postsCtx title list
+
             makeItem ""
-                >>= loadAndApplyTemplate "templates/posts.html"
-                        (constField "title" title `mappend`
-                            constField "body" list `mappend`
-                            defaultContext)
-                >>= loadAndApplyTemplate "templates/default.html"
-                        (constField "title" title `mappend`
-                            defaultContext)
+                >>= loadAndApplyTemplate "templates/posts.html"   postsCtx'
+                >>= loadAndApplyTemplate "templates/default.html" defaultCtx'
                 >>= relativizeUrls
 
     -- Render RSS feed
@@ -146,7 +155,4 @@ main = hakyllWith configuration $ do
             loadAllSnapshots "posts/*" "content"
                 >>= recentFirst
                 >>= renderRss feedConfiguration feedCtx
-
-    -- Read templates
-    match "templates/*" $ compile templateCompiler
 
