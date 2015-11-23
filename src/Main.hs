@@ -1,14 +1,82 @@
 {-# LANGUAGE OverloadedStrings #-}
 module Main where
 
-import Data.List           (isPrefixOf)
-import Data.Text           (pack,unpack,replace,empty)
-import System.FilePath     (takeFileName)
+import Data.List       (isPrefixOf)
+import Data.Monoid     ((<>))
+import Data.Text       (pack,unpack,replace,empty)
+import System.FilePath (takeFileName)
 
 import Hakyll
 
+-- Custom configuration
+
+configuration :: Configuration
+configuration = defaultConfiguration
+    { tmpDirectory  = "/tmp/hakyll"
+    , ignoreFile    = ignoreFile'
+    , deployCommand = "./scripts/publish.sh"
+    }
+  where
+    ignoreFile' path
+        | fileName == ".htaccess" = False
+        | otherwise               = ignoreFile defaultConfiguration path
+      where
+        fileName = takeFileName path
+
+-- Contexts
+
+postCtx :: Context String
+postCtx = dateField "date" "%B %e, %Y" <> defaultContext
+
+allPostsCtx :: Context String
+allPostsCtx = constField "title" "All posts" <> postCtx
+
+homeCtx :: Context String
+homeCtx = constField "title" "Home" <> postCtx
+
+feedCtx :: Context String
+feedCtx = bodyField "description" <> postCtx
+
+tagsCtx :: Tags -> Context String
+tagsCtx tags = tagsField "prettytags" tags <> postCtx
+
+-- Feed configuration
+
+feedConfiguration :: FeedConfiguration
+feedConfiguration = FeedConfiguration
+    { feedTitle       = "Keruspe's blag - RSS feed"
+    , feedDescription = "Various free software hacking stuff"
+    , feedAuthorName  = "Marc-Anroine Perennou"
+    , feedAuthorEmail = "Marc-Antoine@Perennou.com"
+    , feedRoot        = "http://www.imagination-land.org"
+    }
+
+-- Auxiliary compilers
+
+externalizeUrls :: String -> Item String -> Compiler (Item String)
+externalizeUrls root item = return $ fmap (externalizeUrlsWith root) item
+  where
+    externalizeUrlsWith root' = withUrls ext
+      where
+        ext x = if isExternal x then x else root' ++ x
+
+unExternalizeUrls :: String -> Item String -> Compiler (Item String)
+unExternalizeUrls root item = return $ fmap (unExternalizeUrlsWith root) item
+  where
+    unExternalizeUrlsWith root' = withUrls unExt
+      where
+        unExt x = if root' `isPrefixOf` x then unpack $ replace (pack root') empty (pack x) else x
+
+postList :: Tags -> Pattern -> ([Item String] -> Compiler [Item String]) -> Compiler String
+postList tags pattern preprocess' = do
+    postItemTpl <- loadBody "templates/postitem.html"
+    posts <- preprocess' =<< loadAll pattern
+    applyTemplateList postItemTpl (tagsCtx tags) posts
+
+-- Main
+
 main :: IO ()
-main = hakyllWith myConfiguration $ do
+main = hakyllWith configuration $ do
     -- Build tags
     tags <- buildTags "posts/*" (fromCapture "tags/*.html")
 
@@ -85,86 +153,4 @@ main = hakyllWith myConfiguration $ do
 
     -- Read templates
     match "templates/*" $ compile templateCompiler
-
--- Contexts
-
-postCtx :: Context String
-postCtx =
-    dateField "date" "%B %e, %Y" `mappend`
-    defaultContext
-
-allPostsCtx :: Context String
-allPostsCtx =
-    constField "title" "All posts" `mappend`
-    postCtx
-
-homeCtx :: Context String
-homeCtx =
-    constField "title" "Home" `mappend`
-    postCtx
-
-feedCtx :: Context String
-feedCtx =
-    bodyField "description" `mappend`
-    postCtx
-
-tagsCtx :: Tags -> Context String
-tagsCtx tags =
-    tagsField "prettytags" tags `mappend`
-    postCtx
-
--- Feed configuration
-
-feedConfiguration :: FeedConfiguration
-feedConfiguration = FeedConfiguration
-    { feedTitle       = "Keruspe's blag - RSS feed"
-    , feedDescription = "Various free software hacking stuff"
-    , feedAuthorName  = "Marc-Anroine Perennou"
-    , feedAuthorEmail = "Marc-Antoine@Perennou.com"
-    , feedRoot        = "http://www.imagination-land.org"
-    }
-
--- Auxiliary compilers
-
-externalizeUrls :: String -> Item String -> Compiler (Item String)
-externalizeUrls root item = return $ fmap (externalizeUrlsWith root) item
-
-externalizeUrlsWith :: String  -- ^ Path to the site root
-                    -> String  -- ^ HTML to externalize
-                    -> String  -- ^ Resulting HTML
-externalizeUrlsWith root = withUrls ext
-  where
-    ext x = if isExternal x then x else root ++ x
-
-unExternalizeUrls :: String -> Item String -> Compiler (Item String)
-unExternalizeUrls root item = return $ fmap (unExternalizeUrlsWith root) item
-
-unExternalizeUrlsWith :: String  -- ^ Path to the site root
-                      -> String  -- ^ HTML to unExternalize
-                      -> String  -- ^ Resulting HTML
-unExternalizeUrlsWith root = withUrls unExt
-  where
-    unExt x = if root `isPrefixOf` x then unpack $ replace (pack root) empty (pack x) else x
-
-postList :: Tags -> Pattern -> ([Item String] -> Compiler [Item String])
-         -> Compiler String
-postList tags pattern preprocess' = do
-    postItemTpl <- loadBody "templates/postitem.html"
-    posts <- preprocess' =<< loadAll pattern
-    applyTemplateList postItemTpl (tagsCtx tags) posts
-
--- Custom configuration
-
-myConfiguration :: Configuration
-myConfiguration = defaultConfiguration
-    { tmpDirectory  = "/tmp/hakyll"
-    , ignoreFile    = ignoreFile'
-    , deployCommand = "./scripts/publish.sh"
-    }
-  where
-    ignoreFile' path
-        | fileName == ".htaccess" = False
-        | otherwise               = ignoreFile defaultConfiguration path
-      where
-        fileName = takeFileName path
 
