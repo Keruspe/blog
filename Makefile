@@ -1,16 +1,18 @@
 BLOG=./dist/build/blog/blog
+SBF=./.sandbox.ok
 
 all: build
 
 build: $(BLOG)
 	@$(BLOG) build
 
-sandbox:
+$(SBF):
 	@cabal sandbox init
 	@cabal update || true
 	@cabal install --only-dependencies
+	@touch $@
 
-$(BLOG): sandbox src/Main.hs
+$(BLOG): $(SBF) src/Main.hs
 	@cabal build
 	@$(BLOG) clean
 
@@ -30,9 +32,12 @@ clean: $(BLOG)
 	@$(BLOG) clean
 	@cabal clean
 
-clean-sandbox:
-	@cabal sandbox delete
-
 clean-all: clean clean-sandbox
 
-.PHONY: all build sandbox new publish watch check clean clean-sandbox clean-all
+clean-sandbox:
+	@cabal sandbox delete
+	@rm -f $(SBF)
+
+regen-sandbox: clean-sandbox $(SBF)
+
+.PHONY: all build new publish watch check clean clean-all clean-sandbox regen-sandbox clean-all
