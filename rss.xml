@@ -2494,7 +2494,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
                 <section>
 <p>Usually, every Thursday I publish another post in <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">my “Knowing your system” saga</a>, but this week I was busy <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">working on facron</a>. I plan to publish the part three on next Monday, it will be about source-based GNU/Linux distributions.</p>
 <h2 id="whats-in-this-release">What’s in this release?</h2>
-<p>Since <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">last time I wrote about it</a>, a few things have changed: the code is more robust and much more cleaner, and several improvements have been made:</p>
+<p>Since <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">last time I wrote about it</a>, a few things have changed: the code is more robust and much cleaner, and several improvements have been made:</p>
 <ul>
 <li>You’re now able to pass arguments containing spaces if you surround them with quotes or double quotes in the configuration file.</li>
 <li>The fanotify flags handling have slightly changed with a new separator, the comma. If you specify <code>FAN_MODIFY|FAN_CLOSE_WRITE,FAN_OPEN</code> the event caught will be: either <code>FAN_MODIFY</code> AND <code>FAN_CLOSE_WRITE</code>, or <code>FAN_OPEN</code>.</li>
