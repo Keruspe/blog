@@ -11,7 +11,7 @@ I plan to publish the part three on next Monday, it will be about source-based G
 ## What's in this release?
 
 Since [last time I wrote about it](http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html),
-a few things have changed: the code is more robust and much more cleaner, and several improvements have been made:
+a few things have changed: the code is more robust and much cleaner, and several improvements have been made:
 
 * You're now able to pass arguments containing spaces if you surround them with quotes or double quotes in the configuration
 file.
