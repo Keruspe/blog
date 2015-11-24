@@ -1,10 +1,10 @@
-BLOG=./dist/build/blog/blog
+BLF=./.blog.ok
 SBF=./.sandbox.ok
 
 all: build
 
-build: $(BLOG)
-	@$(BLOG) build
+build: $(BLF)
+	@cabal run -- blog build
 
 $(SBF):
 	@cabal sandbox init
@@ -12,25 +12,27 @@ $(SBF):
 	@cabal install --only-dependencies
 	@touch $@
 
-$(BLOG): $(SBF) src/Main.hs
+$(BLF): $(SBF) src/Main.hs
 	@cabal build
-	@$(BLOG) clean
+	@cabal run -- blog clean
+	@touch $@
 
 new:
 	@./scripts/new_post.sh
 
-publish: $(BLOG)
-	@$(BLOG) deploy
+publish: build
+	@cabal run -- blog deploy
 
 watch: build
-	@$(BLOG) watch -p 9000
+	@cabal run -- blog watch -p 9000
 
 check: build
-	@$(BLOG) check
+	@cabal run -- blog check
 
-clean: $(BLOG)
-	@$(BLOG) clean
+clean: $(BLF)
+	@cabal run -- blog clean
 	@cabal clean
+	@rm -f $(BLF)
 
 clean-all: clean clean-sandbox
 
