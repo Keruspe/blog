@@ -7,8 +7,39 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Fri, 15 Jan 2016 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Sun, 31 Jan 2016 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Germinal 15 released</title>
+    <link>http://www.imagination-land.org/posts/2016-01-31-germinal-15-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Germinal 15 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>January 31, 2016</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/germinal.html">germinal</a>, <a href="http://www.imagination-land.org/tags/terminal.html">terminal</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>.</p>
+                </header>
+
+                <section>
+<h2 id="how-do-i-get-it">How do I get it?</h2>
+<p>Germinal is available <a href="https://github.com/Keruspe/Germinal">on github</a></p>
+<p>Version 15 release tarball is available <a href="http://www.imagination-land.org/files/germinal/germinal-15.tar.xz">here</a>, get it while it’s hot!</p>
+<p>Keybindings are documented <a href="https://github.com/Keruspe/Germinal/blob/master/README.md">here</a>.</p>
+<h2 id="whats-new-in-this-release">What’s new in this release?</h2>
+<ul>
+<li>build system cleanup</li>
+<li>audible bell is configurable</li>
+<li>environment handling fixes</li>
+<li>multi-windows fixes</li>
+<li>add a –version</li>
+</ul>
+<p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute!</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Sun, 31 Jan 2016 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2016-01-31-germinal-15-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
+</item>
+<item>
     <title>GPaste 3.18.3 released</title>
     <link>http://www.imagination-land.org/posts/2016-01-15-gpaste-3.18.3-released.html</link>
     <description><![CDATA[            <article>
