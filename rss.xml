@@ -43,7 +43,7 @@
 <p>The problem with password-store though, is that it only keeps tracks of passwords. If you use several usernames, you might as well forget what your username was for some service. That’s where creds appears. I created creds so that it could track both your username and your passwords for all of your service. It’s basically a password-store on steroids.</p>
 <h2 id="typical-creds-workflow">Typical creds workflow</h2>
 <p>The best experience you’ll get with creds is when you use it combined to <a href="https://github.com/Keruspe/GPaste">GPaste</a>.</p>
-<p>Let’s say I wanna register to a new service <code>www.foobar.com</code>. Let’s generate a new passwordi (imagine my email address is me@gmail.com)!</p>
+<p>Let’s say I wanna register to a new service <code>www.foobar.com</code>. Let’s generate a new password (imagine my email address is me@gmail.com)!</p>
 <pre><code>keruspe@Lou ~ % creds generate www.foobar.com 24
 Username: me+foobar@gmail.com
 [master dc4cfe2] Add www.foobar.com
