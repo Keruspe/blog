@@ -77,7 +77,7 @@ could track both your username and your passwords for all of your service. It's 
 
 The best experience you'll get with creds is when you use it combined to [GPaste](https://github.com/Keruspe/GPaste).
 
-Let's say I wanna register to a new service `www.foobar.com`. Let's generate a new passwordi (imagine my email address
+Let's say I wanna register to a new service `www.foobar.com`. Let's generate a new password (imagine my email address
 is me@gmail.com)!
 
 ```
