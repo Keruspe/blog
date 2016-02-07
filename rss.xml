@@ -7,8 +7,64 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sun, 31 Jan 2016 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Sun, 07 Feb 2016 00:00:00 UT</lastBuildDate>
         <item>
+    <title>creds 1 released</title>
+    <link>http://www.imagination-land.org/posts/2016-02-07-creds-1-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>creds 1 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>February  7, 2016</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/creds.html">creds</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/git.html">git</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/security.html">security</a>.</p>
+                </header>
+
+                <section>
+<h2 id="what-is-creds-what-is-a-credentials-mangler">What is creds? What is a credentials mangler?</h2>
+<p>Nowadays, we tend to use more and more online services. Some of them have nice integration with third-party providers such are <a href="http://google.com">google</a> or <a href="https://github.com">github</a> for authentication, but not all of them, and you might not want to use it for some services anyway.</p>
+<h3 id="what-strategy-should-i-use-to-manage-my-online-credentials">What strategy should I use to manage my online credentials?</h3>
+<h4 id="the-easy-way">The easy way</h4>
+<p>There’s the easy way: using the same username and password everywhere. The advantage is that it’ll be easy for you to remember.</p>
+<p><em>Don’t</em></p>
+<p>Doing that is the worst idea you’ll ever get in your life. The global level of security is always equal to the level of security of the weakest link. In the tons of services where you’ll use these credentials, if <em>one</em> of them has a security breach, any attacker <em>will</em> have access to your accounts on all the services where you use the same credentials.</p>
+<h4 id="use-more-that-one-username-when-possible">Use more that one username, when possible</h4>
+<p>As you get more and more accounts, some services might leak your information to some advertising company, or to some attackers who might try to use these to bruteforce other services. In order to easily identify the source of the leak, I strongly advice that you use one username per service.</p>
+<p>If you have a custom domain name, it can be something like <code>sevice1@mydomain.com</code>, <code>service2@mydomain.com</code> which will work nearly everywhere.</p>
+<p>If you don’t have one and are using gmail, for example, and you address is <code>foobar@gmail.com</code>, you can use <code>foobar+service1@gmail.com</code> and so on. Unfortunately, not all services accept <code>+</code> in the username.</p>
+<h4 id="passwords---the-random-seed-way">Passwords - the (random) seed way</h4>
+<p>Now that you have some good usernamed, let’s talk about passwords.</p>
+<p>One very common way of having passwords that you can remember while using a different one for each service is to start from a “seed”. You will decide that all you password will contain some phrase/word or match some pattern, more or less randomly. The you’ll use this as a base to construct the password for each service, trying to remember a logical link between the service and the variable part of your password.</p>
+<p>This is far better than the previously seen “easy way”, and that’s actually what a lot of people will tell you to do in order to be “secure”. It actually works pretty well.</p>
+<p>What happens now if two or three of those services leak your credentials because they’re stupid and store them as plain text? Well, if you’re lucky, you’ll only have to change your password for those. If you’re not, some attacker might understand which pattern you use to create your passwords, and how you create the variable part depending on the service and you’ll be screwed.</p>
+<h4 id="passwords---the-safe-way">Passwords - the safe way</h4>
+<p>The easier way to have a <em>strong</em> and <em>secure</em> password for each service is … not knowing it. There are several tools capable of generating passwords, such as <a href="http://sourceforge.net/projects/pwgen/">pwgen</a>.</p>
+<p>If you don’t know what your password is and if even you can’t remember it, there’s no chance that a leaky service could cause you any harm on the other services you use.</p>
+<p>But then, how do you use it, if you don’t know it?</p>
+<p>That’s where the credentials manager gets in. I’ve used <a href="http://www.passwordstore.org/">password-store</a> for a long time. It’s a really handy tool that generates passwords, store them on your disk encrypted using your GPG key so that only you can decrypt it. When you need a password you just ask <code>pass</code> to give it to you, it will be decrypted using your key and you’ll be able to use it. Once you get used to adding this extra step as part of the authentication mechanism, it becomes really powerful.</p>
+<p>The problem with password-store though, is that it only keeps tracks of passwords. If you use several usernames, you might as well forget what your username was for some service. That’s where creds appears. I created creds so that it could track both your username and your passwords for all of your service. It’s basically a password-store on steroids.</p>
+<h2 id="typical-creds-workflow">Typical creds workflow</h2>
+<p>The best experience you’ll get with creds is when you use it combined to <a href="https://github.com/Keruspe/GPaste">GPaste</a>.</p>
+<p>Let’s say I wanna register to a new service <code>www.foobar.com</code>. Let’s generate a new passwordi (imagine my email address is me@gmail.com)!</p>
+<pre><code>keruspe@Lou ~ % creds generate www.foobar.com 24
+Username: me+foobar@gmail.com
+[master dc4cfe2] Add www.foobar.com
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 www.foobar.com.creds
+Sucessfully added to GPaste
+</code></pre>
+<p>Alright, my new 24-characters password has been generated, and I don’t even know what it is. GPaste only show it to me as <code>[Password] www.foobar.com</code>. Now I can create my account, just hitting <code>Ctrl-V</code> for pasting the password and that’s it.</p>
+<p>If later on I want to log in to this service, all I need to do is <code>creds www.foobar.com</code>. My username will then be in my clipboard. I hit <code>Ctrl-V</code> to paste it. I now hit <code>Ctrl-Alt-V</code> to nuke it from my clipboard and replace it with the password (which is the next item in the history thanks to the nice integration in creds), I hit <code>Ctrl-V</code> in the password box, and I’m logged in, despite the fact that I still have no idea whatsoever of what that password could be.</p>
+<h2 id="how-do-i-get-it">How do I get it?</h2>
+<p>creds is available <a href="https://github.com/Keruspe/creds">on github</a></p>
+<p>Version 1 release tarball is available <a href="http://www.imagination-land.org/files/creds/creds-1.tar.xz">here</a>, get it while it’s hot!</p>
+<p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute!</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Sun, 07 Feb 2016 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2016-02-07-creds-1-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
+</item>
+<item>
     <title>Germinal 15 released</title>
     <link>http://www.imagination-land.org/posts/2016-01-31-germinal-15-released.html</link>
     <description><![CDATA[            <article>
