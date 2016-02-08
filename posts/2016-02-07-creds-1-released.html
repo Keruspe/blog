@@ -83,7 +83,7 @@
 <p>But then, how do you use it, if you don’t know it?</p>
 <p>That’s where the credentials manager gets in. I’ve used <a href="http://www.passwordstore.org/">password-store</a> for a long time. It’s a really handy tool that generates passwords, store them on your disk encrypted using your GPG key so that only you can decrypt it. When you need a password you just ask <code>pass</code> to give it to you, it will be decrypted using your key and you’ll be able to use it. Once you get used to adding this extra step as part of the authentication mechanism, it becomes really powerful.</p>
 <p>The problem with password-store though, is that it only keeps tracks of passwords. If you use several usernames, you might as well forget what your username was for some service. That’s where creds appears. I created creds so that it could track both your username and your passwords for all of your service. It’s basically a password-store on steroids.</p>
-<p>As a bonus, creds comes with a <code>pass2creds</code> script to ease the migration.</p>
+<p>As a bonus, creds comes with a <code>pass2creds</code> script to ease the migration but you should at least use <a href="../posts/2016-02-08-creds-2-released.html">creds 2</a> for it to work properly.</p>
 <h2 id="typical-creds-workflow">Typical creds workflow</h2>
 <p>The best experience you’ll get with creds is when you use it combined to <a href="https://github.com/Keruspe/GPaste">GPaste</a>.</p>
 <p>Let’s say I wanna register to a new service <code>www.foobar.com</code>. Let’s generate a new password (imagine my email address is me@gmail.com)!</p>
