@@ -1,0 +1,22 @@
+---
+title: creds 2 released
+author: Marc-Antoine Perennou
+tags: creds, release, sysadmin, security
+---
+
+## What is creds? What is a credentials mangler?
+
+You can see my complete article about this [there](http://www.imagination-land.org/posts/2016-02-07-creds-1-released.html).
+
+## How do I get it?
+
+creds is available [on github](https://github.com/Keruspe/creds)
+
+Version 2 release tarball is available [here](http://www.imagination-land.org/files/creds/creds-2.tar.xz), get it while it's hot!
+
+## What's new in this release?
+
+- add: don't act as add-raw when piped (regression in pass2creds)
+
+I hope you'll enjoy it. Feel free to propose new features and/or to contribute!
+
