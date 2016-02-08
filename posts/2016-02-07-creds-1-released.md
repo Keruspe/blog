@@ -73,6 +73,8 @@ The problem with password-store though, is that it only keeps tracks of password
 might as well forget what your username was for some service. That's where creds appears. I created creds so that it
 could track both your username and your passwords for all of your service. It's basically a password-store on steroids.
 
+As a bonus, creds comes with a `pass2creds` script to ease the migration.
+
 ## Typical creds workflow
 
 The best experience you'll get with creds is when you use it combined to [GPaste](https://github.com/Keruspe/GPaste).
