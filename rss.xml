@@ -7,8 +7,38 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Mon, 08 Feb 2016 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Tue, 09 Feb 2016 00:00:00 UT</lastBuildDate>
         <item>
+    <title>creds 3 released</title>
+    <link>http://www.imagination-land.org/posts/2016-02-09-creds-3-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>creds 3 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>February  9, 2016</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/creds.html">creds</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>, <a href="http://www.imagination-land.org/tags/security.html">security</a>.</p>
+                </header>
+
+                <section>
+<h2 id="what-is-creds-what-is-a-credentials-mangler">What is creds? What is a credentials mangler?</h2>
+<p>You can see my complete article about this <a href="http://www.imagination-land.org/posts/2016-02-07-creds-1-released.html">there</a>.</p>
+<h2 id="how-do-i-get-it">How do I get it?</h2>
+<p>creds is available <a href="https://github.com/Keruspe/creds">on github</a></p>
+<p>Version 3 release tarball is available <a href="http://www.imagination-land.org/files/creds/creds-3.tar.xz">here</a>, get it while it’s hot!</p>
+<h2 id="whats-new-in-this-release">What’s new in this release?</h2>
+<ul>
+<li>don’t require xsltproc and docbook-xsl when building a release</li>
+<li>support <code>CREDS_GPG_ARGS</code> environment variable to pass additional args to gpg</li>
+<li>don’t crash on some commands when we do not have anything stored yet</li>
+</ul>
+<p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute!</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Tue, 09 Feb 2016 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2016-02-09-creds-3-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
+</item>
+<item>
     <title>creds 2 released</title>
     <link>http://www.imagination-land.org/posts/2016-02-08-creds-2-released.html</link>
     <description><![CDATA[            <article>
