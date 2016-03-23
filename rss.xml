@@ -7,8 +7,65 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Tue, 09 Feb 2016 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Wed, 23 Mar 2016 00:00:00 UT</lastBuildDate>
         <item>
+    <title>GPaste 3.20 released</title>
+    <link>http://www.imagination-land.org/posts/2016-03-23-gpaste-3.20-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 3.20 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>March 23, 2016</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>It’s available <a href="http://www.imagination-land.org/files/gpaste/gpaste-3.20.tar.xz">there</a>, get it while it’s hot!</p>
+<p>This release is for using with with GNOME 3.20.</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>Relicensing from GPL-3 to BSD-2</li>
+<li>Detect the presence of more features at runtime instead of compile time</li>
+<li>The <code>gpaste-client</code> cli has been mostly rewritten</li>
+<li><code>gpaste-client file</code> now supports adding images to the history</li>
+<li>The legacy <code>gpaste</code> cli is gone</li>
+<li>gnome-shell extension cleanups and compatibility with 3.20</li>
+<li>automake 1.15 is required</li>
+<li>pkg-config 0.27 is required</li>
+<li>gtk+ 3.20, vala 0.32 (if –enable-vapi) and gobject-introspection 1.48 are required</li>
+<li><code>gpaste-ui</code> now has a “new” button to add new contents to the clipboard</li>
+<li>The daemon now reexecs itself on SIGUSR1</li>
+<li>Avoid having two passwords under the same name in history</li>
+<li>libgpaste now logs into its own <code>G_LOG_DOMAIN</code></li>
+<li>GPaste components now write their pid to a file</li>
+<li>A new tool is provided for debugging, but not installed: clipboard-watcher</li>
+<li>systemd user units are provided</li>
+<li>Build system cleanups</li>
+<li>Outdated translations have been dropped</li>
+<li>gobject-introspection fixes</li>
+<li>Fix style with gtk+ 3.20</li>
+<li>Implement the new shotcut window from gtk+</li>
+<li>Various code cleanups</li>
+</ul>
+<p>And don’t forget to run <code>gpaste-client dr</code> aka <code>gpaste-client daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
+<p>You then can run <code>gpaste-client daemon-version</code> to check that the correct daemon is running.</p>
+<h2 id="screenshots">Screenshots</h2>
+<h3 id="gnome-shell-extension">Gnome-shell extension</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Extension.png" alt="Extension" /></p>
+<h3 id="graphical-tool">Graphical tool</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Ui-1-full.png" alt="Ui-1" /></p>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Ui-2-full.png" alt="Ui-2" /></p>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Ui-3-full.png" alt="Ui-3" /></p>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Ui-4-full.png" alt="Ui-4" /></p>
+<h3 id="ubuntu-application-indicator-and-legacy-status-icon">Ubuntu application indicator and legacy status icon</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/2/AppIndicator.png" alt="AppIndicator" /></p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Wed, 23 Mar 2016 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2016-03-23-gpaste-3.20-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
+</item>
+<item>
     <title>creds 3 released</title>
     <link>http://www.imagination-land.org/posts/2016-02-09-creds-3-released.html</link>
     <description><![CDATA[            <article>
@@ -359,7 +416,7 @@ Sucessfully added to GPaste
 <p>“163 files changed, 7334 insertions(+), 3159 deletions(-)”</p>
 <h2 id="whats-new">What’s new?</h2>
 <ul>
-<li>Warning, this is a big release, with changes in API, yoi might have to kill your old daemon after upgrading</li>
+<li>Warning, this is a big release, with changes in API, you might have to kill your old daemon after upgrading</li>
 <li>The “gpaste” cli is now “gpaste-client”. old name can still be enabled with –enable-cli for now</li>
 <li>The “gpaste settings” tool is gone, use the “burger” menu from “gpaste-client ui”</li>
 <li>The graphical tool now allows you to fully manage your histories</li>
