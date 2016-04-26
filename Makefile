@@ -20,7 +20,10 @@ $(BLF): $(SBF) src/Main.hs
 new:
 	@./scripts/new_post.sh
 
-publish: build
+update-sha1:
+	@./scripts/update-sha1.sh
+
+publish: build update-sha1
 	@cabal run -- blog deploy
 
 watch: build
@@ -42,4 +45,4 @@ clean-sandbox:
 
 regen-sandbox: clean-sandbox $(SBF)
 
-.PHONY: all build new publish watch check clean clean-all clean-sandbox regen-sandbox clean-all
+.PHONY: all build new update-sha1 publish watch check clean clean-all clean-sandbox regen-sandbox clean-all
