@@ -1,5 +1,5 @@
 ---
-title: Knowing your system - Part 6 - Source-based distributions: Discovering Exherbo
+title: 'Knowing your system - Part 6 - Source-based distributions: Discovering Exherbo'
 author: Marc-Antoine Perennou
 tags: sysadmin, knowingyoursystem, source-based, exherbo
 ---

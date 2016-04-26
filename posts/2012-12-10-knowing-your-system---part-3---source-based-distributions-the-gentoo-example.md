@@ -1,5 +1,5 @@
 ---
-title: Knowing your system - Part 3 - Source-based distributions: The Gentoo example
+title: 'Knowing your system - Part 3 - Source-based distributions: The Gentoo example'
 author: Marc-Antoine Perennou
 tags: sysadmin, knowingyoursystem, source-based
 ---

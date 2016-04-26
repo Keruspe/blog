@@ -1,5 +1,5 @@
 ---
-title: Knowing your system - Part 5 - Source-based distributions: the binary way
+title: 'Knowing your system - Part 5 - Source-based distributions: the binary way'
 author: Marc-Antoine Perennou
 tags: sysadmin, knowingyoursystem, source-based, paludis
 ---
