@@ -39,7 +39,7 @@ As a lot of people rely on me and the integrity and security of what I manage, m
 computer *needs* to be secure. My hard drive is obviously fully encrypted, but shit
 always can happen with shoulder surfing, or surveillance cameras, for example.
 A well organised malicious person could maybe get my password while I type it, so
-the password is not enough. Type to be paranoid and put an extra security measure.
+the password is not enough. Time to be paranoid and put an extra security measure.
 
 ## How do I enable 2FA on my laptop?
 
@@ -87,6 +87,9 @@ With that set, each time you try to login, use sudo, unlock your computer or aut
 admin action, you will be prompted for the TOTP code, and then for your password.
 The `user=root` part in the configuration will automatically make the authentication fail if
 the file in `/etc/google-authenticator` doesn't belong to root.
+
+Now let's check that everything is working properly by logging as your user (`su - keruspe` for me)
+and as root (`su -`). If everything works fine, you're done.
 
 Voila, your computer is now more secure. The only way to bypass it is to edit the
 pam configuration file, which is not possible without your decryption key if your system
