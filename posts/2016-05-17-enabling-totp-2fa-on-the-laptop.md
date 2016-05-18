@@ -77,7 +77,7 @@ home directory that even your web browser can read.
 Last step: actually enable the feature and make it use those files. For that, you need to
 locate the pam configuration file responsible for system authentication. On exherbo,
 that is `/etc/pam.d/system-auth`. At the very beginning of that file, You just need to
-add this first line:
+add this first line (or second if you want to enter your password before the verification code):
 
 ```
 auth        required    pam_google_authenticator.so user=root secret=/etc/google-authenticator/${USER}
