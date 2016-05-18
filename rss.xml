@@ -41,7 +41,7 @@
 <pre><code>chown root:root /etc/google-authenticator/*
 chmod 0400 /etc/google-authenticator/*</code></pre>
 <p>Now, our files are read-only and belong to root, which is quite safer than a file in your home directory that even your web browser can read.</p>
-<p>Last step: actually enable the feature and make it use those files. For that, you need to locate the pam configuration file responsible for system authentication. On exherbo, that is <code>/etc/pam.d/system-auth</code>. At the very beginning of that file, You just need to add this first line:</p>
+<p>Last step: actually enable the feature and make it use those files. For that, you need to locate the pam configuration file responsible for system authentication. On exherbo, that is <code>/etc/pam.d/system-auth</code>. At the very beginning of that file, You just need to add this first line (or second if you want to enter your password before the verification code):</p>
 <pre><code>auth        required    pam_google_authenticator.so user=root secret=/etc/google-authenticator/${USER}</code></pre>
 <p>With that set, each time you try to login, use sudo, unlock your computer or authorise an admin action, you will be prompted for the TOTP code, and then for your password. The <code>user=root</code> part in the configuration will automatically make the authentication fail if the file in <code>/etc/google-authenticator</code> doesn’t belong to root.</p>
 <p>Now let’s check that everything is working properly by logging as your user (<code>su - keruspe</code> for me) and as root (<code>su -</code>). If everything works fine, you’re done.</p>
