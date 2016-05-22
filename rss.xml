@@ -7,8 +7,47 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Tue, 17 May 2016 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Sun, 22 May 2016 00:00:00 UT</lastBuildDate>
         <item>
+    <title>GPaste 3.18.4 released</title>
+    <link>http://www.imagination-land.org/posts/2016-05-22-gpaste-3.18.4-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 3.18.4 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>May 22, 2016</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>It’s available <a href="http://www.imagination-land.org/files/gpaste/gpaste-3.18.4.tar.xz">there</a>, get it while it’s hot!</p>
+<p>This release is the latest release for using with with GNOME 3.18.</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>fix crash when a search goes wrong</li>
+<li>fix hanging issue due to gtk+ race (?) in <code>gtk_clipboard_store</code></li>
+<li>fix the gnome-shell menu sometimes displaying twice</li>
+<li>add debug logs to the core library</li>
+</ul>
+<p>And don’t forget to run <code>gpaste-client dr</code> aka <code>gpaste-client daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
+<p>You then can run <code>gpaste-client daemon-version</code> to check that the correct daemon is running.</p>
+<h2 id="screenshots">Screenshots</h2>
+<h3 id="gnome-shell-extension">Gnome-shell extension</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Extension.png" alt="Extension" /></p>
+<h3 id="graphical-tool">Graphical tool</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Ui-1-full.png" alt="Ui-1" /></p>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Ui-2-full.png" alt="Ui-2" /></p>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Ui-3-full.png" alt="Ui-3" /></p>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Ui-4-full.png" alt="Ui-4" /></p>
+<h3 id="ubuntu-application-indicator-and-legacy-status-icon">Ubuntu application indicator and legacy status icon</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/2/AppIndicator.png" alt="AppIndicator" /></p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Sun, 22 May 2016 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2016-05-22-gpaste-3.18.4-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
+</item>
+<item>
     <title>Enabling TOTP 2 factor authentication on the laptop</title>
     <link>http://www.imagination-land.org/posts/2016-05-17-enabling-totp-2fa-on-the-laptop.html</link>
     <description><![CDATA[            <article>
