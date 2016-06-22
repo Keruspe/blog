@@ -8,7 +8,7 @@ author:              Marc-Antoine Perennou
 maintainer:          Marc-Antoine@Perennou.com
 category:            Web
 build-type:          Simple
-cabal-version:       >=1.10
+cabal-version:       >=1.24
 
 executable blog
   ghc-options:         -Wall
