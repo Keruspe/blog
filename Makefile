@@ -9,7 +9,7 @@ build: $(BLF)
 $(SBF):
 	@cabal sandbox init
 	@cabal update || true
-	@cabal install --only-dependencies
+	@cabal install --shadow-installed-packages --only-dependencies
 	@touch $@
 
 $(BLF): $(SBF) src/Main.hs
