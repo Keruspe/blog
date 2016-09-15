@@ -1,5 +1,5 @@
 ---
-title: Germinal 16 released
+title: Germinal 17 released
 author: Marc-Antoine Perennou
 tags: germinal, terminal, sysadmin
 ---
@@ -8,14 +8,14 @@ tags: germinal, terminal, sysadmin
 
 Germinal is available [on github](https://github.com/Keruspe/Germinal)
 
-Version 16 release tarball is available [here](http://www.imagination-land.org/files/germinal/germinal-16.tar.xz), get it while it's hot!
+Version 17 release tarball is available [here](http://www.imagination-land.org/files/germinal/germinal-17.tar.xz), get it while it's hot!
 
 Keybindings are documented [here](https://github.com/Keruspe/Germinal/blob/master/README.md).
 
 ## What's new in this release?
 
-- Style fixes for gtk+ 3.20
-- Do not use deprecated vte api
+- fix startup on gnome 3.22
+- port to newer vte, require pcre2
 
 I hope you'll enjoy it. Feel free to propose new features and/or to contribute!
 
