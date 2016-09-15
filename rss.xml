@@ -7,8 +7,36 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Fri, 09 Sep 2016 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Thu, 15 Sep 2016 00:00:00 UT</lastBuildDate>
         <item>
+    <title>Germinal 17 released</title>
+    <link>http://www.imagination-land.org/posts/2016-09-15-germinal-17-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>Germinal 17 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>September 15, 2016</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/germinal.html">germinal</a>, <a href="http://www.imagination-land.org/tags/terminal.html">terminal</a>, <a href="http://www.imagination-land.org/tags/sysadmin.html">sysadmin</a>.</p>
+                </header>
+
+                <section>
+<h2 id="how-do-i-get-it">How do I get it?</h2>
+<p>Germinal is available <a href="https://github.com/Keruspe/Germinal">on github</a></p>
+<p>Version 17 release tarball is available <a href="http://www.imagination-land.org/files/germinal/germinal-17.tar.xz">here</a>, get it while it’s hot!</p>
+<p>Keybindings are documented <a href="https://github.com/Keruspe/Germinal/blob/master/README.md">here</a>.</p>
+<h2 id="whats-new-in-this-release">What’s new in this release?</h2>
+<ul>
+<li>fix startup on gnome 3.22</li>
+<li>port to newer vte, require pcre2</li>
+</ul>
+<p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute!</p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Thu, 15 Sep 2016 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2016-09-15-germinal-17-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
+</item>
+<item>
     <title>GPaste 3.21.90 released</title>
     <link>http://www.imagination-land.org/posts/2016-09-09-gpaste-3.21.90-released.html</link>
     <description><![CDATA[            <article>
@@ -329,7 +357,7 @@ chmod 0400 /etc/google-authenticator/*</code></pre>
                 <section>
 <h2 id="how-do-i-get-it">How do I get it?</h2>
 <p>Germinal is available <a href="https://github.com/Keruspe/Germinal">on github</a></p>
-<p>Version 16 release tarball is available <a href="http://www.imagination-land.org/files/germinal/germinal-14.tar.xz">here</a>, get it while it’s hot!</p>
+<p>Version 16 release tarball is available <a href="http://www.imagination-land.org/files/germinal/germinal-16.tar.xz">here</a>, get it while it’s hot!</p>
 <p>Keybindings are documented <a href="https://github.com/Keruspe/Germinal/blob/master/README.md">here</a>.</p>
 <h2 id="whats-new-in-this-release">What’s new in this release?</h2>
 <ul>
