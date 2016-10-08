@@ -91,10 +91,10 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <h3 id="usage">Usage</h3>
 <p>You’re now fully ready! All you have to do is create the binary packages on your compilation node, push the updated repository to your git server, sync it on the other boxes and you will be able to install your freshly made binary packages without having to compile them on all of your machines.</p>
 <p>It’s pretty simple to make binary packages, all you have to do is first to generate the binaries for everything you have installed:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cave</span> resolve -xc world --make binaries --make-dependencies all</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">cave</span> resolve -xc world --make binaries --make-dependencies all</code></pre></div>
 <p>It will automatically generate packages and put tarballs in your distfiles directory. If you run this after updating your compilation box, it will only generate new binary packages for those that have changed.</p>
 <p>Last thing you might want to know: to create a binary package for a package you do not have installed yet, just run</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cave</span> resolve -x --make binaries --make-dependencies all <span class="kw">&lt;</span>insert a package name here<span class="kw">&gt;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">cave</span> resolve -x --make binaries --make-dependencies all <span class="op">&lt;</span>insert a package name here<span class="op">&gt;</span></code></pre></div>
 <p>It will create packages for all the dependencies, installing it afterwards, and finish by making the package for the software you asked.</p>
 <p>Don’t forget to push all changes on your git server!</p>
 <h2 id="next-chapter">Next chapter</h2>

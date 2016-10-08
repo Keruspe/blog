@@ -77,8 +77,8 @@
 <h2 id="what-has-become-my-previous-workflow">What has become my previous workflow?</h2>
 <p>This does not at all look like my previous workflow, but I said I kept it around… Why?</p>
 <p>Actually, my previous workflow comes right after that. Once I’ve sumitted my patch, I add it to my autopatch folder:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> -p /etc/paludis/autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>
-<span class="kw">curl</span> <span class="kw">&lt;</span>patch_url<span class="kw">&gt;</span> <span class="kw">&gt;</span> /etc/paludis.autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>/my.patch</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">mkdir</span> -p /etc/paludis/autopatch/<span class="op">&lt;</span>repository<span class="op">&gt;</span>
+<span class="ex">curl</span> <span class="op">&lt;</span>patch_url<span class="op">&gt;</span> <span class="op">&gt;</span> /etc/paludis.autopatch/<span class="op">&lt;</span>repository<span class="op">&gt;</span>/my.patch</code></pre></div>
 <p>This way, they automatically get applied when I sync back the real repository instead of my copy. If a sync fail, I rebase my patches and resubmit them. Once the patch is pushed, I can safely remove it from my autopatch directory.</p>
 <p>Note that this whole second step can fully be ignored for repositories you have push access to, simplifying even more this light workflow.</p>
 <h2 id="next-chapter">Next chapter</h2>

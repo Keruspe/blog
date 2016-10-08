@@ -93,8 +93,8 @@
 <p>A lot of other subcommands are available, and a lot of options for each of these. Amongst other things, cave allows you to stop the installation process at a certain phase, or resume at another. This allows you to abort at compile phase to apply custom patches, and them resume at compile phase to compile the package with your patches applied. It also support a hooks mechanism.</p>
 <p>We’ll see some more advanced paludis features in a next post of <a href="../tags/knowingyoursystem.html">the knowing your system saga</a>.</p>
 <p>Last thing, The way I update my system is:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cave</span> sync
-<span class="kw">cave</span> resolve world -c -km -Km -Cs</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">cave</span> sync
+<span class="ex">cave</span> resolve world -c -km -Km -Cs</code></pre></div>
 <p>It syncs repositories with upstream to get latest versions of the packages, and then resolve <code>world</code> which is the set containing all the packages you have installed, with a complete dependency tree, as deep as it can, with <code>-c</code> aka <code>--complete</code> and reinstalling all packages for which metadata have changed because of <code>-km -Km</code> aka <code>--keep if-same-metadata --keep-targets if-same-metadata</code>. If a failure occurs, it continues to build the rest while the dependencies still are satisfied thanks to <code>-Cs</code> aka <code>--continue-on-failure if-satisfied</code>. I then run this last command again with <code>-x</code> aka <code>--execute</code> to apply the available updates.</p>
 <h2 id="next-chapter">Next chapter</h2>
 <p><a href="../posts/2012-12-20-knowing-your-system---part-5---source-based-distributions%3A-the-binary-way.html">Read the continuation</a></p>

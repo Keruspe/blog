@@ -4,7 +4,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
         <meta name="description" content="Keruspe's personal blog" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Keruspe's blag - Home sweet home</title>
+        <title>Keruspe's blag - GPaste 3.21.91 released</title>
         <link href="http://fonts.googleapis.com/css?family=Arvo" rel="stylesheet" type="text/css" />
         <link href="http://fonts.googleapis.com/css?family=ABeeZee" rel="stylesheet" type="text/css" />
         <link rel="stylesheet" type="text/css" href="../css/default.css" />
@@ -55,22 +55,33 @@
         <section>
             <article>
                 <header>
-                    <h1>Home sweet home</h1>
-                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>November 21, 2012</strong></p>
-                    <p>Tagged as: <a href="../tags/misc.html">misc</a>.</p>
+                    <h1>GPaste 3.21.91 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>October  8, 2016</strong></p>
+                    <p>Tagged as: <a href="../tags/GPaste.html">GPaste</a>, <a href="../tags/release.html">release</a>, <a href="../tags/clipboard.html">clipboard</a>, <a href="../tags/gnome.html">gnome</a>.</p>
                 </header>
 
                 <section>
-<h2 id="welcome">Welcome</h2>
-<p>It has been a long time since I first wanted to get a blog.</p>
-<p>I’ll mostly speak here about free software and stuff I like to hack, from sysadmin to development and debugging. I write code mostly in Java for my job, but my language of choice is the C for my personal projects. This is why this blog is written in haskell.</p>
-<p>Just to be clear, what I mean by sysadmin is not</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> apt-get install kde</code></pre></div>
-<p>I’m a source-based distributions enthusiast and prefer tutorials and tips about raw software over distro-specific ones.</p>
-<h2 id="special-thanks">Special thanks</h2>
-<p>This blog is powered by <a href="http://jaspervdj.be/hakyll/index.html">Hakyll</a>.</p>
-<p>It was written by <a href="http://blog.clement.delafargue.name/posts/2012-10-21-blog-deployment-system.html">Clément Delafargue</a> and I shamelessly stole it from him.</p>
-<p>This blog is available as <a href="http://github.com/Keruspe/blog">a git repository</a> and hosted on <a href="http://clever-cloud.com/en/">The Clever Cloud</a> which is the company I work for.</p>
+<p>It’s available <a href="../files/gpaste/gpaste-3.21.91.tar.xz">there</a>, get it while it’s hot!</p>
+<p>This is a preview release for using with with GNOME 3.22.</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>Depend on gtk+ 3.22, glib 2.50, gobject-introspeciton 1.50</li>
+<li>Bug fixes and simplifications in pagination handling for gnome-shell</li>
+<li>Fix bug with clipboard/primary selection synchronisation</li>
+<li>Fix racy calls to <code>gtk_clipboard_store</code></li>
+</ul>
+<p>And don’t forget to run <code>gpaste-client dr</code> aka <code>gpaste-client daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
+<p>You then can run <code>gpaste-client daemon-version</code> to check that the correct daemon is running.</p>
+<h2 id="screenshots">Screenshots</h2>
+<h3 id="gnome-shell-extension">Gnome-shell extension</h3>
+<p><img src="../images/GPaste/3/Extension.png" alt="Extension" /></p>
+<h3 id="graphical-tool">Graphical tool</h3>
+<p><img src="../images/GPaste/3/Ui-1-full.png" alt="Ui-1" /></p>
+<p><img src="../images/GPaste/3/Ui-2-full.png" alt="Ui-2" /></p>
+<p><img src="../images/GPaste/3/Ui-3-full.png" alt="Ui-3" /></p>
+<p><img src="../images/GPaste/3/Ui-4-full.png" alt="Ui-4" /></p>
+<h3 id="ubuntu-application-indicator-and-legacy-status-icon">Ubuntu application indicator and legacy status icon</h3>
+<p><img src="../images/GPaste/2/AppIndicator.png" alt="AppIndicator" /></p>
                 </section>
             </article>
 

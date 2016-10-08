@@ -7,8 +7,47 @@
         <description><![CDATA[Various free software hacking stuff]]></description>
         <atom:link href="http://www.imagination-land.org/rss.xml" rel="self"
                    type="application/rss+xml" />
-        <lastBuildDate>Sat, 17 Sep 2016 00:00:00 UT</lastBuildDate>
+        <lastBuildDate>Sat, 08 Oct 2016 00:00:00 UT</lastBuildDate>
         <item>
+    <title>GPaste 3.21.91 released</title>
+    <link>http://www.imagination-land.org/posts/2016-10-08-gpaste-3.22.0-released.html</link>
+    <description><![CDATA[            <article>
+                <header>
+                    <h1>GPaste 3.21.91 released</h1>
+                    <p class="by">by <em>Marc-Antoine Perennou</em> on <strong>October  8, 2016</strong></p>
+                    <p>Tagged as: <a href="http://www.imagination-land.org/tags/GPaste.html">GPaste</a>, <a href="http://www.imagination-land.org/tags/release.html">release</a>, <a href="http://www.imagination-land.org/tags/clipboard.html">clipboard</a>, <a href="http://www.imagination-land.org/tags/gnome.html">gnome</a>.</p>
+                </header>
+
+                <section>
+<p>It’s available <a href="http://www.imagination-land.org/files/gpaste/gpaste-3.21.91.tar.xz">there</a>, get it while it’s hot!</p>
+<p>This is a preview release for using with with GNOME 3.22.</p>
+<h2 id="whats-new">What’s new?</h2>
+<ul>
+<li>Depend on gtk+ 3.22, glib 2.50, gobject-introspeciton 1.50</li>
+<li>Bug fixes and simplifications in pagination handling for gnome-shell</li>
+<li>Fix bug with clipboard/primary selection synchronisation</li>
+<li>Fix racy calls to <code>gtk_clipboard_store</code></li>
+</ul>
+<p>And don’t forget to run <code>gpaste-client dr</code> aka <code>gpaste-client daemon-reexec</code> after upgrading GPaste to activate new functionalities ;)</p>
+<p>You then can run <code>gpaste-client daemon-version</code> to check that the correct daemon is running.</p>
+<h2 id="screenshots">Screenshots</h2>
+<h3 id="gnome-shell-extension">Gnome-shell extension</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Extension.png" alt="Extension" /></p>
+<h3 id="graphical-tool">Graphical tool</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Ui-1-full.png" alt="Ui-1" /></p>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Ui-2-full.png" alt="Ui-2" /></p>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Ui-3-full.png" alt="Ui-3" /></p>
+<p><img src="http://www.imagination-land.org/images/GPaste/3/Ui-4-full.png" alt="Ui-4" /></p>
+<h3 id="ubuntu-application-indicator-and-legacy-status-icon">Ubuntu application indicator and legacy status icon</h3>
+<p><img src="http://www.imagination-land.org/images/GPaste/2/AppIndicator.png" alt="AppIndicator" /></p>
+                </section>
+            </article>
+]]></description>
+    <pubDate>Sat, 08 Oct 2016 00:00:00 UT</pubDate>
+    <guid>http://www.imagination-land.org/posts/2016-10-08-gpaste-3.22.0-released.html</guid>
+    <dc:creator>Marc-Anroine Perennou</dc:creator>
+</item>
+<item>
     <title>GPaste 3.21.91 released</title>
     <link>http://www.imagination-land.org/posts/2016-09-17-gpaste-3.21.91-released.html</link>
     <description><![CDATA[            <article>
@@ -2668,17 +2707,17 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 <p>A few months ago, I decided to track my configuration files using git, which I use for pretty much everything now.</p>
 <p>The problem I had to face is that some of them contain passwords, so I couldn’t let them as is.</p>
 <h2 id="setting-up-the-test-environment">Setting up the test environment</h2>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">keruspe@Lou</span> ~/tmp % mkdir test.git <span class="kw">&amp;&amp;</span> <span class="kw">cd</span> test.git <span class="kw">&amp;&amp;</span> <span class="kw">git</span> init --bare <span class="kw">&amp;&amp;</span> <span class="kw">cd</span> ..
-<span class="kw">Initialized</span> empty Git repository in /home/keruspe/tmp/test.git/
-<span class="kw">keruspe@Lou</span> ~/tmp % mkdir test <span class="kw">&amp;&amp;</span> <span class="kw">cd</span> test <span class="kw">&amp;&amp;</span> <span class="kw">git</span> init
-<span class="kw">Initialized</span> empty Git repository in /home/keruspe/tmp/test/.git/
-<span class="kw">keruspe@Lou</span> ~/tmp/test (git)<span class="kw">-</span>[master] % git remote add origin ../test.git </code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">keruspe@Lou</span> ~/tmp % mkdir test.git <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> test.git <span class="kw">&amp;&amp;</span> <span class="fu">git</span> init --bare <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> ..
+<span class="ex">Initialized</span> empty Git repository in /home/keruspe/tmp/test.git/
+<span class="ex">keruspe@Lou</span> ~/tmp % mkdir test <span class="kw">&amp;&amp;</span> <span class="bu">cd</span> test <span class="kw">&amp;&amp;</span> <span class="fu">git</span> init
+<span class="ex">Initialized</span> empty Git repository in /home/keruspe/tmp/test/.git/
+<span class="ex">keruspe@Lou</span> ~/tmp/test (git)<span class="ex">-</span>[master] % git remote add origin ../test.git </code></pre></div>
 <p>Ok, we now have a remote repository in <code>~/tmp/test.git</code> and a working directory in <code>~/tmp/test</code></p>
 <h2 id="configuring-the-working-directory-to-be-password-safe">Configuring the working directory to be “password-safe”</h2>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">keruspe@Lou</span> ~/tmp/test (git)<span class="kw">-</span>[master] % git config filter.password.clean <span class="st">&quot;sed -e 's/mypassword/@PASSWORD@/' -e 's/anotherpassword/@PASSWORD2@/'&quot;</span>
-<span class="kw">keruspe@Lou</span> ~/tmp/test (git)<span class="kw">-</span>[master] % git config filter.password.smudge <span class="st">&quot;sed -e 's/@PASSWORD@/mypassword/' -e 's/@PASSWORD2@/anotherpassword/'&quot;</span>
-<span class="kw">keruspe@Lou</span> ~/tmp/test (git)<span class="kw">-</span>[master] % cat <span class="kw">&gt;</span> .git/info/attributes &lt;&lt; EOF
-myconf.conf filter=pa<span class="kw">ssword</span>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">keruspe@Lou</span> ~/tmp/test (git)<span class="ex">-</span>[master] % git config filter.password.clean <span class="st">&quot;sed -e 's/mypassword/@PASSWORD@/' -e 's/anotherpassword/@PASSWORD2@/'&quot;</span>
+<span class="ex">keruspe@Lou</span> ~/tmp/test (git)<span class="ex">-</span>[master] % git config filter.password.smudge <span class="st">&quot;sed -e 's/@PASSWORD@/mypassword/' -e 's/@PASSWORD2@/anotherpassword/'&quot;</span>
+<span class="ex">keruspe@Lou</span> ~/tmp/test (git)<span class="ex">-</span>[master] % cat <span class="op">&gt;</span> .git/info/attributes &lt;&lt; EOF
+myconf.conf filter=pa<span class="op">s</span><span class="ex">sword</span>
 EOF</code></pre></div>
 <p>Ok, what’s going on there?</p>
 <p>I’m creating a filter which I call “password”. A filter consist of two functions:</p>
@@ -2688,7 +2727,7 @@ EOF</code></pre></div>
 <p>I then create a <code>.git/info/attributes</code> file, in which I tell git to use my brand new “filter” password for the file <code>myconf.conf</code>. You can use any pattern that git understands here, and can obviously add multiple lines.</p>
 <h2 id="example">Example</h2>
 <p>Let’s now create the <code>myconf.conf</code> file we mentioned earlier, let’s push it to the remote repository, and clone it from anywhere else, to see the result.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">keruspe@Lou</span> ~/tmp/test (git)<span class="kw">-</span>[master] % cat <span class="kw">&gt;</span> myconf.conf &lt;&lt; EOF
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">keruspe@Lou</span> ~/tmp/test (git)<span class="ex">-</span>[master] % cat <span class="op">&gt;</span> myconf.conf &lt;&lt; EOF
 user = johndoe
 password = mypassword
 bddurl = root:anotherpassword@mysql.local
@@ -2703,8 +2742,8 @@ Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 283 bytes, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To ../test.git
- * [new branch]      master -<span class="kw">&gt;</span> <span class="kw">master</span>
-ke<span class="kw">ruspe@Lou</span> ~/tmp/test (git)<span class="kw">-</span>[master] % cd ..
+ * [new branch]      master -<span class="op">&gt;</span> <span class="ex">master</span>
+ke<span class="op">r</span><span class="ex">uspe@Lou</span> ~/tmp/test (git)<span class="ex">-</span>[master] % cd ..
 keruspe@Lou ~/tmp % git clone test.git test2
 Cloning into 'test2'...
 done.
@@ -2751,8 +2790,8 @@ bddurl = root:@PASSWORD2@@mysql.local</code></pre></div>
 <h2 id="what-has-become-my-previous-workflow">What has become my previous workflow?</h2>
 <p>This does not at all look like my previous workflow, but I said I kept it around… Why?</p>
 <p>Actually, my previous workflow comes right after that. Once I’ve sumitted my patch, I add it to my autopatch folder:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> -p /etc/paludis/autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>
-<span class="kw">curl</span> <span class="kw">&lt;</span>patch_url<span class="kw">&gt;</span> <span class="kw">&gt;</span> /etc/paludis.autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>/my.patch</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">mkdir</span> -p /etc/paludis/autopatch/<span class="op">&lt;</span>repository<span class="op">&gt;</span>
+<span class="ex">curl</span> <span class="op">&lt;</span>patch_url<span class="op">&gt;</span> <span class="op">&gt;</span> /etc/paludis.autopatch/<span class="op">&lt;</span>repository<span class="op">&gt;</span>/my.patch</code></pre></div>
 <p>This way, they automatically get applied when I sync back the real repository instead of my copy. If a sync fail, I rebase my patches and resubmit them. Once the patch is pushed, I can safely remove it from my autopatch directory.</p>
 <p>Note that this whole second step can fully be ignored for repositories you have push access to, simplifying even more this light workflow.</p>
 <h2 id="next-chapter">Next chapter</h2>
@@ -2891,8 +2930,8 @@ bddurl = root:@PASSWORD2@@mysql.local</code></pre></div>
 <li>I upload my patch with <code>git pe HEAD~&lt;number_of_commits&gt; | wgetpaste -r -s poundpython</code> (I’ll explain this command later)</li>
 <li>I put a copy of my patch in my autopatch directory (which I’ll explain after):</li>
 </ul>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">mkdir</span> -p /etc/paludis/autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>
-<span class="kw">curl</span> <span class="kw">&lt;</span>patch_url<span class="kw">&gt;</span> <span class="kw">&gt;</span> /etc/paludis.autopatch/<span class="kw">&lt;</span>repository<span class="kw">&gt;</span>/my.patch</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">mkdir</span> -p /etc/paludis/autopatch/<span class="op">&lt;</span>repository<span class="op">&gt;</span>
+<span class="ex">curl</span> <span class="op">&lt;</span>patch_url<span class="op">&gt;</span> <span class="op">&gt;</span> /etc/paludis.autopatch/<span class="op">&lt;</span>repository<span class="op">&gt;</span>/my.patch</code></pre></div>
 <ul>
 <li>I sync the repository so that the autopatch gets applied: <code>cave sync &lt;repository&gt;</code></li>
 <li>I try my patch, compiling the related packages</li>
@@ -3020,10 +3059,10 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <h3 id="usage">Usage</h3>
 <p>You’re now fully ready! All you have to do is create the binary packages on your compilation node, push the updated repository to your git server, sync it on the other boxes and you will be able to install your freshly made binary packages without having to compile them on all of your machines.</p>
 <p>It’s pretty simple to make binary packages, all you have to do is first to generate the binaries for everything you have installed:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cave</span> resolve -xc world --make binaries --make-dependencies all</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">cave</span> resolve -xc world --make binaries --make-dependencies all</code></pre></div>
 <p>It will automatically generate packages and put tarballs in your distfiles directory. If you run this after updating your compilation box, it will only generate new binary packages for those that have changed.</p>
 <p>Last thing you might want to know: to create a binary package for a package you do not have installed yet, just run</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cave</span> resolve -x --make binaries --make-dependencies all <span class="kw">&lt;</span>insert a package name here<span class="kw">&gt;</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">cave</span> resolve -x --make binaries --make-dependencies all <span class="op">&lt;</span>insert a package name here<span class="op">&gt;</span></code></pre></div>
 <p>It will create packages for all the dependencies, installing it afterwards, and finish by making the package for the software you asked.</p>
 <p>Don’t forget to push all changes on your git server!</p>
 <h2 id="next-chapter">Next chapter</h2>
@@ -3078,8 +3117,8 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <p>A lot of other subcommands are available, and a lot of options for each of these. Amongst other things, cave allows you to stop the installation process at a certain phase, or resume at another. This allows you to abort at compile phase to apply custom patches, and them resume at compile phase to compile the package with your patches applied. It also support a hooks mechanism.</p>
 <p>We’ll see some more advanced paludis features in a next post of <a href="http://www.imagination-land.org/tags/knowingyoursystem.html">the knowing your system saga</a>.</p>
 <p>Last thing, The way I update my system is:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">cave</span> sync
-<span class="kw">cave</span> resolve world -c -km -Km -Cs</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">cave</span> sync
+<span class="ex">cave</span> resolve world -c -km -Km -Cs</code></pre></div>
 <p>It syncs repositories with upstream to get latest versions of the packages, and then resolve <code>world</code> which is the set containing all the packages you have installed, with a complete dependency tree, as deep as it can, with <code>-c</code> aka <code>--complete</code> and reinstalling all packages for which metadata have changed because of <code>-km -Km</code> aka <code>--keep if-same-metadata --keep-targets if-same-metadata</code>. If a failure occurs, it continues to build the rest while the dependencies still are satisfied thanks to <code>-Cs</code> aka <code>--continue-on-failure if-satisfied</code>. I then run this last command again with <code>-x</code> aka <code>--execute</code> to apply the available updates.</p>
 <h2 id="next-chapter">Next chapter</h2>
 <p><a href="http://www.imagination-land.org/posts/2012-12-20-knowing-your-system---part-5---source-based-distributions%3A-the-binary-way.html">Read the continuation</a></p>
@@ -3151,21 +3190,21 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <p>The release tarball is available <a href="https://github.com/Keruspe/facron/downloads">there: https://github.com/Keruspe/facron/downloads</a>.</p>
 <p>You must have fanotify included in your kernel (most recent systems should have it by default).</p>
 <p>Here are the steps you need to run in order to get it up and running:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">wget</span> https://github.com/downloads/Keruspe/facron/facron-0.9.tar.xz
-<span class="kw">tar</span> xf facron-0.9.tar.xz
-<span class="kw">cd</span> facron-0.9
-<span class="kw">./configure</span> --sysconfdir=/etc --with-systemdsystemunitdir=/usr/lib/systemd/system
-<span class="kw">make</span>
-<span class="kw">sudo</span> make install</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">wget</span> https://github.com/downloads/Keruspe/facron/facron-0.9.tar.xz
+<span class="fu">tar</span> xf facron-0.9.tar.xz
+<span class="bu">cd</span> facron-0.9
+<span class="ex">./configure</span> --sysconfdir=/etc --with-systemdsystemunitdir=/usr/lib/systemd/system
+<span class="fu">make</span>
+<span class="fu">sudo</span> make install</code></pre></div>
 <p>Then just create your configuration file <a href="http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html">as I said in the previous post</a> or following the manual instructions (man facron).</p>
 <p>When everything is ready, you just have to run</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> systemctl start facron.service</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> systemctl start facron.service</code></pre></div>
 <p>Or for non-systemd systems</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> facron --background</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> facron --background</code></pre></div>
 <p>If you edit the configuration file, you can reload it without restarting the daemon by running</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> systemctl reload facron.service</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> systemctl reload facron.service</code></pre></div>
 <p>Or for non-systemd systems</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> kill -USR1 <span class="ot">$(</span><span class="kw">pidof</span> facron<span class="ot">)</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> kill -USR1 <span class="va">$(</span><span class="fu">pidof</span> facron<span class="va">)</span></code></pre></div>
 <p>I hope you’ll enjoy it. Feel free to propose new features and/or to contribute!</p>
                 </section>
             </article>
@@ -3218,7 +3257,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <p>Two more special tokens will appear: <code>$@</code> which will contain the dirname of the file, and <code>$#</code> which will contain its basename.</p>
 <p>A systemd service file and a release tarball will be provided soon.</p>
 <p>You can reload the configuration at any time by sending a <code>SIGUSR1</code> to facron:</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">kill</span> -USR1 <span class="ot">$(</span><span class="kw">pidof</span> facron<span class="ot">)</span></code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="bu">kill</span> -USR1 <span class="va">$(</span><span class="fu">pidof</span> facron<span class="va">)</span></code></pre></div>
                 </section>
             </article>
 ]]></description>
@@ -3432,7 +3471,7 @@ binary_uri_prefix = http://mybinaries.com/exherbo/</code></pre>
 <p>It has been a long time since I first wanted to get a blog.</p>
 <p>I’ll mostly speak here about free software and stuff I like to hack, from sysadmin to development and debugging. I write code mostly in Java for my job, but my language of choice is the C for my personal projects. This is why this blog is written in haskell.</p>
 <p>Just to be clear, what I mean by sysadmin is not</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="kw">sudo</span> apt-get install kde</code></pre></div>
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="fu">sudo</span> apt-get install kde</code></pre></div>
 <p>I’m a source-based distributions enthusiast and prefer tutorials and tips about raw software over distro-specific ones.</p>
 <h2 id="special-thanks">Special thanks</h2>
 <p>This blog is powered by <a href="http://jaspervdj.be/hakyll/index.html">Hakyll</a>.</p>
