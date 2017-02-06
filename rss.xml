@@ -2780,8 +2780,8 @@ Repository sync           git://git.exherbo.org/dev/keruspe.git
 <h2 id="configuring-the-working-directory-to-be-password-safe">Configuring the working directory to be “password-safe”</h2>
 <div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">keruspe@Lou</span> ~/tmp/test (git)<span class="ex">-</span>[master] % git config filter.password.clean <span class="st">&quot;sed -e 's/mypassword/@PASSWORD@/' -e 's/anotherpassword/@PASSWORD2@/'&quot;</span>
 <span class="ex">keruspe@Lou</span> ~/tmp/test (git)<span class="ex">-</span>[master] % git config filter.password.smudge <span class="st">&quot;sed -e 's/@PASSWORD@/mypassword/' -e 's/@PASSWORD2@/anotherpassword/'&quot;</span>
-<span class="ex">keruspe@Lou</span> ~/tmp/test (git)<span class="ex">-</span>[master] % cat <span class="op">&gt;</span> .git/info/attributes &lt;&lt; EOF
-myconf.conf filter=pa<span class="op">s</span><span class="ex">sword</span>
+<span class="ex">keruspe@Lou</span> ~/tmp/test (git)<span class="ex">-</span>[master] % cat <span class="op">&gt;</span> .git/info/attributes <span class="op">&lt;&lt; EOF</span>
+myconf.conf filter=password
 EOF</code></pre></div>
 <p>Ok, what’s going on there?</p>
 <p>I’m creating a filter which I call “password”. A filter consist of two functions:</p>
@@ -2791,7 +2791,7 @@ EOF</code></pre></div>
 <p>I then create a <code>.git/info/attributes</code> file, in which I tell git to use my brand new “filter” password for the file <code>myconf.conf</code>. You can use any pattern that git understands here, and can obviously add multiple lines.</p>
 <h2 id="example">Example</h2>
 <p>Let’s now create the <code>myconf.conf</code> file we mentioned earlier, let’s push it to the remote repository, and clone it from anywhere else, to see the result.</p>
-<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">keruspe@Lou</span> ~/tmp/test (git)<span class="ex">-</span>[master] % cat <span class="op">&gt;</span> myconf.conf &lt;&lt; EOF
+<div class="sourceCode"><pre class="sourceCode bash"><code class="sourceCode bash"><span class="ex">keruspe@Lou</span> ~/tmp/test (git)<span class="ex">-</span>[master] % cat <span class="op">&gt;</span> myconf.conf <span class="op">&lt;&lt; EOF</span>
 user = johndoe
 password = mypassword
 bddurl = root:anotherpassword@mysql.local
@@ -2806,8 +2806,8 @@ Compressing objects: 100% (2/2), done.
 Writing objects: 100% (3/3), 283 bytes, done.
 Total 3 (delta 0), reused 0 (delta 0)
 To ../test.git
- * [new branch]      master -<span class="op">&gt;</span> <span class="ex">master</span>
-ke<span class="op">r</span><span class="ex">uspe@Lou</span> ~/tmp/test (git)<span class="ex">-</span>[master] % cd ..
+ * [new branch]      master -&gt; master
+keruspe@Lou ~/tmp/test (git)-[master] % cd ..
 keruspe@Lou ~/tmp % git clone test.git test2
 Cloning into 'test2'...
 done.
