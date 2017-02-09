@@ -1,21 +1,10 @@
-BLF=./.blog.ok
-SBF=./.sandbox.ok
-
 all: build
 
-build: $(BLF)
-	@cabal run -- blog build
-
-$(SBF):
-	@cabal sandbox init
-	@cabal update || true
-	@cabal install --shadow-installed-packages --only-dependencies
-	@touch $@
-
-$(BLF): $(SBF) src/Main.hs
-	@cabal build
-	@cabal run -- blog clean
-	@touch $@
+build:
+	@stack upgrade
+	@stack update
+	@stack build
+	@stack exec -- blog build
 
 new:
 	@./scripts/new_post.sh
@@ -24,25 +13,16 @@ update-sha1:
 	@./scripts/update-sha1.sh
 
 publish: build update-sha1
-	@cabal run -- blog deploy
+	@stack exec -- blog deploy
 
 watch: build
-	@cabal run -- blog watch -p 9000
+	@stack exec -- blog watch -p 9000
 
 check: build
-	@cabal run -- blog check
+	@stack exec -- blog check
 
-clean: $(BLF)
-	@cabal run -- blog clean
-	@cabal clean
-	@rm -f $(BLF)
+clean:
+	@stack exec -- blog clean
+	@stack clean
 
-clean-all: clean clean-sandbox
-
-clean-sandbox:
-	@cabal sandbox delete
-	@rm -f $(SBF)
-
-regen-sandbox: clean-sandbox $(SBF)
-
-.PHONY: all build new update-sha1 publish watch check clean clean-all clean-sandbox regen-sandbox clean-all
+.PHONY: all build new update-sha1 publish watch check clean
