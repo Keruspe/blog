@@ -1,10 +1,4 @@
 /.stack-work
-
-/.blog.ok
-/.sandbox.ok
-/.cabal-sandbox
-/cabal.sandbox.config
-/dist
-/_site
 /_cache
+/_site
 !/files/*/*.tar.xz
