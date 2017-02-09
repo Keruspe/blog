@@ -9,7 +9,7 @@ tags: sysadmin, knowingyoursystem, source-based, exherbo, paludis, gnome
 When I started to really dig into my system to fully understand how it works, breaking everything to know of to fix it,
 I decided to do even worse and started using [scm](http://en.wikipedia.org/wiki/Source_Control_Management) packages. Scm
 packages download the source code directly for the upstream development repository using [git](http://git-scm.com/),
-[subversion](http://subversion.tigris.org/), [mercurial](http://mercurial.selenic.com/) or whatever other
+[subversion](http://subversion.tigris.org/), [mercurial](https://www.mercurial-scm.org/) or whatever other
 [vcs](http://en.wikipedia.org/wiki/Revision_control).
 
 Doing this I ended up with a more-that-bleeding-edge system, causing a lot of breakages when stuff went incompatible
