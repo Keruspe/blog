@@ -1,0 +1,8 @@
+resolver: nightly-2017-02-09
+packages:
+    - '.'
+extra-deps: []
+flags: {}
+extra-package-dbs: []
+system-ghc: false
+compiler-check: newer-minor
