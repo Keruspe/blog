@@ -9,8 +9,8 @@ build:
 new:
 	@./scripts/new_post.sh
 
-update-sha1:
-	@./scripts/update-sha1.sh
+update-checksums:
+	@./scripts/update-checksums.sh
 
 publish: build update-sha1
 	@stack exec -- blog deploy

@@ -2,11 +2,14 @@
 
 readonly softs=( creds facron germinal gpaste )
 
-update_sha1() {
+update_checksums() {
     local soft="${1}"
+    local hash
 
     pushd "${0%/*}/../files/${soft}" >/dev/null
-    sha1sum "${soft}"* > sha1sum
+    for hash in sha1 sha256 sha512; do
+        ${hash}sum "${soft}"* > ${hash}sum
+    done
     popd >/dev/null
 }
 
@@ -14,7 +17,7 @@ main() {
     local soft
 
     for soft in "${softs[@]}"; do
-        update_sha1 "${soft}"
+        update_checksums "${soft}"
     done
 }
 
