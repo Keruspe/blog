@@ -12,7 +12,7 @@ new:
 update-checksums:
 	@./scripts/update-checksums.sh
 
-publish: build update-sha1
+publish: build update-checksums
 	@stack exec -- blog deploy
 
 watch: build
@@ -25,4 +25,4 @@ clean:
 	@stack exec -- blog clean
 	@stack clean
 
-.PHONY: all build new update-sha1 publish watch check clean
+.PHONY: all build new update-checksums publish watch check clean
