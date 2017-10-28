@@ -1,10 +1,10 @@
 {-# LANGUAGE OverloadedStrings #-}
+
 module Main where
 
-import Data.List       (stripPrefix)
-import Data.Maybe      (fromMaybe)
-import Data.Monoid     ((<>))
-import System.FilePath (takeFileName)
+import Data.List   (stripPrefix)
+import Data.Maybe  (fromMaybe)
+import Data.Monoid ((<>))
 
 import Hakyll
 
@@ -13,15 +13,8 @@ import Hakyll
 configuration :: Configuration
 configuration = defaultConfiguration
     { tmpDirectory  = "/tmp/hakyll"
-    , ignoreFile    = ignoreFile'
     , deployCommand = "./scripts/publish.sh"
     }
-  where
-    ignoreFile' path
-        | fileName == ".htaccess" = False
-        | otherwise               = ignoreFile defaultConfiguration path
-      where
-        fileName = takeFileName path
 
 -- Contexts
 
