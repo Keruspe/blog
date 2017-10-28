@@ -13,7 +13,7 @@ import Hakyll
 configuration :: Configuration
 configuration = defaultConfiguration
     { tmpDirectory  = "/tmp/hakyll"
-    , deployCommand = "./scripts/publish.sh"
+    , deployCommand = "git push"
     }
 
 -- Contexts
