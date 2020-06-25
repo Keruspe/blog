@@ -4,7 +4,6 @@ module Main where
 
 import Data.List   (stripPrefix)
 import Data.Maybe  (fromMaybe)
-import Data.Monoid ((<>))
 
 import Hakyll
 
