@@ -101,7 +101,6 @@ main = hakyllWith configuration $ do
             >>= (externalizeUrls     $ feedRoot feedConfiguration)
             >>= saveSnapshot         "content"
             >>= (unExternalizeUrls   $ feedRoot feedConfiguration)
-            >>= loadAndApplyTemplate "templates/posts-js.html" tagsCtx'
             >>= loadAndApplyTemplate "templates/default.html"  tagsCtx'
             >>= relativizeUrls
 
