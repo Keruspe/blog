@@ -64,8 +64,9 @@
     <p>
       I'm passionate about low level stuff and the inner mechanisms powering operating systems.
       I've always been eager to go deeper and gather myself knowledge of how things actually work.
-      I quickly jumped to Gentoo during college, then got around Exherbo to push my digging even further.
+      I quickly jumped onto Gentoo during college, then got around Exherbo to push my digging even further.
       All of my systems experimentation led me to contributing to lots of open source projects and ultimately towards rust.
+      I go by the nickname <em>Keruspe</em> online on most platforms.
     </p>
 
     <h2>Employment history</h2>
@@ -78,44 +79,18 @@
 
       <p class="time-period">2010-Present</p>
 
-      <p>
-        I co-founded Clever Cloud when I was still a student, working part-time
-        at first to design the Platform as a Service. We started experimenting
-        with existing technologies, but quickly understood that they weren't
-        made to be tweaked as much as we would need them to and ended up writing our own
-        in-house orchestrator.
-      </p>
-
-      <p>
-        After the initial release in 2012, the platform had to scale with both the
-        number of clients and their size expanding. I had to compromise between
-        using existing initial code to its maximum capacity while rewriting parts
-        in a way that it could absorb the new load and the future next increases.
-      </p>
-
-      <p>
-        Being there from the start, I quickly became one of the references with regards
-        to the big picture of the infrastructure, and I onboarded people as the team grew.
-        I tried to document things as much as possible, co-writing the documentation when possible
-        with peers while explaining the concepts or procedure to them. This kind of "pair writing"
-        allows for the documentation to be less biased and more accessible to others afterwards.
-        Each time a new member arrived was a good opportunity to review the existing documentation
-        and complete it with what's missing.
-      </p>
-
-      <p>
-        Maintenance of a huge infrastructure requires a lot of automation. With years of background
-        maintaining our own, I expanded our tooling every time we faced some time-consuming tasks,
-        be them basic setups or on-call interventions. Over the years, our platform grew a lot, and
-        the number of critical alerts requiring manual intervention actually decreased overall thanks
-        to such tooling, especially in the monitoring and recovery areas.
-      </p>
-
-      <p>
-        I was employee representative for 3 years, allowing for employees to communicate better with
-        the direction when there were problems for which they didn't want to expose themselves,
-        allowing me to be a central part of the communication inside the company.
-      </p>
+      <ul>
+        <li>Co-founded while still a student</li>
+        <li>Contributed to the design of the Platform as a Service</li>
+        <li>Benchmarked existing solutions to try and make them match our use cases</li>
+        <li>Wrote a VM and deployments orchestrator (mostly in Java)</li>
+        <li>Identified bottlenecks to replace them with scalable future-proof alternatives</li>
+        <li>Wrote a git repositories and access managemen tools suite in Rust (to replace gitolite)</li>
+        <li>Onboarded members of the OPS team with the deep knowledge of the plaform, completing documentation in the process</li>
+        <li>Ensured proper maintenance and monitoring of the infrastructure</li>
+        <li>Wrote automation tools (in Rust) to make manual interventions rare</li>
+        <li>Employee representative to be a central part of the communication inside the company</li>
+      </ul>
     </article>
 
     <article>
@@ -126,17 +101,17 @@
 
       <p class="time-period">2013-Present</p>
 
-      <p>
-        Core developer for the Exherbo linux distribution. In charge of the GNOME desktop,
-        the LLVM stack, rustc and all the things based on rust. I also managed software
-        used by Clever Cloud either on public or private repositories and custom patches
-        on top of the official packages.
-      </p>
+      <ul>
+        <li>Joined the core team after a couple of years as a user</li>
+        <li>In charge of maintaining the GNOME desktop packages</li>
+        <li>In charge of maintaining the LLVM infrastructure and toolchain packages</li>
+        <li>Wrote all the rust packaging infrastructure and maintaining the rustc package</li>
+        <li>Maintained Clever Cloud specific packages both in public and private repositories</li>
+        <li>Maintained Clever Cloud specific private patches on top of public packages</li>
+      </ul>
     </article>
 
-    <h2>
-        Education
-    </h2>
+    <h2>Education</h2>
 
     <article>
         <p class="time-period">2011</p>
@@ -145,23 +120,31 @@
         <p>University of Nantes, Nantes, France</p>
     </article>
 
+    <h2>Open Source contributions</h2>
+
+    <p>
+      Being an Exherbo packager, I ended up contributing to a lot of softare's build system and became
+      highly familiar with most of them. I'm also used to contribute to software I use either directly
+      or as dependencies of some of my projects. I got write access to the GNOME repositories this way.
+    </p>
+
+    <h3>Personal projects</h3>
+
+    <ul>
+      <li>GPaste is a clipboard manager that I wrote as a student. It's written in C and is packages for most distributions</li>
+      <li>Germinal is a terminal emulator I wrote (in C) to better suit my day to day temrinal usage</li>
+      <li>async-global-executor is an executor I wrote (in Rust) as a replacement for the one that was used in async-std, it's now the default</li>
+      <li>amq-protocol is an implementation (in Rust) of AMQP</li>
+      <li>lapin is an AMQP client written in Rust</li>
+      <li>facron is a cron system based on filesystem access (written in C)</li>
+    </ul>
+
     <h2>More Information</h2>
 
     <p>
       Having spent my whole career in a small company, I'm used to getting implicated
       in lots of areas requiring a precise view of the big picture in order to get the
       details of each component right.
-    </p>
-
-    <p>
-      I have always loved to work on open source projects and built some of my own.
-      While historically I mostly worked with Java, Ruby and shell scripts, I tried
-      and push more rust in new projects and tooling and successfully pushed it in
-      production in several places over the years. My oldest open source projects,
-      such as GPaste (a clipboard manager for GNOME) are written in C, my more recent
-      ones are written in rust, such as the lapin AMQP client (that I initially started
-      with Geoffroy Couprie, a colleague of mine). I've been contributing less for the
-      past few years in my spare time since I'm now father of three.
     </p>
   </body>
 </html>
