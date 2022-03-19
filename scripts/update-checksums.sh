@@ -8,7 +8,7 @@ update_checksums() {
 
     pushd "${0%/*}/../files/${soft}" >/dev/null
     for hash in sha1 sha256 sha512; do
-        ${hash}sum "${soft}"* > ${hash}sum
+        ${hash}sum *tar* > ${hash}sum
     done
     popd >/dev/null
 }
