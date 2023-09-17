@@ -1,10 +1,10 @@
 ---
-title: GPaste 45.rc released
+title: GPaste 45 released
 author: Marc-Antoine Perennou
 tags: GPaste, release, clipboard, gnome
 ---
 
-It's available [there](https://www.imagination-land.org/files/gpaste/GPaste-45.rc.tar.xz), get it while it's hot!
+It's available [there](https://www.imagination-land.org/files/gpaste/GPaste-45.tar.xz), get it while it's hot!
 
 This is a release for using with with GNOME 45.
 
