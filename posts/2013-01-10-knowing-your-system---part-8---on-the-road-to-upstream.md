@@ -27,7 +27,7 @@ packages. Sometimes I still need to patch stuff though, so I still use the same 
 
 ## My work flow
 
-My work flow for contributing to upstream is not much different to [the one I use for contributing to Exherbo](http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html).
+My work flow for contributing to upstream is not much different to [the one I use for contributing to Exherbo](https://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html).
 I also use an autopatch mechanism which is slightly different. My hook for automatically patch software is available
 there: [https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/ebuild_prepare_pre/patches.bash](https://github.com/Keruspe/paludis-config/blob/exherbo/hooks/ebuild_prepare_pre/patches.bash).
 If I remember correctly it was initially written by [Ciaran McCreesh](http://ciaranm.wordpress.com/), the
@@ -42,4 +42,4 @@ functionalities. The only risk is to learn a lot.
 
 ## Next chapter
 
-[Read the continuation](http://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo%3A-updated-and-smoother-method.html)
+[Read the continuation](https://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo%3A-updated-and-smoother-method.html)

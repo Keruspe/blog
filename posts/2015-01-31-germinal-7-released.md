@@ -25,7 +25,7 @@ This will cause tmux to automatically start a new session if you use `tmux a` an
 
 Germinal is available [on github](https://github.com/Keruspe/Germinal)
 
-Version 7 release tarball is available [here](http://www.imagination-land.org/files/germinal/germinal-7.tar.xz), get it while it's hot!
+Version 7 release tarball is available [here](https://www.imagination-land.org/files/germinal/germinal-7.tar.xz), get it while it's hot!
 
 ## What's new in this release?
 

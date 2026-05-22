@@ -6,13 +6,13 @@ tags: creds, release, sysadmin, security
 
 ## What is creds? What is a credentials mangler?
 
-You can see my complete article about this [there](http://www.imagination-land.org/posts/2016-02-07-creds-1-released.html).
+You can see my complete article about this [there](https://www.imagination-land.org/posts/2016-02-07-creds-1-released.html).
 
 ## How do I get it?
 
 creds is available [on github](https://github.com/Keruspe/creds)
 
-Version 3 release tarball is available [here](http://www.imagination-land.org/files/creds/creds-3.tar.xz), get it while it's hot!
+Version 3 release tarball is available [here](https://www.imagination-land.org/files/creds/creds-3.tar.xz), get it while it's hot!
 
 ## What's new in this release?
 

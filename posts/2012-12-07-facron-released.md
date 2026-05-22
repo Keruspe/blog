@@ -4,13 +4,13 @@ author: Marc-Antoine Perennou
 tags: facron, fanotify, cron, sysadmin
 ---
 
-Usually, every Thursday I publish another post in [my "Knowing your system" saga](http://www.imagination-land.org/tags/knowingyoursystem.html),
-but this week I was busy [working on facron](http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html).
+Usually, every Thursday I publish another post in [my "Knowing your system" saga](https://www.imagination-land.org/tags/knowingyoursystem.html),
+but this week I was busy [working on facron](https://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html).
 I plan to publish the part three on next Monday, it will be about source-based GNU/Linux distributions.
 
 ## What's in this release?
 
-Since [last time I wrote about it](http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html),
+Since [last time I wrote about it](https://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html),
 a few things have changed: the code is more robust and much cleaner, and several improvements have been made:
 
 * You're now able to pass arguments containing spaces if you surround them with quotes or double quotes in the configuration
@@ -39,7 +39,7 @@ make
 sudo make install
 ```
 
-Then just create your configuration file [as I said in the previous post](http://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html)
+Then just create your configuration file [as I said in the previous post](https://www.imagination-land.org/posts/2012-12-04-facron-fanotify-cron-system.html)
 or following the manual instructions (man facron).
 
 When everything is ready, you just have to run

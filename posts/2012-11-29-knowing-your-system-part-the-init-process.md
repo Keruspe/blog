@@ -4,7 +4,7 @@ author: Marc-Antoine Perennou
 tags: sysadmin, knowingyoursystem, systemd
 ---
 
-[As we last saw](http://www.imagination-land.org/posts/2012-11-22-knowing-your-system-part-basics-on-unixlike-systems.html),
+[As we last saw](https://www.imagination-land.org/posts/2012-11-22-knowing-your-system-part-basics-on-unixlike-systems.html),
 when we start an UNIX-like system, the kernel gives the hand to a main process called "init". We'll now see how it
 works.
 
@@ -121,4 +121,4 @@ A really interesting serie of blog posts by Lennart Poettering (systemd's lead d
 
 ## Next chapter
 
-[Read the continuation](http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html)
+[Read the continuation](https://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html)

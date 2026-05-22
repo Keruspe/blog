@@ -6,10 +6,10 @@ tags: sysadmin, knowingyoursystem, source-based, exherbo
 
 ## The limits of Gentoo
 
-As I said [in part 3](http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html)
-of the [knowing your system](http://www.imagination-land.org/tags/knowingyoursystem.html) saga, I really started to dig
+As I said [in part 3](https://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html)
+of the [knowing your system](https://www.imagination-land.org/tags/knowingyoursystem.html) saga, I really started to dig
 into my system when I used [Gentoo](http://www.gentoo.org/). I quickly spotted the limits of portage, its default
-package manager [and switched to paludis](http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html).
+package manager [and switched to paludis](https://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html).
 It really is easy to mess up your python installation, especially when you're not a python developer and you don't care
 about it. Of course there are tools to help you, such as `python-updater`, but it won't be of great help if you're not
 in a basic "breakage because of python update" case. Because of portage being written in python, you end up with an
@@ -67,4 +67,4 @@ status of it, since they all have to be submitted. We want to maintain as few pa
 
 ## Next chapter
 
-[Read the continuation](http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html)
+[Read the continuation](https://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html)

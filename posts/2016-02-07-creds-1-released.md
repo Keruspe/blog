@@ -74,7 +74,7 @@ might as well forget what your username was for some service. That's where creds
 could track both your username and your passwords for all of your service. It's basically a password-store on steroids.
 
 As a bonus, creds comes with a `pass2creds` script to ease the migration but you should at least use
-[creds 2](http://www.imagination-land.org/posts/2016-02-08-creds-2-released.html) for it to work properly.
+[creds 2](https://www.imagination-land.org/posts/2016-02-08-creds-2-released.html) for it to work properly.
 
 ## Typical creds workflow
 
@@ -106,7 +106,7 @@ box, and I'm logged in, despite the fact that I still have no idea whatsoever of
 
 creds is available [on github](https://github.com/Keruspe/creds)
 
-Version 1 release tarball is available [here](http://www.imagination-land.org/files/creds/creds-1.tar.xz), get it while it's hot!
+Version 1 release tarball is available [here](https://www.imagination-land.org/files/creds/creds-1.tar.xz), get it while it's hot!
 
 I hope you'll enjoy it. Feel free to propose new features and/or to contribute!
 

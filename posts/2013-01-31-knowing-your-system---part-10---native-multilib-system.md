@@ -13,7 +13,7 @@ better fits our needs.
 
 ## The future of "Knowing your system"
 
-Two weeks ago, with [Part 9](http://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo:-updated-and-smoother-method.html),
+Two weeks ago, with [Part 9](https://www.imagination-land.org/posts/2013-01-17-knowing-your-system---part-9---contributing-to-exherbo:-updated-and-smoother-method.html),
 I actually finished my initial Roadmap for this saga of posts, so I won't continue to make 1 post per week. I'll keep
 posting them on Thursdays, as I find out interesting stuff about system internals.
 

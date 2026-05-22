@@ -4,7 +4,7 @@ author: Marc-Antoine Perennou
 tags: sysadmin, knowingyoursystem, source-based, paludis
 ---
 
-[We last saw](http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html)
+[We last saw](https://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html)
 the [paludis](http://paludis.exherbo.org/) tool. Now, we'll take a look at how we can handle a source-based distribution
 using paludis for large pools of servers.
 
@@ -87,4 +87,4 @@ Don't forget to push all changes on your git server!
 
 ## Next chapter
 
-[Read the continuation](http://www.imagination-land.org/posts/2012-12-27-knowing-your-system---part-6---source-based-distributions-discovering-exherbo.html)
+[Read the continuation](https://www.imagination-land.org/posts/2012-12-27-knowing-your-system---part-6---source-based-distributions-discovering-exherbo.html)

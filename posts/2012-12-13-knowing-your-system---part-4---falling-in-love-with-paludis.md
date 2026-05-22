@@ -6,7 +6,7 @@ tags: sysadmin, knowingyoursystem, source-based, paludis
 
 ## Installing a source-based GNU/Linux distribution
 
-[As we last saw](http://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html),
+[As we last saw](https://www.imagination-land.org/posts/2012-12-10-knowing-your-system---part-3---source-based-distributions-the-gentoo-example.html),
 I'm really fond of source-based distributions. Beyond the administration and the management of an installed system, you
 also have to install it in the first place. Because of the fact that you have to compile absolutely everything in your
 system, it may be really scary to install one.
@@ -71,7 +71,7 @@ to stop the installation process at a certain phase, or resume at another. This 
 apply custom patches, and them resume at compile phase to compile the package with your patches applied.
 It also support a hooks mechanism.
 
-We'll see some more advanced paludis features in a next post of [the knowing your system saga](http://www.imagination-land.org/tags/knowingyoursystem.html).
+We'll see some more advanced paludis features in a next post of [the knowing your system saga](https://www.imagination-land.org/tags/knowingyoursystem.html).
 
 Last thing, The way I update my system is:
 
@@ -89,4 +89,4 @@ command again with `-x` aka `--execute` to apply the available updates.
 
 ## Next chapter
 
-[Read the continuation](http://www.imagination-land.org/posts/2012-12-20-knowing-your-system---part-5---source-based-distributions%3A-the-binary-way.html)
+[Read the continuation](https://www.imagination-land.org/posts/2012-12-20-knowing-your-system---part-5---source-based-distributions%3A-the-binary-way.html)

@@ -4,13 +4,13 @@ author: Marc-Antoine Perennou
 tags: sysadmin, knowingyoursystem, source-based, exherbo, paludis
 ---
 
-In the [part 7](http://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html),
+In the [part 7](https://www.imagination-land.org/posts/2013-01-03-knowing-your-system---part-7---contributing-to-exherbo.html),
 I described my workflow for contributing to Exherbo. Since then I had a few remarks (from [kloeri](http://kloeri.livejournal.com/),
 the [Exherbo](http://www.exherbo.org/)'s father, amongst others) on how I could improve it.
 
 ## My new workflow
 
-What I liked about my previous workflow is that it was exactly the same for contributing to Exherbo or [to upstream](http://www.imagination-land.org/posts/2013-01-10-knowing-your-system---part-8---on-the-road-to-upstream.html).
+What I liked about my previous workflow is that it was exactly the same for contributing to Exherbo or [to upstream](https://www.imagination-land.org/posts/2013-01-10-knowing-your-system---part-8---on-the-road-to-upstream.html).
 This is why it isn't completely done. Most of it is actually still here, but in another way. What's new is `cave sync`'s
 option `-s`, aka `--source` which allows you to specify multiple sync sources for a repository.
 For each repository that I install, I edit its configuration file changing `sync = git://git.exherbo.org/arbor.git` to
@@ -46,4 +46,4 @@ this light workflow.
 
 ## Next chapter
 
-[Read the continuation](http://www.imagination-land.org/posts/2013-01-31-knowing-your-system---part-10---native-multilib-system.html)
+[Read the continuation](https://www.imagination-land.org/posts/2013-01-31-knowing-your-system---part-10---native-multilib-system.html)

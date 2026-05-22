@@ -4,8 +4,8 @@ author: Marc-Antoine Perennou
 tags: sysadmin, knowingyoursystem, source-based
 ---
 
-After [a little reminder on UNIX-like systems](http://www.imagination-land.org/posts/2012-11-22-knowing-your-system-part-basics-on-unixlike-systems.html)
-and [a quick view to the init process](http://www.imagination-land.org/posts/2012-11-29-knowing-your-system-part-the-init-process.html),
+After [a little reminder on UNIX-like systems](https://www.imagination-land.org/posts/2012-11-22-knowing-your-system-part-basics-on-unixlike-systems.html)
+and [a quick view to the init process](https://www.imagination-land.org/posts/2012-11-29-knowing-your-system-part-the-init-process.html),
 we'll now see the kind of distributions which I really love, where you really control everything.
 
 ## What is a source-based GNU/Linux distribution?
@@ -33,7 +33,7 @@ This can be seen as a PITA but this is the price of real liberty. With source-ba
 components of each software you want to build, and exactly which options you want. With binary distributions, if you're
 missing a feature, you'll have to do everything by yourself outside your package manager, and this will really be a PITA
 to maintain. With source-based distribution, it's way easier to contribute, as we'll see in a later post of [this saga
-of posts](http://www.imagination-land.org/tags/knowingyoursystem.html). The package does not contain all the binaries,
+of posts](https://www.imagination-land.org/tags/knowingyoursystem.html). The package does not contain all the binaries,
 it's just a text file you have to edit to add an option you're missing. Everything becomes easier to customize, you
 become the God of your system.
 
@@ -62,4 +62,4 @@ see in my next post that I didn't really like its default package manager, and I
 
 ## Next chapter
 
-[Read the continuation](http://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html)
+[Read the continuation](https://www.imagination-land.org/posts/2012-12-13-knowing-your-system---part-4---falling-in-love-with-paludis.html)

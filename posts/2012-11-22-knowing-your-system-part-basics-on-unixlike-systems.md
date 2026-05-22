@@ -101,4 +101,4 @@ started in the right order. One of the last things to start is the graphical int
 
 ## Next chapter
 
-[Read the continuation](http://www.imagination-land.org/posts/2012-11-29-knowing-your-system-part-the-init-process.html)
+[Read the continuation](https://www.imagination-land.org/posts/2012-11-29-knowing-your-system-part-the-init-process.html)

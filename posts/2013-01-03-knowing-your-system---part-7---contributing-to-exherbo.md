@@ -66,4 +66,4 @@ intuitive and integrated this process is in my every day work.
 
 ## Next chapter
 
-[Read the continuation](http://www.imagination-land.org/posts/2013-01-10-knowing-your-system---part-8---on-the-road-to-upstream.html)
+[Read the continuation](https://www.imagination-land.org/posts/2013-01-10-knowing-your-system---part-8---on-the-road-to-upstream.html)

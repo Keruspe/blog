@@ -8,7 +8,7 @@ tags: germinal, terminal, sysadmin
 
 Germinal is available [on github](https://github.com/Keruspe/Germinal)
 
-Version 17 release tarball is available [here](http://www.imagination-land.org/files/germinal/germinal-17.tar.xz), get it while it's hot!
+Version 17 release tarball is available [here](https://www.imagination-land.org/files/germinal/germinal-17.tar.xz), get it while it's hot!
 
 Keybindings are documented [here](https://github.com/Keruspe/Germinal/blob/master/README.md).
 
