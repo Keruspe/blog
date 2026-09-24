@@ -2,8 +2,9 @@
 
 module Main where
 
-import Data.List   (stripPrefix)
-import Data.Maybe  (fromMaybe)
+import Control.Applicative (empty)
+import Data.List           (isPrefixOf, stripPrefix)
+import Data.Maybe          (fromMaybe)
 
 import Hakyll
 
@@ -33,7 +34,18 @@ feedCtx :: Context String
 feedCtx = bodyField "description" <> defaultCtx
 
 tagsCtx :: Tags -> Context String
-tagsCtx tags = tagsField "prettytags" tags <> defaultCtx
+tagsCtx tags = tagsField "prettytags" tags <> gpasteCtx <> defaultCtx
+
+-- Set on GPaste's own posts, for the template to ask for support there: the
+-- tag alone also covers posts about tools built around it
+gpasteCtx :: Context String
+gpasteCtx = field "gpaste" $ \item -> do
+    let ident = itemIdentifier item
+    tags  <- getTags ident
+    title <- getMetadataField ident "title"
+    if "GPaste" `elem` tags && maybe False ("GPaste " `isPrefixOf`) title
+        then return ""
+        else empty
 
 postsCtx :: String -> String -> Context String
 postsCtx title list = constField "body" list <> basicCtx title
