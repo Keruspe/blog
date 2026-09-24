@@ -1,4 +1,5 @@
 ---
+project: Germinal
 title: Germinal 9 released
 author: Marc-Antoine Perennou
 tags: germinal, terminal, sysadmin

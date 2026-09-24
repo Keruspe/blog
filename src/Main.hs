@@ -2,9 +2,8 @@
 
 module Main where
 
-import Control.Applicative (empty)
-import Data.List           (isPrefixOf, stripPrefix)
-import Data.Maybe          (fromMaybe)
+import Data.List   (stripPrefix)
+import Data.Maybe  (fromMaybe)
 
 import Hakyll
 
@@ -18,8 +17,12 @@ configuration = defaultConfiguration
 
 -- Contexts
 
+projectCtx :: Context String
+projectCtx = field "project" $ \item ->
+    fromMaybe "my work" <$> getMetadataField (itemIdentifier item) "project"
+
 defaultCtx :: Context String
-defaultCtx = dateField "date" "%B %e, %Y" <> defaultContext
+defaultCtx = projectCtx <> dateField "date" "%B %e, %Y" <> defaultContext
 
 basicCtx :: String -> Context String
 basicCtx title = constField "title" title <> defaultCtx
@@ -34,18 +37,7 @@ feedCtx :: Context String
 feedCtx = bodyField "description" <> defaultCtx
 
 tagsCtx :: Tags -> Context String
-tagsCtx tags = tagsField "prettytags" tags <> gpasteCtx <> defaultCtx
-
--- Set on GPaste's own posts, for the template to ask for support there: the
--- tag alone also covers posts about tools built around it
-gpasteCtx :: Context String
-gpasteCtx = field "gpaste" $ \item -> do
-    let ident = itemIdentifier item
-    tags  <- getTags ident
-    title <- getMetadataField ident "title"
-    if "GPaste" `elem` tags && maybe False ("GPaste " `isPrefixOf`) title
-        then return ""
-        else empty
+tagsCtx tags = tagsField "prettytags" tags <> defaultCtx
 
 postsCtx :: String -> String -> Context String
 postsCtx title list = constField "body" list <> basicCtx title
@@ -54,7 +46,7 @@ postsCtx title list = constField "body" list <> basicCtx title
 
 feedConfiguration :: FeedConfiguration
 feedConfiguration = FeedConfiguration
-    { feedTitle       = "Keruspe's blag - RSS feed"
+    { feedTitle       = "Keruspe's blog - RSS feed"
     , feedDescription = "Various free software hacking stuff"
     , feedAuthorName  = "Marc-Anroine Perennou"
     , feedAuthorEmail = "Marc-Antoine@Perennou.com"
